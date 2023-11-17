@@ -1,0 +1,1 @@
+export { HistoricEventCard } from "./HistoricEventCard";
