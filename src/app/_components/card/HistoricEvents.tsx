@@ -1,5 +1,4 @@
 "use client";
-
 import { trpc } from "@/app/_trpc/client";
 import { HistoricEventCard } from ".";
 
