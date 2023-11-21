@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Glass_Antiqua } from "next/font/google";
 import "./globals.css";
 
 import Provider from "@/app/_trpc/Provider";
+import { GameEngineProvider } from "./_context/gameEngineContext";
 
-const inter = Inter({ subsets: ["latin"] });
+const glassAntiqua = Glass_Antiqua({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,8 +19,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Provider>{children}</Provider>
+      <body className={`${glassAntiqua.className} h-screen w-screen`}>
+        <Provider>
+          <GameEngineProvider>{children}</GameEngineProvider>
+        </Provider>
       </body>
     </html>
   );

@@ -4,15 +4,22 @@ import { HistoricEventCard } from ".";
 
 export const HistoricEvents = () => {
   const { data, refetch, isLoading, isFetching, isSuccess } =
-    trpc.historicEvent.useQuery(undefined, {
-      trpc: { ssr: false },
-      suspense: false,
-    });
+    trpc.historicEvents.useQuery(
+      { pageSize: 10, salt: "salt" },
+      {
+        trpc: { ssr: false },
+        suspense: false,
+      },
+    );
 
   return (
     <div>
       <button onClick={() => refetch()}>Reload</button>
-      {isSuccess && <HistoricEventCard historicEvent={data} />}
+
+      {isSuccess &&
+        data.map((event) => (
+          <HistoricEventCard historicEvent={event} key={event.id} />
+        ))}
       {isFetching && <span>LOADING!!!</span>}
     </div>
   );

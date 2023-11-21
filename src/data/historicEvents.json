@@ -1,0 +1,124 @@
+{
+  "data": [
+    {
+      "category": "science",
+      "year": 1543,
+      "description": "Nicolaus Copernicus publishes his heliocentric theory, proposing that the Earth revolves around the Sun."
+    },
+    {
+      "category": "politics",
+      "year": 1776,
+      "description": "The United States Declaration of Independence is adopted, marking the birth of the United States of America."
+    },
+    {
+      "category": "technology",
+      "year": 1969,
+      "description": "Apollo 11 successfully lands the first humans, Neil Armstrong and Buzz Aldrin, on the Moon."
+    },
+    {
+      "category": "exploration",
+      "year": 1492,
+      "description": "Christopher Columbus sets sail from Spain on his first voyage across the Atlantic, reaching the Americas."
+    },
+    {
+      "category": "culture",
+      "year": 1605,
+      "description": "William Shakespeare's play 'Macbeth' is performed for the first time in London."
+    },
+    {
+      "category": "war",
+      "year": 1945,
+      "description": "World War II ends in Europe with the unconditional surrender of Nazi Germany."
+    },
+    {
+      "category": "science",
+      "year": 1687,
+      "description": "Isaac Newton publishes 'Philosophiæ Naturalis Principia Mathematica,' introducing the laws of motion and universal gravitation."
+    },
+    {
+      "category": "politics",
+      "year": 1789,
+      "description": "The French Revolution begins with the storming of the Bastille, marking the end of the absolute monarchy in France."
+    },
+    {
+      "category": "technology",
+      "year": 1876,
+      "description": "Alexander Graham Bell patents the telephone, revolutionizing communication."
+    },
+    {
+      "category": "exploration",
+      "year": 1519,
+      "description": "Ferdinand Magellan's expedition sets off to circumnavigate the globe, ultimately proving the Earth is round."
+    },
+    {
+      "category": "culture",
+      "year": 1969,
+      "description": "The Woodstock Festival, a pivotal moment in music history, takes place in upstate New York."
+    },
+    {
+      "category": "war",
+      "year": 1918,
+      "description": "World War I ends with the signing of the Armistice of 11 November, leading to peace negotiations."
+    },
+    {
+      "category": "history",
+      "year": 1523,
+      "description": "Gustav Vasa is elected King of Sweden, marking the end of the Kalmar Union and the beginning of modern Sweden."
+    },
+    {
+      "category": "exploration",
+      "year": 1638,
+      "description": "Foundation of Gothenburg, a significant Swedish port city, aimed at expanding trade and maritime activities."
+    },
+    {
+      "category": "science",
+      "year": 1735,
+      "description": "Carl Linnaeus publishes 'Systema Naturae,' establishing the system of binomial nomenclature for species classification."
+    },
+    {
+      "category": "politics",
+      "year": 1809,
+      "description": "The Finnish War concludes with the signing of the Treaty of Fredrikshamn, resulting in the loss of Finland to Russia."
+    },
+    {
+      "category": "technology",
+      "year": 1876,
+      "description": "Alfred Nobel invents dynamite, revolutionizing the field of explosives and laying the foundation for the Nobel Prizes."
+    },
+    {
+      "category": "culture",
+      "year": 1901,
+      "description": "Selma Lagerlöf becomes the first female writer to win the Nobel Prize in Literature for her work 'Gösta Berling's Saga.'"
+    },
+    {
+      "category": "politics",
+      "year": 1971,
+      "description": "Sweden officially switches from driving on the left-hand side of the road to the right-hand side, known as Dagen H (H Day)."
+    },
+    {
+      "category": "technology",
+      "year": 1989,
+      "description": "Tim Berners-Lee, a British computer scientist, proposes the concept of the World Wide Web, laying the groundwork for its development, which later becomes integral worldwide, including in Sweden."
+    },
+    {
+      "category": "culture",
+      "year": 1992,
+      "description": "Ingmar Bergman, acclaimed Swedish film director, receives the Irving G. Thalberg Memorial Award at the Oscars for his exceptional contributions to cinema."
+    },
+    {
+      "category": "history",
+      "year": 1995,
+      "description": "Sweden joins the European Union (EU) after a referendum in which the majority of voters supported membership."
+    },
+    {
+      "category": "technology",
+      "year": 2003,
+      "description": "Skype, a communication platform founded by Niklas Zennström and Janus Friis, which plays a significant role in global communications, is developed in Sweden."
+    },
+    {
+      "category": "culture",
+      "year": 2016,
+      "description": "Bob Dylan, an American musician and songwriter, wins the Nobel Prize in Literature, becoming the first musician to receive this prestigious award."
+    }
+  ]
+}

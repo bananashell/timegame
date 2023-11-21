@@ -9,7 +9,8 @@ export function HistoricEventCard({
     <article className="border border-white">
       <header>{historicEvent.category}</header>
       <main>{historicEvent.description}</main>
-      <footer>{historicEvent.year.year}</footer>
+      <footer>{historicEvent.year}</footer>
     </article>
   );
 }
+HistoricEventCard.displayName = "HistoricEventCard";
