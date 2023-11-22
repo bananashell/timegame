@@ -14,6 +14,7 @@
     "@trpc/next": "^10.43.3",
     "@trpc/react-query": "^10.43.3",
     "@trpc/server": "^10.43.3",
+    "immer": "^10.0.3",
     "next": "^14.0.2",
     "react": "^18",
     "react-dom": "^18",

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { Glass_Antiqua } from "next/font/google";
 import "./globals.css";
+import { Glass_Antiqua } from "next/font/google";
 
 import Provider from "@/app/_trpc/Provider";
 import { GameEngineProvider } from "./_context/gameEngineContext";
