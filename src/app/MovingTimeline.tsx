@@ -6,7 +6,7 @@ export const MovingTimeline = () => {
   return (
     <section className="flex justify-evenly w-full">
       {randomEvents.map((x) => (
-        <TimelineEvent historicEvent={x} />
+        <TimelineEvent key={x.id} historicEvent={x} />
       ))}
     </section>
   );
