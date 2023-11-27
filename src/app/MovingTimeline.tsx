@@ -1,7 +1,7 @@
 import { HistoricEvent } from "@/models/historicEvent";
-import { Timeline } from "./_components/timeline/Timeline";
 import { TimelineEvent } from "./_components/timeline/TimelineEvent";
 
+// TODO: make it move
 export const MovingTimeline = () => {
   return (
     <section className="flex justify-evenly w-full">

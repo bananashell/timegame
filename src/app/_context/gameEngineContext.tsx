@@ -9,12 +9,16 @@ import {
   useEffect,
   useState,
 } from "react";
-import { trpc } from "../_trpc/client";
+import { trpc } from "@/app/_trpc/client";
+import { useRouter } from "next/navigation";
 
 export type GameEngineContextProps = {
+  gameState: "idle" | "playing" | "game over";
   timeline: HistoricEvent[];
   latestItem?: HistoricEvent;
-  actions: {};
+  actions: {
+    startNewGame: (args: { salt?: string }) => void;
+  };
 };
 
 const GameEngineContext = createContext<GameEngineContextProps>(
@@ -25,9 +29,12 @@ GameEngineContext.displayName = "GameEngineContext";
 export const GameEngineProvider: FunctionComponent<PropsWithChildren<{}>> = ({
   children,
 }) => {
+  const router = useRouter();
   const [salt, setSalt] = useState("");
   const [timeline, setTimeline] = useState<HistoricEvent[]>([]);
   const [latestItem, setLatestItem] = useState<HistoricEvent>();
+  const [gameState, setGameState] =
+    useState<GameEngineContextProps["gameState"]>("idle");
 
   const { data } = trpc.historicEvents.useInfiniteQuery(
     {
@@ -41,8 +48,25 @@ export const GameEngineProvider: FunctionComponent<PropsWithChildren<{}>> = ({
     setLatestItem(data?.pages.at(-1)?.at(-1));
   }, [data?.pages?.length]);
 
+  const onStartNewGame = (args: { salt?: string }) => {
+    if (salt) return;
+    if (!args.salt) return;
+    if (gameState !== "idle" && gameState !== "game over") return;
+
+    setSalt(args.salt);
+    setGameState("playing");
+    router.push(`/game/${args.salt}`);
+  };
+
   return (
-    <GameEngineContext.Provider value={{ timeline, latestItem, actions: {} }}>
+    <GameEngineContext.Provider
+      value={{
+        timeline,
+        latestItem,
+        gameState,
+        actions: { startNewGame: onStartNewGame },
+      }}
+    >
       {children}
     </GameEngineContext.Provider>
   );

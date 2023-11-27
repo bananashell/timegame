@@ -1,14 +1,16 @@
 import Link from "next/link";
-import { MovingTimeline } from "./MovingTimeline";
+import { MovingTimeline } from "@/app/MovingTimeline";
+import { StartNewGame } from "@/app/_components/StartNewGame";
+import { generateRandomSalt } from "@/server/service/saltService";
 
-export default function Home() {
+export default async function Home() {
+  const newSalt = await generateRandomSalt();
+
   return (
     <main className="flex flex-col justify-center items-center h-full">
       <h1 className="text-[8vw]">Welcome to the Timeline</h1>
       <MovingTimeline />
-      <Link href="/game" className="text-[4vw] hover:scale-125 transition-all">
-        Start new game
-      </Link>
+      <StartNewGame salt={newSalt} />
     </main>
   );
 }
