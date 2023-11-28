@@ -7,10 +7,10 @@ export const GameClientInitiator = ({ salt }: { salt: string }) => {
   const { actions, gameState } = useGameEngine();
   useEffect(() => {
     if (!salt) return;
-    if (gameState !== "idle" && gameState !== "game over") return;
+    if (gameState.state !== "game start") return;
 
     actions.startNewGame({ salt });
   }, [gameState, salt]);
 
-  return <></>;
+  return null;
 };

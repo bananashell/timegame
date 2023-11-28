@@ -3,6 +3,7 @@ import "./globals.css";
 import { Glass_Antiqua } from "next/font/google";
 
 import Provider from "@/app/_trpc/Provider";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { GameEngineProvider } from "./_context/gameEngineContext";
 
 const glassAntiqua = Glass_Antiqua({ weight: "400", subsets: ["latin"] });
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body className={`${glassAntiqua.className} h-screen w-screen`}>
         <Provider>
           <GameEngineProvider>{children}</GameEngineProvider>
+          <ReactQueryDevtools />
         </Provider>
       </body>
     </html>

@@ -1,3 +1,4 @@
+import { GameBoard } from "./GameBoard";
 import { GameClientInitiator } from "./gameClientInitiator";
 
 type Props = {
@@ -8,6 +9,7 @@ export default async function Game({ params: { salt } }: { params: Props }) {
   return (
     <div className="text-white">
       <GameClientInitiator salt={salt} />
+      <GameBoard />
     </div>
   );
 }
