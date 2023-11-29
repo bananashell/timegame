@@ -11,6 +11,9 @@ export const Guess = () => {
     <section className="text-3xl flex flex-col gap-8">
       <h1 className=" text-center">{gameState.currentEvent?.guess}</h1>
       <DragHandle />
+      <button onClick={() => actions.lockGuess()} className="bg-white">
+        Guess
+      </button>
     </section>
   );
 };
