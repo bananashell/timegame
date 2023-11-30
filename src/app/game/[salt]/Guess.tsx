@@ -33,7 +33,7 @@ const DragHandle = () => {
     const unsub = x.on("change", (value) => {
       if (!captureValueChange.current) return;
       xDelta.current = x.getVelocity();
-      // console.log(xDelta.current);
+
       guess(Math.round(currentEvent!.guess + xDelta.current / 10));
     });
 
