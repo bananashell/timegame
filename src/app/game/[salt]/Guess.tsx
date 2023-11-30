@@ -9,8 +9,8 @@ export const Guess = () => {
   const [currentEvent] = useAtom(currentEventAtom);
 
   return (
-    <section className="text-3xl flex flex-col gap-8">
-      <h1 className=" text-center">{currentEvent?.guess}</h1>
+    <section className="text-3xl flex flex-col gap-8 items-center">
+      <h1 className="text-center">{currentEvent?.guess ?? ""}</h1>
       <DragHandle />
       <button onClick={() => lockGuess()} className="bg-white text-black">
         Guess
