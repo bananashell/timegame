@@ -40,7 +40,7 @@ const DragHandle = () => {
     return () => {
       unsub();
     };
-  }, [x, currentEvent]);
+  }, [x, currentEvent, guess]);
 
   const onDragStart = () => {
     captureValueChange.current = true;

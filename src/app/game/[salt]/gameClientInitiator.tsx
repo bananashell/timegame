@@ -14,7 +14,7 @@ export const GameClientInitiator = ({ salt }: { salt: string }) => {
     if (state !== "game start") return;
 
     startNewGame({ salt });
-  }, [state, salt]);
+  }, [state, salt, startNewGame]);
 
   return null;
 };
