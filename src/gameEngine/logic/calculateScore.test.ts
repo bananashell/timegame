@@ -27,6 +27,7 @@ describe("calculateScore", () => {
         guess: 1889,
         year: 1900,
       } as MockCurrentEvent,
+      salt: "",
     });
     expect(actual).toBeFalse();
   });
@@ -43,6 +44,7 @@ describe("calculateScore", () => {
         guess: 1901,
         year: 1890,
       } as MockCurrentEvent,
+      salt: "",
     });
     expect(actual).toBeFalse();
   });
@@ -75,6 +77,7 @@ describe("calculateScore", () => {
           guess: correctYear + diff,
           year: correctYear,
         } as MockCurrentEvent,
+        salt: "",
       });
       expect(actual).toBe(SCORES.SMALL_DIFF_SCORE);
     },
@@ -92,6 +95,7 @@ describe("calculateScore", () => {
         guess: 1911,
         year: 1900,
       } as MockCurrentEvent,
+      salt: "",
     });
     expect(actual).toBe(SCORES.LARGE_DIFF_SCORE);
   });
@@ -108,6 +112,53 @@ describe("calculateScore", () => {
         guess: 1889,
         year: 1900,
       } as MockCurrentEvent,
+      salt: "",
+    });
+    expect(actual).toBe(SCORES.LARGE_DIFF_SCORE);
+  });
+
+  it("returns points when answer and guess is before all other timeline events", () => {
+    const actual = calculateScore({
+      timelineEvents: [
+        {
+          year: 1945,
+        } as MockTimelineEvent,
+        {
+          year: 1992,
+        } as MockTimelineEvent,
+        {
+          year: 1995,
+        } as MockTimelineEvent,
+      ],
+      state: "playing",
+      currentEvent: {
+        guess: 1900,
+        year: 1918,
+      } as MockCurrentEvent,
+      salt: "",
+    });
+    expect(actual).toBe(SCORES.LARGE_DIFF_SCORE);
+  });
+
+  it("returns points when answer and guess is after all other timeline events", () => {
+    const actual = calculateScore({
+      timelineEvents: [
+        {
+          year: 1945,
+        } as MockTimelineEvent,
+        {
+          year: 1992,
+        } as MockTimelineEvent,
+        {
+          year: 1995,
+        } as MockTimelineEvent,
+      ],
+      state: "playing",
+      currentEvent: {
+        guess: 2000,
+        year: 2020,
+      } as MockCurrentEvent,
+      salt: "",
     });
     expect(actual).toBe(SCORES.LARGE_DIFF_SCORE);
   });

@@ -1,16 +1,17 @@
 "use client";
 
-import { useGameEngine } from "@/app/_context/gameEngineContext";
+import { orderedTimelineEvents } from "@/app/state";
 import { TimelineEvent } from "./TimelineEvent";
+import { useAtom } from "jotai";
 
 export const Timeline = () => {
-  const { gameState } = useGameEngine();
+  const [timelineEvents] = useAtom(orderedTimelineEvents);
 
   return (
-    <main>
-      {gameState.timelineEvents.map((event) => (
+    <section className="flex gap-2 py-4">
+      {timelineEvents.map((event) => (
         <TimelineEvent historicEvent={event} key={event.id} />
       ))}
-    </main>
+    </section>
   );
 };

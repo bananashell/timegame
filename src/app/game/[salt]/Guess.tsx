@@ -1,17 +1,18 @@
-import { useGameEngine } from "@/app/_context/gameEngineContext";
+import { currentEventAtom } from "@/app/state";
+import { useAtom } from "jotai";
+import { useGuess, useLock } from "@/app/state/actions";
 import { motion, useMotionValue } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 export const Guess = () => {
-  const { gameState, actions } = useGameEngine();
-
-  const handleChange = () => {};
+  const lockGuess = useLock();
+  const [currentEvent] = useAtom(currentEventAtom);
 
   return (
     <section className="text-3xl flex flex-col gap-8">
-      <h1 className=" text-center">{gameState.currentEvent?.guess}</h1>
+      <h1 className=" text-center">{currentEvent?.guess}</h1>
       <DragHandle />
-      <button onClick={() => actions.lockGuess()} className="bg-white">
+      <button onClick={() => lockGuess()} className="bg-white text-black">
         Guess
       </button>
     </section>
@@ -19,28 +20,27 @@ export const Guess = () => {
 };
 
 const DragHandle = () => {
-  const { gameState, actions } = useGameEngine();
+  const guess = useGuess();
+  const [currentEvent] = useAtom(currentEventAtom);
 
   const x = useMotionValue(0);
   const xDelta = useRef(0);
   const captureValueChange = useRef(false);
 
   useEffect(() => {
-    if (!gameState.currentEvent) return;
+    if (!currentEvent) return;
 
     const unsub = x.on("change", (value) => {
       if (!captureValueChange.current) return;
       xDelta.current = x.getVelocity();
-      console.log(xDelta.current);
-      actions.changeGuess(
-        Math.round(gameState.currentEvent!.guess + xDelta.current / 10),
-      );
+      // console.log(xDelta.current);
+      guess(Math.round(currentEvent!.guess + xDelta.current / 10));
     });
 
     return () => {
       unsub();
     };
-  }, [x, gameState]);
+  }, [x, currentEvent]);
 
   const onDragStart = () => {
     captureValueChange.current = true;

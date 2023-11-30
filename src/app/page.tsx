@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { MovingTimeline } from "@/app/MovingTimeline";
 import { StartNewGame } from "@/app/_components/StartNewGame";
 import { generateRandomSalt } from "@/server/service/saltService";

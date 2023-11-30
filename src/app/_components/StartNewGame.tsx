@@ -1,12 +1,12 @@
 "use client";
 
-import { useGameEngine } from "../_context/gameEngineContext";
+import { useStartNewGame } from "../state/actions";
 
 export const StartNewGame = ({ salt }: { salt: string }) => {
-  const { actions } = useGameEngine();
+  const startNewGame = useStartNewGame();
 
   const handleStartNewGame = () => {
-    actions.startNewGame({ salt });
+    startNewGame({ salt });
   };
   return (
     <button

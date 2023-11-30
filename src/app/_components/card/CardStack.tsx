@@ -1,6 +1,7 @@
 "use client";
 
-import { useGameEngine } from "@/app/_context/gameEngineContext";
+import { useAtom } from "jotai";
+import { currentEventAtom, nextEventAtom } from "@/app/state";
 import { HistoricEvent } from "@/models/historicEvent";
 import {
   AnimatePresence,
@@ -10,12 +11,12 @@ import {
 } from "framer-motion";
 
 export const CardStack = () => {
-  const { gameState, actions } = useGameEngine();
-  const { nextEvent, currentEvent } = gameState;
+  const [currentEvent] = useAtom(currentEventAtom);
+  const [nextEvent] = useAtom(nextEventAtom);
 
   return (
     <section className="relative w-full h-52">
-      <AnimatePresence initial={false}>
+      <AnimatePresence>
         <Card
           key={`back-${nextEvent?.id}`}
           frontCard={false}
@@ -45,6 +46,7 @@ function Card({
   });
 
   const variantsFrontCard = {
+    initial: { opacity: 0, scale: 0.5 },
     animate: { scale: 1, y: 0, opacity: 1 },
     exit: { opacity: 0, scale: 0.5 },
   };
@@ -53,8 +55,11 @@ function Card({
     animate: { scale: 0.75, y: 30, opacity: 0.5 },
   };
 
+  if (!historicEvent) return null;
+
   return (
     <motion.div
+      key={historicEvent?.id}
       style={{
         width: 240,
         height: 240,

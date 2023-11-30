@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Glass_Antiqua } from "next/font/google";
+import { DevTools } from "./Devtools";
 
-import Provider from "@/app/_trpc/Provider";
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-import { GameEngineProvider } from "./_context/gameEngineContext";
+// import Provider from "@/app/_trpc/Provider";
+// import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 const glassAntiqua = Glass_Antiqua({ weight: "400", subsets: ["latin"] });
 
@@ -21,10 +21,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${glassAntiqua.className} h-screen w-screen`}>
-        <Provider>
-          <GameEngineProvider>{children}</GameEngineProvider>
-          <ReactQueryDevtools />
-        </Provider>
+        {/* <Provider> */}
+        <DevTools />
+        {children}
+        {/* <ReactQueryDevtools /> */}
+        {/* </Provider> */}
       </body>
     </html>
   );

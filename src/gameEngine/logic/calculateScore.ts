@@ -46,15 +46,20 @@ const isInTimespan = (gameState: GameState): boolean => {
     throw new Error("Current event is not defined");
   }
 
-  for (let i = 0; i < gameState.timelineEvents.length; i++) {
-    const current = gameState.timelineEvents.at(i)!;
-    const next = gameState.timelineEvents.at(i + 1);
+  const orderedTimelineEvents = gameState.timelineEvents.sort(
+    (a, b) => a.year - b.year,
+  );
+
+  for (let i = 0; i < orderedTimelineEvents.length; i++) {
+    const current = orderedTimelineEvents.at(i)!;
+    const next = orderedTimelineEvents.at(i + 1);
 
     if (
+      i == 0 &&
       current.year > gameState.currentEvent.year &&
       current.year > gameState.currentEvent.guess
     ) {
-      continue;
+      return true;
     }
 
     if (

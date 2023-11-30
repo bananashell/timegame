@@ -1,16 +1,20 @@
 "use client";
 
-import { useGameEngine } from "@/app/_context/gameEngineContext";
+import { stateAtom } from "@/app/state";
+import { useStartNewGame } from "@/app/state/actions";
+import { useAtom } from "jotai";
 import { useEffect } from "react";
 
 export const GameClientInitiator = ({ salt }: { salt: string }) => {
-  const { actions, gameState } = useGameEngine();
+  const startNewGame = useStartNewGame();
+  const [state] = useAtom(stateAtom);
+
   useEffect(() => {
     if (!salt) return;
-    if (gameState.state !== "game start") return;
+    if (state !== "game start") return;
 
-    actions.startNewGame({ salt });
-  }, [gameState, salt]);
+    startNewGame({ salt });
+  }, [state, salt]);
 
   return null;
 };

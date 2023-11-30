@@ -5,7 +5,7 @@ import { HistoricEvent } from "@/models/historicEvent";
 
 export const createNewGame = (salt: string): GameState => {
   return {
-    state: "game start",
+    state: "playing",
     timelineEvents: [],
     currentEvent: undefined,
     salt: salt,
@@ -25,6 +25,7 @@ export const nextHistoricEvent = (
     return draft;
   });
 };
+
 const currentYear = new Date().getFullYear();
 export const guess = (state: GameState, year: Year) => {
   return produce(state, (draft) => {

@@ -12,6 +12,7 @@ export const historicEventsRouter = {
       }),
     )
     .query((opts) => {
+      console.log("Getting historic events", opts.input);
       return getHistoricEvents({ ...opts.input });
     }),
 };

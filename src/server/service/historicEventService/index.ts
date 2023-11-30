@@ -26,5 +26,12 @@ export const getHistoricEvents = async ({
     return [];
   }
 
-  return randomizedData.slice(cursorIndex + 1, cursorIndex + 1 + pageSize);
+  const data = randomizedData.slice(
+    cursorIndex + 1,
+    cursorIndex + 1 + pageSize,
+  );
+
+  console.log("Returning: ", data);
+
+  return data;
 };
