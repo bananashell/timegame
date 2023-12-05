@@ -6,6 +6,7 @@ export const StartNewGame = ({ salt }: { salt: string }) => {
   const startNewGame = useStartNewGame();
 
   const handleStartNewGame = () => {
+    console.log("start new game", salt);
     startNewGame({ salt });
   };
   return (

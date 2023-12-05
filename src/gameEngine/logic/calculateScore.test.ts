@@ -4,10 +4,10 @@ import {
   SCORES,
   calculateScore,
 } from "./calculateScore";
-import { GameState } from "@/gameEngine/gameState";
+import { RootState } from "@/gameEngine/gameState";
 
-type MockCurrentEvent = GameState["currentEvent"];
-type MockTimelineEvent = GameState["timelineEvents"][number];
+type MockCurrentEvent = RootState["currentEvent"];
+type MockTimelineEvent = RootState["timelineEvents"][number];
 
 describe("calculateScore", () => {
   it("throws when guess is missing", () => {
@@ -55,7 +55,7 @@ describe("calculateScore", () => {
         guess: 1900,
         year: 1900,
       },
-    } as GameState);
+    } as RootState);
     expect(actual).toBe(SCORES.MAXIMUM_SCORE);
   });
 

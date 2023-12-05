@@ -2,24 +2,22 @@ import { trpc } from "@/app/_trpc/client";
 import { calculateScore } from "@/gameEngine/logic/calculateScore";
 import { useAtom } from "jotai";
 import {
-  gameStateAtom,
+  rootStateAtom,
   stateAtom,
   saltAtom,
   timelineEventsAtom,
   currentEventAtom,
 } from "..";
-import { useRouter } from "next/navigation";
 
 export const useLock = () => {
-  const router = useRouter();
-  const [gameState] = useAtom(gameStateAtom);
+  const [gameState] = useAtom(rootStateAtom);
   const [state, setState] = useAtom(stateAtom);
   const [salt] = useAtom(saltAtom);
   const [timelineEvents, setTimelineEvents] = useAtom(timelineEventsAtom);
   const [currentEvent, setCurrentEvent] = useAtom(currentEventAtom);
 
   return async () => {
-    if (state != "playing") {
+    if (state.mainState != "playing") {
       throw new Error("Must be playing to be able to lock");
     }
 
@@ -27,7 +25,7 @@ export const useLock = () => {
     if (score === false) {
       // GAME END
       console.warn("GAME OVER");
-      setState("game over");
+      setState({ mainState: "game over", subState: "score screen" });
       return;
     }
 

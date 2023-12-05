@@ -2,21 +2,20 @@ import { trpc } from "@/app/_trpc/client";
 import { createNewGame } from "@/gameEngine/actions";
 import { useAtom } from "jotai";
 import { useRouter } from "next/navigation";
-import { gameStateAtom, currentEventAtom } from "..";
+import { rootStateAtom, currentEventAtom } from "..";
 
 export const useStartNewGame = () => {
-  const [gameState, setGameState] = useAtom(gameStateAtom);
+  const [rootState, setRootState] = useAtom(rootStateAtom);
   const [_, setCurrentEvent] = useAtom(currentEventAtom);
   const router = useRouter();
 
   return async (args: { salt: string }) => {
     if (!args.salt) return;
 
-    if (gameState?.state !== "game start" && gameState?.state !== "game over")
-      return;
+    if (rootState?.gameState.mainState === "playing") return;
 
     console.log("starting game", args.salt);
-    setGameState(createNewGame(args.salt));
+    setRootState(createNewGame(args.salt));
 
     const res = await trpc.historicEvents.query({
       salt: args.salt,

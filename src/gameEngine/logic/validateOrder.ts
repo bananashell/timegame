@@ -1,6 +1,6 @@
-import { GameState } from "@/gameEngine/gameState";
+import { RootState } from "@/gameEngine/gameState";
 
-export const validateOrder = (gameState: GameState) => {
+export const validateOrder = (gameState: RootState) => {
   if (
     gameState.timelineEvents.length === 0 ||
     gameState.timelineEvents.length === 1

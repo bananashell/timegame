@@ -1,4 +1,4 @@
-import { GameState } from "@/gameEngine/gameState";
+import { RootState } from "@/gameEngine/gameState";
 
 export const FIVE_POINT_DIFF_CUTOFF = 10 as const;
 export const SCORES = {
@@ -18,7 +18,7 @@ export const SCORES = {
  * false if the guess is wrong
  * @param gameState
  */
-export const calculateScore = (gameState: GameState): false | number => {
+export const calculateScore = (gameState: RootState): false | number => {
   if (!gameState.currentEvent?.guess)
     throw new Error("Current event is not defined");
 
@@ -41,7 +41,7 @@ export const calculateScore = (gameState: GameState): false | number => {
   return SCORES.LARGE_DIFF_SCORE;
 };
 
-const isInTimespan = (gameState: GameState): boolean => {
+const isInTimespan = (gameState: RootState): boolean => {
   if (!gameState.currentEvent) {
     throw new Error("Current event is not defined");
   }

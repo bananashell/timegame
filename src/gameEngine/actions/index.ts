@@ -1,11 +1,11 @@
 import { produce } from "immer";
-import { GameState, HistoricGameEvent, Year } from "@/gameEngine/gameState";
+import { RootState, HistoricGameEvent, Year } from "@/gameEngine/gameState";
 import { calculateScore } from "@/gameEngine/logic/calculateScore";
 import { HistoricEvent } from "@/models/historicEvent";
 
-export const createNewGame = (salt: string): GameState => {
+export const createNewGame = (salt: string): RootState => {
   return {
-    state: "playing",
+    gameState: { mainState: "playing", subState: "guessing" },
     timelineEvents: [],
     currentEvent: undefined,
     salt: salt,
@@ -13,12 +13,11 @@ export const createNewGame = (salt: string): GameState => {
 };
 
 export const nextHistoricEvent = (
-  state: GameState,
+  state: RootState,
   next: HistoricEvent,
   afterNext?: HistoricEvent,
-): GameState => {
+): RootState => {
   return produce(state, (draft) => {
-    draft.state = "playing";
     draft.currentEvent = { ...next, guess: 1900 };
     draft.nextEvent = afterNext;
 
@@ -27,9 +26,9 @@ export const nextHistoricEvent = (
 };
 
 const currentYear = new Date().getFullYear();
-export const guess = (state: GameState, year: Year) => {
+export const guess = (state: RootState, year: Year) => {
   return produce(state, (draft) => {
-    if (draft.state != "playing") {
+    if (draft.gameState.mainState != "playing") {
       throw new Error("Must be playing to be able to guess");
     }
 
@@ -41,16 +40,16 @@ export const guess = (state: GameState, year: Year) => {
   });
 };
 
-export const lock = (state: GameState): GameState => {
+export const lock = (state: RootState): RootState => {
   return produce(state, (draft) => {
-    if (draft.state != "playing") {
+    if (draft.gameState.mainState != "playing") {
       throw new Error("Must be playing to be able to lock");
     }
 
     const score = calculateScore(draft);
     if (score === false) {
       // GAME END
-      draft.state = "game over";
+      draft.gameState = { mainState: "game over", subState: "score screen" };
       return;
     }
 

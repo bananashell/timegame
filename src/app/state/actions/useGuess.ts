@@ -8,7 +8,7 @@ export const useGuess = () => {
   const [currentEvent, setCurrentEvent] = useAtom(currentEventAtom);
 
   return (year: Year) => {
-    if (state != "playing") {
+    if (state.mainState != "playing") {
       throw new Error("Must be playing to be able to guess");
     }
 

@@ -11,7 +11,7 @@ export const GameClientInitiator = ({ salt }: { salt: string }) => {
 
   useEffect(() => {
     if (!salt) return;
-    if (state !== "game start") return;
+    if (state.mainState !== "game start") return;
 
     startNewGame({ salt });
   }, [state, salt, startNewGame]);

@@ -1,10 +1,10 @@
 import { describe, expect, it } from "bun:test";
 import { validateOrder } from "./validateOrder";
-import { GameState, LockedHistoricGameEvent } from "@/gameEngine/gameState";
+import { RootState, LockedHistoricGameEvent } from "@/gameEngine/gameState";
 
 const createMockGameState = (
   timelineEvents: LockedHistoricGameEvent[],
-): GameState => {
+): RootState => {
   return {
     state: "playing",
     timelineEvents,

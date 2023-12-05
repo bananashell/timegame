@@ -12,7 +12,10 @@ export const Guess = () => {
     <section className="text-3xl flex flex-col gap-8 items-center">
       <h1 className="text-center">{currentEvent?.guess ?? ""}</h1>
       <DragHandle />
-      <button onClick={() => lockGuess()} className="bg-white text-black">
+      <button
+        onClick={() => lockGuess()}
+        className="bg-white py-2 rounded px-4 text-black"
+      >
         Guess
       </button>
     </section>

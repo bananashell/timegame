@@ -4,10 +4,22 @@ export type Year = number;
 export type HistoricGameEvent = HistoricEvent & { guess: Year };
 export type LockedHistoricGameEvent = HistoricGameEvent & { score: number };
 
-export type GameState = {
+export type RootState = {
   currentEvent?: HistoricGameEvent;
   nextEvent?: HistoricEvent;
   timelineEvents: LockedHistoricGameEvent[];
-  state: "game start" | "playing" | "game over";
+  gameState: GameStartState | PlayingState | GameOverState;
   salt: string;
 };
+
+type GameState<MainState, SubState> = {
+  mainState: MainState;
+  subState: SubState;
+};
+
+type GameStartState = GameState<"game start", undefined>;
+type PlayingState = GameState<
+  "playing",
+  "guessing" | "displaying correct answer"
+>;
+type GameOverState = GameState<"game over", "score screen" | "end screen">;

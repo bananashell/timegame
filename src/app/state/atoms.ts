@@ -1,27 +1,27 @@
-import { GameState } from "@/gameEngine/gameState";
+import { RootState } from "@/gameEngine/gameState";
 import { atom } from "jotai";
 import { focusAtom } from "jotai-optics";
 
-export const gameStateAtom = atom<GameState>({
+export const rootStateAtom = atom<RootState>({
   timelineEvents: [],
   salt: "",
-  state: "game start",
+  gameState: { mainState: "game start", subState: undefined },
 });
-gameStateAtom.debugLabel = "gameStateAtom";
+rootStateAtom.debugLabel = "gameStateAtom";
 
-export const saltAtom = focusAtom(gameStateAtom, (optic) => optic.prop("salt"));
+export const saltAtom = focusAtom(rootStateAtom, (optic) => optic.prop("salt"));
 saltAtom.debugLabel = "salt";
 
-export const currentEventAtom = focusAtom(gameStateAtom, (optic) =>
+export const currentEventAtom = focusAtom(rootStateAtom, (optic) =>
   optic.prop("currentEvent"),
 );
 currentEventAtom.debugLabel = "currentEventAtom";
-export const nextEventAtom = focusAtom(gameStateAtom, (optic) =>
+export const nextEventAtom = focusAtom(rootStateAtom, (optic) =>
   optic.prop("nextEvent"),
 );
 nextEventAtom.debugLabel = "nextEventAtom";
 
-export const timelineEventsAtom = focusAtom(gameStateAtom, (optic) =>
+export const timelineEventsAtom = focusAtom(rootStateAtom, (optic) =>
   optic.prop("timelineEvents"),
 );
 timelineEventsAtom.debugLabel = "timelineEventsAtom";
@@ -38,7 +38,7 @@ export const scoreAtom = atom((get) =>
 );
 scoreAtom.debugLabel = "scoreAtom";
 
-export const stateAtom = focusAtom(gameStateAtom, (optic) =>
-  optic.prop("state"),
+export const stateAtom = focusAtom(rootStateAtom, (optic) =>
+  optic.prop("gameState"),
 );
 stateAtom.debugLabel = "stateAtom";
