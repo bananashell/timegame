@@ -31,7 +31,5 @@ export const getHistoricEvents = async ({
     cursorIndex + 1 + pageSize,
   );
 
-  console.log("Returning: ", data);
-
   return data;
 };

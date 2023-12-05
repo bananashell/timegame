@@ -3,15 +3,24 @@ import { useAtom } from "jotai";
 import { useGuess, useLock } from "@/app/state/actions";
 import { motion, useMotionValue } from "framer-motion";
 import { useEffect, useRef } from "react";
+import { RangeSlider } from "@/app/_components/rangeSlider";
 
 export const Guess = () => {
   const lockGuess = useLock();
   const [currentEvent] = useAtom(currentEventAtom);
 
+  const guess = useGuess();
+
   return (
     <section className="text-3xl flex flex-col gap-8 items-center">
       <h1 className="text-center">{currentEvent?.guess ?? ""}</h1>
-      <DragHandle />
+      <RangeSlider
+        onChange={guess}
+        min={-2000}
+        max={2023}
+        value={currentEvent?.guess ?? 1900}
+      />
+      {/* <DragHandle /> */}
       <button
         onClick={() => lockGuess()}
         className="bg-white py-2 rounded px-4 text-black"

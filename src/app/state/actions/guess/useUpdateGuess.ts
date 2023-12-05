@@ -1,8 +1,8 @@
 import { Year } from "@/gameEngine/gameState";
 import { useAtom } from "jotai";
-import { stateAtom, currentEventAtom } from "..";
+import { stateAtom, currentEventAtom } from "../..";
 
-export const useGuess = () => {
+export const useUpdateGuess = () => {
   const currentYear = new Date().getFullYear();
   const [state] = useAtom(stateAtom);
   const [currentEvent, setCurrentEvent] = useAtom(currentEventAtom);

@@ -1,3 +1,3 @@
 export { useStartNewGame } from "./useStartNewGame";
-export { useGuess } from "./useGuess";
-export { useLock } from "./useLock";
+export { useUpdateGuess as useGuess } from "./guess/useUpdateGuess";
+export { useLockGuess as useLock } from "./guess/useLockGuess";
