@@ -25,9 +25,9 @@ export const RangeSlider = ({
     }
   };
 
-  const percentage =
-    calculatePercentage(currentValue, min, max) *
-    (inputRef?.current?.clientWidth ?? 0);
+  //   const percentage =
+  //     calculatePercentage(currentValue, min, max) *
+  //     (inputRef?.current?.clientWidth ?? 0);
 
   return (
     <section className="w-full px-12 relative box-border">
