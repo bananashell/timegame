@@ -12,14 +12,26 @@ export const Guess = () => {
   const guess = useGuess();
 
   return (
-    <section className="text-3xl flex flex-col gap-8 items-center">
-      <h1 className="text-center">{currentEvent?.guess ?? ""}</h1>
-      <RangeSlider
+    <section className="grid-in-guess text-3xl flex flex-col gap-8 items-center">
+      {/* <h1 className="text-center">{currentEvent?.guess ?? ""}</h1> */}
+      <input
+        type="number"
+        className="bg-transparent text-white caret-white text-center text-7xl w-full ring-0 focus:ring-0 focus:outline-none"
+        value={currentEvent?.guess ?? ""}
+        onChange={(e) => {
+          if (!("value" in e.target)) throw new Error("No value in target");
+          if (typeof e.target.value !== "string")
+            throw new Error("Invalid type");
+
+          guess(+e.target.value);
+        }}
+      />
+      {/* <RangeSlider
         onChange={guess}
         min={-2000}
         max={2023}
         value={currentEvent?.guess ?? 1900}
-      />
+      /> */}
       {/* <DragHandle /> */}
       <button
         onClick={() => lockGuess()}

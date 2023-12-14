@@ -15,13 +15,9 @@ export const CardStack = () => {
   const [nextEvent] = useAtom(nextEventAtom);
 
   return (
-    <section className="relative w-full h-52">
+    <section className="grid-in-current-card relative flex">
       <AnimatePresence>
-        <Card
-          key={`back-${nextEvent?.id}`}
-          frontCard={false}
-          historicEvent={nextEvent}
-        />
+        {" "}
         <Card
           key={`front-${nextEvent?.id}`}
           frontCard={true}

@@ -17,8 +17,19 @@ const config: Config = {
         sans: ["var(--font-glass-antiqua)"],
         mono: ["var(--font-roboto-mono)"],
       },
+      gridTemplateAreas: {
+        gameBoard: ["score timeline current-card", "score timeline guess"],
+      },
+      gridTemplateColumns: {
+        // lg_gameBoard: `200px 1fr 1fr`,
+        gameBoard: `100px 2fr 1fr`,
+      },
+      gridTemplateRows: {
+        gameBoard: `1fr
+        2fr`,
+      },
     },
   },
-  plugins: [],
+  plugins: [require("@savvywombat/tailwindcss-grid-areas")],
 };
 export default config;

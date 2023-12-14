@@ -27,7 +27,7 @@ export const timelineEventsAtom = focusAtom(rootStateAtom, (optic) =>
 timelineEventsAtom.debugLabel = "timelineEventsAtom";
 
 export const orderedTimelineEvents = atom((get) =>
-  get(timelineEventsAtom).sort((a, b) => a.year - b.year),
+  get(timelineEventsAtom).sort((a, b) => b.year - a.year),
 );
 orderedTimelineEvents.debugLabel = "orderedTimelineEvents";
 

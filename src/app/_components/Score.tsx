@@ -33,7 +33,7 @@ export const Score = () => {
           },
           { type: "inertia", stiffness: 100, duration: 1 },
         ],
-      ]).then(() => {});
+      ]);
 
       await animateQuestionMark([
         [
@@ -43,7 +43,7 @@ export const Score = () => {
           },
           { type: "inertia", stiffness: 100, duration: 1 },
         ],
-      ]).then(() => {});
+      ]);
 
       await animateAnswer([
         [
@@ -51,7 +51,7 @@ export const Score = () => {
           { rotateY: [90, 0], opacity: [0, 1] },
           { type: "inertia", stiffness: 100, duration: 0.5 },
         ],
-      ]).then(() => {});
+      ]);
 
       await timeout(500);
       await persistGuess();
