@@ -15,6 +15,7 @@ export const MovingTimeline = () => {
 const generateNewRandomTimelineEvent = (): HistoricEvent => {
   return {
     id: "asd",
+    title: "asd",
     category: "culture",
     description: "",
     year: getRandomYearInRange(1400, currentYear),

@@ -15,7 +15,7 @@ export const GameBoard = () => {
   const [state] = useAtom(stateAtom);
   console.log("state", state);
   return (
-    <main className="flex flex-col h-screen items-center justify-center w-screen">
+    <main className=" h-screen items-center justify-center w-screen">
       <AnimatePresence>
         {state.mainState === "game over" && <GameOver />}
 
@@ -25,11 +25,14 @@ export const GameBoard = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 2 }}
-            className="w-full"
+            className="grid gap-x-4
+            grid-areas-gameBoard
+            grid-cols-gameBoard
+            grid-rows-gameBoard w-full p-4 h-full"
           >
+            <Timeline />
             <CardStack />
             <Guess />
-            <Timeline />
             <CurrentScore />
             <Score />
           </motion.section>

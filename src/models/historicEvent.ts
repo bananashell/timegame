@@ -2,6 +2,7 @@ import { z } from "zod";
 
 export const historicEvent = z.object({
   id: z.string().uuid(),
+  title: z.string(),
   category: z.enum([
     "sport",
     "popculture",

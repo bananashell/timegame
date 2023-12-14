@@ -6,9 +6,16 @@ export const TimelineEvent = ({
   historicEvent: HistoricEvent;
 }) => {
   return (
-    <article className="text-2xl relative rounded-full border-2 border-black dark:border-white p-4">
-      <span>{historicEvent.year}</span>
-      <div className="border-l-2 border-black absolute w-1 translate-y-4" />
+    <article className="flex max-w-lg divide-x rounded border-2 border-black dark:border-white py-4">
+      <div className="px-4">
+        <h2 className="text-black dark:text-white">{historicEvent.title}</h2>
+        <span className="text-gray-800 dark:text-gray-400">
+          {historicEvent.description}
+        </span>
+      </div>
+      <div className="text-5xl flex items-center px-8">
+        <span>{historicEvent.year}</span>
+      </div>
     </article>
   );
 };

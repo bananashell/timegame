@@ -5,7 +5,7 @@ export const SCORES = {
   MAXIMUM_SCORE: 10 as const,
   SMALL_DIFF_SCORE: 5 as const,
   LARGE_DIFF_SCORE: 1 as const,
-  FIRST_GUESS_SCORE: 0 as const,
+  FIRST_GUESS_SCORE: 1 as const,
 };
 
 /**
