@@ -1,5 +1,5 @@
-import { HistoricEvent } from "@/models/historicEvent";
 import { TimelineEvent } from "./_components/timeline/TimelineEvent";
+import { HistoricGameEvent } from "@/gameEngine/gameState";
 
 // TODO: make it move
 export const MovingTimeline = () => {
@@ -12,12 +12,13 @@ export const MovingTimeline = () => {
   );
 };
 
-const generateNewRandomTimelineEvent = (): HistoricEvent => {
+const generateNewRandomTimelineEvent = (): HistoricGameEvent => {
   return {
     id: "asd",
     title: "asd",
     category: "culture",
     description: "",
+    guess: 0,
     year: getRandomYearInRange(1400, currentYear),
   };
 };
