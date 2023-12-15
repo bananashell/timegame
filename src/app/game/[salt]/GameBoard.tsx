@@ -27,8 +27,12 @@ export const GameBoard = () => {
             transition={{ duration: 2 }}
             className="grid gap-x-4
             grid-areas-gameBoard
+            lg:grid-areas-lg_gameBoard
             grid-cols-gameBoard
-            grid-rows-gameBoard w-full p-4 h-full"
+            lg:grid-cols-lg_gameBoard
+            grid-rows-gameBoard
+            lg:grid-rows-lg_gameBoard
+            w-full p-4 h-full"
           >
             <Timeline />
             <CardStack />

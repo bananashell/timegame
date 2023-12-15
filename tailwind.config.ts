@@ -18,14 +18,21 @@ const config: Config = {
         mono: ["var(--font-roboto-mono)"],
       },
       gridTemplateAreas: {
-        gameBoard: ["score timeline current-card", "score timeline guess"],
+        lg_gameBoard: ["score timeline current-card", "score timeline guess"],
+        gameBoard: [
+          "timeline timeline timeline",
+          "current-card current-card current-card",
+          "score guess deadspace",
+        ],
       },
       gridTemplateColumns: {
-        // lg_gameBoard: `200px 1fr 1fr`,
-        gameBoard: `100px 2fr 1fr`,
+        lg_gameBoard: `200px 1fr 1fr`,
+        gameBoard: `20px 1fr 20px`,
       },
       gridTemplateRows: {
-        gameBoard: `1fr
+        gameBoard: `3fr
+        1fr`,
+        lg_gameBoard: `1fr
         2fr`,
       },
     },
