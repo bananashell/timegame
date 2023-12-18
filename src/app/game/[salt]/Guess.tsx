@@ -1,9 +1,6 @@
 import { currentEventAtom } from "@/app/state";
 import { useAtom } from "jotai";
 import { useGuess, useLock } from "@/app/state/actions";
-import { motion, useMotionValue } from "framer-motion";
-import { useEffect, useRef } from "react";
-import { RangeSlider } from "@/app/_components/rangeSlider";
 
 export const Guess = () => {
   const lockGuess = useLock();

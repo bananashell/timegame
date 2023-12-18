@@ -38,12 +38,23 @@ export const usePersistGuess = () => {
     const newTimeline = [...timelineEvents, { ...currentEvent!, score: score }];
 
     setTimelineEvents(newTimeline);
+    const totalScore = newTimeline.reduce((acc, curr) => acc + curr.score, 0);
 
-    const res = await trpc.historicEvents.query({
-      salt,
-      pageSize: 1,
-      cursor: currentEvent!.id,
-    });
+    const [res, _] = await Promise.all([
+      trpc.historicEvents.query({
+        salt,
+        pageSize: 1,
+        cursor: currentEvent!.id,
+      }),
+      trpc.upsertGame.mutate({
+        name: "username",
+        salt,
+        score: totalScore,
+        userId: "2ea0f401-cf08-4589-89cd-10f66bbc1302",
+        gameStatus: state.mainState,
+        noQuestions: newTimeline.length,
+      }),
+    ]);
 
     const next = res[0];
     setCurrentEvent({ ...next, guess: currentEvent.guess }); // TODO: Use loadable

@@ -3,6 +3,7 @@ import { scoreAtom, timelineEventsAtom } from "../state";
 import { motion, useAnimate } from "framer-motion";
 import { useEffect, useState } from "react";
 import { timeout } from "@/utils/timeout";
+import { trpc } from "../_trpc/client";
 
 export const CurrentScore = () => {
   const [score] = useAtom(scoreAtom);
@@ -64,7 +65,7 @@ export const CurrentScore = () => {
   }, [score]);
 
   return (
-    <div className="grid-in-score flex flex-col gap-2">
+    <div className="grid-in-score flex flex-col gap-2 pointer-events-none touch-none">
       <motion.article
         initial={{ opacity: 1, scale: 1 }}
         ref={scope}

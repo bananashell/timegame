@@ -9,32 +9,26 @@ import {
   useMotionValue,
   useTransform,
 } from "framer-motion";
+import { useRef, useState } from "react";
 
 export const CardStack = () => {
   const [currentEvent] = useAtom(currentEventAtom);
   const [nextEvent] = useAtom(nextEventAtom);
 
   return (
-    <section className="grid-in-current-card relative flex">
+    <section className="grid-in-current-card relative flex items-center justify-center">
       <AnimatePresence>
-        {" "}
-        <Card
-          key={`front-${nextEvent?.id}`}
-          frontCard={true}
-          historicEvent={currentEvent}
-        />
+        <Card key={`front-${nextEvent?.id}`} historicEvent={currentEvent} />
       </AnimatePresence>
     </section>
   );
 };
 
-function Card({
-  frontCard,
-  historicEvent,
-}: {
-  frontCard: boolean;
-  historicEvent?: HistoricEvent;
-}) {
+function Card({ historicEvent }: { historicEvent?: HistoricEvent }) {
+  const [isOpen, setIsOpen] = useState(false);
+  const offscreenHeadingRef = useRef<HTMLHeadingElement>(null);
+  const offscreenTextRef = useRef<HTMLParagraphElement>(null);
+
   const x = useMotionValue(0);
   const scale = useTransform(x, [-150, 0, 150], [0.5, 1, 0.5]);
   const rotate = useTransform(x, [-150, 0, 150], [-45, 0, 45], {
@@ -46,45 +40,64 @@ function Card({
     animate: { scale: 1, y: 0, opacity: 1 },
     exit: { opacity: 0, scale: 0.5 },
   };
-  const variantsBackCard = {
-    initial: { scale: 0, y: 105, opacity: 0 },
-    animate: { scale: 0.75, y: 30, opacity: 0.5 },
-  };
 
   if (!historicEvent) return null;
+
+  const headingHeight = offscreenHeadingRef!.current?.offsetHeight ?? 0;
+  const textHeight = offscreenTextRef!.current?.offsetHeight ?? 0;
 
   return (
     <motion.div
       key={historicEvent?.id}
       style={{
-        width: 240,
-        height: 240,
-        position: "absolute",
-        top: 0,
-        left: "50%",
-        translateX: "-50%",
+        width: "100%",
         x,
         rotate,
       }}
-      variants={frontCard ? variantsFrontCard : variantsBackCard}
+      variants={variantsFrontCard}
       initial="initial"
       animate="animate"
       exit="exit"
-      transition={
-        frontCard
-          ? { type: "spring", stiffness: 300, damping: 20 }
-          : { scale: { duration: 0.2 }, opacity: { duration: 0.4 } }
-      }
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
+      className="cursor-pointer"
     >
       <motion.div
-        className="text-black p-8 w-60 rounded-xl"
+        className="text-black p-8 rounded-xl w-full user-select-none"
         style={{
-          aspectRatio: 1.7777777778,
           backgroundColor: "#fff",
           scale,
+          height: headingHeight + 64,
         }}
+        layout
+        variants={{
+          open: {
+            height: headingHeight + textHeight + 64,
+          },
+          close: {
+            height: headingHeight + 64,
+          },
+        }}
+        animate={isOpen ? "open" : "close"}
+        onClick={() => setIsOpen(!isOpen)}
       >
-        <article>{historicEvent?.description}</article>
+        <article>
+          <h2>{historicEvent?.title}</h2>
+          <AnimatePresence>
+            {isOpen && (
+              <motion.p
+                initial={{ opacity: 0 }}
+                animate={{ opacity: isOpen ? 1 : 0 }}
+              >
+                {historicEvent?.description}
+              </motion.p>
+            )}
+          </AnimatePresence>
+        </article>
+
+        <aside className="opacity-0 pointer-events-none">
+          <h2 ref={offscreenHeadingRef}>{historicEvent?.title}</h2>
+          <p ref={offscreenTextRef}>{historicEvent?.description}</p>
+        </aside>
       </motion.div>
     </motion.div>
   );

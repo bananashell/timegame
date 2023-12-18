@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${glassAntiqua.className} h-screen w-screen`}>
+      <body className={`${glassAntiqua.className} h-[100dvh] w-[100dvw]`}>
         {/* <Provider> */}
         <JotaiProvider>
           <DevTools />
