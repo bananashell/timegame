@@ -22,7 +22,7 @@ describe("calculateScore", () => {
           year: 1890,
         } as MockTimelineEvent,
       ],
-      state: "playing",
+      gameState: { mainState: "playing", subState: "guessing" },
       currentEvent: {
         guess: 1889,
         year: 1900,
@@ -39,7 +39,7 @@ describe("calculateScore", () => {
           year: 1900,
         } as MockTimelineEvent,
       ],
-      state: "playing",
+      gameState: { mainState: "playing", subState: "guessing" },
       currentEvent: {
         guess: 1901,
         year: 1890,
@@ -72,7 +72,7 @@ describe("calculateScore", () => {
             year: 2000,
           } as MockTimelineEvent,
         ],
-        state: "playing",
+        gameState: { mainState: "playing", subState: "guessing" },
         currentEvent: {
           guess: correctYear + diff,
           year: correctYear,
@@ -90,7 +90,7 @@ describe("calculateScore", () => {
           year: 1890,
         } as MockTimelineEvent,
       ],
-      state: "playing",
+      gameState: { mainState: "playing", subState: "guessing" },
       currentEvent: {
         guess: 1911,
         year: 1900,
@@ -107,7 +107,7 @@ describe("calculateScore", () => {
           year: 1800,
         } as MockTimelineEvent,
       ],
-      state: "playing",
+      gameState: { mainState: "playing", subState: "guessing" },
       currentEvent: {
         guess: 1889,
         year: 1900,
@@ -130,7 +130,7 @@ describe("calculateScore", () => {
           year: 1995,
         } as MockTimelineEvent,
       ],
-      state: "playing",
+      gameState: { mainState: "playing", subState: "guessing" },
       currentEvent: {
         guess: 1900,
         year: 1918,
@@ -138,6 +138,46 @@ describe("calculateScore", () => {
       salt: "",
     });
     expect(actual).toBe(SCORES.LARGE_DIFF_SCORE);
+  });
+
+  it("returns points when guess is before all other timeline events and event has the same year as another event", () => {
+    const actual = calculateScore({
+      timelineEvents: [
+        {
+          year: 1969,
+        } as MockTimelineEvent,
+        {
+          year: 1995,
+        } as MockTimelineEvent,
+      ],
+      gameState: { mainState: "playing", subState: "guessing" },
+      currentEvent: {
+        guess: 1968,
+        year: 1969,
+      } as MockCurrentEvent,
+      salt: "",
+    });
+    expect(actual).toBe(SCORES.SMALL_DIFF_SCORE);
+  });
+
+  it("returns points when guess is after all other timeline events and event has the same year as another event", () => {
+    const actual = calculateScore({
+      timelineEvents: [
+        {
+          year: 1969,
+        } as MockTimelineEvent,
+        {
+          year: 1995,
+        } as MockTimelineEvent,
+      ],
+      gameState: { mainState: "playing", subState: "guessing" },
+      currentEvent: {
+        guess: 1996,
+        year: 1995,
+      } as MockCurrentEvent,
+      salt: "",
+    });
+    expect(actual).toBe(SCORES.SMALL_DIFF_SCORE);
   });
 
   it("returns points when answer and guess is after all other timeline events", () => {
@@ -153,7 +193,10 @@ describe("calculateScore", () => {
           year: 1995,
         } as MockTimelineEvent,
       ],
-      state: "playing",
+      gameState: {
+        mainState: "playing",
+        subState: "guessing",
+      },
       currentEvent: {
         guess: 2000,
         year: 2020,

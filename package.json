@@ -17,6 +17,7 @@
     "@trpc/next": "^10.43.3",
     "@trpc/react-query": "^10.43.3",
     "@trpc/server": "^10.43.3",
+    "firebase": "^10.7.1",
     "framer-motion": "^10.16.5",
     "immer": "^10.0.3",
     "jotai": "^2.6.0",

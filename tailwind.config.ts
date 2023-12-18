@@ -27,13 +27,13 @@ const config: Config = {
       },
       gridTemplateColumns: {
         lg_gameBoard: `200px 1fr 1fr`,
-        gameBoard: `20px 1fr 20px`,
+        gameBoard: `0px 1fr 0px`,
       },
       gridTemplateRows: {
         gameBoard: `3fr
         1fr`,
         lg_gameBoard: `1fr
-        2fr`,
+        1fr`,
       },
     },
   },

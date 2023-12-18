@@ -56,8 +56,8 @@ const isInTimespan = (gameState: RootState): boolean => {
 
     if (
       i == 0 &&
-      current.year > gameState.currentEvent.year &&
-      current.year > gameState.currentEvent.guess
+      current.year >= gameState.currentEvent.year &&
+      current.year >= gameState.currentEvent.guess
     ) {
       return true;
     }

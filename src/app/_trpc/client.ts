@@ -1,5 +1,5 @@
 import { createTRPCReact } from "@trpc/react-query";
-import { createTRPCProxyClient, httpBatchLink } from "@trpc/client";
+import { createTRPCProxyClient, httpBatchLink, wsLink } from "@trpc/client";
 
 import { type AppRouter } from "@/server";
 

@@ -4,12 +4,12 @@ import { currentEventAtom, orderedTimelineEvents } from "@/app/state";
 import { TimelineEvent } from "./TimelineEvent";
 import { useAtom } from "jotai";
 import { AnimatePresence, motion } from "framer-motion";
-import { useMemo } from "react";
+import { useLayoutEffect, useMemo, useRef } from "react";
 import { isDefined } from "@/utils/guards/isDefined";
-import { LockedHistoricGameEvent } from "@/gameEngine/gameState";
 import { isLockedEvent } from "@/utils/guards/isLockedEvent";
 
 export const Timeline = () => {
+  const arrowRef = useRef<HTMLDivElement>(null);
   const [timelineEvents] = useAtom(orderedTimelineEvents);
   const [currentEvent] = useAtom(currentEventAtom);
 
@@ -21,7 +21,9 @@ export const Timeline = () => {
     });
   }, [timelineEvents, currentEvent]);
 
-  console.log("inlinedTimelineEvents", inlinedTimelineEvents);
+  useLayoutEffect(() => {
+    arrowRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [currentEvent]);
 
   return (
     <div className="grid-in-timeline flex flex-col items-center overflow-y-scroll gap-2 py-4">
@@ -38,6 +40,7 @@ export const Timeline = () => {
             >
               {asArrow && (
                 <motion.div
+                  ref={arrowRef}
                   key={"guess"}
                   className="text-5xl"
                   initial={{ y: -5 }}

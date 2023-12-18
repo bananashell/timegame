@@ -43,12 +43,6 @@ export const GameOver = () => {
 
   return (
     <div className="flex flex-col gap-8 items-center text-white">
-      <button
-        className="absolute text-white bottom-0 bg-red-500"
-        onClick={animate}
-      >
-        Animate
-      </button>
       <section className="flex flex-col gap-8">
         <motion.h2 className="text-6xl opacity-0" ref={headerScope}>
           Game over
