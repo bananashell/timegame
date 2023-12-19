@@ -17,7 +17,9 @@
     "@trpc/next": "^10.43.3",
     "@trpc/react-query": "^10.43.3",
     "@trpc/server": "^10.43.3",
+    "@types/uuid": "^9.0.7",
     "firebase": "^10.7.1",
+    "firebase-admin": "^12.0.0",
     "framer-motion": "^10.16.5",
     "immer": "^10.0.3",
     "jotai": "^2.6.0",
@@ -28,9 +30,11 @@
     "react": "^18",
     "react-dom": "^18",
     "tailwind-merge": "^2.1.0",
+    "uuid": "^9.0.1",
     "zod": "^3.22.4"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^14.0.4",
     "@savvywombat/tailwindcss-grid-areas": "^3.1.0",
     "@types/node": "^20",
     "@types/react": "^18",
