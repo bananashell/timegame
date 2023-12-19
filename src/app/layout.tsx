@@ -1,13 +1,19 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Glass_Antiqua } from "next/font/google";
+import { Lobster, Bebas_Neue } from "next/font/google";
 import { DevTools } from "./Devtools";
 import { Provider as JotaiProvider } from "jotai";
 
-// import Provider from "@/app/_trpc/Provider";
-// import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
-
-const glassAntiqua = Glass_Antiqua({ weight: "400", subsets: ["latin"] });
+const lobster = Lobster({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-lobster",
+});
+const bebasNeue = Bebas_Neue({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-bebas-neue",
+});
 
 export const metadata: Metadata = {
   title: "Timeline",
@@ -21,7 +27,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${glassAntiqua.className} h-[100dvh] w-[100dvw]`}>
+      <body
+        className={`${bebasNeue.variable} ${lobster.variable} font-sans h-[100dvh] w-[100dvw]`}
+      >
         {/* <Provider> */}
         <JotaiProvider>
           <DevTools />
