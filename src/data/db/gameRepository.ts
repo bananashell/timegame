@@ -1,6 +1,6 @@
-import { addDoc, getDoc, doc, updateDoc, setDoc } from "firebase/firestore";
-import { gamesCollection } from "./firestore";
+import { getFirestore } from "firebase-admin/firestore";
 import { z } from "zod";
+import { initAdmin } from "./firebaseAdmin";
 
 export const GameInput = z.object({
   userId: z.string().uuid(),
@@ -15,6 +15,12 @@ export type Game = z.infer<typeof GameInput>;
 
 type GameId = string;
 
+const gamesCollection = async () => {
+  await initAdmin();
+  const firestore = getFirestore();
+  return firestore.collection("games");
+};
+
 const gameId = ({ userId, salt }: { userId: string; salt: string }): GameId => {
   if (!userId) throw new Error("userId is not defined");
   if (!salt) throw new Error("salt is not defined");
@@ -23,28 +29,28 @@ const gameId = ({ userId, salt }: { userId: string; salt: string }): GameId => {
 };
 
 export const upsertGame = async (game: Game) => {
-  const docRef = doc(gamesCollection, gameId(game));
-  const docSnap = await getDoc(docRef);
+  const id = gameId(game);
+  const gameSnap = await getGame(id);
 
-  if (docSnap.exists()) {
-    await updateDoc(docRef, game);
-    console.log("Document updated with ID: ", docRef.id);
+  if (gameSnap.exists) {
+    await gameSnap.ref.update(game);
+    console.log("Document updated with ID: ", gameSnap.ref.id);
     return;
   }
+  const collection = await gamesCollection();
+  await collection.doc(id).create(game);
 
-  await setDoc(docRef, game);
-
-  console.log("Document written with ID: ", docRef.id);
+  console.log("Document written with ID: ", gameId);
   return;
 };
 
 export const getGame = async (gameId: GameId) => {
-  const docRef = doc(gamesCollection, gameId);
-  const docSnap = await getDoc(docRef);
+  const collection = await gamesCollection();
+  const gameSnap = await collection.doc(gameId).get();
 
-  if (!docSnap.exists()) {
-    throw new Error(`Game ${gameId} does not exist`);
-  }
-
-  return docSnap.data();
+  return {
+    exists: gameSnap.exists,
+    data: gameSnap.data() as Game,
+    ref: gameSnap.ref,
+  };
 };
