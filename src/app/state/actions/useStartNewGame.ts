@@ -9,10 +9,11 @@ export const useStartNewGame = () => {
   const [rootState, setRootState] = useAtom(rootStateAtom);
   const [_, setCurrentEvent] = useAtom(currentEventAtom);
   const router = useRouter();
-  const userId = window.localStorage.getItem("userId") ?? uuidv4();
-  window.localStorage.setItem("userId", userId);
 
   return async (args: { salt: string }) => {
+    const userId = global.localStorage.getItem("userId") ?? uuidv4();
+    global.localStorage.setItem("userId", userId);
+
     if (!args.salt) return;
 
     if (rootState?.gameState.mainState === "playing") return;
