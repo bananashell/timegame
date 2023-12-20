@@ -4,14 +4,12 @@ import {
   currentEventAtom,
   nextEventAtom,
   rootStateAtom,
-  saltAtom,
   stateAtom,
   timelineEventsAtom,
 } from "@/app/state";
 import { trpc } from "@/app/_trpc/client";
 
 export const usePersistGuess = () => {
-  const [salt] = useAtom(saltAtom);
   const [timelineEvents, setTimelineEvents] = useAtom(timelineEventsAtom);
   const [currentEvent, setCurrentEvent] = useAtom(currentEventAtom);
   const [_nextEvent, setNextEvent] = useAtom(nextEventAtom);
@@ -42,15 +40,15 @@ export const usePersistGuess = () => {
 
     const [res, _] = await Promise.all([
       trpc.historicEvents.query({
-        salt,
+        salt: gameState.salt,
         pageSize: 1,
         cursor: currentEvent!.id,
       }),
       trpc.upsertGame.mutate({
-        name: "username",
-        salt,
+        username: gameState.username,
+        salt: gameState.salt,
         score: totalScore,
-        userId: "2ea0f401-cf08-4589-89cd-10f66bbc1302",
+        userId: gameState.userId,
         gameStatus: state.mainState,
         noQuestions: newTimeline.length,
       }),

@@ -1,12 +1,18 @@
 "use client";
 
+import { ReactNode } from "react";
 import { useStartNewGame } from "../state/actions";
 
-export const StartNewGame = ({ salt }: { salt: string }) => {
+export const StartNewGame = ({
+  salt,
+  children,
+}: {
+  salt: string;
+  children: ReactNode;
+}) => {
   const startNewGame = useStartNewGame();
 
   const handleStartNewGame = () => {
-    console.log("start new game", salt);
     startNewGame({ salt });
   };
   return (
@@ -14,7 +20,7 @@ export const StartNewGame = ({ salt }: { salt: string }) => {
       className="text-[4vw] hover:scale-125 transition-all"
       onClick={handleStartNewGame}
     >
-      Start new game
+      {children}
     </button>
   );
 };
