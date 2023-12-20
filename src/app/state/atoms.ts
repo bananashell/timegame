@@ -1,13 +1,34 @@
+"use client";
+
 import { RootState } from "@/gameEngine/gameState";
 import { atom } from "jotai";
 import { focusAtom } from "jotai-optics";
+import { v4 as uuidv4 } from "uuid";
+
+const getFromLocalStorage = (key: string) => {
+  if (typeof global.localStorage?.getItem !== "function") return undefined;
+
+  return global.localStorage.getItem(key);
+};
 
 export const rootStateAtom = atom<RootState>({
   timelineEvents: [],
   salt: "",
   gameState: { mainState: "game start", subState: undefined },
+  username: getFromLocalStorage("username") ?? "",
+  userId: getFromLocalStorage("userId") ?? uuidv4(),
 });
 rootStateAtom.debugLabel = "gameStateAtom";
+
+export const usernameAtom = focusAtom(rootStateAtom, (optic) =>
+  optic.prop("username"),
+);
+usernameAtom.debugLabel = "username";
+
+export const userIdAtom = focusAtom(rootStateAtom, (optic) =>
+  optic.prop("userId"),
+);
+userIdAtom.debugLabel = "userId";
 
 export const saltAtom = focusAtom(rootStateAtom, (optic) => optic.prop("salt"));
 saltAtom.debugLabel = "salt";

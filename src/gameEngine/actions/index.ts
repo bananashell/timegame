@@ -3,12 +3,22 @@ import { RootState, HistoricGameEvent, Year } from "@/gameEngine/gameState";
 import { calculateScore } from "@/gameEngine/logic/calculateScore";
 import { HistoricEvent } from "@/models/historicEvent";
 
-export const createNewGame = (salt: string): RootState => {
+export const createNewGame = ({
+  salt,
+  username,
+  userId,
+}: {
+  salt: string;
+  username: string;
+  userId: string;
+}): RootState => {
   return {
     gameState: { mainState: "playing", subState: "guessing" },
     timelineEvents: [],
     currentEvent: undefined,
     salt: salt,
+    userId: userId,
+    username: username,
   };
 };
 

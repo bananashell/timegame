@@ -6,7 +6,7 @@ export const GameInput = z.object({
   userId: z.string().uuid(),
   salt: z.string(),
   score: z.number().min(0).max(1000000),
-  name: z.string().min(1).max(255),
+  username: z.string().min(1).max(255),
   gameStatus: z.enum(["playing", "game over"]),
   noQuestions: z.number().min(0).max(1000000),
 });

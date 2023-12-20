@@ -1,5 +1,7 @@
 import { ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
+import Texture from "public/images/Texturelabs_Film_147L.jpg";
+import Image from "next/image";
 
 const generateGradient = () => {
   const colors = ["#F7F2D7", "#94E8D5"];
@@ -18,14 +20,19 @@ const TempPage = () => {
   return (
     <section
       className="flex items-center justify-center h-full w-full"
-      style={{
-        background: generateGradient(),
-      }}
+      style={{ background: generateGradient() }}
     >
-      <header className="p-8 rounded-full aspect-square justify-center flex flex-col items-center border-8 border-stone-500 bg-teal-300 text-white">
+      <header className="relative p-8 rounded-full aspect-square justify-center flex flex-col items-center border-8 border-[#dedac2] bg-[#85d1c0] text-white">
         <h2 className="uppercase">Welcome to the</h2>
         <StrokeHeader>Timeline</StrokeHeader>
       </header>
+      <Image
+        src={Texture}
+        alt="Texture"
+        objectFit="cover"
+        objectPosition="center"
+        className="absolute top-0 left-0 w-full h-full mix-blend-soft-light"
+      />
     </section>
   );
 };

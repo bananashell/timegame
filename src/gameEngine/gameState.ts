@@ -10,6 +10,8 @@ export type RootState = {
   timelineEvents: LockedHistoricGameEvent[];
   gameState: GameStartState | PlayingState | GameOverState;
   salt: string;
+  username: string;
+  userId: string;
 };
 
 type GameState<MainState, SubState> = {
