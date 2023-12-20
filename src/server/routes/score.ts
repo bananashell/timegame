@@ -1,6 +1,11 @@
 import { procedure } from "@/server/trpc";
 import { emitEvent } from "../eventEmitter";
-import { GameInput, upsertGame } from "@/data/db/gameRepository";
+import {
+  GameInput,
+  upsertGame,
+  FindGamesInput,
+  findGames,
+} from "@/data/db/gameRepository";
 
 export const gameRouter = {
   upsertGame: procedure.input(GameInput).mutation(async (opts) => {
@@ -8,5 +13,9 @@ export const gameRouter = {
 
     await upsertGame(opts.input);
     emitEvent("upsertGame", opts.input);
+  }),
+  findGames: procedure.input(FindGamesInput).query(async (opts) => {
+    console.log("Find game", opts.input);
+    return findGames(opts.input);
   }),
 };

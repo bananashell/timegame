@@ -10,8 +10,11 @@ export const GameInput = z.object({
   gameStatus: z.enum(["playing", "game over"]),
   noQuestions: z.number().min(0).max(1000000),
 });
-
 export type Game = z.infer<typeof GameInput>;
+
+export const FindGamesInput = z.object({
+  salt: z.string(),
+});
 
 type GameId = string;
 
@@ -53,4 +56,11 @@ export const getGame = async (gameId: GameId) => {
     data: gameSnap.data() as Game,
     ref: gameSnap.ref,
   };
+};
+
+export const findGames = async ({ salt }: { salt: string }) => {
+  const collection = await gamesCollection();
+  const data = await collection.where("salt", "==", salt).get();
+
+  return data.docs.map((doc) => doc.data() as Game);
 };
