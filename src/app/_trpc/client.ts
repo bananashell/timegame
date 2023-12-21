@@ -1,9 +1,9 @@
-import { createTRPCReact } from "@trpc/react-query";
-import { createTRPCProxyClient, httpBatchLink, wsLink } from "@trpc/client";
+import { createTRPCNext } from "@trpc/next";
+import { createTRPCProxyClient, httpBatchLink } from "@trpc/client";
 
 import { type AppRouter } from "@/server";
 
-export const trpc = createTRPCProxyClient<AppRouter>({
+const config = {
   links: [
     httpBatchLink({
       /**
@@ -20,7 +20,14 @@ export const trpc = createTRPCProxyClient<AppRouter>({
       },
     }),
   ],
-});
+};
+
+// export const trpcNext = createTRPCNext<AppRouter>({
+//   config() {
+//     return config;
+//   },
+// });
+export const trpc = createTRPCProxyClient<AppRouter>(config);
 
 function getBaseUrl() {
   return "";

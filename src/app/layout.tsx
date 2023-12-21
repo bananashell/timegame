@@ -5,7 +5,7 @@ import { DevTools } from "./Devtools";
 import { Provider as JotaiProvider } from "jotai";
 
 // import Provider from "@/app/_trpc/Provider";
-// import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 const glassAntiqua = Glass_Antiqua({ weight: "400", subsets: ["latin"] });
 
