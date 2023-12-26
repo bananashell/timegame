@@ -1,4 +1,3 @@
-import { calculateScore } from "@/gameEngine/logic/calculateScore";
 import { useAtom } from "jotai";
 import {
   currentEventAtom,
@@ -26,36 +25,22 @@ export const usePersistGuess = () => {
 
     if (!currentEvent) throw new Error("Current event is not defined");
 
-    const score = calculateScore(gameState);
-    if (score === false) {
-      // GAME END
-      console.warn("GAME OVER");
+    const { gameState: newGameState, nextEvent } = await trpc.makeGuess.mutate({
+      guess: {
+        guess: currentEvent.guess,
+        questionId: currentEvent.id,
+      },
+      salt: gameState.salt,
+      userId: gameState.userId,
+    });
+
+    if (newGameState.gameStatus === "game over") {
       setState({ mainState: "game over", subState: "score screen" });
       return;
     }
-    const newTimeline = [...timelineEvents, { ...currentEvent!, score: score }];
 
-    setTimelineEvents(newTimeline);
-    const totalScore = newTimeline.reduce((acc, curr) => acc + curr.score, 0);
-
-    const [res, _] = await Promise.all([
-      trpc.historicEvents.query({
-        salt: gameState.salt,
-        pageSize: 1,
-        cursor: currentEvent!.id,
-      }),
-      trpc.upsertGame.mutate({
-        username: gameState.username,
-        salt: gameState.salt,
-        score: totalScore,
-        userId: gameState.userId,
-        gameStatus: state.mainState,
-        noQuestions: newTimeline.length,
-      }),
-    ]);
-
-    const next = res[0];
-    setCurrentEvent({ ...next, guess: currentEvent.guess }); // TODO: Use loadable
+    setTimelineEvents(newGameState.events);
+    setCurrentEvent({ ...nextEvent, guess: currentEvent.guess });
     setState({ mainState: "playing", subState: "guessing" });
   };
 };

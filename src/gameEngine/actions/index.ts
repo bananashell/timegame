@@ -56,7 +56,13 @@ export const lock = (state: RootState): RootState => {
       throw new Error("Must be playing to be able to lock");
     }
 
-    const score = calculateScore(draft);
+    if (!draft.currentEvent) throw new Error("No current event to lock");
+
+    const score = calculateScore({
+      currentEvent: draft.currentEvent,
+      guess: draft.currentEvent.guess,
+      historicEvents: draft.timelineEvents,
+    });
     if (score === false) {
       // GAME END
       draft.gameState = { mainState: "game over", subState: "score screen" };

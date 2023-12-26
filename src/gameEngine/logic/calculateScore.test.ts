@@ -4,10 +4,8 @@ import {
   SCORES,
   calculateScore,
 } from "./calculateScore";
-import { RootState } from "@/gameEngine/gameState";
-
-type MockCurrentEvent = RootState["currentEvent"];
-type MockTimelineEvent = RootState["timelineEvents"][number];
+import { LockedHistoricGameEvent, RootState } from "@/gameEngine/gameState";
+import { HistoricEvent } from "@/models/historicEvent";
 
 describe("calculateScore", () => {
   it("throws when guess is missing", () => {
@@ -17,45 +15,46 @@ describe("calculateScore", () => {
 
   it("return false when guess is before lower bounds", () => {
     const actual = calculateScore({
-      timelineEvents: [
+      historicEvents: [
         {
           year: 1890,
-        } as MockTimelineEvent,
-      ],
-      gameState: { mainState: "playing", subState: "guessing" },
+        },
+      ] as unknown as LockedHistoricGameEvent[],
+      guess: 1889,
       currentEvent: {
-        guess: 1889,
         year: 1900,
-      } as MockCurrentEvent,
-      salt: "",
+      } as unknown as HistoricEvent,
     });
     expect(actual).toBeFalse();
   });
 
   it("return false when guess is after upper bounds", () => {
     const actual = calculateScore({
-      timelineEvents: [
+      historicEvents: [
         {
           year: 1900,
-        } as MockTimelineEvent,
-      ],
-      gameState: { mainState: "playing", subState: "guessing" },
+        },
+      ] as unknown as LockedHistoricGameEvent[],
+      guess: 1901,
       currentEvent: {
-        guess: 1901,
         year: 1890,
-      } as MockCurrentEvent,
-      salt: "",
+      } as unknown as HistoricEvent,
     });
     expect(actual).toBeFalse();
   });
 
   it("returns 10 when guess is correct", () => {
     const actual = calculateScore({
+      historicEvents: [
+        {
+          year: 1900,
+        },
+      ] as unknown as LockedHistoricGameEvent[],
+      guess: 1900,
       currentEvent: {
-        guess: 1900,
         year: 1900,
-      },
-    } as RootState);
+      } as unknown as HistoricEvent,
+    });
     expect(actual).toBe(SCORES.MAXIMUM_SCORE);
   });
 
@@ -64,20 +63,18 @@ describe("calculateScore", () => {
     (diff: number) => {
       const correctYear = 1900;
       const actual = calculateScore({
-        timelineEvents: [
+        historicEvents: [
           {
             year: 1890,
-          } as MockTimelineEvent,
+          },
           {
             year: 2000,
-          } as MockTimelineEvent,
-        ],
-        gameState: { mainState: "playing", subState: "guessing" },
+          },
+        ] as unknown as LockedHistoricGameEvent[],
+        guess: correctYear + diff,
         currentEvent: {
-          guess: correctYear + diff,
           year: correctYear,
-        } as MockCurrentEvent,
-        salt: "",
+        } as unknown as HistoricEvent,
       });
       expect(actual).toBe(SCORES.SMALL_DIFF_SCORE);
     },
@@ -85,123 +82,108 @@ describe("calculateScore", () => {
 
   it(`returns ${SCORES.LARGE_DIFF_SCORE} when diff is more than +${FIVE_POINT_DIFF_CUTOFF}`, () => {
     const actual = calculateScore({
-      timelineEvents: [
+      historicEvents: [
         {
           year: 1890,
-        } as MockTimelineEvent,
-      ],
-      gameState: { mainState: "playing", subState: "guessing" },
+        },
+      ] as unknown as LockedHistoricGameEvent[],
+      guess: 1911,
       currentEvent: {
-        guess: 1911,
         year: 1900,
-      } as MockCurrentEvent,
-      salt: "",
+      } as unknown as HistoricEvent,
     });
     expect(actual).toBe(SCORES.LARGE_DIFF_SCORE);
   });
 
   it(`returns ${SCORES.LARGE_DIFF_SCORE} when diff is more than -${FIVE_POINT_DIFF_CUTOFF}`, () => {
     const actual = calculateScore({
-      timelineEvents: [
+      historicEvents: [
         {
           year: 1800,
-        } as MockTimelineEvent,
-      ],
-      gameState: { mainState: "playing", subState: "guessing" },
+        },
+      ] as unknown as LockedHistoricGameEvent[],
+      guess: 1889,
       currentEvent: {
-        guess: 1889,
         year: 1900,
-      } as MockCurrentEvent,
-      salt: "",
+      } as unknown as HistoricEvent,
     });
     expect(actual).toBe(SCORES.LARGE_DIFF_SCORE);
   });
 
   it("returns points when answer and guess is before all other timeline events", () => {
     const actual = calculateScore({
-      timelineEvents: [
+      historicEvents: [
         {
           year: 1945,
-        } as MockTimelineEvent,
+        },
         {
           year: 1992,
-        } as MockTimelineEvent,
+        },
         {
           year: 1995,
-        } as MockTimelineEvent,
-      ],
-      gameState: { mainState: "playing", subState: "guessing" },
+        },
+      ] as unknown as LockedHistoricGameEvent[],
+      guess: 1900,
       currentEvent: {
-        guess: 1900,
         year: 1918,
-      } as MockCurrentEvent,
-      salt: "",
+      } as unknown as HistoricEvent,
     });
     expect(actual).toBe(SCORES.LARGE_DIFF_SCORE);
   });
 
   it("returns points when guess is before all other timeline events and event has the same year as another event", () => {
     const actual = calculateScore({
-      timelineEvents: [
+      historicEvents: [
         {
           year: 1969,
-        } as MockTimelineEvent,
+        },
         {
           year: 1995,
-        } as MockTimelineEvent,
-      ],
-      gameState: { mainState: "playing", subState: "guessing" },
+        },
+      ] as unknown as LockedHistoricGameEvent[],
+      guess: 1968,
       currentEvent: {
-        guess: 1968,
         year: 1969,
-      } as MockCurrentEvent,
-      salt: "",
+      } as unknown as HistoricEvent,
     });
     expect(actual).toBe(SCORES.SMALL_DIFF_SCORE);
   });
 
   it("returns points when guess is after all other timeline events and event has the same year as another event", () => {
     const actual = calculateScore({
-      timelineEvents: [
+      historicEvents: [
         {
           year: 1969,
-        } as MockTimelineEvent,
+        },
         {
           year: 1995,
-        } as MockTimelineEvent,
-      ],
-      gameState: { mainState: "playing", subState: "guessing" },
+        },
+      ] as unknown as LockedHistoricGameEvent[],
+      guess: 1996,
       currentEvent: {
-        guess: 1996,
         year: 1995,
-      } as MockCurrentEvent,
-      salt: "",
+      } as unknown as HistoricEvent,
     });
     expect(actual).toBe(SCORES.SMALL_DIFF_SCORE);
   });
 
   it("returns points when answer and guess is after all other timeline events", () => {
     const actual = calculateScore({
-      timelineEvents: [
+      historicEvents: [
         {
           year: 1945,
-        } as MockTimelineEvent,
+        },
         {
           year: 1992,
-        } as MockTimelineEvent,
+        },
         {
           year: 1995,
-        } as MockTimelineEvent,
-      ],
-      gameState: {
-        mainState: "playing",
-        subState: "guessing",
-      },
+        },
+      ] as unknown as LockedHistoricGameEvent[],
+      guess: 2000,
       currentEvent: {
-        guess: 2000,
         year: 2020,
-      } as MockCurrentEvent,
-      salt: "",
+      } as unknown as HistoricEvent,
     });
     expect(actual).toBe(SCORES.LARGE_DIFF_SCORE);
   });

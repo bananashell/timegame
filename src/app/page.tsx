@@ -1,19 +1,14 @@
 import { StartNewGame } from "@/app/StartNewGame";
-import { generateRandomSalt } from "@/server/service/saltService";
-import { ReactNode } from "react";
-import { twMerge } from "tailwind-merge";
 import Texture from "public/images/Texturelabs_Film_147L.jpg";
 import Image from "next/image";
 
 export default async function Home() {
-  const newSalt = await generateRandomSalt();
-
   return (
     <main
       className="flex items-center justify-center h-full w-full"
       style={{ background: generateGradient() }}
     >
-      <StartNewGame salt={newSalt} />
+      <StartNewGame />
       <Image
         src={Texture}
         alt="Texture"

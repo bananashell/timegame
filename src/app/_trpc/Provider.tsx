@@ -14,15 +14,7 @@
 //         },
 //       }),
 //   );
-//   const [trpcClient] = useState(() =>
-//     trpc.createClient({
-//       links: [
-//         httpBatchLink({
-//           url: "/api/trpc",
-//         }),
-//       ],
-//     }),
-//   );
+//   const [trpcClient] = useState(() => trpc);
 //   return (
 //     <trpc.Provider client={trpcClient} queryClient={queryClient}>
 //       <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
