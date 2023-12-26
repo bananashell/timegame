@@ -187,6 +187,31 @@ describe("calculateScore", () => {
     });
     expect(actual).toBe(SCORES.LARGE_DIFF_SCORE);
   });
+
+  it("doesn't alter the array order", () => {
+    const data = {
+      historicEvents: [
+        {
+          year: 1992,
+        },
+        {
+          year: 1945,
+        },
+        {
+          year: 1995,
+        },
+      ] as unknown as LockedHistoricGameEvent[],
+      guess: 2000,
+      currentEvent: {
+        year: 2020,
+      } as unknown as HistoricEvent,
+    };
+    const actual = calculateScore(data);
+
+    expect(data.historicEvents.at(0)!.year).toEqual(1992);
+    expect(data.historicEvents.at(1)!.year).toEqual(1945);
+    expect(data.historicEvents.at(2)!.year).toEqual(1995);
+  });
 });
 
 function createDiffArray(
