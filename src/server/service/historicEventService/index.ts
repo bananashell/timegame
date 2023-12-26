@@ -1,8 +1,6 @@
-import { HistoricEvent, historicEvent } from "@/models/historicEvent";
-import { data } from "@/data/historicEvents.json";
+import { HistoricEvent } from "@/models/historicEvent";
+import { historicEvents } from "@/data/historicEvents";
 import { randomizeArrayWithSalt } from "@/utils/array/randomizeArrayWithSalt";
-
-const allData = data.map((event) => historicEvent.parse({ ...event }));
 
 const PAGE_SIZE = 1 as const;
 
@@ -13,7 +11,7 @@ export const getNextHistoricEvent = async ({
   salt: string;
   cursor: string | undefined | null;
 }): Promise<HistoricEvent> => {
-  const randomizedData = randomizeArrayWithSalt(allData, salt);
+  const randomizedData = randomizeArrayWithSalt(historicEvents, salt);
 
   if (!cursor) {
     return randomizedData.slice(0, PAGE_SIZE)[0];
