@@ -1,9 +1,9 @@
-import { procedure, router } from "./trpc";
-import { historicEventsRouter } from "./routes/historicEvents";
-import { gameRouter } from "./routes/score";
+import { router } from "./trpc";
+// import { historicEventsRouter } from "./routes/historicEventsRouter";
+import { gameRouter } from "./routes/game";
 
 export const appRouter = router({
-  ...historicEventsRouter,
+  // ...historicEventsRouter,
   ...gameRouter,
 });
 

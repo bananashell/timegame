@@ -1,4 +1,8 @@
-import { RootState } from "@/gameEngine/gameState";
+import { Year, LockedHistoricGameEvent } from "@/gameEngine/gameState";
+import { HistoricEvent } from "@/models/historicEvent";
+
+type ScoredHistoricEvent = Pick<LockedHistoricGameEvent, "year" | "score">;
+type CurrentEvent = Pick<HistoricEvent, "year">;
 
 export const FIVE_POINT_DIFF_CUTOFF = 10 as const;
 export const SCORES = {
@@ -18,54 +22,54 @@ export const SCORES = {
  * false if the guess is wrong
  * @param gameState
  */
-export const calculateScore = (gameState: RootState): false | number => {
-  if (!gameState.currentEvent?.guess)
-    throw new Error("Current event is not defined");
+export const calculateScore = (args: {
+  historicEvents: ScoredHistoricEvent[];
+  currentEvent: CurrentEvent;
+  guess: Year;
+}): false | number => {
+  if (typeof args.guess != "number")
+    throw new Error("Guess has to be a number");
 
-  if (gameState.currentEvent.year === gameState.currentEvent.guess)
-    return SCORES.MAXIMUM_SCORE;
-  if (gameState.timelineEvents.length === 0) return SCORES.FIRST_GUESS_SCORE;
+  if (args.currentEvent.year === args.guess) return SCORES.MAXIMUM_SCORE;
+  if (args.historicEvents.length === 0) return SCORES.FIRST_GUESS_SCORE;
 
-  const inTimespan = isInTimespan(gameState);
+  const inTimespan = isInTimespan(args);
   if (!inTimespan) {
     return false;
   }
 
-  if (
-    Math.abs(gameState.currentEvent.year - gameState.currentEvent.guess) <=
-    FIVE_POINT_DIFF_CUTOFF
-  ) {
+  if (Math.abs(args.currentEvent.year - args.guess) <= FIVE_POINT_DIFF_CUTOFF) {
     return SCORES.SMALL_DIFF_SCORE;
   }
 
   return SCORES.LARGE_DIFF_SCORE;
 };
 
-const isInTimespan = (gameState: RootState): boolean => {
-  if (!gameState.currentEvent) {
-    throw new Error("Current event is not defined");
-  }
+const isInTimespan = ({
+  historicEvents,
+  currentEvent,
+  guess,
+}: {
+  historicEvents: ScoredHistoricEvent[];
+  currentEvent: CurrentEvent;
+  guess: Year;
+}): boolean => {
+  if (typeof guess != "number") throw new Error("Guess has to be a number");
 
-  const orderedTimelineEvents = gameState.timelineEvents.sort(
-    (a, b) => a.year - b.year,
-  );
+  const orderedTimelineEvents = historicEvents.sort((a, b) => a.year - b.year);
 
   for (let i = 0; i < orderedTimelineEvents.length; i++) {
     const current = orderedTimelineEvents.at(i)!;
     const next = orderedTimelineEvents.at(i + 1);
 
-    if (
-      i == 0 &&
-      current.year >= gameState.currentEvent.year &&
-      current.year >= gameState.currentEvent.guess
-    ) {
+    if (i == 0 && current.year >= currentEvent.year && current.year >= guess) {
       return true;
     }
 
     if (
-      current.year <= gameState.currentEvent.year &&
-      current.year <= gameState.currentEvent.guess &&
-      (!next || next.year >= gameState.currentEvent.year)
+      current.year <= currentEvent.year &&
+      current.year <= guess &&
+      (!next || next.year >= currentEvent.year)
     ) {
       return true;
     }

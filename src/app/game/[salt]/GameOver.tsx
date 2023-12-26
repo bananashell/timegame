@@ -3,6 +3,7 @@
 import { scoreAtom } from "@/app/state";
 import { motion, useAnimate } from "framer-motion";
 import { useAtom } from "jotai";
+import { HighScore } from "./HighScore";
 
 export const GameOver = () => {
   const [score] = useAtom(scoreAtom);
@@ -55,7 +56,7 @@ export const GameOver = () => {
             {score}p
           </span>
         </motion.h1>
-        {/* <motion.span className="text-2xl">{getScoreText(score)}</motion.span> */}
+        <HighScore />
       </section>
     </div>
   );

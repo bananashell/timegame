@@ -4,139 +4,162 @@
       "title": "Copernicus' Heliocentric Theory",
       "category": "science",
       "year": 1543,
-      "description": "Nicolaus Copernicus publishes his heliocentric theory, proposing that the Earth revolves around the Sun."
+      "description": "Nicolaus Copernicus publishes his heliocentric theory, proposing that the Earth revolves around the Sun.",
+      "id": "9949df87-d7b3-4789-85ba-60aa972a1750"
     },
     {
       "title": "United States Declaration of Independence",
       "category": "politics",
       "year": 1776,
-      "description": "The United States Declaration of Independence is adopted, marking the birth of the United States of America."
+      "description": "The United States Declaration of Independence is adopted, marking the birth of the United States of America.",
+      "id": "eaf4287a-da99-4030-a322-8169b15d86d2"
     },
     {
       "title": "Apollo 11 Moon Landing",
       "category": "technology",
       "year": 1969,
-      "description": "Apollo 11 successfully lands the first humans, Neil Armstrong and Buzz Aldrin, on the Moon."
+      "description": "Apollo 11 successfully lands the first humans, Neil Armstrong and Buzz Aldrin, on the Moon.",
+      "id": "38d2c0c4-4e1c-4f71-b263-c36b7d5f0b05"
     },
     {
       "title": "Christopher Columbus' Voyage",
       "category": "exploration",
       "year": 1492,
-      "description": "Christopher Columbus sets sail from Spain on his first voyage across the Atlantic, reaching the Americas."
+      "description": "Christopher Columbus sets sail from Spain on his first voyage across the Atlantic, reaching the Americas.",
+      "id": "d0a0f4b9-f050-4b97-8ed9-20dc81544cce"
     },
     {
       "title": "First Performance of Macbeth",
       "category": "culture",
       "year": 1605,
-      "description": "William Shakespeare's play 'Macbeth' is performed for the first time in London."
+      "description": "William Shakespeare's play 'Macbeth' is performed for the first time in London.",
+      "id": "a1c1dc8e-15ba-45e6-83d3-aa2e5407423a"
     },
     {
       "title": "End of World War II in Europe",
       "category": "war",
       "year": 1945,
-      "description": "World War II ends in Europe with the unconditional surrender of Nazi Germany."
+      "description": "World War II ends in Europe with the unconditional surrender of Nazi Germany.",
+      "id": "5827119b-85c5-4f3a-bbf2-fd6134080f0e"
     },
     {
       "title": "Publication of Newton's Principia",
       "category": "science",
       "year": 1687,
-      "description": "Isaac Newton publishes 'Philosophiæ Naturalis Principia Mathematica,' introducing the laws of motion and universal gravitation."
+      "description": "Isaac Newton publishes 'Philosophiæ Naturalis Principia Mathematica,' introducing the laws of motion and universal gravitation.",
+      "id": "7b920779-834e-4199-8d22-9c617ed0811b"
     },
     {
       "title": "Start of the French Revolution",
       "category": "politics",
       "year": 1789,
-      "description": "The French Revolution begins with the storming of the Bastille, marking the end of the absolute monarchy in France."
+      "description": "The French Revolution begins with the storming of the Bastille, marking the end of the absolute monarchy in France.",
+      "id": "6142f822-83f3-4cf7-9fea-1a96c7e36925"
     },
     {
       "title": "Invention of the Telephone",
       "category": "technology",
       "year": 1876,
-      "description": "Alexander Graham Bell patents the telephone, revolutionizing communication."
+      "description": "Alexander Graham Bell patents the telephone, revolutionizing communication.",
+      "id": "872eb354-8ebe-4686-a2bb-4519c225aedb"
     },
     {
       "title": "Magellan travels around the globe",
       "category": "exploration",
       "year": 1519,
-      "description": "Ferdinand Magellan's expedition sets off to circumnavigate the globe, ultimately proving the Earth is round."
+      "description": "Ferdinand Magellan's expedition sets off to circumnavigate the globe, ultimately proving the Earth is round.",
+      "id": "08038ee4-d27a-4d13-8ea0-d8a1cc7136f5"
     },
     {
       "title": "Woodstock Festival",
       "category": "culture",
       "year": 1969,
-      "description": "The Woodstock Festival, a pivotal moment in music history, takes place in upstate New York."
+      "description": "The Woodstock Festival, a pivotal moment in music history, takes place in upstate New York.",
+      "id": "7f3eee96-9c23-4aa1-8fb9-e1d81dd7af78"
     },
     {
       "title": "End of World War I",
       "category": "war",
       "year": 1918,
-      "description": "World War I ends with the signing of the Armistice of 11 November, leading to peace negotiations."
+      "description": "World War I ends with the signing of the Armistice of 11 November, leading to peace negotiations.",
+      "id": "12f30caa-2c6a-4690-9759-a8d6598165ad"
     },
     {
       "title": "Gustav Vasa Elected King of Sweden",
       "category": "history",
       "year": 1523,
-      "description": "Gustav Vasa is elected King of Sweden, marking the end of the Kalmar Union and the beginning of modern Sweden."
+      "description": "Gustav Vasa is elected King of Sweden, marking the end of the Kalmar Union and the beginning of modern Sweden.",
+      "id": "cc8fe089-0d12-4a47-aeef-5fe2f56c10a0"
     },
     {
       "title": "Foundation of Gothenburg",
       "category": "exploration",
       "year": 1638,
-      "description": "Foundation of Gothenburg, a significant Swedish port city, aimed at expanding trade and maritime activities."
+      "description": "Foundation of Gothenburg, a significant Swedish port city, aimed at expanding trade and maritime activities.",
+      "id": "45d14b37-6837-4ae5-90ad-51c6d37f7a5b"
     },
     {
       "title": "Publication of 'Systema Naturae'",
       "category": "science",
       "year": 1735,
-      "description": "Carl Linnaeus publishes 'Systema Naturae,' establishing the system of binomial nomenclature for species classification."
+      "description": "Carl Linnaeus publishes 'Systema Naturae,' establishing the system of binomial nomenclature for species classification.",
+      "id": "420a93b5-38e2-4a18-99ad-ee5713feb5d6"
     },
     {
       "title": "Treaty of Fredrikshamn",
       "category": "politics",
       "year": 1809,
-      "description": "The Finnish War concludes with the signing of the Treaty of Fredrikshamn, resulting in the loss of Finland to Russia."
+      "description": "The Finnish War concludes with the signing of the Treaty of Fredrikshamn, resulting in the loss of Finland to Russia.",
+      "id": "3591d947-781c-4f20-9d1e-f654b8d3ae20"
     },
     {
       "title": "Invention of Dynamite",
       "category": "technology",
       "year": 1876,
-      "description": "Alfred Nobel invents dynamite, revolutionizing the field of explosives and laying the foundation for the Nobel Prizes."
+      "description": "Alfred Nobel invents dynamite, revolutionizing the field of explosives and laying the foundation for the Nobel Prizes.",
+      "id": "a6002c28-f379-4662-947e-4fc2d3e36858"
     },
     {
       "title": "Selma Lagerlöf Wins Nobel Prize in Literature",
       "category": "culture",
       "year": 1901,
-      "description": "Selma Lagerlöf becomes the first female writer to win the Nobel Prize in Literature for her work 'Gösta Berling's Saga.'"
+      "description": "Selma Lagerlöf becomes the first female writer to win the Nobel Prize in Literature for her work 'Gösta Berling's Saga.'",
+      "id": "78a9d962-e15b-4fc1-92ae-314691a4c6fe"
     },
     {
       "title": "Switch to Right-Hand Traffic in Sweden",
       "category": "politics",
       "year": 1971,
-      "description": "Sweden officially switches from driving on the left-hand side of the road to the right-hand side, known as Dagen H (H Day)."
+      "description": "Sweden officially switches from driving on the left-hand side of the road to the right-hand side, known as Dagen H (H Day).",
+      "id": "81aa8317-4fac-417d-80b6-ebfd047026c7"
     },
     {
       "title": "Invention of the World Wide Web",
       "category": "technology",
       "year": 1989,
-      "description": "Tim Berners-Lee, a British computer scientist, proposes the concept of the World Wide Web, laying the groundwork for its development, which later becomes integral worldwide."
+      "description": "Tim Berners-Lee, a British computer scientist, proposes the concept of the World Wide Web, laying the groundwork for its development, which later becomes integral worldwide.",
+      "id": "d8cec920-cf93-49a5-a808-ef1a2ab68989"
     },
     {
       "title": "Sweden Joins the European Union",
       "category": "history",
       "year": 1995,
-      "description": "Sweden joins the European Union (EU) after a referendum in which the majority of voters supported membership."
+      "description": "Sweden joins the European Union (EU) after a referendum in which the majority of voters supported membership.",
+      "id": "d4e274ee-ee3c-4ee8-87ca-a4ccd9fafa75"
     },
     {
       "title": "Development of Skype",
       "category": "technology",
       "year": 2003,
-      "description": "Skype, a communication platform founded by Niklas Zennström and Janus Friis, which plays a significant role in global communications, is developed in Sweden."
+      "description": "Skype, a communication platform founded by Niklas Zennström and Janus Friis, which plays a significant role in global communications, is developed in Sweden.",
+      "id": "3af64621-99ea-425c-b02f-ec367b78db20"
     },
     {
       "title": "Bob Dylan Wins Nobel Prize in Literature",
       "category": "culture",
       "year": 2016,
-      "description": "Bob Dylan, an American musician and songwriter, wins the Nobel Prize in Literature, becoming the first musician to receive this prestigious award."
+      "description": "Bob Dylan, an American musician and songwriter, wins the Nobel Prize in Literature, becoming the first musician to receive this prestigious award.",
+      "id": "a42c1483-8007-4096-873d-0ce6ef08920a"
     }
   ]
 }

@@ -6,15 +6,20 @@ import { twMerge } from "tailwind-merge";
 import { AnimatePresence, motion } from "framer-motion";
 import { usernameAtom } from "./state";
 import { useAtom } from "jotai";
+import { useRouter } from "next/navigation";
 
-export const StartNewGame = ({ salt }: { salt: string }) => {
+export const StartNewGame = () => {
+  const router = useRouter();
   const [state, setState] = useState<"initial" | "name select">("initial");
   const [username, setUsername] = useAtom(usernameAtom);
 
-  const startNewGame = useStartNewGame();
-  const handleKeyUp = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  const { mutateAsync: startNewGameAsync, isLoading } = useStartNewGame();
+  const handleKeyUp = async (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key == "Enter") {
-      startNewGame({ salt });
+      const data = await startNewGameAsync();
+      if (!data) throw new Error("Failed to start new game");
+
+      router.push(`/game/${data.game.salt}`);
     }
   };
 
