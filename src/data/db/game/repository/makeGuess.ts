@@ -38,18 +38,6 @@ export const makeGuess = async (input: MakeGuessInput): Promise<GameEntity> => {
     currentEvent: currentEvent,
   });
 
-  if (score === false) {
-    // TODO: if guess is incorrect, update score and return game over.
-    const gameData = {
-      ...entity.data,
-      gameStatus: "game over",
-    } satisfies GameEntity;
-
-    await entity.ref.update(gameData);
-
-    return gameData;
-  }
-
   const gameData = {
     ...entity.data,
     events: [
@@ -57,12 +45,15 @@ export const makeGuess = async (input: MakeGuessInput): Promise<GameEntity> => {
       {
         ...currentEvent,
         guess: input.guess.guess,
-        score: score,
+        score: score || 0,
       },
     ],
     noEvents: entity.data.noEvents + 1,
-    totalScore: entity.data.totalScore + score,
-  };
+    totalScore: entity.data.totalScore + (score || 0),
+    gameStatus: score ? "playing" : "game over",
+  } satisfies GameEntity;
+
+  console.log("Updating game", gameData);
 
   await entity.ref.update(gameData);
 

@@ -56,7 +56,9 @@ const isInTimespan = ({
 }): boolean => {
   if (typeof guess != "number") throw new Error("Guess has to be a number");
 
-  const orderedTimelineEvents = historicEvents.sort((a, b) => a.year - b.year);
+  const orderedTimelineEvents = [...historicEvents].sort(
+    (a, b) => a.year - b.year,
+  );
 
   for (let i = 0; i < orderedTimelineEvents.length; i++) {
     const current = orderedTimelineEvents.at(i)!;
