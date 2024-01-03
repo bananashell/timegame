@@ -94,7 +94,7 @@
     {
       "title": "Foundation of Gothenburg",
       "category": "exploration",
-      "year": 1638,
+      "year": 1621,
       "description": "Foundation of Gothenburg, a significant Swedish port city, aimed at expanding trade and maritime activities.",
       "id": "45d14b37-6837-4ae5-90ad-51c6d37f7a5b"
     },
@@ -159,6 +159,13 @@
       "category": "culture",
       "year": 2016,
       "description": "Bob Dylan, an American musician and songwriter, wins the Nobel Prize in Literature, becoming the first musician to receive this prestigious award.",
+      "id": "a42c1483-8007-4096-873d-0ce6ef08920a"
+    },
+    {
+      "title": "'Trillingnöten' is discontinued",
+      "category": "culture",
+      "year": 2014,
+      "description": "The classic 'Trillingnöt', a chocolate-covered peanut candy, is discontinued by Cloetta and removed from 'Alladin'.",
       "id": "a42c1483-8007-4096-873d-0ce6ef08920a"
     }
   ]

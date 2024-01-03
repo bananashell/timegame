@@ -3,6 +3,7 @@ import "./globals.css";
 import { Lobster, Bebas_Neue } from "next/font/google";
 import { DevTools } from "./Devtools";
 import { Provider as JotaiProvider } from "jotai";
+import { ThemeSwitcher } from "./ThemeSwitcher";
 
 const lobster = Lobster({
   weight: "400",
@@ -26,10 +27,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="">
       <body
-        className={`${bebasNeue.variable} ${lobster.variable} font-sans h-[100dvh] w-[100dvw]`}
+        className={`${bebasNeue.variable} ${lobster.variable} font-sans h-[100dvh] w-[100dvw] text-gray-800 dark:text-white`}
       >
+        <ThemeSwitcher />
         {/* <Provider> */}
         <JotaiProvider>
           <DevTools />

@@ -14,6 +14,8 @@ export const gameEntity = z.object({
       score: z.number().min(0).max(1000000),
     }),
   ),
+  lastUpdated: z.date(),
+  createdAt: z.date(),
 });
 
 export type GameEntity = z.infer<typeof gameEntity>;

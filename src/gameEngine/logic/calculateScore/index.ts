@@ -1,8 +1,12 @@
 import { Year, LockedHistoricGameEvent } from "@/gameEngine/gameState";
 import { HistoricEvent } from "@/models/historicEvent";
+import { isInTimespan } from "./isInTimespan";
 
-type ScoredHistoricEvent = Pick<LockedHistoricGameEvent, "year" | "score">;
-type CurrentEvent = Pick<HistoricEvent, "year">;
+export type ScoredHistoricEvent = Pick<
+  LockedHistoricGameEvent,
+  "year" | "score"
+>;
+export type CurrentEvent = Pick<HistoricEvent, "year">;
 
 export const FIVE_POINT_DIFF_CUTOFF = 10 as const;
 export const SCORES = {
@@ -43,39 +47,4 @@ export const calculateScore = (args: {
   }
 
   return SCORES.LARGE_DIFF_SCORE;
-};
-
-const isInTimespan = ({
-  historicEvents,
-  currentEvent,
-  guess,
-}: {
-  historicEvents: ScoredHistoricEvent[];
-  currentEvent: CurrentEvent;
-  guess: Year;
-}): boolean => {
-  if (typeof guess != "number") throw new Error("Guess has to be a number");
-
-  const orderedTimelineEvents = [...historicEvents].sort(
-    (a, b) => a.year - b.year,
-  );
-
-  for (let i = 0; i < orderedTimelineEvents.length; i++) {
-    const current = orderedTimelineEvents.at(i)!;
-    const next = orderedTimelineEvents.at(i + 1);
-
-    if (i == 0 && current.year >= currentEvent.year && current.year >= guess) {
-      return true;
-    }
-
-    if (
-      current.year <= currentEvent.year &&
-      current.year <= guess &&
-      (!next || next.year >= currentEvent.year)
-    ) {
-      return true;
-    }
-  }
-
-  return false;
 };

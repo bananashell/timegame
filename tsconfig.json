@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES2015",
     "lib": ["DOM", "DOM.ITERABLE", "ESNext"],
     "allowJs": false,
     "skipLibCheck": true,

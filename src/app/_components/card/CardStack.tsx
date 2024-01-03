@@ -62,9 +62,8 @@ function Card({ historicEvent }: { historicEvent?: HistoricEvent }) {
       className="cursor-pointer"
     >
       <motion.div
-        className="text-black p-8 rounded-xl w-full user-select-none"
+        className="backdrop-blur-lg bg-white/20 dark:bg-black/20 border-black dark:border-white border-2 p-8 rounded-xl w-full user-select-none"
         style={{
-          backgroundColor: "#fff",
           scale,
           height: headingHeight + 64,
         }}

@@ -23,6 +23,8 @@ export const createNewGameEntity = async (
     totalScore: 0,
     userId: userId,
     username: username,
+    createdAt: new Date(),
+    lastUpdated: new Date(),
   };
 
   await collection.doc(id).create(gameEntity);

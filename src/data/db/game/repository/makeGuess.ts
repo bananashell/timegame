@@ -51,6 +51,8 @@ export const makeGuess = async (input: MakeGuessInput): Promise<GameEntity> => {
     noEvents: entity.data.noEvents + 1,
     totalScore: entity.data.totalScore + (score || 0),
     gameStatus: score ? "playing" : "game over",
+    lastUpdated: new Date(),
+    createdAt: entity.data.createdAt ?? new Date(),
   } satisfies GameEntity;
 
   console.log("Updating game", gameData);

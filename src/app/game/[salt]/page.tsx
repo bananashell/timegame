@@ -7,7 +7,7 @@ type Props = {
 
 export default async function Game({ params: { salt } }: { params: Props }) {
   return (
-    <div className="text-white">
+    <div className="">
       <GameClientInitiator salt={salt} />
       <GameBoard />
     </div>
