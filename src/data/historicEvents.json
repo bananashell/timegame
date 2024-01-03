@@ -1,172 +1,342 @@
 {
   "data": [
     {
-      "title": "Copernicus' Heliocentric Theory",
+      "title": {
+        "en": "Copernicus' Heliocentric Theory",
+        "sv": "Copernicus heliocentriska teori"
+      },
       "category": "science",
       "year": 1543,
-      "description": "Nicolaus Copernicus publishes his heliocentric theory, proposing that the Earth revolves around the Sun.",
+      "description": {
+        "en": "Nicolaus Copernicus publishes his heliocentric theory, proposing that the Earth revolves around the Sun.",
+        "sv": "Nicolaus Copernicus publicerar sin heliocentriska teori, där han föreslår att jorden roterar runt solen."
+      },
       "id": "9949df87-d7b3-4789-85ba-60aa972a1750"
     },
     {
-      "title": "United States Declaration of Independence",
+      "title": {
+        "en": "United States Declaration of Independence",
+        "sv": "Förenta Staternas självständighetsförklaring"
+      },
       "category": "politics",
       "year": 1776,
-      "description": "The United States Declaration of Independence is adopted, marking the birth of the United States of America.",
+      "description": {
+        "en": "The United States Declaration of Independence is adopted, marking the birth of the United States of America.",
+        "sv": "Förenta Staternas självständighetsförklaring antas och markerar födelsen av Förenta Staterna."
+      },
       "id": "eaf4287a-da99-4030-a322-8169b15d86d2"
     },
     {
-      "title": "Apollo 11 Moon Landing",
+      "title": {
+        "en": "Apollo 11 Moon Landing",
+        "sv": "Apollo 11-månlandningen"
+      },
       "category": "technology",
       "year": 1969,
-      "description": "Apollo 11 successfully lands the first humans, Neil Armstrong and Buzz Aldrin, on the Moon.",
+      "description": {
+        "en": "Apollo 11 successfully lands the first humans, Neil Armstrong and Buzz Aldrin, on the Moon.",
+        "sv": "Apollo 11 landar framgångsrikt de första människorna, Neil Armstrong och Buzz Aldrin, på månen."
+      },
       "id": "38d2c0c4-4e1c-4f71-b263-c36b7d5f0b05"
     },
     {
-      "title": "Christopher Columbus' Voyage",
+      "title": {
+        "en": "Christopher Columbus' Voyage",
+        "sv": "Christopher Columbus resa"
+      },
       "category": "exploration",
       "year": 1492,
-      "description": "Christopher Columbus sets sail from Spain on his first voyage across the Atlantic, reaching the Americas.",
+      "description": {
+        "en": "Christopher Columbus sets sail from Spain on his first voyage across the Atlantic, reaching the Americas.",
+        "sv": "Christopher Columbus seglar från Spanien på sin första resa över Atlanten och når Amerika."
+      },
       "id": "d0a0f4b9-f050-4b97-8ed9-20dc81544cce"
     },
     {
-      "title": "First Performance of Macbeth",
+      "title": {
+        "en": "First Performance of Macbeth",
+        "sv": "Första framträdandet av Macbeth"
+      },
       "category": "culture",
       "year": 1605,
-      "description": "William Shakespeare's play 'Macbeth' is performed for the first time in London.",
+      "description": {
+        "en": "William Shakespeare's play 'Macbeth' is performed for the first time in London.",
+        "sv": "William Shakespeares pjäs 'Macbeth' framförs för första gången i London."
+      },
       "id": "a1c1dc8e-15ba-45e6-83d3-aa2e5407423a"
     },
     {
-      "title": "End of World War II in Europe",
+      "title": {
+        "en": "End of World War II in Europe",
+        "sv": "Andra världskrigets slut i Europa"
+      },
       "category": "war",
       "year": 1945,
-      "description": "World War II ends in Europe with the unconditional surrender of Nazi Germany.",
+      "description": {
+        "en": "World War II ends in Europe with the unconditional surrender of Nazi Germany.",
+        "sv": "Andra världskriget slutar i Europa med Nazitysklands ovillkorliga kapitulation."
+      },
       "id": "5827119b-85c5-4f3a-bbf2-fd6134080f0e"
     },
     {
-      "title": "Publication of Newton's Principia",
+      "title": {
+        "en": "Publication of Newton's Principia",
+        "sv": "Publicering av Newtons Principia"
+      },
       "category": "science",
       "year": 1687,
-      "description": "Isaac Newton publishes 'Philosophiæ Naturalis Principia Mathematica,' introducing the laws of motion and universal gravitation.",
+      "description": {
+        "en": "Isaac Newton publishes 'Philosophiæ Naturalis Principia Mathematica,' introducing the laws of motion and universal gravitation.",
+        "sv": "Isaac Newton publicerar 'Philosophiæ Naturalis Principia Mathematica', där han introducerar rörelselagarna och den universella gravitationen."
+      },
       "id": "7b920779-834e-4199-8d22-9c617ed0811b"
     },
     {
-      "title": "Start of the French Revolution",
+      "title": {
+        "en": "The French Revolution begins with the storming of the Bastille",
+        "sv": "Bastiljen stormas och franska revolutionen börjar"
+      },
       "category": "politics",
       "year": 1789,
-      "description": "The French Revolution begins with the storming of the Bastille, marking the end of the absolute monarchy in France.",
+      "description": {
+        "en": "The French Revolution begins with the storming of the Bastille, marking the end of the absolute monarchy in France.",
+        "sv": "Franska revolutionen börjar med stormningen av Bastiljen och markerar slutet på det absoluta monarkiet i Frankrike."
+      },
       "id": "6142f822-83f3-4cf7-9fea-1a96c7e36925"
     },
     {
-      "title": "Invention of the Telephone",
+      "title": {
+        "en": "Invention of the Telephone",
+        "sv": "Telefonen patenteras"
+      },
       "category": "technology",
       "year": 1876,
-      "description": "Alexander Graham Bell patents the telephone, revolutionizing communication.",
+      "description": {
+        "en": "Alexander Graham Bell patents the telephone, revolutionizing communication.",
+        "sv": "Alexander Graham Bell patenterar telefonen och revolutionerar kommunikationen."
+      },
       "id": "872eb354-8ebe-4686-a2bb-4519c225aedb"
     },
     {
-      "title": "Magellan travels around the globe",
+      "title": {
+        "en": "Magellan travels around the globe",
+        "sv": "Magellans resa runt jorden"
+      },
       "category": "exploration",
       "year": 1519,
-      "description": "Ferdinand Magellan's expedition sets off to circumnavigate the globe, ultimately proving the Earth is round.",
+      "description": {
+        "en": "Ferdinand Magellan's expedition sets off to circumnavigate the globe, ultimately proving the Earth is round.",
+        "sv": "Ferdinand Magellans expedition ger sig iväg för att kringgå jorden och bevisa att jorden är rund."
+      },
       "id": "08038ee4-d27a-4d13-8ea0-d8a1cc7136f5"
     },
     {
-      "title": "Woodstock Festival",
+      "title": {
+        "en": "Woodstock Festival",
+        "sv": "Woodstock Festivalen"
+      },
       "category": "culture",
       "year": 1969,
-      "description": "The Woodstock Festival, a pivotal moment in music history, takes place in upstate New York.",
+      "description": {
+        "en": "The Woodstock Festival, a pivotal moment in music history, takes place in upstate New York.",
+        "sv": "Woodstock-festivalen, en avgörande händelse i musikhistorien, äger rum i upstate New York."
+      },
       "id": "7f3eee96-9c23-4aa1-8fb9-e1d81dd7af78"
     },
     {
-      "title": "End of World War I",
+      "title": {
+        "en": "End of World War I",
+        "sv": "Första världskrigets slut"
+      },
       "category": "war",
       "year": 1918,
-      "description": "World War I ends with the signing of the Armistice of 11 November, leading to peace negotiations.",
+      "description": {
+        "en": "World War I ends with the signing of the Armistice of 11 November in Compiègne, leading to peace negotiations.",
+        "sv": "Första världskriget slutar med undertecknandet av Vapenstilleståndet i Compiègneskogen den 11 november, vilket leder till fredsförhandlingar."
+      },
       "id": "12f30caa-2c6a-4690-9759-a8d6598165ad"
     },
     {
-      "title": "Gustav Vasa Elected King of Sweden",
+      "title": {
+        "en": "Gustav Vasa Elected King of Sweden",
+        "sv": "Gustav Vasa vald till kung av Sverige"
+      },
       "category": "history",
       "year": 1523,
-      "description": "Gustav Vasa is elected King of Sweden, marking the end of the Kalmar Union and the beginning of modern Sweden.",
+      "description": {
+        "en": "Gustav Vasa is elected King of Sweden, marking the end of the Kalmar Union and the beginning of modern Sweden.",
+        "sv": "Gustav Vasa väljs till kung av Sverige och markerar slutet på Kalmarunionen och början av det moderna Sverige."
+      },
       "id": "cc8fe089-0d12-4a47-aeef-5fe2f56c10a0"
     },
     {
-      "title": "Foundation of Gothenburg",
+      "title": {
+        "en": "Foundation of Gothenburg",
+        "sv": "Göteborg grundas"
+      },
       "category": "exploration",
       "year": 1621,
-      "description": "Foundation of Gothenburg, a significant Swedish port city, aimed at expanding trade and maritime activities.",
+      "description": {
+        "en": "Foundation of Gothenburg, a significant Swedish port city, aimed at expanding trade and maritime activities.",
+        "sv": "Grundandet av Göteborg, en betydande svensk hamnstad, syftade till att utvidga handel och maritima aktiviteter."
+      },
       "id": "45d14b37-6837-4ae5-90ad-51c6d37f7a5b"
     },
     {
-      "title": "Publication of 'Systema Naturae'",
+      "title": {
+        "en": "Publication of 'Systema Naturae'",
+        "sv": "Publicering av 'Systema Naturae'"
+      },
       "category": "science",
       "year": 1735,
-      "description": "Carl Linnaeus publishes 'Systema Naturae,' establishing the system of binomial nomenclature for species classification.",
+      "description": {
+        "en": "Carl Linnaeus publishes 'Systema Naturae,' establishing the system of binomial nomenclature for species classification.",
+        "sv": "Carl von Linné publicerar 'Systema Naturae', och etablerar systemet för binomial nomenklatur för artklassificering."
+      },
       "id": "420a93b5-38e2-4a18-99ad-ee5713feb5d6"
     },
     {
-      "title": "Treaty of Fredrikshamn",
+      "title": {
+        "en": "Finland belongs to Russia after the Treaty of Fredrikshamn",
+        "sv": "Finland tillfaller Ryssland efter fredsavtalet i Fredrikshamn"
+      },
       "category": "politics",
       "year": 1809,
-      "description": "The Finnish War concludes with the signing of the Treaty of Fredrikshamn, resulting in the loss of Finland to Russia.",
+      "description": {
+        "en": "The Finnish War concludes with the signing of the Treaty of Fredrikshamn, resulting in the loss of Finland to Russia.",
+        "sv": "Finska kriget avslutas med undertecknandet av fredsfördraget i Fredrikshamn, vilket resulterar i att Finland förlorades till Ryssland."
+      },
       "id": "3591d947-781c-4f20-9d1e-f654b8d3ae20"
     },
     {
-      "title": "Invention of Dynamite",
+      "title": {
+        "en": "Invention of Dynamite",
+        "sv": "Uppfinningen av dynamit"
+      },
       "category": "technology",
       "year": 1876,
-      "description": "Alfred Nobel invents dynamite, revolutionizing the field of explosives and laying the foundation for the Nobel Prizes.",
+      "description": {
+        "en": "Alfred Nobel invents dynamite, revolutionizing the field of explosives and laying the foundation for the Nobel Prizes.",
+        "sv": "Alfred Nobel uppfinnar dynamit och revolutionerar sprängämnesområdet samt lägger grunden för Nobels pris."
+      },
       "id": "a6002c28-f379-4662-947e-4fc2d3e36858"
     },
     {
-      "title": "Selma Lagerlöf Wins Nobel Prize in Literature",
+      "title": {
+        "en": "Selma Lagerlöf Wins Nobel Prize in Literature",
+        "sv": "Selma Lagerlöf vinner Nobelpriset i litteratur"
+      },
       "category": "culture",
       "year": 1901,
-      "description": "Selma Lagerlöf becomes the first female writer to win the Nobel Prize in Literature for her work 'Gösta Berling's Saga.'",
+      "description": {
+        "en": "Selma Lagerlöf becomes the first female writer to win the Nobel Prize in Literature for her work 'Gösta Berling's Saga.'",
+        "sv": "Selma Lagerlöf blir den första kvinnliga författaren att vinna Nobelpriset i litteratur för sitt verk 'Gösta Berlings Saga.'"
+      },
       "id": "78a9d962-e15b-4fc1-92ae-314691a4c6fe"
     },
     {
-      "title": "Switch to Right-Hand Traffic in Sweden",
+      "title": {
+        "en": "Switch to Right-Hand Traffic in Sweden",
+        "sv": "Byte till högertrafik i Sverige"
+      },
       "category": "politics",
       "year": 1971,
-      "description": "Sweden officially switches from driving on the left-hand side of the road to the right-hand side, known as Dagen H (H Day).",
+      "description": {
+        "en": "Sweden officially switches from driving on the left-hand side of the road to the right-hand side, known as Dagen H (H Day).",
+        "sv": "Sverige byter officiellt från att köra på vänster sida av vägen till höger sida, känt som Dagen H (H-dagen)."
+      },
       "id": "81aa8317-4fac-417d-80b6-ebfd047026c7"
     },
     {
-      "title": "Invention of the World Wide Web",
+      "title": {
+        "en": "Invention of the World Wide Web",
+        "sv": "Uppfinningen av World Wide Web"
+      },
       "category": "technology",
       "year": 1989,
-      "description": "Tim Berners-Lee, a British computer scientist, proposes the concept of the World Wide Web, laying the groundwork for its development, which later becomes integral worldwide.",
+      "description": {
+        "en": "Tim Berners-Lee, a British computer scientist, proposes the concept of the World Wide Web, laying the groundwork for its development, which later becomes integral worldwide.",
+        "sv": "Tim Berners-Lee, en brittisk datavetenskapsman, föreslår konceptet för World Wide Web, lägger grunden för dess utveckling, vilket senare blir integrerat över hela världen."
+      },
       "id": "d8cec920-cf93-49a5-a808-ef1a2ab68989"
     },
     {
-      "title": "Sweden Joins the European Union",
+      "title": {
+        "en": "Sweden Joins the European Union",
+        "sv": "Sverige går med i Europeiska unionen"
+      },
       "category": "history",
       "year": 1995,
-      "description": "Sweden joins the European Union (EU) after a referendum in which the majority of voters supported membership.",
+      "description": {
+        "en": "Sweden joins the European Union (EU) after a referendum in which the majority of voters supported membership.",
+        "sv": "Sverige går med i Europeiska unionen (EU) efter en folkomröstning där majoriteten av väljarna stödde medlemskapet."
+      },
       "id": "d4e274ee-ee3c-4ee8-87ca-a4ccd9fafa75"
     },
     {
-      "title": "Skype is released",
+      "title": {
+        "en": "Skype is released",
+        "sv": "Skype släpps"
+      },
       "category": "technology",
       "year": 2003,
-      "description": "Skype, a communication platform founded by Niklas Zennström and Janus Friis, which plays a significant role in global communications, is developed in Sweden.",
+      "description": {
+        "en": "Skype, a communication platform founded by Niklas Zennström and Janus Friis, which plays a significant role in global communications, is developed in Sweden.",
+        "sv": "Skype, en kommunikationsplattform grundad av Niklas Zennström och Janus Friis, som spelar en betydande roll i global kommunikation, utvecklas i Sverige."
+      },
       "id": "3af64621-99ea-425c-b02f-ec367b78db20"
     },
     {
-      "title": "Bob Dylan Wins Nobel Prize in Literature",
+      "title": {
+        "en": "Bob Dylan Wins Nobel Prize in Literature",
+        "sv": "Bob Dylan vinner Nobelpriset i litteratur"
+      },
       "category": "culture",
       "year": 2016,
-      "description": "Bob Dylan, an American musician and songwriter, wins the Nobel Prize in Literature, becoming the first musician to receive this prestigious award.",
+      "description": {
+        "en": "Bob Dylan, an American musician and songwriter, wins the Nobel Prize in Literature, becoming the first musician to receive this prestigious award.",
+        "sv": "Bob Dylan, en amerikansk musiker och låtskrivare, vinner Nobelpriset i litteratur och blir den första musikern som får detta prestigefyllda pris."
+      },
       "id": "a42c1483-8007-4096-873d-0ce6ef08920a"
     },
     {
-      "title": "'Trillingnöten' is discontinued",
+      "title": {
+        "en": "'Trillingnöten' is discontinued",
+        "sv": "Trillingnöten slutar tillverkas"
+      },
       "category": "culture",
       "year": 2014,
-      "description": "The classic 'Trillingnöt', a chocolate-covered peanut candy, is discontinued by Cloetta and removed from 'Alladin'.",
+      "description": {
+        "en": "The classic 'Trillingnöt', a chocolate-covered peanut candy, is discontinued by Cloetta and removed from the 'Alladin'-box, a box of chocolates.",
+        "sv": "Den klassiska Trillingnöten, slutar tillverkas av Cloetta och tas bort från Alladinasken."
+      },
       "id": "e3186122-d146-41d7-838e-541b667cf1b0"
+    },
+    {
+      "title": {
+        "en": "Adolf Hitler is born",
+        "sv": "Adolf Hitler föds"
+      },
+      "category": "history",
+      "year": 1889,
+      "description": {
+        "en": "Adolf Hitler is born in Austria-Hungary",
+        "sv": "Adolf Hitler föds i dåvarande Österrike-Ungern"
+      },
+      "id": "49247261-fe99-4a7e-aa93-2eaa20ab7410"
+    },
+    {
+      "title": {
+        "en": "The chocolate drink O'boy is launched by Findus",
+        "sv": "Mjölkdrycken O'boy lanseras av Findus"
+      },
+      "category": "history",
+      "year": 1960,
+      "description": {
+        "en": "The chocolate drink O'boy is launched by Findus",
+        "sv": "Mjölkdrycken O'boy lanseras av Findus"
+      },
+      "id": "57f42db8-a077-4460-95a8-3e5b88d65186"
     }
   ]
 }
