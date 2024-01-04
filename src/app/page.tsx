@@ -13,8 +13,6 @@ export default async function Home() {
       <Image
         src={Texture}
         alt="Texture"
-        objectFit="cover"
-        objectPosition="center"
         className="absolute top-0 left-0 w-full h-full mix-blend-soft-light pointer-events-none"
       />
     </main>
