@@ -4,6 +4,8 @@ import { scoreAtom } from "@/app/state";
 import { motion, useAnimate } from "framer-motion";
 import { useAtom } from "jotai";
 import { HighScore } from "./HighScore";
+import { useEffect } from "react";
+import { timeout } from "@/utils/timeout";
 
 export const GameOver = () => {
   const [score] = useAtom(scoreAtom);
@@ -60,21 +62,4 @@ export const GameOver = () => {
       </section>
     </div>
   );
-};
-
-const getScoreText = (score: number) => {
-  if (score > 45) {
-    return "Wow, that's amazing";
-  }
-  if (score > 30) {
-    return "Not bad, keep it up";
-  }
-  if (score > 15) {
-    return "It's not terrible";
-  }
-  if (score > 10) {
-    return "You can do better than that";
-  }
-
-  return "Ouch, that's not a very good score";
 };

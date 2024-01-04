@@ -12,6 +12,7 @@ const getFromLocalStorage = (key: string) => {
 };
 
 export const rootStateAtom = atom<RootState>({
+  id: "",
   timelineEvents: [],
   salt: "",
   gameState: { mainState: "game start", subState: undefined },

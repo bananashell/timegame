@@ -16,6 +16,7 @@ export const createNewGameEntity = async (
   const id = gameId({ salt: salt, userId: userId });
   const collection = await gamesCollection();
   const gameEntity: GameEntity = {
+    id: id,
     events: [],
     gameStatus: "playing",
     noEvents: 0,

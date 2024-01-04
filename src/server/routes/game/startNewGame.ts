@@ -25,7 +25,6 @@ export const startNewGame = procedure
         userId: input.userId,
         username: input.username,
       });
-      console.log("Entity", entity);
 
       const nextEvent = await getNextHistoricEvent({
         salt: salt,

@@ -2,6 +2,9 @@ import { historicEvent } from "@/models/historicEvent";
 import { z } from "zod";
 
 export const gameEntity = z.object({
+  id: z.string().regex(
+    /^[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}\|[a-z0-9]{16}$/, // uuid|salt
+  ),
   userId: z.string().uuid(),
   salt: z.string(),
   username: z.string().min(1).max(255),

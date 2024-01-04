@@ -3,21 +3,29 @@
 import { CardStack } from "@/app/_components/card";
 import { Timeline } from "@/app/_components/timeline";
 import { Guess } from "./Guess";
-import { stateAtom } from "@/app/state";
+import { stateAtom, rootStateAtom } from "@/app/state";
 import { useAtom } from "jotai";
 import { CurrentScore } from "@/app/_components/CurrentScore";
 import { GameOver } from "./GameOver";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
 import { Score } from "@/app/_components/Score";
+import { useRouter } from "next/navigation";
 
 export const GameBoard = () => {
+  const [rootState] = useAtom(rootStateAtom);
   const [state] = useAtom(stateAtom);
-  console.log("state", state);
+  const router = useRouter();
+
+  if (state.mainState === "game over") {
+    router.push(`/highscore/${rootState.id}`);
+    return null;
+  }
+
   return (
     <main className=" h-screen items-center justify-center w-screen">
       <AnimatePresence>
-        {state.mainState === "game over" && <GameOver />}
+        {/* {state.mainState === "game over" && <GameOver />} */}
 
         {state.mainState === "playing" && (
           <motion.section

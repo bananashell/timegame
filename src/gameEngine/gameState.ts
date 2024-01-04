@@ -5,6 +5,7 @@ export type HistoricGameEvent = HistoricEvent & { guess: Year };
 export type LockedHistoricGameEvent = HistoricGameEvent & { score: number };
 
 export type RootState = {
+  id: string;
   currentEvent?: HistoricGameEvent;
   nextEvent?: HistoricEvent;
   timelineEvents: LockedHistoricGameEvent[];
