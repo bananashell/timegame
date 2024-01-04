@@ -37,10 +37,9 @@ export default function RootLayout({
         <JotaiProvider>
           <DevTools />
           {children}
-          <Analytics />
         </JotaiProvider>
-        {/* <ReactQueryDevtools />
-        </Provider> */}
+        {/* </Provider> */}
+        <Analytics />
       </body>
     </html>
   );
