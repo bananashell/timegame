@@ -2,6 +2,7 @@ import { produce } from "immer";
 import { RootState, HistoricGameEvent, Year } from "@/gameEngine/gameState";
 import { calculateScore } from "@/gameEngine/logic/calculateScore";
 import { HistoricEvent } from "@/models/historicEvent";
+import { gameId } from "@/data/db/game/gameId";
 
 export const createNewGame = ({
   salt,
@@ -13,6 +14,7 @@ export const createNewGame = ({
   userId: string;
 }): RootState => {
   return {
+    id: gameId({ salt: salt, userId: userId }),
     gameState: { mainState: "playing", subState: "guessing" },
     timelineEvents: [],
     currentEvent: undefined,

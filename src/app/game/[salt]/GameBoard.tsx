@@ -6,7 +6,6 @@ import { Guess } from "./Guess";
 import { stateAtom, rootStateAtom } from "@/app/state";
 import { useAtom } from "jotai";
 import { CurrentScore } from "@/app/_components/CurrentScore";
-import { GameOver } from "./GameOver";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
 import { Score } from "@/app/_components/Score";
@@ -25,8 +24,6 @@ export const GameBoard = () => {
   return (
     <main className=" h-screen items-center justify-center w-screen">
       <AnimatePresence>
-        {/* {state.mainState === "game over" && <GameOver />} */}
-
         {state.mainState === "playing" && (
           <motion.section
             initial={{ opacity: 0 }}
