@@ -8,8 +8,8 @@ export type ScoredHistoricEvent = Pick<
 >;
 export type CurrentEvent = Pick<HistoricEvent, "year">;
 
-export const FIVE_POINT_DIFF_CUTOFF = 10 as const;
-export const SCORES = {
+const FIVE_POINT_DIFF_CUTOFF = 10 as const;
+const SCORES = {
   MAXIMUM_SCORE: 10 as const,
   SMALL_DIFF_SCORE: 5 as const,
   LARGE_DIFF_SCORE: 1 as const,

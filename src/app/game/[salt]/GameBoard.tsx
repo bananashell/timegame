@@ -1,9 +1,9 @@
 "use client";
 
-import { CardStack } from "@/app/_components/card/CardStack";
-import { Timeline } from "@/app/_components/timeline/Timeline";
+import { CardStack } from "@/app/_components/card";
+import { Timeline } from "@/app/_components/timeline";
 import { Guess } from "./Guess";
-import { rootStateAtom, stateAtom } from "@/app/state";
+import { stateAtom } from "@/app/state";
 import { useAtom } from "jotai";
 import { CurrentScore } from "@/app/_components/CurrentScore";
 import { GameOver } from "./GameOver";

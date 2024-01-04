@@ -3,7 +3,7 @@ import { gameId } from "../gameId";
 import { gamesCollection } from "./gamesCollection";
 import { getGame } from "./getGame";
 
-export const upsertGame = async (game: GameEntity) => {
+export async function upsertGame(game: GameEntity) {
   const id = gameId(game);
   const gameSnap = await getGame(id);
 
@@ -17,4 +17,4 @@ export const upsertGame = async (game: GameEntity) => {
 
   console.log("Document written with ID: ", gameId);
   return;
-};
+}

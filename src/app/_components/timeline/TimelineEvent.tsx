@@ -13,8 +13,8 @@ export const TimelineEvent = ({
       className={`flex max-w-lg rounded-xl border-2 border-black dark:border-white backdrop-blur-lg bg-white/20 dark:bg-black/20`}
     >
       <div className="px-4 py-2">
-        <h2 className="">{historicEvent.title}</h2>
-        <span className="">{historicEvent.description}</span>
+        <h2 className="">{historicEvent.title.sv}</h2>
+        <span className="">{historicEvent.description.sv}</span>
       </div>
       <div className="text-5xl flex items-center p-2 aspect-square w-40 ">
         <div
