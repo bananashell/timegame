@@ -5,6 +5,7 @@ import { DevTools } from "./Devtools";
 import { Provider as JotaiProvider } from "jotai";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const lobster = Lobster({
   weight: "400",
@@ -40,6 +41,7 @@ export default function RootLayout({
         </JotaiProvider>
         {/* </Provider> */}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
