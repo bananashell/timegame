@@ -4,6 +4,7 @@ import { Lobster, Bebas_Neue } from "next/font/google";
 import { DevTools } from "./Devtools";
 import { Provider as JotaiProvider } from "jotai";
 import { ThemeSwitcher } from "./ThemeSwitcher";
+import { Analytics } from "@vercel/analytics/react";
 
 const lobster = Lobster({
   weight: "400",
@@ -36,6 +37,7 @@ export default function RootLayout({
         <JotaiProvider>
           <DevTools />
           {children}
+          <Analytics />
         </JotaiProvider>
         {/* <ReactQueryDevtools />
         </Provider> */}
