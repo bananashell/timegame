@@ -80,22 +80,22 @@ function Card({ historicEvent }: { historicEvent?: HistoricEvent }) {
         onClick={() => setIsOpen(!isOpen)}
       >
         <article>
-          <h2>{historicEvent?.title}</h2>
+          <h2>{historicEvent?.title.sv}</h2>
           <AnimatePresence>
             {isOpen && (
               <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: isOpen ? 1 : 0 }}
               >
-                {historicEvent?.description}
+                {historicEvent?.description.sv}
               </motion.p>
             )}
           </AnimatePresence>
         </article>
 
         <aside className="opacity-0 pointer-events-none">
-          <h2 ref={offscreenHeadingRef}>{historicEvent?.title}</h2>
-          <p ref={offscreenTextRef}>{historicEvent?.description}</p>
+          <h2 ref={offscreenHeadingRef}>{historicEvent?.title.sv}</h2>
+          <p ref={offscreenTextRef}>{historicEvent?.description.sv}</p>
         </aside>
       </motion.div>
     </motion.div>

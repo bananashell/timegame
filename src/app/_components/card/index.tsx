@@ -1,1 +1,1 @@
-export { HistoricEventCard } from "./HistoricEventCard";
+export { CardStack } from "./CardStack";
