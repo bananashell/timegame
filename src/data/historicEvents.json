@@ -80,8 +80,8 @@
     },
     {
       "title": {
-        "en": "Publication of Newton's Principia",
-        "sv": "Publicering av Newtons Principia"
+        "en": "Isaac Newton's theory of Universal Gravitation is published",
+        "sv": "Isaac Newton publiceras sin teori om universell gravitation"
       },
       "category": "science",
       "year": 1687,
@@ -337,6 +337,552 @@
         "sv": "Mjölkdrycken O'boy lanseras av Findus"
       },
       "id": "57f42db8-a077-4460-95a8-3e5b88d65186"
+    },
+    {
+      "title": {
+        "en": "Cuban Javier Sotomayor sets a new world record in high jump with 2.45 meters",
+        "sv": "Kubanen Javier Sotomayor sätter nytt världsrekord i höjdhopp med sina 2,45 meter"
+      },
+      "category": "sports",
+      "year": 1993,
+      "description": {
+        "en": "Cuban Javier Sotomayor sets a new world record in high jump with 2.45 meters",
+        "sv": "Kubanen Javier Sotomayor sätter nytt världsrekord i höjdhopp med sina 2,45 meter"
+      },
+      "id": "48c5f7d6-d172-4802-8a76-a10c32e45ae3"
+    },
+    {
+      "title": {
+        "en": "Cuban Javier Sotomayor sets a new world record in high jump with 2.45 meters",
+        "sv": "Kubanen Javier Sotomayor sätter nytt världsrekord i höjdhopp med sina 2,45 meter"
+      },
+      "category": "sports",
+      "year": 1993,
+      "description": {
+        "en": "Cuban Javier Sotomayor sets a new world record in high jump with 2.45 meters",
+        "sv": "Kubanen Javier Sotomayor sätter nytt världsrekord i höjdhopp med sina 2,45 meter"
+      },
+      "id": "67af9eb4-4636-403c-b42c-c4b4c0713b2d"
+    },
+    {
+      "title": {
+        "en": "The Berlin Wall falls, marking the reunification of East and West Germany",
+        "sv": "Berlinmuren faller och markerar återföreningen av Öst- och Västtyskland"
+      },
+      "category": "politics",
+      "year": 1989,
+      "description": {
+        "en": "The Berlin Wall falls, marking the reunification of East and West Germany",
+        "sv": "Berlinmuren faller och markerar återföreningen av Öst- och Västtyskland"
+      },
+      "id": "b0e444cb-776d-4add-b872-99f5e2c8e082"
+    },
+    {
+      "title": {
+        "en": "Nelson Mandela is released from prison after 27 years",
+        "sv": "Nelson Mandela friges från fängelset efter 27 år"
+      },
+      "category": "politics",
+      "year": 1990,
+      "description": {
+        "en": "Nelson Mandela is released from prison after 27 years",
+        "sv": "Nelson Mandela friges från fängelset efter 27 år"
+      },
+      "id": "1500cf8e-ffe5-4919-9237-df5090b53f39"
+    },
+    {
+      "title": {
+        "en": "The first iPhone is released",
+        "sv": "Den första iPhonen släpps"
+      },
+      "category": "technology",
+      "year": 2007,
+      "description": {
+        "en": "The first iPhone is released",
+        "sv": "Den första iPhonen släpps"
+      },
+      "id": "3b765457-0387-4175-b4e9-a5d787d6ab5b"
+    },
+    {
+      "id": "3d7ad2ca-3a76-4e22-8f9f-10b7662dd3b4",
+      "title": {
+        "sv": "SpaceX genomför första bemannade rymduppdrag till Internationella rymdstationen ISS",
+        "en": "SpaceX conducts first crewed mission to the International Space Station"
+      },
+      "category": "history",
+      "year": 2020,
+      "description": {
+        "sv": "SpaceX genomför första bemannade rymduppdrag till Internationella rymdstationen ISS, öppnar dörren för kommersiella rymdresor",
+        "en": "SpaceX conducts first crewed mission to the International Space Station, paving the way for commercial space travel"
+      }
+    },
+    {
+      "id": "8822b36a-7797-4bad-809b-b9584ef877c6",
+      "title": {
+        "sv": "Netflix-serien 'Stranger Things' fångar publikens uppmärksamhet",
+        "en": "Netflix series 'Stranger Things' captures audience attention"
+      },
+      "category": "culture",
+      "year": 2016,
+      "description": {
+        "sv": "Netflix-serien 'Stranger Things' fångar publikens uppmärksamhet med sin nostalgiska ton och spännande handling",
+        "en": "Netflix series 'Stranger Things' captures audience attention with its nostalgic tone and compelling storyline"
+      }
+    },
+    {
+      "id": "5830b638-eeb4-418b-b805-1307f9d4455e",
+      "title": {
+        "sv": "George R.R. Martin släpper boken 'A Game of Thrones'",
+        "en": "George R.R. Martin publishes 'A Game of Thrones'"
+      },
+      "category": "culture",
+      "year": 1996,
+      "description": {
+        "sv": "George R.R. Martin släpper boken 'A Game of Thrones', den första boken i serien 'A Song of Ice and Fire'",
+        "en": "George R.R. Martin publishes 'A Game of Thrones', the first book in the 'A Song of Ice and Fire' series"
+      }
+    },
+    {
+      "id": "551bfaa3-4ace-4e31-9fdf-7b333d395ffe",
+      "title": {
+        "sv": "George R.R. Martin släpper boken 'A Game of Thrones'",
+        "en": "George R.R. Martin publishes 'A Game of Thrones'"
+      },
+      "category": "culture",
+      "year": 1996,
+      "description": {
+        "sv": "George R.R. Martin släpper boken 'A Game of Thrones', den första boken i serien 'A Song of Ice and Fire'",
+        "en": "George R.R. Martin publishes 'A Game of Thrones', the first book in the 'A Song of Ice and Fire' series"
+      }
+    },
+    {
+      "id": "1d87dea2-0d57-47cd-939d-8e8e50d096da",
+      "title": {
+        "sv": "Parasite vinner Oscar för Bästa Film och Bästa Internationella Film",
+        "en": "Parasite wins the Oscar for Best Picture and Best International Feature Film"
+      },
+      "category": "popculture",
+      "year": 2020,
+      "description": {
+        "sv": "Parasite vinner Oscar för Bästa Film och Bästa Internationella Film, vilket markerar en historisk seger för sydkoreansk film",
+        "en": "Parasite wins the Oscar for Best Picture and Best International Feature Film, marking a historic victory for South Korean cinema"
+      }
+    },
+    {
+      "id": "1215dbc7-c223-4791-9e68-d10d8ba77ed5",
+      "title": {
+        "sv": "Avengers: Endgame blir den mest inkomstbringande filmen genom tiderna",
+        "en": "Avengers: Endgame becomes the highest-grossing film of all time"
+      },
+      "category": "popculture",
+      "year": 2019,
+      "description": {
+        "sv": "Avengers: Endgame blir den mest inkomstbringande filmen genom tiderna och avslutar en episk superhjältesaga",
+        "en": "Avengers: Endgame becomes the highest-grossing film of all time, concluding an epic superhero saga"
+      }
+    },
+    {
+      "id": "780548bb-2c36-4eb7-84b6-cc3325cba3f8",
+      "title": {
+        "sv": "Casablanca vinner Oscar för Bästa Film",
+        "en": "Casablanca wins the Oscar for Best Picture"
+      },
+      "category": "popculture",
+      "year": 1943,
+      "description": {
+        "sv": "Casablanca vinner Oscar för Bästa Film och blir en klassiker inom filmhistorien",
+        "en": "Casablanca wins the Oscar for Best Picture and becomes a classic in film history"
+      }
+    },
+    {
+      "id": "1306a0fc-ceb9-4846-a419-1f17f25e0401",
+      "title": {
+        "sv": "The Wizard of Oz premiärvisas i Technicolor",
+        "en": "The Wizard of Oz premieres in Technicolor"
+      },
+      "category": "popculture",
+      "year": 1939,
+      "description": {
+        "sv": "The Wizard of Oz premiärvisas i Technicolor och blir en banbrytande filmupplevelse för sin tid",
+        "en": "The Wizard of Oz premieres in Technicolor and becomes a groundbreaking film experience for its era"
+      }
+    },
+    {
+      "id": "fb0262c4-5f93-44b2-aebc-cfb2d96448cc",
+      "title": {
+        "sv": "Charlie Chaplin släpper filmen 'The Kid'",
+        "en": "Charlie Chaplin releases the film 'The Kid'"
+      },
+      "category": "popculture",
+      "year": 1921,
+      "description": {
+        "sv": "Charlie Chaplin släpper filmen 'The Kid', som blir en av hans mest älskade verk",
+        "en": "Charlie Chaplin releases the film 'The Kid', which becomes one of his most beloved works"
+      }
+    },
+    {
+      "id": "50721b7a-066e-4c61-bdbb-996d164b135a",
+      "title": {
+        "sv": "The Birth of a Nation revolutionerar filmtekniken",
+        "en": "The Birth of a Nation revolutionizes film techniques"
+      },
+      "category": "popculture",
+      "year": 1915,
+      "description": {
+        "sv": "The Birth of a Nation revolutionerar filmtekniken med sina innovativa regimetoder och berättarstil",
+        "en": "The Birth of a Nation revolutionizes film techniques with its innovative directing methods and storytelling style"
+      }
+    },
+    {
+      "id": "276e2a46-f1bd-4ab5-8d73-a71e775f0299",
+      "title": {
+        "sv": "Star Wars: A New Hope släpps",
+        "en": "Star Wars: A New Hope is released"
+      },
+      "category": "popculture",
+      "year": 1977,
+      "description": {
+        "sv": "Star Wars: A New Hope släpps och startar en av de mest framgångsrika filmfranchiserna i historien",
+        "en": "Star Wars: A New Hope is released, initiating one of the most successful film franchises in history"
+      }
+    },
+    {
+      "id": "be5556a4-6a69-4f7b-8f00-53f6f0a8374c",
+      "title": {
+        "sv": "Rocky vinner Oscar för Bästa Film",
+        "en": "Rocky wins the Oscar for Best Picture"
+      },
+      "category": "popculture",
+      "year": 1976,
+      "description": {
+        "sv": "Rocky vinner Oscar för Bästa Film och etablerar sig som en ikonisk film inom sportdramagenren",
+        "en": "Rocky wins the Oscar for Best Picture, solidifying itself as an iconic film in the sports drama genre"
+      }
+    },
+    {
+      "id": "e041bee9-a845-4799-bd0a-22ccc85dee22",
+      "title": {
+        "sv": "E.T. the Extra-Terrestrial blir en kassasuccé",
+        "en": "E.T. the Extra-Terrestrial becomes a box office hit"
+      },
+      "category": "popculture",
+      "year": 1982,
+      "description": {
+        "sv": "E.T. the Extra-Terrestrial blir en kassasuccé och berör miljontals tittare världen över",
+        "en": "E.T. the Extra-Terrestrial becomes a box office hit, touching the hearts of millions of viewers worldwide"
+      }
+    },
+    {
+      "id": "16b29001-c140-41b1-a72b-c722e886cac9",
+      "title": {
+        "sv": "The Breakfast Club släpps och blir en ikonisk ungdomsfilm",
+        "en": "The Breakfast Club is released, becoming an iconic teen film"
+      },
+      "category": "popculture",
+      "year": 1985,
+      "description": {
+        "sv": "The Breakfast Club släpps och fångar en generation med sin skildring av tonårsliv och sociala grupper",
+        "en": "The Breakfast Club is released, capturing a generation with its portrayal of teenage life and social groups"
+      }
+    },
+    {
+      "id": "87492642-cbf5-412a-871a-f300c92acb1f",
+      "title": {
+        "sv": "Harrison Ford introducerar karaktären Deckard i Blade Runner",
+        "en": "Harrison Ford introduces the character Deckard in Blade Runner"
+      },
+      "category": "popculture",
+      "year": 1982,
+      "description": {
+        "sv": "Blade Runner revolutionerar science fiction-genren med sin dystopiska vision och visuella effekter",
+        "en": "Blade Runner revolutionizes the science fiction genre with its dystopian vision and visual effects"
+      }
+    },
+    {
+      "id": "5457978a-32a5-411c-8908-27b54f771156",
+      "title": {
+        "sv": "Filmen The Godfather släpps",
+        "en": "The movie classic The Godfather is released"
+      },
+      "category": "popculture",
+      "year": 1972,
+      "description": {
+        "sv": "The Godfather släpps och blir en kassasuccé, vilket leder till två uppföljare och en av de mest framgångsrika filmtrilogierna",
+        "en": "The Godfather is released, becoming a box office hit, leading to two sequels and one of the most successful film trilogies"
+      }
+    },
+    {
+      "id": "57dd8627-b38b-4b3a-ad12-a0d68f70eb85",
+      "title": {
+        "sv": "The Shawshank Redemption släpps",
+        "en": "The Shawshank Redemption is released"
+      },
+      "category": "popculture",
+      "year": 1994,
+      "description": {
+        "sv": "The Shawshank Redemption blir en av de mest älskade filmerna genom tiderna",
+        "en": "The Shawshank Redemption later becomes one of the most beloved films of all time"
+      }
+    },
+    {
+      "id": "d8000a95-a358-4400-8fe2-04dca8956c47",
+      "title": {
+        "sv": "The Lord of the Rings: The Return of the King vinner Oscar för Bästa Film",
+        "en": "The Lord of the Rings: The Return of the King wins the Oscar for Best Picture"
+      },
+      "category": "popculture",
+      "year": 2004,
+      "description": {
+        "sv": "The Lord of the Rings: The Return of the King vinner Oscar för Bästa Film och avslutar en av de mest framgångsrika filmtrilogierna",
+        "en": "The Lord of the Rings: The Return of the King wins the Oscar for Best Picture, concluding one of the most successful film trilogies"
+      }
+    },
+    {
+      "id": "85749ed7-57bc-4560-bf0d-44caf7eacb37",
+      "title": {
+        "sv": "Queen släpper 'Bohemian Rhapsody'",
+        "en": "Queen releases 'Bohemian Rhapsody'"
+      },
+      "category": "popculture",
+      "year": 1975,
+      "description": {
+        "sv": "Queen släpper 'Bohemian Rhapsody', en banbrytande låt som blir en ikon inom rockmusiken",
+        "en": "Queen releases 'Bohemian Rhapsody', a groundbreaking song that becomes an icon in rock music"
+      }
+    },
+    {
+      "id": "f5636795-1767-4bf5-9b59-a3de4752c760",
+      "title": {
+        "sv": "Michael Jackson släpper albumet 'Thriller'",
+        "en": "Michael Jackson releases the album 'Thriller'"
+      },
+      "category": "popculture",
+      "year": 1982,
+      "description": {
+        "sv": "Michael Jackson släpper albumet 'Thriller', som blir världens mest sålda album genom tiderna",
+        "en": "Michael Jackson releases the album 'Thriller', which becomes the world's best-selling album of all time"
+      }
+    },
+    {
+      "id": "fec34283-4574-47aa-a0bb-d0a660c39d81",
+      "title": {
+        "sv": "Bee Gees dominerar med soundtracket till 'Saturday Night Fever'",
+        "en": "Bee Gees dominate with the soundtrack of 'Saturday Night Fever'"
+      },
+      "category": "popculture",
+      "year": 1977,
+      "description": {
+        "sv": "Bee Gees dominerar med soundtracket till 'Saturday Night Fever', vilket blir ett av de bästsäljande albumen",
+        "en": "Bee Gees dominate with the soundtrack of 'Saturday Night Fever', becoming one of the best-selling albums"
+      }
+    },
+    {
+      "id": "1c2280ca-644b-41ea-aa5e-265cf7add78b",
+      "title": {
+        "sv": "John Lennon släpper 'Imagine'",
+        "en": "John Lennon releases 'Imagine'"
+      },
+      "category": "popculture",
+      "year": 1971,
+      "description": {
+        "sv": "John Lennon släpper 'Imagine', en tidlös låt som blir en hymn för fred och en värld utan gränser",
+        "en": "John Lennon releases 'Imagine', a timeless song that becomes an anthem for peace and a world without borders"
+      }
+    },
+    {
+      "id": "7b709c70-6d07-4d53-a10a-c062196e71b1",
+      "title": {
+        "sv": "Madonna släpper albumet 'Like a Virgin'",
+        "en": "Madonna releases the album 'Like a Virgin'"
+      },
+      "category": "popculture",
+      "year": 1984,
+      "description": {
+        "sv": "Madonna släpper albumet 'Like a Virgin', vilket cementerar hennes status som en popikon",
+        "en": "Madonna releases the album 'Like a Virgin', solidifying her status as a pop icon"
+      }
+    },
+    {
+      "id": "8a6aba3c-5d9f-4119-a460-374cbc3892a2",
+      "title": {
+        "sv": "The Beatles släpper albumet 'Sgt. Pepper's Lonely Hearts Club Band'",
+        "en": "The Beatles release the album 'Sgt. Pepper's Lonely Hearts Club Band'"
+      },
+      "category": "popculture",
+      "year": 1967,
+      "description": {
+        "sv": "The Beatles släpper albumet 'Sgt. Pepper's Lonely Hearts Club Band', som blir ett av de mest inflytelserika albumen genom tiderna",
+        "en": "The Beatles release the album 'Sgt. Pepper's Lonely Hearts Club Band', becoming one of the most influential albums of all time"
+      }
+    },
+    {
+      "id": "382efb41-1b4a-4f1a-8e41-95b40feae71d",
+      "title": {
+        "sv": "Sverige inför allmän rösträtt för kvinnor",
+        "en": "Women gains the right to vote in Swedish political elections"
+      },
+      "category": "politics",
+      "year": 1921,
+      "description": {
+        "sv": "Sverige inför allmän rösträtt för kvinnor och blir ett av de första länderna att göra det",
+        "en": "Sweden introduces universal suffrage for women, becoming one of the first countries to do so"
+      }
+    },
+    {
+      "id": "c341710f-c2a5-470b-bc64-512a1e7f08ea",
+      "title": {
+        "sv": "ABBA vinner Eurovision Song Contest",
+        "en": "ABBA wins the Eurovision Song Contest"
+      },
+      "category": "music",
+      "year": 1974,
+      "description": {
+        "sv": "ABBA vinner Eurovision Song Contest med låten 'Waterloo' och får internationell berömmelse",
+        "en": "ABBA wins the Eurovision Song Contest with the song 'Waterloo', gaining international acclaim"
+      }
+    },
+    {
+      "id": "1f753d0b-0cb9-42b6-b737-4328b2955eeb",
+      "title": {
+        "sv": "Olof Palme mördas i Stockholm",
+        "en": "Olof Palme is assassinated in Stockholm"
+      },
+      "category": "politics",
+      "year": 1986,
+      "description": {
+        "sv": "Olof Palme mördas på öppen gata i Stockholm, vilket chockar landet och får global uppmärksamhet",
+        "en": "Olof Palme is assassinated on the streets of Stockholm, shocking the country and receiving global attention"
+      }
+    },
+    {
+      "id": "2b4ddaa8-ec79-46c0-abe0-2d5a6dd4d36d",
+      "title": {
+        "sv": "Sverige förlorar Slaget vid Poltava och stormaktstiden når sitt slut",
+        "en": "Sweden loses The Battle of Poltava and the Swedish Empire comes to an end"
+      },
+      "category": "war",
+      "year": 1709,
+      "description": {
+        "sv": "Svenska stormaktstiden når sitt slut efter nederlaget i Slaget vid Poltava mot Ryssland",
+        "en": "The Swedish Empire's era of greatness comes to an end after the defeat at the Battle of Poltava against Russia"
+      }
+    },
+    {
+      "id": "bd6e858b-1a77-499c-a0e9-ef295918585d",
+      "title": {
+        "sv": "Celine Dion representerar Schweiz i Eurovision Song Contest",
+        "en": "Celine Dion represents Switzerland in Eurovision Song Contest"
+      },
+      "category": "music",
+      "year": 1988,
+      "description": {
+        "sv": "Celine Dion representerar Schweiz i Eurovision Song Contest och vinner med låten 'Ne partez pas sans moi'",
+        "en": "Celine Dion represents Switzerland in the Eurovision Song Contest and wins with the song 'Ne partez pas sans moi'"
+      }
+    },
+    {
+      "id": "93ad6703-9a7e-4c52-97c4-f5b9b9bdd842",
+      "title": {
+        "sv": "Första Eurovision Song Contest hålls i Lugano, Schweiz",
+        "en": "First Eurovision Song Contest is held in Lugano, Switzerland"
+      },
+      "category": "music",
+      "year": 1956,
+      "description": {
+        "sv": "Det allra första Eurovision Song Contest hålls i Lugano, Schweiz, med sju deltagande länder",
+        "en": "The very first Eurovision Song Contest is held in Lugano, Switzerland, with seven participating countries"
+      }
+    },
+    {
+      "id": "77dcbe8b-daed-4168-a384-15a14a062985",
+      "title": {
+        "sv": "Stockholm arrangerar Sommar-OS",
+        "en": "Stockholm hosts the Summer Olympics"
+      },
+      "category": "sports",
+      "year": 1912,
+      "description": {
+        "sv": "Stockholm arrangerar Sommar-OS, vilket var det femte olympiska spelen och var det första att inkludera kvinnliga deltagare i simning",
+        "en": "Stockholm hosts the Summer Olympics, marking the fifth Olympic Games and being the first to include female competitors in swimming"
+      }
+    },
+    {
+      "id": "e45eb5a3-df2a-4056-8c6d-018617c11c47",
+      "title": {
+        "en": "The Battle of Hastings",
+        "sv": "Slaget vid Hastings"
+      },
+      "category": "war",
+      "year": 1066,
+      "description": {
+        "en": "The Battle of Hastings takes place between the Normans led by William the Conqueror and the English forces led by King Harold II, resulting in the Norman conquest of England.",
+        "sv": "Slaget vid Hastings äger rum mellan normanderna ledda av Vilhelm Erövraren och de engelska styrkorna ledda av kung Harold II, vilket resulterar i normandernas erövring av England."
+      }
+    },
+    {
+      "id": "d64e8514-a728-409e-9e69-e7557338feb2",
+      "title": {
+        "en": "The Magna Carta is Signed",
+        "sv": "Magna Carta undertecknas"
+      },
+      "category": "politics",
+      "year": 1215,
+      "description": {
+        "en": "The Magna Carta, a document limiting the powers of the monarchy and establishing certain legal rights, is signed by King John of England at Runnymede.",
+        "sv": "Magna Carta, ett dokument som begränsar monarkins makt och fastställer vissa lagliga rättigheter, undertecknas av kung Johan av England vid Runnymede."
+      }
+    },
+    {
+      "id": "7d81e3d7-6ab4-4bc2-acd5-9f4ea10c08e9",
+      "title": {
+        "en": "The Hundred Years' War Starts",
+        "sv": "Hundraårskriget börjar"
+      },
+      "category": "war",
+      "year": 1337,
+      "description": {
+        "en": "The Hundred Years' War between England and France begins over territorial disputes and the English claim to the French throne.",
+        "sv": "Hundraårskriget mellan England och Frankrike börjar på grund av territoriella tvister och den engelska ansprånget på den franska tronen."
+      }
+    },
+    {
+      "id": "5e129d19-06c6-48ae-a209-6192b38b0b83",
+      "title": {
+        "en": "Galileo Galilei discovers the moons of Jupiter",
+        "sv": "Galileo Galilei upptäcker Jupiters månar"
+      },
+      "category": "science",
+      "year": 1610,
+      "description": {
+        "en": "Galileo Galilei makes astronomical observations using a telescope, discovering celestial bodies like Jupiter's moons, sunspots, and craters on the Moon, which supports the heliocentric theory.",
+        "sv": "Galileo Galilei gör astronomiska observationer med hjälp av ett teleskop och upptäcker himlakroppar som Jupiters månar, solfläckar och kratrar på månen, vilket stödjer den heliocentriska teorin."
+      }
+    },
+    {
+      "id": "cf56097c-8d9c-4ea5-a1e2-41770979f7e9",
+      "title": {
+        "en": "Linnaeus' Biological Classification System",
+        "sv": "Carl von Linnés system för biologisk klassificering"
+      },
+      "category": "science",
+      "year": 1735,
+      "description": {
+        "en": "Carl Linnaeus introduces a systematic method for classifying and naming living organisms, known as binomial nomenclature, which forms the basis of modern taxonomy.",
+        "sv": "Carl von Linné introducerar en systematisk metod för att klassificera och namnge levande organismer, känd som binomisk nomenklatur, vilket utgör grunden för modern taxonomi."
+      }
+    },
+    {
+      "id": "c2e49715-6ba8-41ee-9519-67b2a9c3e7fc",
+      "title": {
+        "en": "Jesse Owens wins 4 gold medals at the Berlin Olympics",
+        "sv": "Jesse Owens vinner 4 guld vid de olympiska spelen i Berlin"
+      },
+      "category": "sports",
+      "year": 1936,
+      "description": {
+        "en": "American track and field athlete Jesse Owens wins four gold medals at the Berlin Olympics, undermining Hitler's idea of Aryan supremacy.",
+        "sv": "Den amerikanske friidrottsutövaren Jesse Owens vinner fyra guldmedaljer vid de olympiska spelen i Berlin och underminerar Hitler's idé om ariskt överlägsenhet."
+      }
     }
   ]
 }
