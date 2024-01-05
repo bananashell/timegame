@@ -12,7 +12,7 @@ export type RootState = {
   gameState: GameStartState | PlayingState | GameOverState;
   salt: string;
   username: string;
-  userId: string;
+  userId?: string;
 };
 
 type GameState<MainState, SubState> = {

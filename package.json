@@ -26,9 +26,11 @@
     "jotai-devtools": "^0.7.0",
     "jotai-optics": "^0.3.1",
     "next": "^14.0.2",
+    "next-client-cookies": "^1.1.0",
     "optics-ts": "^2.4.1",
     "react": "^18",
     "react-dom": "^18",
+    "superjson": "^2.2.1",
     "tailwind-merge": "^2.1.0",
     "uuid": "^9.0.1",
     "zod": "^3.22.4"

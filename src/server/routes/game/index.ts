@@ -1,11 +1,11 @@
 import { startNewGame } from "./startNewGame";
 import { makeGuess } from "./makeGuess";
-// import { joinGame } from "./joinGame";
 import { getHighscore } from "./getHighscore";
+import { getGame } from "./getGame";
 
 export const gameRouter = {
   startNewGame,
-  //   joinGame,
+  getGame,
   makeGuess,
   getHighscore,
 };

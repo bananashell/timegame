@@ -3,7 +3,7 @@ import { createNewGameEntity } from "@/data/db/game/repository/createNewGame";
 import { HistoricEvent } from "@/models/historicEvent";
 import { getNextHistoricEvent } from "@/server/service/historicEventService";
 import { generateRandomSalt } from "@/server/service/saltService";
-import { procedure } from "@/server/trpc";
+import { baseProcedure } from "@/server/trpc";
 import { z } from "zod";
 
 const startNewGameInput = z.object({
@@ -11,7 +11,7 @@ const startNewGameInput = z.object({
   username: z.string().min(1).max(255),
 });
 
-export const startNewGame = procedure
+export const startNewGame = baseProcedure
   .input(startNewGameInput)
   .mutation(
     async ({

@@ -3,8 +3,10 @@ import { useAtom } from "jotai";
 import { rootStateAtom, currentEventAtom, userIdAtom } from "..";
 import { v4 as uuidv4 } from "uuid";
 import { useState } from "react";
+import { useCookies } from "next-client-cookies";
 
 export const useStartNewGame = () => {
+  const cookies = useCookies();
   const [rootState, setRootState] = useAtom(rootStateAtom);
   const [userId, setUserId] = useAtom(userIdAtom);
   const [state, setState] = useState<"idle" | "loading" | "success" | "error">(
@@ -17,7 +19,7 @@ export const useStartNewGame = () => {
       try {
         const newUserId = userId ?? uuidv4();
         setUserId(newUserId);
-        global.localStorage.setItem("userId", newUserId);
+        cookies.set("userId", newUserId);
 
         if (rootState?.gameState.mainState === "playing") return;
 
@@ -36,6 +38,7 @@ export const useStartNewGame = () => {
         setState("success");
         return res;
       } catch (e) {
+        console.error(e);
         setState("error");
         return undefined;
       }

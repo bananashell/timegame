@@ -3,7 +3,6 @@
 import { RootState } from "@/gameEngine/gameState";
 import { atom } from "jotai";
 import { focusAtom } from "jotai-optics";
-import { v4 as uuidv4 } from "uuid";
 
 const getFromLocalStorage = (key: string) => {
   if (typeof global.localStorage?.getItem !== "function") return undefined;
@@ -17,7 +16,7 @@ export const rootStateAtom = atom<RootState>({
   salt: "",
   gameState: { mainState: "game start", subState: undefined },
   username: getFromLocalStorage("username") ?? "",
-  userId: getFromLocalStorage("userId") ?? uuidv4(),
+  userId: undefined,
 });
 rootStateAtom.debugLabel = "gameStateAtom";
 

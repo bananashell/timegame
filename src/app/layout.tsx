@@ -6,6 +6,7 @@ import { Provider as JotaiProvider } from "jotai";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { CookiesProvider } from "next-client-cookies/server";
 
 const lobster = Lobster({
   weight: "400",
@@ -33,15 +34,17 @@ export default function RootLayout({
       <body
         className={`${bebasNeue.variable} ${lobster.variable} font-sans h-[100dvh] w-[100dvw] text-gray-800 dark:text-white`}
       >
-        <ThemeSwitcher />
-        {/* <Provider> */}
-        <JotaiProvider>
-          <DevTools />
-          {children}
-        </JotaiProvider>
-        {/* </Provider> */}
-        <Analytics />
-        <SpeedInsights />
+        <CookiesProvider>
+          <ThemeSwitcher />
+          {/* <Provider> */}
+          <JotaiProvider>
+            <DevTools />
+            {children}
+          </JotaiProvider>
+          {/* </Provider> */}
+          <Analytics />
+          <SpeedInsights />
+        </CookiesProvider>
       </body>
     </html>
   );
