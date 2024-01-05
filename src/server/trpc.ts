@@ -6,7 +6,7 @@ import superjson from "superjson";
 // For instance, the use of a t variable
 // is common in i18n libraries.
 
-const t = initTRPC.context<{}>().create({
+const t = initTRPC.context<typeof createInnerTRPCContext>().create({
   transformer: superjson,
 });
 
@@ -14,9 +14,8 @@ const t = initTRPC.context<{}>().create({
 export const router = t.router;
 export const baseProcedure = t.procedure;
 
-console.log("t.createCallerFactory", t.createCallerFactory);
-
 /**
  * Create a server-side caller
  * @see https://trpc.io/docs/server/server-side-calls
  */
+export const createCaller = t.createCallerFactory;

@@ -11,7 +11,9 @@ export const useStartNewGame = () => {
   const [userId, setUserId] = useAtom(userIdAtom);
   const [state, setState] = useState<"idle" | "loading" | "success" | "error">(
     "idle",
-  );
+  ); // TODO: change to expose state from react-query instead
+
+  const { mutateAsync: startNewGameAsync } = trpc.startNewGame.useMutation();
 
   return {
     mutateAsync: async () => {
@@ -23,7 +25,7 @@ export const useStartNewGame = () => {
 
         if (rootState?.gameState.mainState === "playing") return;
 
-        const res = await trpc.startNewGame.mutate({
+        const res = await startNewGameAsync({
           userId: newUserId,
           username: rootState.username,
         });

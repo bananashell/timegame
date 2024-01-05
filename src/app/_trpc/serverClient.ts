@@ -1,10 +1,12 @@
 "use server";
 
+import { createServerSideHelpers } from "@trpc/react-query/server";
 import { httpBatchLink, loggerLink } from "@trpc/client";
 import { AppRouter, appRouter } from "@/server";
 
-import { createTRPCNext } from "@trpc/next";
 import superjson from "superjson";
+import { createCaller } from "@/server/trpc";
+import { createTRPCContext } from "@/server/context";
 
 function getBaseUrl() {
   if (process.env.VERCEL_URL)
@@ -19,34 +21,41 @@ function getBaseUrl() {
   return `http://localhost:${process.env.PORT ?? 3000}`;
 }
 
-export const trpc = createTRPCNext<AppRouter>({
-  config() {
-    return {
-      transformer: superjson,
-      links: [
-        loggerLink({
-          enabled: (opts) =>
-            process.env.NODE_ENV === "development" ||
-            (opts.direction === "down" && opts.result instanceof Error),
-        }),
-        httpBatchLink({
-          /**
-           * If you want to use SSR, you need to use the server's full URL
-           * @link https://trpc.io/docs/ssr
-           **/
-          url: `${getBaseUrl()}/api/trpc`,
-
-          // You can pass any HTTP headers you wish here
-          async headers() {
-            return {
-              // authorization: getAuthCookie(),
-            };
-          },
-        }),
-      ],
-    };
-  },
+export const trpc = createServerSideHelpers({
+  router: appRouter,
+  ctx: await createTRPCContext(),
+  transformer: superjson,
 });
+
+// export const trpc = createCaller(appRouter)({
+//   config() {
+//     return {
+//       transformer: superjson,
+//       links: [
+//         loggerLink({
+//           enabled: (opts) =>
+//             process.env.NODE_ENV === "development" ||
+//             (opts.direction === "down" && opts.result instanceof Error),
+//         }),
+//         httpBatchLink({
+//           /**
+//            * If you want to use SSR, you need to use the server's full URL
+//            * @link https://trpc.io/docs/ssr
+//            **/
+//           url: `${getBaseUrl()}/api/trpc`,
+
+//           // You can pass any HTTP headers you wish here
+//           async headers() {
+//             return {
+//               // authorization: getAuthCookie(),
+//             };
+//           },
+//         }),
+//       ],
+//     };
+//   },
+// });
+
 // export const trpc = appRouter.createCaller({
 //   links: [
 //     httpBatchLink({

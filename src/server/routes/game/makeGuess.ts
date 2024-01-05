@@ -1,10 +1,10 @@
-import { procedure } from "@/server/trpc";
+import { baseProcedure } from "@/server/trpc";
 import { emitEvent } from "../../eventEmitter";
 import { makeGuessInput } from "@/data/db/game/repository";
 import { makeGuess as _makeGuess } from "@/data/db/game/repository/makeGuess";
 import { getNextHistoricEvent } from "@/server/service/historicEventService";
 
-export const makeGuess = procedure
+export const makeGuess = baseProcedure
   .input(makeGuessInput)
   .mutation(async (opts) => {
     console.log("Make guess", opts.input);

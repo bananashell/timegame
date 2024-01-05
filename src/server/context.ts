@@ -33,12 +33,12 @@ export const createTRPCContext = async (opts?: CreateNextContextOptions) => {
   const locale = acceptLanguage?.includes("en") ? "en" : "sv";
 
   const innerContext = await createInnerTRPCContext({
-    req: opts?.req,
     userId: opts?.req.cookies.userId,
   });
 
   return {
     ...innerContext,
     req: opts?.req,
+    res: opts?.res,
   };
 };

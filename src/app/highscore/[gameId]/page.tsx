@@ -8,7 +8,7 @@ const HighscorePage = async ({
   params: { gameId: string };
 }) => {
   gameId = decodeURIComponent(gameId || "");
-  const highscores = await trpc.getHighscore({ gameId });
+  const highscores = await trpc.getHighscore.fetch({ gameId });
 
   return (
     <section className="flex w-full gap-4 h-screen justify-center items-center flex-col">

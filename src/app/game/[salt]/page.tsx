@@ -7,7 +7,7 @@ type Props = {
 };
 
 export default async function Game({ params: { salt } }: { params: Props }) {
-  const gameEntity = await trpc.getGame({ salt });
+  const gameEntity = await trpc.getGame.fetch({ salt });
   console.log("gameEntity", gameEntity);
 
   return (

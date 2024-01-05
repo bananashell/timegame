@@ -15,6 +15,8 @@ export const usePersistGuess = () => {
   const [state, setState] = useAtom(stateAtom);
   const [gameState] = useAtom(rootStateAtom);
 
+  const { mutateAsync: makeGuessAsync } = trpc.makeGuess.useMutation();
+
   return async () => {
     const isDisplayingCorrectAnswer =
       state.mainState == "playing" &&
@@ -25,13 +27,13 @@ export const usePersistGuess = () => {
 
     if (!currentEvent) throw new Error("Current event is not defined");
 
-    const { gameState: newGameState, nextEvent } = await trpc.makeGuess.mutate({
+    const { gameState: newGameState, nextEvent } = await makeGuessAsync({
       guess: {
         guess: currentEvent.guess,
         questionId: currentEvent.id,
       },
       salt: gameState.salt,
-      userId: gameState.userId,
+      userId: gameState.userId!,
     });
 
     if (newGameState.gameStatus === "game over") {

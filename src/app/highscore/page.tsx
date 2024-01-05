@@ -3,7 +3,7 @@ import { trpc } from "../_trpc/serverClient";
 import { Highscore } from "./Highscore";
 
 const HighscorePage = async () => {
-  const highscores = await trpc.getHighscore({});
+  const highscores = await trpc.getHighscore.fetch({});
   return (
     <section className="flex w-full gap-4 h-screen justify-center items-center flex-col">
       <Highscore highscores={highscores} />

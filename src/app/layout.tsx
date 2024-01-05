@@ -7,6 +7,7 @@ import { ThemeSwitcher } from "./ThemeSwitcher";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { CookiesProvider } from "next-client-cookies/server";
+import TRPCProvider from "./_trpc/Provider";
 
 const lobster = Lobster({
   weight: "400",
@@ -36,12 +37,12 @@ export default function RootLayout({
       >
         <CookiesProvider>
           <ThemeSwitcher />
-          {/* <Provider> */}
-          <JotaiProvider>
-            <DevTools />
-            {children}
-          </JotaiProvider>
-          {/* </Provider> */}
+          <TRPCProvider>
+            <JotaiProvider>
+              <DevTools />
+              {children}
+            </JotaiProvider>
+          </TRPCProvider>
           <Analytics />
           <SpeedInsights />
         </CookiesProvider>

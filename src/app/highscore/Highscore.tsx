@@ -9,7 +9,7 @@ export const Highscore = ({
   highscores,
 }: {
   gameId?: string;
-  highscores: Awaited<ReturnType<typeof trpc.getHighscore>>;
+  highscores: Awaited<ReturnType<typeof trpc.getHighscore.fetch>>;
 }) => {
   return (
     <section>
