@@ -29,14 +29,14 @@ export const TimelineEvent = ({
   );
 };
 
-const colorMapping: { [category in HistoricEvent["category"]]: string } = {
-  sport: "bg-[#091540] text-white",
-  popculture: "bg-[#EC4E20] text-black",
-  science: "bg-[#016FB9] text-white",
-  politics: "bg-[#A01A7D] text-white",
-  technology: "",
-  exploration: "bg-[#FF9505] text-black",
-  culture: "",
-  war: "",
-  history: "",
-};
+// const colorMapping: { [category in HistoricEvent["category"]]: string } = {
+//   sports: "bg-[#091540] text-white",
+//   popculture: "bg-[#EC4E20] text-black",
+//   science: "bg-[#016FB9] text-white",
+//   politics: "bg-[#A01A7D] text-white",
+//   technology: "",
+//   exploration: "bg-[#FF9505] text-black",
+//   culture: "",
+//   war: "",
+//   history: "",
+// };

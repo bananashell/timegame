@@ -7,7 +7,7 @@ export const historicEvent = z.object({
     en: z.string(),
   }),
   category: z.enum([
-    "sport",
+    "sports",
     "popculture",
     "science",
     "politics",
@@ -16,6 +16,7 @@ export const historicEvent = z.object({
     "culture",
     "war",
     "history",
+    "music",
   ]),
   year: z.number(),
   description: z.object({
