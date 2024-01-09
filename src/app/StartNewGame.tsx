@@ -13,14 +13,24 @@ export const StartNewGame = () => {
   const [state, setState] = useState<"initial" | "name select">("initial");
   const [username, setUsername] = useAtom(usernameAtom);
 
-  const { mutateAsync: startNewGameAsync, isLoading } = useStartNewGame();
+  const {
+    mutateAsync: startNewGameAsync,
+    isLoading,
+    isIdle,
+    isError,
+    isSuccess,
+  } = useStartNewGame();
   const handleKeyUp = async (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key == "Enter") {
-      const data = await startNewGameAsync();
-      if (!data) throw new Error("Failed to start new game");
-
-      router.push(`/game/${data.game.salt}`);
+      await startNewGame();
     }
+  };
+
+  const startNewGame = async () => {
+    const data = await startNewGameAsync();
+    if (!data) throw new Error("Failed to start new game");
+
+    router.push(`/game/${data.game.salt}`);
   };
 
   return (
@@ -50,28 +60,43 @@ export const StartNewGame = () => {
         )}
 
         {state == "name select" && (
-          <motion.header
-            key="name select"
-            initial={{ scale: 0.5, opacity: 0.5, x: "-50%", y: "-50%" }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.9, opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            onKeyUp={handleKeyUp}
-            className="top-1/2 left-1/2 text-center absolute w-full max-w-lg select-none cursor-pointer drop-shadow-lg p-8 rounded-full aspect-square justify-center flex flex-col items-center border-8 border-[#dedac2] bg-[#85d1c0] text-white"
-          >
-            <h2>{"What's your name?"}</h2>
-            <input
-              value={username}
-              onChange={(e) => {
-                global.localStorage.setItem("username", e.target.value);
-                setUsername(e.target.value);
-              }}
-              type="text"
-              className="bg-transparent text-white text-center outline-none caret-white text-8xl max-w-md"
-              maxLength={12}
-              autoFocus
-            />
-          </motion.header>
+          <>
+            {isLoading || (isSuccess && <>Loading...</>)}
+            {isError && <>Error</>}
+            {isIdle && (
+              <motion.header
+                key="name select"
+                initial={{ scale: 0.5, opacity: 0.5, x: "-50%", y: "-50%" }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+                transition={{ duration: 0.2 }}
+                onKeyUp={handleKeyUp}
+                className="top-1/2 left-1/2 text-center absolute w-full max-w-lg select-none cursor-pointer drop-shadow-lg p-8 rounded-full aspect-square justify-center flex flex-col items-center border-8 border-[#dedac2] bg-[#85d1c0] text-white"
+              >
+                <h2>{"What's your name?"}</h2>
+                <input
+                  value={username}
+                  onChange={(e) => {
+                    global.localStorage.setItem("username", e.target.value);
+                    setUsername(e.target.value);
+                  }}
+                  type="text"
+                  className="bg-transparent text-white text-center outline-none caret-white text-8xl max-w-md"
+                  maxLength={12}
+                  autoFocus
+                />
+                <motion.button
+                  whileTap={{ scale: 0.8 }}
+                  initial={{ scale: 1 }}
+                  disabled={!username}
+                  onClick={startNewGame}
+                  className="transition-colors select-none text-4xl mt-4 disabled:text-white/20"
+                >
+                  Next
+                </motion.button>
+              </motion.header>
+            )}
+          </>
         )}
       </AnimatePresence>
     </section>

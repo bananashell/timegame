@@ -16,7 +16,7 @@ export const Guess = () => {
         pattern="[0-9]*"
         inputMode="numeric"
         className="bg-transparent caret-black dark:caret-white text-center text-7xl w-full ring-0 focus:ring-0 focus:outline-none"
-        value={currentEvent?.guess ?? ""}
+        value={currentEvent?.guess || ""}
         onChange={(e) => {
           if (!("value" in e.target)) throw new Error("No value in target");
           if (typeof e.target.value !== "string")

@@ -22,7 +22,7 @@ export const Timeline = () => {
   }, [timelineEvents, currentEvent]);
 
   useLayoutEffect(() => {
-    arrowRef.current?.scrollIntoView({ behavior: "smooth" });
+    // arrowRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
   }, [currentEvent]);
 
   return (
@@ -42,7 +42,7 @@ export const Timeline = () => {
                 <motion.div
                   ref={arrowRef}
                   key={"guess"}
-                  className="text-5xl px-4 py-2 rounded-xl  border-2 border-black dark:border-white backdrop-blur-lg bg-white/20 dark:bg-black/20"
+                  className="text-5xl px-4 py-2 rounded-xl border-2 border-black dark:border-white backdrop-blur-lg bg-white/20 dark:bg-black/20"
                   initial={{ y: -5 }}
                   animate={{ y: 5 }}
                   transition={{
