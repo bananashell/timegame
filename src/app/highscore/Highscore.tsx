@@ -12,7 +12,7 @@ export const Highscore = ({
   highscores: Awaited<ReturnType<typeof trpc.getHighscore>>;
 }) => {
   return (
-    <section>
+    <section className="px-2 max-w-full">
       <motion.h1
         className="text-center dark:drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.6)] "
         initial={{ opacity: 0, y: 50 }}
@@ -22,7 +22,7 @@ export const Highscore = ({
       </motion.h1>
       <motion.ol
         data-current-game-id={gameId}
-        className="rounded-xl relative z-10 divide-y py-4 drop-shadow-lg bg-white dark:bg-gray-800 inline-flex w-96 flex-col"
+        className="rounded-xl relative z-10 divide-y drop-shadow-lg bg-white dark:bg-gray-800 inline-flex w-96 max-w-full flex-col"
         variants={container}
         initial="hidden"
         animate="show"

@@ -29,15 +29,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="">
+    <html lang="en" className="h-full">
       <body
-        className={`${bebasNeue.variable} ${lobster.variable} font-sans h-[100dvh] w-[100dvw] text-gray-800 dark:text-white`}
+        className={`${bebasNeue.variable} ${lobster.variable} font-sans h-full w-full overscroll-none absolute top-0 left-0 text-gray-800 dark:text-white`}
       >
         <ThemeSwitcher />
         {/* <Provider> */}
         <JotaiProvider>
           <DevTools />
-          {children}
+          <section className="relative h-full w-full">{children}</section>
         </JotaiProvider>
         {/* </Provider> */}
         <Analytics />

@@ -40,6 +40,7 @@ export const useStartNewGame = () => {
         return undefined;
       }
     },
+    isIdle: state === "idle",
     isLoading: state === "loading",
     isError: state === "error",
     isSuccess: state === "success",

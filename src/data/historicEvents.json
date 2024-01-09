@@ -16,13 +16,13 @@
     {
       "title": {
         "en": "United States Declaration of Independence",
-        "sv": "Förenta Staternas självständighetsförklaring"
+        "sv": "USA:s förklarar sig självständigt"
       },
       "category": "politics",
       "year": 1776,
       "description": {
         "en": "The United States Declaration of Independence is adopted, marking the birth of the United States of America.",
-        "sv": "Förenta Staternas självständighetsförklaring antas och markerar födelsen av Förenta Staterna."
+        "sv": "Självständighetsförklaring antas och markerar födelsen av Förenta Staterna."
       },
       "id": "eaf4287a-da99-4030-a322-8169b15d86d2"
     },
@@ -41,8 +41,8 @@
     },
     {
       "title": {
-        "en": "Christopher Columbus' Voyage",
-        "sv": "Christopher Columbus resa"
+        "en": "Columbus discovers the Americas",
+        "sv": "Columbus upptäcker den Nya världen"
       },
       "category": "exploration",
       "year": 1492,
@@ -340,8 +340,8 @@
     },
     {
       "title": {
-        "en": "Cuban Javier Sotomayor sets a new world record in high jump with 2.45 meters",
-        "sv": "Kubanen Javier Sotomayor sätter nytt världsrekord i höjdhopp med sina 2,45 meter"
+        "en": "Javier Sotomayor sets a new world record in high jump",
+        "sv": "Javier Sotomayor sätter nytt världsrekord i höjdhopp"
       },
       "category": "sports",
       "year": 1993,
@@ -555,8 +555,8 @@
       "category": "popculture",
       "year": 1976,
       "description": {
-        "sv": "Rocky vinner Oscar för Bästa Film och etablerar sig som en ikonisk film inom sportdramagenren",
-        "en": "Rocky wins the Oscar for Best Picture, solidifying itself as an iconic film in the sports drama genre"
+        "sv": "Rocky vinner Oscar för Bästa Film och etablerar sig som en ikonisk film",
+        "en": "Rocky wins the Oscar for Best Picture, solidifying itself as an iconic film"
       }
     },
     {
@@ -716,6 +716,19 @@
       }
     },
     {
+      "id": "6d137f9f-9418-4bc1-8caa-08644e950d30",
+      "title": {
+        "sv": "The Beatles släpper debutalbumet 'Please Please Me'",
+        "en": "The Beatles release the debut album 'Please Please Me'"
+      },
+      "category": "popculture",
+      "year": 1963,
+      "description": {
+        "sv": "The Beatles släpper sitt debutalbum 'Please Please Me' och blir en global succé med hits som 'Love Me Do' och 'Twist and Shout'",
+        "en": "The Beatles release their debut album 'Please Please Me' and become a global success with hits like 'Love Me Do' and 'Twist and Shout'"
+      }
+    },
+    {
       "id": "382efb41-1b4a-4f1a-8e41-95b40feae71d",
       "title": {
         "sv": "Sverige inför allmän rösträtt för kvinnor",
@@ -757,13 +770,13 @@
     {
       "id": "2b4ddaa8-ec79-46c0-abe0-2d5a6dd4d36d",
       "title": {
-        "sv": "Sverige förlorar Slaget vid Poltava och stormaktstiden når sitt slut",
-        "en": "Sweden loses The Battle of Poltava and the Swedish Empire comes to an end"
+        "sv": "Slaget vid Poltava",
+        "en": "The Battle of Poltava"
       },
       "category": "war",
       "year": 1709,
       "description": {
-        "sv": "Svenska stormaktstiden når sitt slut efter nederlaget i Slaget vid Poltava mot Ryssland",
+        "sv": "Svenska stormaktstiden når sitt slut efter nederlaget i slaget vid Poltava mot Ryssland",
         "en": "The Swedish Empire's era of greatness comes to an end after the defeat at the Battle of Poltava against Russia"
       }
     },

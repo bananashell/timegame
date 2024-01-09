@@ -7,7 +7,7 @@ export default function GameLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-w-screen min-h-screen" style={{ background: gradient }}>
+    <div className="h-full w-full" style={{ background: gradient }}>
       {children}
     </div>
   );

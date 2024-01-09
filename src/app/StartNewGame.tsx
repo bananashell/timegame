@@ -13,18 +13,28 @@ export const StartNewGame = () => {
   const [state, setState] = useState<"initial" | "name select">("initial");
   const [username, setUsername] = useAtom(usernameAtom);
 
-  const { mutateAsync: startNewGameAsync, isLoading } = useStartNewGame();
+  const {
+    mutateAsync: startNewGameAsync,
+    isLoading,
+    isIdle,
+    isError,
+    isSuccess,
+  } = useStartNewGame();
   const handleKeyUp = async (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key == "Enter") {
-      const data = await startNewGameAsync();
-      if (!data) throw new Error("Failed to start new game");
-
-      router.push(`/game/${data.game.salt}`);
+      await startNewGame();
     }
   };
 
+  const startNewGame = async () => {
+    const data = await startNewGameAsync();
+    if (!data) throw new Error("Failed to start new game");
+
+    router.push(`/game/${data.game.salt}`);
+  };
+
   return (
-    <section className="relative w-screen h-screen">
+    <section className="w-full h-full">
       <AnimatePresence initial={false}>
         {state == "initial" && (
           <motion.header
@@ -38,40 +48,55 @@ export const StartNewGame = () => {
             onClick={() => setState("name select")}
             className="top-1/2 left-1/2 absolute w-full max-w-lg select-none cursor-pointer drop-shadow-xl p-8 rounded-full aspect-square justify-center inline-flex flex-col items-center border-8 border-[#dedac2] bg-[#85d1c0] text-white"
           >
-            <h2 className="uppercase">Welcome to the</h2>
+            <h2 className="uppercase">Välkommen till</h2>
             <StrokeHeader
               className="lg:scale-150 -translate-y-2 lg:-translate-y-4"
               textColor="text-white"
             >
-              Timeline
+              Tidslinjen
             </StrokeHeader>
-            <h2>Start new game</h2>
+            <h2>Starta nytt spel</h2>
           </motion.header>
         )}
 
         {state == "name select" && (
-          <motion.header
-            key="name select"
-            initial={{ scale: 0.5, opacity: 0.5, x: "-50%", y: "-50%" }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.9, opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            onKeyUp={handleKeyUp}
-            className="top-1/2 left-1/2 text-center absolute w-full max-w-lg select-none cursor-pointer drop-shadow-lg p-8 rounded-full aspect-square justify-center flex flex-col items-center border-8 border-[#dedac2] bg-[#85d1c0] text-white"
-          >
-            <h2>{"What's your name?"}</h2>
-            <input
-              value={username}
-              onChange={(e) => {
-                global.localStorage.setItem("username", e.target.value);
-                setUsername(e.target.value);
-              }}
-              type="text"
-              className="bg-transparent text-white text-center outline-none caret-white text-8xl max-w-md"
-              maxLength={12}
-              autoFocus
-            />
-          </motion.header>
+          <>
+            {isLoading || (isSuccess && <>Loading...</>)}
+            {isError && <>Error</>}
+            {isIdle && (
+              <motion.header
+                key="name select"
+                initial={{ scale: 0.5, opacity: 0.5, x: "-50%", y: "-50%" }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+                transition={{ duration: 0.2 }}
+                onKeyUp={handleKeyUp}
+                className="top-1/2 left-1/2 text-center absolute w-full max-w-lg select-none cursor-pointer drop-shadow-lg p-8 rounded-full aspect-square justify-center flex flex-col items-center border-8 border-[#dedac2] bg-[#85d1c0] text-white"
+              >
+                <h2>{"Vad heter du?"}</h2>
+                <input
+                  value={username}
+                  onChange={(e) => {
+                    global.localStorage.setItem("username", e.target.value);
+                    setUsername(e.target.value);
+                  }}
+                  type="text"
+                  className="bg-transparent text-white text-center outline-none caret-white text-8xl max-w-full"
+                  maxLength={12}
+                  autoFocus
+                />
+                <motion.button
+                  whileTap={{ scale: 0.8 }}
+                  initial={{ scale: 1 }}
+                  disabled={!username}
+                  onClick={startNewGame}
+                  className="transition-colors select-none text-4xl mt-2 disabled:text-white/20"
+                >
+                  Nästa
+                </motion.button>
+              </motion.header>
+            )}
+          </>
         )}
       </AnimatePresence>
     </section>
