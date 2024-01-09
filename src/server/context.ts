@@ -26,7 +26,8 @@ export async function createInnerTRPCContext(opts?: CreateInnerContextOptions) {
  *
  * @see https://trpc.io/docs/context#inner-and-outer-context
  */
-export const createTRPCContext = async (opts?: CreateNextContextOptions) => {
+export const createTRPCContext = async (opts: CreateNextContextOptions) => {
+  console.log("opts:", opts);
   const acceptLanguage = opts?.req.headers["accept-language"];
   // If you store locales on User in DB, you can use that instead
   // We use the accept-language header to determine the locale here.

@@ -1,10 +1,18 @@
 import { trpc } from "../_trpc/serverClient";
+import { TestCall } from "./testcall";
 
 const TempPage = async () => {
   // const highscores = await trpc.getHighscore({ salt: "2285cbedd67997e0" });
 
+  const result = await trpc.test.fetch();
+
   // console.log(highscores);
-  return null;
+  return (
+    <div>
+      <TestCall />
+      {result.userId}
+    </div>
+  );
   // return (
   //   <ul>
   //     {highscores.map((x) => (

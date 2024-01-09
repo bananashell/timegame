@@ -13,6 +13,17 @@ const t = initTRPC.context<typeof createInnerTRPCContext>().create({
 // Base router and procedure helpers
 export const router = t.router;
 export const baseProcedure = t.procedure;
+export const protectedProcedure = t.procedure.use((opts) => {
+  console.log("protectedProcedure opts:", opts);
+  console.log("protectedProcedure opts.ctx.req:", opts.ctx.req);
+  return opts.next({
+    ctx: {
+      userId: "",
+      req: opts.ctx.req,
+      res: opts.ctx.res,
+    },
+  });
+});
 
 /**
  * Create a server-side caller
