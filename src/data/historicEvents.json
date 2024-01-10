@@ -1117,6 +1117,19 @@
         "en": "Nelson Mandela, a prominent anti-apartheid activist and leader of the African National Congress (ANC), is arrested and imprisoned on charges of sabotage and conspiracy to overthrow the government. He spent 27 years in prison, mostly on Robben Island.",
         "sv": "Nelson Mandela, en framstående anti-apartheidaktivist och ledare för African National Congress (ANC), arresteras och fängslas för anklagelser om sabotage och konspiration för att störta regeringen. Han tillbringade 27 år i fängelse, främst på Robben Island."
       }
+    },
+    {
+      "id": "69d9418c-0f7c-4694-9d47-ae350acb0687",
+      "title": {
+        "en": "Mariner 9 becomes the first spacecraft to orbit another planet",
+        "sv": "Mariner 9 blir den första rymdfarkosten att krets runt en annan planet"
+      },
+      "category": "exploration",
+      "year": 1971,
+      "description": {
+        "en": "Mariner 9 was the first spacecraft to orbit another planet. It conducted an extensive survey of the Martian surface, providing detailed images and data that significantly enhanced our understanding of the planet's geology, atmosphere, and climate.",
+        "sv": "Mariner 9 var den första rymdfarkosten att kretsa runt en annan planet. Den genomförde en omfattande undersökning av Mars yta och tillhandahöll detaljerade bilder och data som avsevärt förbättrade vår förståelse för planetens geologi, atmosfär och klimat."
+      }
     }
   ]
 }
