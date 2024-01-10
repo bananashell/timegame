@@ -1039,6 +1039,84 @@
         "en": "Arne Larsson receives the first fully implantable pacemaker, developed by engineer Rune Elmqvist and surgeon Åke Senning, revolutionizing the treatment of heart rhythm disorders.",
         "sv": "Arne Larsson får den första helt inopererbara pacemakern, utvecklad av ingenjören Rune Elmqvist och kirurgen Åke Senning, vilket revolutionerar behandlingen av hjärtrytmrubbningar."
       }
+    },
+    {
+      "id": "a00a967a-e56e-413c-a402-cd4c6e73e326",
+      "title": {
+        "en": "Sinking of the Titanic",
+        "sv": "Titanic sjunker"
+      },
+      "category": "history",
+      "year": 1912,
+      "description": {
+        "en": "RMS Titanic, deemed 'unsinkable,' strikes an iceberg on its maiden voyage from Southampton to New York City on April 14, 1912, leading to its sinking in the early hours of April 15, resulting in the loss of over 1,500 lives.",
+        "sv": "RMS Titanic, som ansågs vara 'osänkbar,' kolliderar med ett isberg på sin jungfruresa från Southampton till New York City den 14 april 1912, vilket leder till dess sänkning under de tidiga timmarna den 15 april och resulterar i förlusten av över 1 500 liv."
+      }
+    },
+    {
+      "id": "61bbcb73-e2ad-4c5c-b555-5d8366c7fcde",
+      "title": {
+        "en": "President Clinton's Denial of the Monica Lewinsky Scandal",
+        "sv": "President Clintons förnekar Monica Lewinsky-skandalen"
+      },
+      "category": "politics",
+      "year": 1998,
+      "description": {
+        "en": "Amidst allegations of an inappropriate relationship with Monica Lewinsky, a White House intern, President Bill Clinton initially denies the affair, leading to a lengthy investigation and subsequent impeachment proceedings.",
+        "sv": "I samband med anklagelser om ett olämpligt förhållande med Monica Lewinsky, en praktikant på Vita huset, förnekar president Bill Clinton först affären, vilket leder till en långvarig utredning och senare riksrättsprocess."
+      }
+    },
+    {
+      "id": "8197ac3b-e1e9-44df-8275-a001ca7fd3da",
+      "title": {
+        "en": "Watergate Scandal",
+        "sv": "Watergate-skandalen"
+      },
+      "category": "politics",
+      "year": 1972,
+      "description": {
+        "en": "A break-in at the Democratic National Committee headquarters at the Watergate complex led to a series of revelations uncovering widespread political espionage and corrupt practices orchestrated by Nixon's administration.",
+        "sv": "En inbrott på Democratic National Committee:s huvudkontor i Watergate-komplexet ledde till avslöjanden som avslöjade omfattande politiskt spionage och korrupta metoder som iscensatts av Nixons regering."
+      }
+    },
+    {
+      "id": "e3d7dcbc-0c16-4305-860d-918983f00eda",
+      "title": {
+        "en": "Paternity Leave in Sweden",
+        "sv": "Pappaledighet i Sverige"
+      },
+      "category": "politics",
+      "year": 1974,
+      "description": {
+        "en": "Sweden introduces a parental leave system that allows both parents to take time off work to care for their children.",
+        "sv": "Sverige inför ett föräldraledighetssystem som gör det möjligt för båda föräldrarna att ta ledigt från arbetet för att ta hand om sina barn."
+      }
+    },
+    {
+      "id": "3bbce86a-e7f5-41e7-aed7-648679c9b4b5",
+      "title": {
+        "en": "Dag Hammarskjöld dies in a plane crash",
+        "sv": "Dag Hammarskjölds dör i en flygolycka"
+      },
+      "category": "history",
+      "year": 1961,
+      "description": {
+        "en": "Dag Hammarskjöld, the Secretary-General of the United Nations, dies in a plane crash, while en route to negotiate a ceasefire in the Congo.",
+        "sv": "Dag Hammarskjöld, generalsekreterare för Förenta Nationerna, omkommer i en flygolycka, på väg för att förhandla om en eldupphör i Kongo."
+      }
+    },
+    {
+      "id": "792bff3c-e539-4ee8-9567-9f87d85c3ea1",
+      "title": {
+        "en": "Nelson Mandela's Imprisonment",
+        "sv": "Nelson Mandela fängslas"
+      },
+      "category": "history",
+      "year": 1962,
+      "description": {
+        "en": "Nelson Mandela, a prominent anti-apartheid activist and leader of the African National Congress (ANC), is arrested and imprisoned on charges of sabotage and conspiracy to overthrow the government. He spent 27 years in prison, mostly on Robben Island.",
+        "sv": "Nelson Mandela, en framstående anti-apartheidaktivist och ledare för African National Congress (ANC), arresteras och fängslas för anklagelser om sabotage och konspiration för att störta regeringen. Han tillbringade 27 år i fängelse, främst på Robben Island."
+      }
     }
   ]
 }
