@@ -184,19 +184,6 @@
     },
     {
       "title": {
-        "en": "Publication of 'Systema Naturae'",
-        "sv": "Publicering av 'Systema Naturae'"
-      },
-      "category": "science",
-      "year": 1735,
-      "description": {
-        "en": "Carl Linnaeus publishes 'Systema Naturae,' establishing the system of binomial nomenclature for species classification.",
-        "sv": "Carl von Linné publicerar 'Systema Naturae', och etablerar systemet för binomial nomenklatur för artklassificering."
-      },
-      "id": "420a93b5-38e2-4a18-99ad-ee5713feb5d6"
-    },
-    {
-      "title": {
         "en": "Finland belongs to Russia after the Treaty of Fredrikshamn",
         "sv": "Finland tillfaller Ryssland efter fredsavtalet i Fredrikshamn"
       },
@@ -895,6 +882,162 @@
       "description": {
         "en": "American track and field athlete Jesse Owens wins four gold medals at the Berlin Olympics, undermining Hitler's idea of Aryan supremacy.",
         "sv": "Den amerikanske friidrottsutövaren Jesse Owens vinner fyra guldmedaljer vid de olympiska spelen i Berlin och underminerar Hitler's idé om ariskt överlägsenhet."
+      }
+    },
+    {
+      "id": "18a3adc9-6333-42b7-aca6-5b899e569ae7",
+      "title": {
+        "en": "Michael Jordan's Final NBA Finals",
+        "sv": "Michael Jordans sista NBA-final"
+      },
+      "category": "sports",
+      "year": 1998,
+      "description": {
+        "en": "Michael Jordan leads the Chicago Bulls to victory in the NBA Finals against the Utah Jazz, securing his sixth NBA championship and earning the Finals MVP title.",
+        "sv": "Michael Jordan leder Chicago Bulls till seger i NBA-finalen mot Utah Jazz, säkrar sin sjätte NBA-mästerskapstitel och tilldelas titeln som Finals MVP."
+      }
+    },
+    {
+      "id": "4261a90a-d6fb-4133-9b7a-0f7776f2f826",
+      "title": {
+        "en": "Construction of Notre Dame Cathedral",
+        "sv": "Byggandet av Notre-Dame-katedralen"
+      },
+      "category": "culture",
+      "year": 1163,
+      "description": {
+        "en": "Construction begins on Notre Dame Cathedral in Paris, France, under Bishop Maurice de Sully's direction, showcasing Gothic architecture and becoming an iconic symbol of French heritage.",
+        "sv": "Byggandet av Notre-Dame-katedralen i Paris, Frankrike, inleds under biskop Maurice de Sullys ledning. Katedralen visar gotisk arkitektur och blir en ikonisk symbol för det franska kulturarvet."
+      }
+    },
+    {
+      "id": "9aeb09af-30d5-411d-b006-8dfb88153619",
+      "title": {
+        "en": "Salem Witch Trials",
+        "sv": "Häxprocesserna i Salem"
+      },
+      "category": "history",
+      "year": 1692,
+      "description": {
+        "en": "A series of trials and executions occur in Salem, Massachusetts, resulting from hysteria over witchcraft accusations, leading to the execution of several individuals.",
+        "sv": "En serie rättegångar och avrättningar äger rum i Salem, Massachusetts, till följd av hysteri kring anklagelser om häxeri. Detta resulterar i avrättningen av flera personer."
+      }
+    },
+    {
+      "id": "1e728c49-18bf-4fd1-a4c3-d03e68776585",
+      "title": {
+        "en": "The Great Fire of London",
+        "sv": "Den stora branden i London"
+      },
+      "category": "history",
+      "year": 1666,
+      "description": {
+        "en": "A devastating fire engulfs London, destroying a significant portion of the city, including St. Paul's Cathedral, and leading to urban planning reforms.",
+        "sv": "En förödande brand härjar i London och förstör en betydande del av staden, inklusive St. Paul's Cathedral. Branden resulterar i reformer inom stadsplanering."
+      }
+    },
+    {
+      "id": "5bb52ddf-3df0-460a-95f0-4ef328a99384",
+      "title": {
+        "en": "Invention of the Spinning Jenny",
+        "sv": "Spinning Jenny uppfinns"
+      },
+      "category": "technology",
+      "year": 1764,
+      "description": {
+        "en": "James Hargreaves invents the Spinning Jenny, a multi-spindle spinning frame revolutionizing textile production.",
+        "sv": "James Hargreaves uppfinner Spinning Jenny, en flerspindlig spinnram som revolutionerar textilproduktionen."
+      }
+    },
+    {
+      "id": "9c52cf97-8809-45ae-a178-c5d6c4791e99",
+      "title": {
+        "en": "Invention of the Telegraph",
+        "sv": "Samuel Morse uppfinner telegrafen"
+      },
+      "category": "technology",
+      "year": 1837,
+      "description": {
+        "en": "Samuel Morse invents the telegraph, allowing long-distance communication through electrical signals.",
+        "sv": "Samuel Morse uppfinner telegrafen, vilket möjliggör långväga kommunikation genom elektriska signaler."
+      }
+    },
+    {
+      "id": "6b1d84d2-d96e-440d-baaf-5c3d0f70080c",
+      "title": {
+        "en": "The Wright brothers make the first powered flight",
+        "sv": "Bröderna Wrights första flygtur"
+      },
+      "category": "technology",
+      "year": 1903,
+      "description": {
+        "en": "The Wright brothers achieve the first powered flight, introducing the era of aviation.",
+        "sv": "Bröderna Wright uppnår den första motoriserade flygningen och introducerar flygets tidsålder."
+      }
+    },
+    {
+      "id": "e5bd6c47-e7d0-4d04-a023-200161cbec4b",
+      "title": {
+        "en": "Invention of the Steam Engine",
+        "sv": "Uppfinningen av ångmaskinen"
+      },
+      "category": "technology",
+      "year": 1698,
+      "description": {
+        "en": "Thomas Savery invents the first practical steam engine, used for pumping water from mines and later serves as a cornerstone for industrial revolution.",
+        "sv": "Thomas Savery uppfinner den första praktiska ångmaskinen, använd för att pumpa vatten från gruvor och senare fungerar som en grundsten för industriella revolutionen."
+      }
+    },
+    {
+      "id": "d7db7284-66b8-47dd-95cd-8601dbeeae4a",
+      "title": {
+        "en": "Introduction of the Celsius Temperature Scale",
+        "sv": "Celsius temperaturskala introduceras"
+      },
+      "category": "science",
+      "year": 1742,
+      "description": {
+        "en": "Anders Celsius introduces the Celsius temperature scale, also known as the centigrade scale, used globally for measuring temperature.",
+        "sv": "Anders Celsius introducerar Celsius temperaturskala, även känd som centigrade skalan, som används globalt för att mäta temperatur."
+      }
+    },
+    {
+      "id": "1812fe25-f29a-4c3e-8177-6b70f1112f93",
+      "title": {
+        "en": "Diego Maradona's 'Hand of God' Goal",
+        "sv": "Diego Maradonas gör mål med 'Guds hand'"
+      },
+      "category": "sports",
+      "year": 1986,
+      "description": {
+        "en": "Diego Maradona scores a controversial goal using his hand, later described by him as the 'Hand of God,' during the Argentina vs. England quarter-final match in the 1986 FIFA World Cup.",
+        "sv": "Diego Maradona gör ett kontroversiellt mål med sin hand, senare beskrivet av honom själv som 'Guds hand', under kvartsfinalen i 1986 års fotbolls-VM mellan Argentina och England."
+      }
+    },
+    {
+      "id": "09fb7697-b47b-4873-a6c9-4fa70c98a459",
+      "title": {
+        "en": "Death of Pablo Escobar",
+        "sv": "Pablo Escobars död"
+      },
+      "category": "history",
+      "year": 1993,
+      "description": {
+        "en": "Pablo Escobar, notorious Colombian drug lord and leader of the Medellín Cartel, is killed by Colombian security forces on December 2, 1993, ending his reign as a drug kingpin.",
+        "sv": "Pablo Escobar, ökänd colombiansk knarkkung och ledare för Medellín-kartellen, dödas av colombianska säkerhetsstyrkor den 2 december 1993, vilket avslutar hans tid som knarkkung."
+      }
+    },
+    {
+      "id": "8e09fc3f-59df-4f38-8138-9a75319f0868",
+      "title": {
+        "en": "The Pacemaker is fully implanted",
+        "sv": "Första pacemakern opereras in"
+      },
+      "category": "science",
+      "year": 1958,
+      "description": {
+        "en": "Arne Larsson receives the first fully implantable pacemaker, developed by engineer Rune Elmqvist and surgeon Åke Senning, revolutionizing the treatment of heart rhythm disorders.",
+        "sv": "Arne Larsson får den första helt inopererbara pacemakern, utvecklad av ingenjören Rune Elmqvist och kirurgen Åke Senning, vilket revolutionerar behandlingen av hjärtrytmrubbningar."
       }
     }
   ]
