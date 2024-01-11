@@ -16,10 +16,9 @@ const SCORES = {
 /**
  * Calculates the score for the current historic events guess.
  * @example
- * 10 points for being completely correct
- * 5 points for being in the correct timespan and +/- 10 years away
+ * 20 points for being completely correct
+ * 10 - difference in guess and answer results in the same amount of points
  * 1 point for being in the correct timespan
- * 0 points for the first guess unless completely correct
  * false if the guess is wrong
  * @param gameState
  */
@@ -39,7 +38,7 @@ export const calculateScore = (args: {
   }
 
   const diff = Math.abs(args.currentEvent.year - args.guess);
-  const score = Math.max(SCORES.MAXIMUM_SCORE - diff, 1);
+  const score = Math.max(SCORES.MAXIMUM_SCORE - (diff - 1), 1);
 
   return score;
 };

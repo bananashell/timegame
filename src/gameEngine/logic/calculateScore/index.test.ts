@@ -73,39 +73,9 @@ describe("calculateScore", () => {
           year: correctYear,
         } as unknown as HistoricEvent,
       });
-      expect(actual).toBe(Math.max(10 - Math.abs(diff), 1));
+      expect(actual).toBe(Math.max(10 - (Math.abs(diff) - 1), 1));
     },
   );
-
-  // it(`returns ${SCORES.LARGE_DIFF_SCORE} when diff is more than +${FIVE_POINT_DIFF_CUTOFF}`, () => {
-  //   const actual = calculateScore({
-  //     historicEvents: [
-  //       {
-  //         year: 1890,
-  //       },
-  //     ] as unknown as LockedHistoricGameEvent[],
-  //     guess: 1911,
-  //     currentEvent: {
-  //       year: 1900,
-  //     } as unknown as HistoricEvent,
-  //   });
-  //   expect(actual).toBe(SCORES.LARGE_DIFF_SCORE);
-  // });
-
-  // it(`returns ${SCORES.LARGE_DIFF_SCORE} when diff is more than -${FIVE_POINT_DIFF_CUTOFF}`, () => {
-  //   const actual = calculateScore({
-  //     historicEvents: [
-  //       {
-  //         year: 1800,
-  //       },
-  //     ] as unknown as LockedHistoricGameEvent[],
-  //     guess: 1889,
-  //     currentEvent: {
-  //       year: 1900,
-  //     } as unknown as HistoricEvent,
-  //   });
-  //   expect(actual).toBe(SCORES.LARGE_DIFF_SCORE);
-  // });
 
   it("returns points when answer and guess is before all other timeline events", () => {
     const actual = calculateScore({
@@ -143,7 +113,7 @@ describe("calculateScore", () => {
         year: 1969,
       } as unknown as HistoricEvent,
     });
-    expect(actual).toBe(9);
+    expect(actual).toBe(10);
   });
 
   it("returns points when guess is after all other timeline events and event has the same year as another event", () => {
@@ -161,7 +131,7 @@ describe("calculateScore", () => {
         year: 1995,
       } as unknown as HistoricEvent,
     });
-    expect(actual).toBe(9);
+    expect(actual).toBe(10);
   });
 
   it("returns points when answer and guess is after all other timeline events", () => {
