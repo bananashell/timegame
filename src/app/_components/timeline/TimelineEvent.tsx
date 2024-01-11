@@ -1,7 +1,5 @@
 import { HistoricGameEvent } from "@/gameEngine/gameState";
-import { HistoricEvent, historicEvent } from "@/models/historicEvent";
 import { isLockedEvent as _isLockedEvent } from "@/utils/guards/isLockedEvent";
-import { twMerge } from "tailwind-merge";
 
 export const TimelineEvent = ({
   historicEvent,
@@ -10,21 +8,14 @@ export const TimelineEvent = ({
 }) => {
   return (
     <article
-      className={`flex max-w-lg rounded-xl border-2 border-black dark:border-white backdrop-blur-lg bg-white/20 dark:bg-black/20`}
+      className={`flex flex-col max-w-lg rounded-xl overflow-hidden border-2 px-4 w-44 border-black dark:border-white backdrop-blur-lg bg-white/20 dark:bg-black/20`}
     >
-      <div className="px-4 py-2">
-        <h2 className="">{historicEvent.title.sv}</h2>
-        <span className="">{historicEvent.description.sv}</span>
-      </div>
-      <div className="text-5xl flex items-center p-2 aspect-square w-40 ">
-        <div
-          className={twMerge(
-            "w-full h-full rounded-xl flex justify-center items-center",
-          )}
-        >
-          <div className="px-2">{historicEvent.year}</div>
-        </div>
-      </div>
+      <span className="text-3xl text-center">
+        <span className="">{historicEvent.year}</span>
+      </span>
+      <span className="text-base text-center font-normal break-words line-clamp-2">
+        {historicEvent.title.sv}
+      </span>
     </article>
   );
 };

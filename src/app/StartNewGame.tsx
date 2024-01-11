@@ -20,6 +20,7 @@ export const StartNewGame = () => {
     isError,
     isSuccess,
   } = useStartNewGame();
+
   const handleKeyUp = async (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key == "Enter") {
       await startNewGame();
@@ -34,7 +35,7 @@ export const StartNewGame = () => {
   };
 
   return (
-    <section className="relative w-screen h-screen">
+    <section className="w-full h-full">
       <AnimatePresence initial={false}>
         {state == "initial" && (
           <motion.header
@@ -48,14 +49,14 @@ export const StartNewGame = () => {
             onClick={() => setState("name select")}
             className="top-1/2 left-1/2 absolute w-full max-w-lg select-none cursor-pointer drop-shadow-xl p-8 rounded-full aspect-square justify-center inline-flex flex-col items-center border-8 border-[#dedac2] bg-[#85d1c0] text-white"
           >
-            <h2 className="uppercase">Welcome to the</h2>
+            <h2 className="uppercase">Välkommen till</h2>
             <StrokeHeader
               className="lg:scale-150 -translate-y-2 lg:-translate-y-4"
               textColor="text-white"
             >
-              Timeline
+              Tidslinjen
             </StrokeHeader>
-            <h2>Start new game</h2>
+            <h2>Starta nytt spel</h2>
           </motion.header>
         )}
 
@@ -73,7 +74,7 @@ export const StartNewGame = () => {
                 onKeyUp={handleKeyUp}
                 className="top-1/2 left-1/2 text-center absolute w-full max-w-lg select-none cursor-pointer drop-shadow-lg p-8 rounded-full aspect-square justify-center flex flex-col items-center border-8 border-[#dedac2] bg-[#85d1c0] text-white"
               >
-                <h2>{"What's your name?"}</h2>
+                <h2>{"Vad heter du?"}</h2>
                 <input
                   value={username}
                   onChange={(e) => {
@@ -81,7 +82,7 @@ export const StartNewGame = () => {
                     setUsername(e.target.value);
                   }}
                   type="text"
-                  className="bg-transparent text-white text-center outline-none caret-white text-8xl max-w-md"
+                  className="bg-transparent text-white text-center outline-none caret-white text-8xl max-w-full"
                   maxLength={12}
                   autoFocus
                 />
@@ -90,9 +91,9 @@ export const StartNewGame = () => {
                   initial={{ scale: 1 }}
                   disabled={!username}
                   onClick={startNewGame}
-                  className="transition-colors select-none text-4xl mt-4 disabled:text-white/20"
+                  className="transition-colors select-none text-4xl mt-2 disabled:text-white/20"
                 >
-                  Next
+                  Nästa
                 </motion.button>
               </motion.header>
             )}

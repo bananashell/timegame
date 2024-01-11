@@ -22,7 +22,7 @@ export const GameBoard = () => {
   }
 
   return (
-    <main className=" h-screen items-center justify-center w-screen">
+    <main className=" h-full items-center justify-center w-full">
       <AnimatePresence>
         {state.mainState === "playing" && (
           <motion.section
@@ -37,10 +37,10 @@ export const GameBoard = () => {
             lg:grid-cols-lg_gameBoard
             grid-rows-gameBoard
             lg:grid-rows-lg_gameBoard
-            w-full p-4 h-full"
+            w-full pb-0 h-full"
           >
             <Timeline />
-            <CardStack />
+            {/* <CardStack /> */}
             <Guess />
             <CurrentScore />
             <Score />

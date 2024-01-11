@@ -16,13 +16,13 @@
     {
       "title": {
         "en": "United States Declaration of Independence",
-        "sv": "Förenta Staternas självständighetsförklaring"
+        "sv": "USA:s förklarar sig självständigt"
       },
       "category": "politics",
       "year": 1776,
       "description": {
         "en": "The United States Declaration of Independence is adopted, marking the birth of the United States of America.",
-        "sv": "Förenta Staternas självständighetsförklaring antas och markerar födelsen av Förenta Staterna."
+        "sv": "Självständighetsförklaring antas och markerar födelsen av Förenta Staterna."
       },
       "id": "eaf4287a-da99-4030-a322-8169b15d86d2"
     },
@@ -41,8 +41,8 @@
     },
     {
       "title": {
-        "en": "Christopher Columbus' Voyage",
-        "sv": "Christopher Columbus resa"
+        "en": "Columbus discovers the Americas",
+        "sv": "Columbus upptäcker den Nya världen"
       },
       "category": "exploration",
       "year": 1492,
@@ -327,8 +327,8 @@
     },
     {
       "title": {
-        "en": "Cuban Javier Sotomayor sets a new world record in high jump with 2.45 meters",
-        "sv": "Kubanen Javier Sotomayor sätter nytt världsrekord i höjdhopp med sina 2,45 meter"
+        "en": "Javier Sotomayor sets a new world record in high jump",
+        "sv": "Javier Sotomayor sätter nytt världsrekord i höjdhopp"
       },
       "category": "sports",
       "year": 1993,
@@ -542,8 +542,8 @@
       "category": "popculture",
       "year": 1976,
       "description": {
-        "sv": "Rocky vinner Oscar för Bästa Film och etablerar sig som en ikonisk film inom sportdramagenren",
-        "en": "Rocky wins the Oscar for Best Picture, solidifying itself as an iconic film in the sports drama genre"
+        "sv": "Rocky vinner Oscar för Bästa Film och etablerar sig som en ikonisk film",
+        "en": "Rocky wins the Oscar for Best Picture, solidifying itself as an iconic film"
       }
     },
     {

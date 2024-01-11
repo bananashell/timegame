@@ -1,37 +1,98 @@
 import { currentEventAtom } from "@/app/state";
 import { useAtom } from "jotai";
 import { useGuess, useLock } from "@/app/state/actions";
+import { AnimatePresence, motion } from "framer-motion";
+import { BackspaceRounded } from "@mui/icons-material";
 
 export const Guess = () => {
-  const lockGuess = useLock();
-  const [currentEvent] = useAtom(currentEventAtom);
-
-  const guess = useGuess();
-
   return (
     <section className="grid-in-guess text-3xl flex flex-col gap-8 items-center">
-      {/* <h1 className="text-center">{currentEvent?.guess ?? ""}</h1> */}
-      <input
-        type="number"
-        pattern="[0-9]*"
-        inputMode="numeric"
-        className="bg-transparent caret-black dark:caret-white text-center text-7xl w-full ring-0 focus:ring-0 focus:outline-none"
-        value={currentEvent?.guess || ""}
-        onChange={(e) => {
-          if (!("value" in e.target)) throw new Error("No value in target");
-          if (typeof e.target.value !== "string")
-            throw new Error("Invalid type");
+      <motion.div className="w-full flex flex-col">
+        <CurrentEvent />
+        <Keypad />
+      </motion.div>
+    </section>
+  );
+};
 
-          guess(+e.target.value);
-        }}
-      />
+const Keypad = () => {
+  const [currentEvent] = useAtom(currentEventAtom);
+  const updateGuess = useGuess();
+  const lockGuess = useLock();
+  const value = currentEvent?.guess;
 
-      <button
-        onClick={() => lockGuess()}
-        className="bg-white py-2 rounded px-4 text-black"
-      >
-        Guess
-      </button>
+  const backspace = () => {
+    updateGuess(value ? Math.floor(value / 10) : 0);
+  };
+  const addNumber = (numeral: number) => {
+    updateGuess(value ? value * 10 + numeral : numeral);
+  };
+
+  return (
+    <article className="w-full bg-white flex items-center justify-center dark:bg-gray-800 border-t border-gray-500">
+      <article className="w-full max-w-sm">
+        <section className="flex justify-end items-center gap-2">
+          <div>{value || ""}</div>
+          <motion.button
+            whileTap={{ scale: 0.8 }}
+            onClick={backspace}
+            className="px-4 py-2 aspect-square"
+          >
+            <BackspaceRounded />
+          </motion.button>
+        </section>
+        <section className="text-xl  grid grid-cols-3 gap-px bg-black border border-t-black dark:border-t-white dark:bg-white">
+          {buttons.map((value) => {
+            if (value === "empty") {
+              return (
+                <i
+                  key={value}
+                  className="text-center aspect-[2/1] bg-white dark:bg-gray-800"
+                />
+              );
+            }
+
+            if (value === "lock") {
+              return (
+                <motion.button
+                  key={value}
+                  whileTap={{ scale: 0.9 }}
+                  onClick={lockGuess}
+                  className="bg-blue-300"
+                >
+                  Lås
+                </motion.button>
+              );
+            }
+
+            return (
+              <motion.button
+                key={value}
+                whileTap={{ scale: 0.9 }}
+                className="text-center aspect-[2/1] bg-white dark:bg-gray-800"
+                onClick={() => addNumber(value)}
+              >
+                {value}
+              </motion.button>
+            );
+          })}
+        </section>
+      </article>
+    </article>
+  );
+};
+
+const buttons = [1, 2, 3, 4, 5, 6, 7, 8, 9, "lock", 0, "empty"] as const;
+
+const CurrentEvent = () => {
+  const [currentEvent] = useAtom(currentEventAtom);
+
+  return (
+    <section className="backdrop-blur-xl flex justify-center bg-white/20 dark:bg-black/20 border-black dark:border-white border-t-2 w-full user-select-none">
+      <div className="w-full max-w-md p-8 ">
+        <h2 className="text-2xl">{currentEvent?.title.sv}</h2>
+        <p className="text-base">{currentEvent?.description.sv}</p>
+      </div>
     </section>
   );
 };

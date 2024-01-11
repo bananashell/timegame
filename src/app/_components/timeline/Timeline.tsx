@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useLayoutEffect, useMemo, useRef } from "react";
 import { isDefined } from "@/utils/guards/isDefined";
 import { isLockedEvent } from "@/utils/guards/isLockedEvent";
+import { Place } from "@mui/icons-material";
 
 export const Timeline = () => {
   const arrowRef = useRef<HTMLDivElement>(null);
@@ -22,11 +23,15 @@ export const Timeline = () => {
   }, [timelineEvents, currentEvent]);
 
   useLayoutEffect(() => {
-    // arrowRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+    arrowRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+      inline: "center",
+    });
   }, [currentEvent]);
 
   return (
-    <div className="grid-in-timeline flex flex-col items-center overflow-y-scroll gap-2 py-4">
+    <div className="grid-in-timeline line-cla flex flex-row-reverse items-center overflow-y-scroll gap-1 py-4">
       <AnimatePresence>
         {inlinedTimelineEvents.map((event) => {
           const asArrow = !isLockedEvent(event);
@@ -38,11 +43,11 @@ export const Timeline = () => {
               animate={{ opacity: 1 }}
               transition={{ type: "spring", duration: 0.5, bounce: 0.5 }}
             >
-              {asArrow && (
+              {asArrow && event.guess > 0 && (
                 <motion.div
                   ref={arrowRef}
                   key={"guess"}
-                  className="text-5xl px-4 py-2 rounded-xl border-2 border-black dark:border-white backdrop-blur-lg bg-white/20 dark:bg-black/20"
+                  className="text-xl px-2 text-black"
                   initial={{ y: -5 }}
                   animate={{ y: 5 }}
                   transition={{
@@ -54,7 +59,7 @@ export const Timeline = () => {
                     duration: 1,
                   }}
                 >
-                  {"<<"} {event.guess} {">>"}
+                  <Place sx={{ fontSize: 40 }} className="text-red-500" />
                 </motion.div>
               )}
               {!asArrow && (
