@@ -20,6 +20,7 @@ export const StartNewGame = () => {
     isError,
     isSuccess,
   } = useStartNewGame();
+
   const handleKeyUp = async (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key == "Enter") {
       await startNewGame();
