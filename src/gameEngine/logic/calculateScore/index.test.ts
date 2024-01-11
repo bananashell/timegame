@@ -4,14 +4,6 @@ import { LockedHistoricGameEvent } from "@/gameEngine/gameState";
 import { HistoricEvent } from "@/models/historicEvent";
 import { GameEntity } from "@/data/db/game/gameEntity";
 
-const FIVE_POINT_DIFF_CUTOFF = 10 as const;
-const SCORES = {
-  MAXIMUM_SCORE: 10 as const,
-  SMALL_DIFF_SCORE: 5 as const,
-  LARGE_DIFF_SCORE: 1 as const,
-  FIRST_GUESS_SCORE: 1 as const,
-};
-
 describe("calculateScore", () => {
   it("throws when guess is missing", () => {
     const actual = () => calculateScore({} as any);
@@ -48,7 +40,7 @@ describe("calculateScore", () => {
     expect(actual).toBeFalse();
   });
 
-  it("returns 10 when guess is correct", () => {
+  it("returns 20 when guess is correct", () => {
     const actual = calculateScore({
       historicEvents: [
         {
@@ -60,11 +52,11 @@ describe("calculateScore", () => {
         year: 1900,
       } as unknown as HistoricEvent,
     });
-    expect(actual).toBe(SCORES.MAXIMUM_SCORE);
+    expect(actual).toBe(20);
   });
 
   it.each(createDiffArray(-10, 10, 0))(
-    `returns ${SCORES.SMALL_DIFF_SCORE} when diff is %i`,
+    `calculates correctly when diff is %i`,
     (diff: number) => {
       const correctYear = 1900;
       const actual = calculateScore({
@@ -81,39 +73,9 @@ describe("calculateScore", () => {
           year: correctYear,
         } as unknown as HistoricEvent,
       });
-      expect(actual).toBe(SCORES.SMALL_DIFF_SCORE);
+      expect(actual).toBe(Math.max(10 - (Math.abs(diff) - 1), 1));
     },
   );
-
-  it(`returns ${SCORES.LARGE_DIFF_SCORE} when diff is more than +${FIVE_POINT_DIFF_CUTOFF}`, () => {
-    const actual = calculateScore({
-      historicEvents: [
-        {
-          year: 1890,
-        },
-      ] as unknown as LockedHistoricGameEvent[],
-      guess: 1911,
-      currentEvent: {
-        year: 1900,
-      } as unknown as HistoricEvent,
-    });
-    expect(actual).toBe(SCORES.LARGE_DIFF_SCORE);
-  });
-
-  it(`returns ${SCORES.LARGE_DIFF_SCORE} when diff is more than -${FIVE_POINT_DIFF_CUTOFF}`, () => {
-    const actual = calculateScore({
-      historicEvents: [
-        {
-          year: 1800,
-        },
-      ] as unknown as LockedHistoricGameEvent[],
-      guess: 1889,
-      currentEvent: {
-        year: 1900,
-      } as unknown as HistoricEvent,
-    });
-    expect(actual).toBe(SCORES.LARGE_DIFF_SCORE);
-  });
 
   it("returns points when answer and guess is before all other timeline events", () => {
     const actual = calculateScore({
@@ -133,7 +95,7 @@ describe("calculateScore", () => {
         year: 1918,
       } as unknown as HistoricEvent,
     });
-    expect(actual).toBe(SCORES.LARGE_DIFF_SCORE);
+    expect(actual).toBe(1);
   });
 
   it("returns points when guess is before all other timeline events and event has the same year as another event", () => {
@@ -151,7 +113,7 @@ describe("calculateScore", () => {
         year: 1969,
       } as unknown as HistoricEvent,
     });
-    expect(actual).toBe(SCORES.SMALL_DIFF_SCORE);
+    expect(actual).toBe(10);
   });
 
   it("returns points when guess is after all other timeline events and event has the same year as another event", () => {
@@ -169,7 +131,7 @@ describe("calculateScore", () => {
         year: 1995,
       } as unknown as HistoricEvent,
     });
-    expect(actual).toBe(SCORES.SMALL_DIFF_SCORE);
+    expect(actual).toBe(10);
   });
 
   it("returns points when answer and guess is after all other timeline events", () => {
@@ -190,7 +152,7 @@ describe("calculateScore", () => {
         year: 2020,
       } as unknown as HistoricEvent,
     });
-    expect(actual).toBe(SCORES.LARGE_DIFF_SCORE);
+    expect(actual).toBe(1);
   });
 
   it("doesn't alter the array order", () => {
@@ -259,6 +221,7 @@ describe("real data", () => {
 
 const mockText = { sv: "", en: "" };
 const entity: GameEntity = {
+  id: "",
   salt: "2285cbedd67997e0",
   userId: "3e4874bb-0c0b-4017-9961-6b04aebb3264",
   username: "jocke",

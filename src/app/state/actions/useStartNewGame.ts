@@ -30,7 +30,7 @@ export const useStartNewGame = () => {
           ...res.game,
           gameState: { mainState: "playing", subState: "guessing" },
           timelineEvents: [],
-          currentEvent: { ...res.nextEvent, guess: 1900 },
+          currentEvent: { ...res.nextEvent, guess: 0 },
         });
 
         setState("success");

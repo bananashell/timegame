@@ -8,21 +8,17 @@ export type ScoredHistoricEvent = Pick<
 >;
 export type CurrentEvent = Pick<HistoricEvent, "year">;
 
-const FIVE_POINT_DIFF_CUTOFF = 10 as const;
 const SCORES = {
+  ABSOLUTELY_CORRECT: 20 as const,
   MAXIMUM_SCORE: 10 as const,
-  SMALL_DIFF_SCORE: 5 as const,
-  LARGE_DIFF_SCORE: 1 as const,
-  FIRST_GUESS_SCORE: 1 as const,
 };
 
 /**
  * Calculates the score for the current historic events guess.
  * @example
- * 10 points for being completely correct
- * 5 points for being in the correct timespan and +/- 10 years away
+ * 20 points for being completely correct
+ * 10 - difference in guess and answer results in the same amount of points
  * 1 point for being in the correct timespan
- * 0 points for the first guess unless completely correct
  * false if the guess is wrong
  * @param gameState
  */
@@ -34,17 +30,15 @@ export const calculateScore = (args: {
   if (typeof args.guess != "number")
     throw new Error("Guess has to be a number");
 
-  if (args.currentEvent.year === args.guess) return SCORES.MAXIMUM_SCORE;
-  if (args.historicEvents.length === 0) return SCORES.FIRST_GUESS_SCORE;
+  if (args.currentEvent.year === args.guess) return SCORES.ABSOLUTELY_CORRECT;
 
   const inTimespan = isInTimespan(args);
   if (!inTimespan) {
     return false;
   }
 
-  if (Math.abs(args.currentEvent.year - args.guess) <= FIVE_POINT_DIFF_CUTOFF) {
-    return SCORES.SMALL_DIFF_SCORE;
-  }
+  const diff = Math.abs(args.currentEvent.year - args.guess);
+  const score = Math.max(SCORES.MAXIMUM_SCORE - (diff - 1), 1);
 
-  return SCORES.LARGE_DIFF_SCORE;
+  return score;
 };
