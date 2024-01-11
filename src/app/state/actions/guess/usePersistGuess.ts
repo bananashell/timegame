@@ -40,7 +40,7 @@ export const usePersistGuess = () => {
     }
 
     setTimelineEvents(newGameState.events);
-    setCurrentEvent({ ...nextEvent, guess: currentEvent.guess });
+    setCurrentEvent({ ...nextEvent, guess: 0 });
     setState({ mainState: "playing", subState: "guessing" });
   };
 };

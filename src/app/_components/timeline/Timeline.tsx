@@ -31,7 +31,7 @@ export const Timeline = () => {
   }, [currentEvent]);
 
   return (
-    <div className="grid-in-timeline line-cla flex flex-row-reverse items-center overflow-y-scroll gap-1 py-4">
+    <div className="grid-in-timeline line-cla flex flex-row-reverse justify-center items-center overflow-y-scroll gap-1 py-4">
       <AnimatePresence>
         {inlinedTimelineEvents.map((event) => {
           const asArrow = !isLockedEvent(event);
