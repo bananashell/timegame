@@ -21,7 +21,7 @@ export const CurrentScore = () => {
         scope.current,
         {
           scale: [1, 1.1],
-          width: [100, 120],
+          width: [50, 50],
           height: [200, 200],
           rotate: [0, 360],
           borderRadius: ["100%", "10%"],
@@ -46,7 +46,7 @@ export const CurrentScore = () => {
         scope.current,
         {
           scale: [1],
-          width: [100],
+          width: [50],
           rotate: [0],
           borderRadius: ["100%"],
         } as any,
@@ -65,11 +65,11 @@ export const CurrentScore = () => {
   }, [score]);
 
   return (
-    <div className="grid-in-score flex flex-col gap-2 pointer-events-none touch-none">
+    <div className="grid-in-score flex flex-col gap-2">
       <motion.article
         initial={{ opacity: 1, scale: 1 }}
         ref={scope}
-        className="flex items-center justify-center user-select-none text-5xl p-6 bg-white rounded-full h-[100px] w-[100px]"
+        className="flex items-center justify-center user-select-none text-2xl p-4 md:p-6 bg-white rounded-full h-[50px] w-[50px] pointer-events-none touch-none"
       >
         <div className="text-black relative whitespace-nowrap">
           <motion.div id="current" initial={{ x: 0 }}>

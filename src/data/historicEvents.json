@@ -340,19 +340,6 @@
     },
     {
       "title": {
-        "en": "Cuban Javier Sotomayor sets a new world record in high jump with 2.45 meters",
-        "sv": "Kubanen Javier Sotomayor sätter nytt världsrekord i höjdhopp med sina 2,45 meter"
-      },
-      "category": "sports",
-      "year": 1993,
-      "description": {
-        "en": "Cuban Javier Sotomayor sets a new world record in high jump with 2.45 meters",
-        "sv": "Kubanen Javier Sotomayor sätter nytt världsrekord i höjdhopp med sina 2,45 meter"
-      },
-      "id": "67af9eb4-4636-403c-b42c-c4b4c0713b2d"
-    },
-    {
-      "title": {
         "en": "The Berlin Wall falls, marking the reunification of East and West Germany",
         "sv": "Berlinmuren faller och markerar återföreningen av Öst- och Västtyskland"
       },
@@ -430,19 +417,6 @@
       }
     },
     {
-      "id": "551bfaa3-4ace-4e31-9fdf-7b333d395ffe",
-      "title": {
-        "sv": "George R.R. Martin släpper boken 'A Game of Thrones'",
-        "en": "George R.R. Martin publishes 'A Game of Thrones'"
-      },
-      "category": "culture",
-      "year": 1996,
-      "description": {
-        "sv": "George R.R. Martin släpper boken 'A Game of Thrones', den första boken i serien 'A Song of Ice and Fire'",
-        "en": "George R.R. Martin publishes 'A Game of Thrones', the first book in the 'A Song of Ice and Fire' series"
-      }
-    },
-    {
       "id": "1d87dea2-0d57-47cd-939d-8e8e50d096da",
       "title": {
         "sv": "Parasite vinner Oscar för Bästa Film och Bästa Internationella Film",
@@ -458,8 +432,8 @@
     {
       "id": "1215dbc7-c223-4791-9e68-d10d8ba77ed5",
       "title": {
-        "sv": "Avengers: Endgame blir den mest inkomstbringande filmen genom tiderna",
-        "en": "Avengers: Endgame becomes the highest-grossing film of all time"
+        "sv": "Avengers: Endgame går upp på biograferna",
+        "en": "Avengers: Endgame permieres in theaters"
       },
       "category": "popculture",
       "year": 2019,
@@ -510,8 +484,8 @@
     {
       "id": "50721b7a-066e-4c61-bdbb-996d164b135a",
       "title": {
-        "sv": "The Birth of a Nation revolutionerar filmtekniken",
-        "en": "The Birth of a Nation revolutionizes film techniques"
+        "sv": "'The Birth of a Nation' revolutionerar filmtekniken",
+        "en": "'The Birth of a Nation' revolutionizes film techniques"
       },
       "category": "popculture",
       "year": 1915,
@@ -783,8 +757,8 @@
     {
       "id": "93ad6703-9a7e-4c52-97c4-f5b9b9bdd842",
       "title": {
-        "sv": "Första Eurovision Song Contest hålls i Lugano, Schweiz",
-        "en": "First Eurovision Song Contest is held in Lugano, Switzerland"
+        "sv": "Eurovision Song Contest hålls för första gången",
+        "en": "Eurovision Song Contest is held for the first time"
       },
       "category": "music",
       "year": 1956,
@@ -1129,6 +1103,32 @@
       "description": {
         "en": "Mariner 9 was the first spacecraft to orbit another planet. It conducted an extensive survey of the Martian surface, providing detailed images and data that significantly enhanced our understanding of the planet's geology, atmosphere, and climate.",
         "sv": "Mariner 9 var den första rymdfarkosten att kretsa runt en annan planet. Den genomförde en omfattande undersökning av Mars yta och tillhandahöll detaljerade bilder och data som avsevärt förbättrade vår förståelse för planetens geologi, atmosfär och klimat."
+      }
+    },
+    {
+      "id": "dc58385c-13ec-420d-8b1d-c5f4c70c1dee",
+      "title": {
+        "en": "'Voting Rights Act' prohibits racial discrimination in voting",
+        "sv": "'Voting Rights Act' förbjuder rasdiskriminering i Amerikanska val"
+      },
+      "category": "politics",
+      "year": 1965,
+      "description": {
+        "en": "The Voting Rights Act is signed into law by the President. Allowing people of color to vote without restrictions.",
+        "sv": "'Voting Rights Act' undertecknas av presidenten. Detta gör det möjligt för icke-vita att rösta utan restriktioner."
+      }
+    },
+    {
+      "id": "fa1426c1-58bb-41c5-a43d-dff042ee3f31",
+      "title": {
+        "en": "Work on Mount Rushmore begins",
+        "sv": "Arbetet med Mount Rushmore påbörjas"
+      },
+      "category": "politics",
+      "year": 1927,
+      "description": {
+        "en": "Roughly 400 workers begin carving the faces of four U.S. presidents into Mount Rushmore in South Dakota.",
+        "sv": "Omkring 400 arbetare börjar hugga ut ansiktena av fyra amerikanska presidenter i berget Mount Rushmore i South Dakota."
       }
     }
   ]

@@ -1,12 +1,18 @@
-import { currentEventAtom } from "@/app/state";
+import { currentEventAtom, surroundingEventsAtom } from "@/app/state";
 import { useAtom } from "jotai";
 import { useGuess, useLock } from "@/app/state/actions";
 import { AnimatePresence, motion } from "framer-motion";
-import { BackspaceRounded } from "@mui/icons-material";
+import {
+  BackspaceRounded,
+  ChevronLeftRounded,
+  ChevronRightRounded,
+  LockRounded,
+  LockOpen,
+} from "@mui/icons-material";
 
 export const Guess = () => {
   return (
-    <section className="grid-in-guess text-3xl flex flex-col gap-8 items-center">
+    <section className="grid-in-guess text-3xl flex flex-col gap-8 items-center self-end">
       <motion.div className="w-full flex flex-col">
         <CurrentEvent />
         <Keypad />
@@ -17,6 +23,8 @@ export const Guess = () => {
 
 const Keypad = () => {
   const [currentEvent] = useAtom(currentEventAtom);
+  const [surroundingEvents] = useAtom(surroundingEventsAtom);
+
   const updateGuess = useGuess();
   const lockGuess = useLock();
   const value = currentEvent?.guess;
@@ -27,30 +35,55 @@ const Keypad = () => {
   const addNumber = (numeral: number) => {
     updateGuess(value ? value * 10 + numeral : numeral);
   };
+  const handlePrevious = () => {
+    const nextValue =
+      (surroundingEvents?.eventBefore?.guess &&
+        surroundingEvents?.eventBefore?.guess - 1) ||
+      value ||
+      0;
+
+    updateGuess(nextValue);
+  };
+  const handleNext = () => {
+    const nextValue =
+      (surroundingEvents?.eventBefore?.guess &&
+        surroundingEvents?.eventBefore?.guess + 1) ||
+      value ||
+      0;
+
+    updateGuess(nextValue);
+  };
 
   return (
     <article className="w-full bg-white flex items-center justify-center dark:bg-gray-800 border-t border-gray-500">
       <article className="w-full max-w-sm">
-        <section className="flex justify-end items-center gap-2">
+        <section className="flex justify-between items-center gap-2">
+          <motion.button
+            whileTap={{ scale: 0.8 }}
+            onClick={handlePrevious}
+            className="px-4 py-2 aspect-square"
+          >
+            <ChevronLeftRounded />
+          </motion.button>
           <div>{value || ""}</div>
           <motion.button
             whileTap={{ scale: 0.8 }}
-            onClick={backspace}
+            onClick={handleNext}
             className="px-4 py-2 aspect-square"
           >
-            <BackspaceRounded />
+            <ChevronRightRounded />
           </motion.button>
         </section>
         <section className="text-xl  grid grid-cols-3 gap-px bg-black border border-t-black dark:border-t-white dark:bg-white">
           {buttons.map((value) => {
-            if (value === "empty") {
-              return (
-                <i
-                  key={value}
-                  className="text-center aspect-[2/1] bg-white dark:bg-gray-800"
-                />
-              );
-            }
+            // if (value === "empty") {
+            //   return (
+            //     <i
+            //       key={value}
+            //       className="text-center aspect-[2/1] bg-white dark:bg-gray-800"
+            //     />
+            //   );
+            // }
 
             if (value === "lock") {
               return (
@@ -58,9 +91,22 @@ const Keypad = () => {
                   key={value}
                   whileTap={{ scale: 0.9 }}
                   onClick={lockGuess}
-                  className="bg-blue-300"
+                  className="bg-red-500"
                 >
-                  Lås
+                  <LockOpen />
+                </motion.button>
+              );
+            }
+
+            if (value === "backspace") {
+              return (
+                <motion.button
+                  key={value}
+                  whileTap={{ scale: 0.9 }}
+                  onClick={backspace}
+                  className="bg-white dark:bg-gray-800"
+                >
+                  <BackspaceRounded />
                 </motion.button>
               );
             }
@@ -82,7 +128,21 @@ const Keypad = () => {
   );
 };
 
-const buttons = [1, 2, 3, 4, 5, 6, 7, 8, 9, "lock", 0, "empty"] as const;
+const buttons = [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  "lock",
+  0,
+  // "empty",
+  "backspace",
+] as const;
 
 const CurrentEvent = () => {
   const [currentEvent] = useAtom(currentEventAtom);

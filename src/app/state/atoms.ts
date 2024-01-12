@@ -53,6 +53,30 @@ export const orderedTimelineEvents = atom((get) =>
 );
 orderedTimelineEvents.debugLabel = "orderedTimelineEvents";
 
+export const surroundingEventsAtom = atom((get) => {
+  const events = get(orderedTimelineEvents);
+  const currentEvent = get(currentEventAtom);
+
+  if (!currentEvent) {
+    return { eventBefore: undefined, eventAfter: undefined };
+  }
+
+  for (let i = 0; i < events.length; i++) {
+    const e = events[i];
+    if (i === events.length - 1)
+      return { eventBefore: e, eventAfter: undefined };
+
+    if (e.year < currentEvent.guess) {
+      return {
+        eventBefore: e,
+        eventAfter: events[i + 1],
+      };
+    }
+  }
+
+  return { eventBefore: undefined, eventAfter: undefined };
+});
+
 export const scoreAtom = atom((get) =>
   get(timelineEventsAtom).reduce((acc, curr) => {
     return acc + curr.score;

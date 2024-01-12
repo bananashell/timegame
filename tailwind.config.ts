@@ -30,8 +30,9 @@ const config: Config = {
         gameBoard: `0px 1fr 0px`,
       },
       gridTemplateRows: {
-        gameBoard: `3fr
-        1fr`,
+        gameBoard: `minmax(150px, 1fr)
+        minmax(80px, auto)
+        2fr`,
       },
     },
   },
