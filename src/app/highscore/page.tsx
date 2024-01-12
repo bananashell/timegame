@@ -8,7 +8,6 @@ const HighscorePage = async () => {
   const highscores = await trpc.getHighscore({});
   return (
     <section className="flex w-full gap-4 h-screen justify-center items-center flex-col">
-      <div>{new Date().toISOString()}</div>
       <Highscore highscores={highscores} />
       <Link
         href={"/"}
