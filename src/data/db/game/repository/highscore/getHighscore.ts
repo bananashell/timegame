@@ -1,8 +1,12 @@
 import { z } from "zod";
 import { gamesCollection } from "@/data/db/game/repository/gamesCollection";
+import { nameOf } from "@/utils/nameOf";
+import { GameEntity } from "../../gameEntity";
+import { generateYearAndWeek } from "@/utils/date/generateYearAndWeek";
 
 export const getHighscoreInput = z.object({
   gameId: z.string().optional(),
+  date: z.date().optional(),
 });
 
 type Highscore = {
@@ -15,10 +19,19 @@ type Highscore = {
 
 export const getHighscore = async ({
   gameId,
+  date,
 }: z.infer<typeof getHighscoreInput>): Promise<Highscore[]> => {
   const collection = await gamesCollection();
 
-  const data = await collection.orderBy("totalScore", "desc").limit(10).get();
+  const data = await collection
+    .where(
+      nameOf<GameEntity>("weekAndYear"),
+      "==",
+      generateYearAndWeek(date ?? new Date()),
+    )
+    .orderBy("totalScore", "desc")
+    .limit(10)
+    .get();
 
   let highscores: Highscore[] = data.docs.map((doc, index) => {
     const data = doc.data();

@@ -1,20 +1,19 @@
 "use client";
 
-import { stateAtom } from "@/app/state";
+import { rootStateAtom, stateAtom } from "@/app/state";
 import { useStartNewGame } from "@/app/state/actions";
 import { useAtom } from "jotai";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
-export const GameClientInitiator = ({ salt }: { salt: string }) => {
-  // const startNewGame = useStartNewGame();
-  // const [state] = useAtom(stateAtom);
+export const GameClientInitiator = () => {
+  const { mutateAsync: startNewGame } = useStartNewGame();
+  const [state] = useAtom(rootStateAtom);
 
-  // useEffect(() => {
-  //   if (!salt) return;
-  //   if (state.mainState !== "game start") return;
-
-  //   startNewGame({ salt });
-  // }, [state, salt, startNewGame]);
+  useEffect(() => {
+    if (state.gameState.mainState !== "game start") return;
+    console.log("Recovering game");
+    startNewGame();
+  }, [state, startNewGame]);
 
   return null;
 };

@@ -31,44 +31,48 @@ export const Timeline = () => {
   }, [currentEvent]);
 
   return (
-    <div className="grid-in-timeline flex flex-row-reverse justify-center items-center overflow-y-clip overflow-x-scroll px-4 pr-[220px] gap-1">
-      <AnimatePresence>
-        {inlinedTimelineEvents.map((event) => {
-          const asArrow = !isLockedEvent(event);
-          return (
-            <motion.div
-              key={asArrow ? "guess" : event.id}
-              layout
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ type: "spring", duration: 0.5, bounce: 0.5 }}
-            >
-              {asArrow && event.guess > 0 && (
+    <div className="grid-in-timeline w-full">
+      <div id="timline-scrollcontainer" className="overflow-scroll">
+        <div className="flex flex-row-reverse flex-nowrap min-w-full w-fit gap-1 justify-center items-center px-2 py-2">
+          <AnimatePresence>
+            {inlinedTimelineEvents.map((event) => {
+              const asArrow = !isLockedEvent(event);
+              return (
                 <motion.div
-                  ref={arrowRef}
-                  key={"guess"}
-                  className="text-xl px-2 text-black"
-                  initial={{ y: -5 }}
-                  animate={{ y: 5 }}
-                  transition={{
-                    repeatType: "mirror",
-                    type: "spring",
-                    bounce: 0.8,
-                    damping: 20,
-                    repeat: Infinity,
-                    duration: 1,
-                  }}
+                  key={asArrow ? "guess" : event.id}
+                  layout
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ type: "spring", duration: 0.5, bounce: 0.5 }}
                 >
-                  <Place sx={{ fontSize: 40 }} className="text-red-500" />
+                  {asArrow && event.guess > 0 && (
+                    <motion.div
+                      ref={arrowRef}
+                      key={"guess"}
+                      className="text-xl px-2 text-black"
+                      initial={{ y: -5 }}
+                      animate={{ y: 5 }}
+                      transition={{
+                        repeatType: "mirror",
+                        type: "spring",
+                        bounce: 0.8,
+                        damping: 20,
+                        repeat: Infinity,
+                        duration: 1,
+                      }}
+                    >
+                      <Place sx={{ fontSize: 40 }} className="text-red-500" />
+                    </motion.div>
+                  )}
+                  {!asArrow && (
+                    <TimelineEvent historicEvent={event} key={event.id} />
+                  )}
                 </motion.div>
-              )}
-              {!asArrow && (
-                <TimelineEvent historicEvent={event} key={event.id} />
-              )}
-            </motion.div>
-          );
-        })}
-      </AnimatePresence>
+              );
+            })}
+          </AnimatePresence>
+        </div>
+      </div>
     </div>
   );
 };

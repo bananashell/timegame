@@ -1,9 +1,16 @@
 import { createTRPCNext } from "@trpc/next";
 import { createTRPCProxyClient, httpBatchLink } from "@trpc/client";
-
+import superjson from "superjson";
 import { type AppRouter } from "@/server";
 
-const config = {
+// export const trpcNext = createTRPCNext<AppRouter>({
+//   config() {
+//     return config;
+//   },
+// });
+
+export const trpc = createTRPCProxyClient<AppRouter>({
+  transformer: superjson,
   links: [
     httpBatchLink({
       /**
@@ -20,14 +27,7 @@ const config = {
       },
     }),
   ],
-};
-
-// export const trpcNext = createTRPCNext<AppRouter>({
-//   config() {
-//     return config;
-//   },
-// });
-export const trpc = createTRPCProxyClient<AppRouter>(config);
+});
 
 function getBaseUrl() {
   return "";

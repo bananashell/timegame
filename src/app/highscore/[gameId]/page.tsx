@@ -1,6 +1,7 @@
 import { trpc } from "@/app/_trpc/serverClient";
 import { Highscore } from "../Highscore";
 import Link from "next/link";
+import superjson from "superjson";
 
 const HighscorePage = async ({
   params: { gameId },
@@ -9,6 +10,7 @@ const HighscorePage = async ({
 }) => {
   gameId = decodeURIComponent(gameId || "");
   const highscores = await trpc.getHighscore({ gameId });
+  console.log("highscores", highscores);
 
   return (
     <section className="flex w-full gap-4 h-screen justify-center items-center flex-col">
