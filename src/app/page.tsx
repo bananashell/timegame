@@ -12,6 +12,7 @@ export default async function Home() {
       <StartNewGame />
       <Image
         src={Texture}
+        quality={20}
         alt="Texture"
         className="absolute top-0 left-0 w-full h-full mix-blend-soft-light pointer-events-none"
       />
