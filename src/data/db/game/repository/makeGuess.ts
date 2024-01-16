@@ -19,11 +19,8 @@ export const makeGuessInput = z.object({
 export type MakeGuessInput = z.infer<typeof makeGuessInput>;
 
 export const makeGuess = async (input: MakeGuessInput): Promise<GameEntity> => {
-  console.log("makeGuess1", input);
   const data = makeGuessInput.parse(input);
-  console.log("makeGuess2", data);
   const entity = await getGame(gameId(data));
-  console.log("makeGuess3", entity);
 
   if (!entity.exists) {
     throw new Error("Game does not exist");
@@ -62,12 +59,10 @@ export const makeGuess = async (input: MakeGuessInput): Promise<GameEntity> => {
         ? entity.data.createdAt.toDate()
         : new Date(),
     weekAndYear:
-      entity.data.weekAndYear ?? generateYearAndWeek(entity.data.createdAt),
+      entity.data.weekAndYear ?? generateYearAndWeek(entity.data.createdAt).key,
   } satisfies GameEntity;
 
-  console.log("before parse", updatedData);
   const gameData = gameEntity.safeParse(updatedData);
-  console.log("parse success", gameData.success);
   if (!gameData.success) {
     console.error("Unable to parse gameData", gameData.error);
     throw new Error(`Invalid game data ${gameData.error}`);

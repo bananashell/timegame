@@ -1,8 +1,7 @@
 import { z } from "zod";
-import { GameEntity } from "../gameEntity";
+import { GameEntity, gameEntity } from "../gameEntity";
 import { gamesCollection } from "./gamesCollection";
 import { gameId } from "../gameId";
-import { getISOWeek, getISOWeekYear } from "date-fns";
 import { generateYearAndWeek } from "@/utils/date/generateYearAndWeek";
 
 const createNewGameEntityInput = z.object({
@@ -18,7 +17,7 @@ export const createNewGameEntity = async (
   const id = gameId({ salt: salt, userId: userId });
   const collection = await gamesCollection();
   const now = new Date();
-  const gameEntity: GameEntity = {
+  const entity = gameEntity.parse({
     id: id,
     events: [],
     gameStatus: "playing",
@@ -29,14 +28,14 @@ export const createNewGameEntity = async (
     username: username,
     createdAt: now,
     lastUpdated: now,
-    weekAndYear: generateYearAndWeek(now),
-  };
+    weekAndYear: generateYearAndWeek(now).key,
+  } satisfies GameEntity);
 
   const existing = await collection.doc(id).get();
   if (existing.exists) {
     return existing.data() as GameEntity;
   }
 
-  await collection.doc(id).create(gameEntity);
-  return gameEntity;
+  await collection.doc(id).create(entity);
+  return entity;
 };

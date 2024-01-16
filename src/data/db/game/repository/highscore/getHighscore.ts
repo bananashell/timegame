@@ -20,15 +20,16 @@ type Highscore = {
 export const getHighscore = async ({
   gameId,
   date,
-}: z.infer<typeof getHighscoreInput>): Promise<Highscore[]> => {
+}: z.infer<typeof getHighscoreInput>): Promise<{
+  year: number;
+  week: number;
+  highscores: Highscore[];
+}> => {
   const collection = await gamesCollection();
 
+  const { week, year, key } = generateYearAndWeek(date ?? new Date());
   const data = await collection
-    .where(
-      nameOf<GameEntity>("weekAndYear"),
-      "==",
-      generateYearAndWeek(date ?? new Date()),
-    )
+    .where(nameOf<GameEntity>("weekAndYear"), "==", key)
     .orderBy("totalScore", "desc")
     .limit(10)
     .get();
@@ -45,21 +46,25 @@ export const getHighscore = async ({
   });
 
   if (!gameId || highscores.find((highscore) => highscore.gameId === gameId)) {
-    return highscores;
+    return { highscores, week, year };
   }
 
   const game = (await collection.doc(gameId).get()).data();
   if (!game) {
-    return highscores;
+    return { highscores, week, year };
   }
 
-  return [
-    ...highscores,
-    {
-      gameId,
-      noEvents: game.noEvents,
-      score: game.totalScore,
-      username: game.username,
-    },
-  ];
+  return {
+    week,
+    year,
+    highscores: [
+      ...highscores,
+      {
+        gameId,
+        noEvents: game.noEvents,
+        score: game.totalScore,
+        username: game.username,
+      },
+    ],
+  };
 };
