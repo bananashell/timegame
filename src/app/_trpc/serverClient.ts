@@ -2,6 +2,7 @@
 
 import { httpBatchLink } from "@trpc/client";
 import { appRouter } from "@/server";
+import superjson from "superjson";
 
 function getBaseUrl() {
   if (process.env.VERCEL_URL)
@@ -17,6 +18,7 @@ function getBaseUrl() {
 }
 
 export const trpc = appRouter.createCaller({
+  transformer: superjson,
   links: [
     httpBatchLink({
       /**

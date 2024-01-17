@@ -1,9 +1,11 @@
 import { calculateScore } from "@/gameEngine/logic/calculateScore";
 import { getHistoricEvent } from "../../../historicEvents";
-import { GameEntity } from "../gameEntity";
+import { GameEntity, gameEntity } from "../gameEntity";
 import { gameId } from "../gameId";
 import { getGame } from "./getGame";
 import { z } from "zod";
+import { generateYearAndWeek } from "@/utils/date/generateYearAndWeek";
+import { Timestamp } from "firebase-admin/firestore";
 
 export const makeGuessInput = z.object({
   userId: z.string().uuid(),
@@ -38,7 +40,7 @@ export const makeGuess = async (input: MakeGuessInput): Promise<GameEntity> => {
     currentEvent: currentEvent,
   });
 
-  const gameData = {
+  const updatedData = {
     ...entity.data,
     events: [
       ...entity.data.events,
@@ -52,12 +54,22 @@ export const makeGuess = async (input: MakeGuessInput): Promise<GameEntity> => {
     totalScore: entity.data.totalScore + (score || 0),
     gameStatus: score ? "playing" : "game over",
     lastUpdated: new Date(),
-    createdAt: entity.data.createdAt ?? new Date(),
+    createdAt:
+      entity.data.createdAt instanceof Timestamp
+        ? entity.data.createdAt.toDate()
+        : new Date(),
+    weekAndYear:
+      entity.data.weekAndYear ?? generateYearAndWeek(entity.data.createdAt).key,
   } satisfies GameEntity;
 
-  console.log("Updating game", gameData);
+  const gameData = gameEntity.safeParse(updatedData);
+  if (!gameData.success) {
+    console.error("Unable to parse gameData", gameData.error);
+    throw new Error(`Invalid game data ${gameData.error}`);
+  }
+  console.log("Updating game", gameData.data);
 
-  await entity.ref.update(gameData);
+  await entity.ref.update(gameData.data);
 
-  return gameData;
+  return gameData.data;
 };

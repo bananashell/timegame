@@ -8,17 +8,19 @@ const HighscorePage = async ({
   params: { gameId: string };
 }) => {
   gameId = decodeURIComponent(gameId || "");
-  const highscores = await trpc.getHighscore({ gameId });
+  const highscoreData = await trpc.getHighscore({ gameId });
 
   return (
     <section className="flex w-full gap-4 h-screen justify-center items-center flex-col">
-      <Highscore gameId={gameId} highscores={highscores} />
-      <Link
-        href={"/"}
-        className="text-xl bg-white dark:bg-gray-800 hover:bg-gray-100 transition-colors hover:dark:bg-gray-700 px-8 py-4 rounded drop-shadow-lg"
-      >
-        Nytt spel
-      </Link>
+      <Highscore gameId={gameId} data={highscoreData} />
+      <section className="mt-8 text-3xl text-center dark:drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.6)] flex flex-col">
+        <Link className="underline" href={`/statistics/${gameId}`}>
+          Se din statistik
+        </Link>
+        <Link href="/" className="underline">
+          Tillbaka till start
+        </Link>
+      </section>
     </section>
   );
 };

@@ -17,7 +17,7 @@ export const GameBoard = () => {
   const router = useRouter();
 
   if (state.mainState === "game over") {
-    router.push(`/highscore/${rootState.id}`);
+    router.push(`/statistics/${rootState.id}`);
     return null;
   }
 

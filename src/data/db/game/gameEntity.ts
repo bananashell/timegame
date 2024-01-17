@@ -3,7 +3,7 @@ import { z } from "zod";
 
 export const gameEntity = z.object({
   id: z.string().regex(
-    /^[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}\|[a-z0-9]{16}$/, // uuid|salt
+    /^[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}\|[a-z0-9]{8,16}$/, // uuid|salt
   ),
   userId: z.string().uuid(),
   salt: z.string(),
@@ -19,6 +19,7 @@ export const gameEntity = z.object({
   ),
   lastUpdated: z.date(),
   createdAt: z.date(),
+  weekAndYear: z.string().regex(/^\d{4}-(?:[1-9]|[1-4][0-9]|5[0-3])$/),
 });
 
 export type GameEntity = z.infer<typeof gameEntity>;

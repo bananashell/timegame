@@ -3,6 +3,7 @@ import { useAtom } from "jotai";
 import { rootStateAtom, currentEventAtom, userIdAtom } from "..";
 import { v4 as uuidv4 } from "uuid";
 import { useState } from "react";
+import { RootState } from "@/gameEngine/gameState";
 
 export const useStartNewGame = () => {
   const [rootState, setRootState] = useAtom(rootStateAtom);
@@ -26,10 +27,21 @@ export const useStartNewGame = () => {
           username: rootState.username,
         });
 
+        let state: RootState["gameState"] = {
+          mainState: "playing",
+          subState: "guessing",
+        };
+        if (res.game.gameStatus === "game over") {
+          state = {
+            mainState: "game over",
+            subState: "score screen",
+          };
+        }
+
         setRootState({
           ...res.game,
-          gameState: { mainState: "playing", subState: "guessing" },
-          timelineEvents: [],
+          gameState: state,
+          timelineEvents: res.game.events,
           currentEvent: { ...res.nextEvent, guess: 0 },
         });
 
