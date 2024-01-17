@@ -19,9 +19,6 @@ const StatisticsPage = async ({
         <Link href={`/highscore/${gameId}`} className="underline">
           Veckans topplista
         </Link>
-        <Link href="/" className="underline">
-          Tillbaka till start
-        </Link>
       </section>
     </section>
   );

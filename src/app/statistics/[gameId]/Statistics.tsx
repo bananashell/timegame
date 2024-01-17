@@ -28,19 +28,19 @@ export const Statistics = ({
       >
         <StatisticsItem title={"Poäng"} value={`${data.statistics.score} p`} />
         <StatisticsItem
-          title={"Antal händelser"}
+          title={"Händelser"}
           value={`${data.statistics.noEvents} st`}
         />
         <StatisticsItem
-          title={"Antal rätt"}
+          title={"Fullpottar"}
           value={`${data.statistics.noCorrectGuesses} st`}
         />
         <StatisticsItem
-          title={"Antal år fel"}
+          title={"Totalt år fel"}
           value={`${data.statistics.yearsOff} år`}
         />
         <StatisticsItem
-          title={"Snitt antal år fel"}
+          title={"Snitt år fel"}
           value={`${data.statistics.averageYearsOff.toFixed(1)} år`}
         />
       </motion.ol>
