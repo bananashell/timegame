@@ -17,6 +17,7 @@ export const historicEvent = z.object({
     "war",
     "history",
     "music",
+    "discovery",
   ]),
   year: z.number(),
   description: z.object({

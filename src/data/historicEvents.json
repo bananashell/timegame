@@ -1130,6 +1130,201 @@
         "en": "Roughly 400 workers begin carving the faces of four U.S. presidents into Mount Rushmore in South Dakota.",
         "sv": "Omkring 400 arbetare börjar hugga ut ansiktena av fyra amerikanska presidenter i berget Mount Rushmore i South Dakota."
       }
+    },
+    {
+      "id": "90ceda70-10f5-4c4c-ae4d-dca8ffbd9bfa",
+      "title": {
+        "en": "Ågestaverket Swedens first commercially used Nuclear Power Plant comes online",
+        "sv": "Ågestaverket, Sveriges första kommersiellt använda kärnkraftverk, tas i drift"
+      },
+      "category": "politics",
+      "year": 1964,
+      "description": {
+        "en": "The power plant was only operational for 10 years before it was shut down.",
+        "sv": "Kärnkraftverket var bara i drift i 10 år innan det stängdes."
+      }
+    },
+    {
+      "id": "0f1244de-c4fd-40b9-bb67-40c23881f738",
+      "title": {
+        "en": "Discovery of Penicillin by Alexander Fleming",
+        "sv": "Alexander Fleming upptäcker penicillinet"
+      },
+      "category": "science",
+      "year": 1928,
+      "description": {
+        "en": "Alexander Fleming discovers the antibiotic substance penicillin, marking a revolutionary breakthrough in medicine by introducing the era of antibiotics.",
+        "sv": "Alexander Fleming upptäcker antibiotikasubstansen penicillin och markerar en revolutionerande genombrott inom medicin genom att introducera eran av antibiotika."
+      }
+    },
+    {
+      "id": "2e5b2a77-b8d5-4197-a331-a16965447500",
+      "title": {
+        "en": "First Successful Heart Transplant human-to-human",
+        "sv": "Första framgångsrika hjärttransplantationen människa till människa"
+      },
+      "category": "science",
+      "year": 1967,
+      "description": {
+        "en": "Dr. Christiaan Barnard performs the world's first successful heart transplant, marking a milestone in the field of organ transplantation.",
+        "sv": "Dr. Christiaan Barnard genomför världens första framgångsrika hjärttransplantation och markerar en milstolpe inom organtransplantationsområdet."
+      }
+    },
+    {
+      "id": "f3fbf142-d2c5-40c1-81dd-de95ebd980d9",
+      "title": {
+        "en": "Nature, the journal, publishes the evidence for DNA",
+        "sv": "Tidsskriften Nature publicerar bevisen för DNA"
+      },
+      "category": "science",
+      "year": 1953,
+      "description": {
+        "en": "James Watson and Francis Crick elucidate the double helix structure of DNA, paving the way for advancements in genetics and molecular biology.",
+        "sv": "James Watson och Francis Crick förklarar strukturen av DNA:s dubbelhelix, vilket banar väg för framsteg inom genetik och molekylärbiologi."
+      }
+    },
+    {
+      "id": "ce374b52-2556-4f45-ab43-137480c2c258",
+      "title": {
+        "en": "Martin Luther King Jr.'s 'I Have a Dream' Speech",
+        "sv": "Martin Luther King Jr:s 'I Have a Dream'-tal"
+      },
+      "category": "politics",
+      "year": 1963,
+      "description": {
+        "en": "Martin Luther King Jr. delivers his iconic 'I Have a Dream' speech during the March on Washington, advocating for civil rights and equality for African Americans.",
+        "sv": "Martin Luther King Jr. levererar sitt ikoniska 'I Have a Dream'-tal under Marschen till Washington, och förespråkar för medborgerliga rättigheter och jämlikhet för afroamerikaner."
+      }
+    },
+    {
+      "id": "4cd701a7-ac4c-4db1-b855-058d799ffe6e",
+      "title": {
+        "en": "Indira Gandhi Becomes the First Female Prime Minister of India",
+        "sv": "Indira Gandhi blir Indiens första kvinnliga premiärminister"
+      },
+      "category": "politics",
+      "year": 1966,
+      "description": {
+        "en": "Indira Gandhi is sworn in as the Prime Minister of India, becoming the first woman to hold the office.",
+        "sv": "Indira Gandhi svärs in som Indiens premiärminister och blir den första kvinnan att inneha ämbetet."
+      }
+    },
+    {
+      "id": "adeb9516-dde5-4451-9503-97690c1c424c",
+      "title": {
+        "en": "Winston Churchill's 'We Shall Fight on the Beaches' Speech",
+        "sv": "Winston Churchills 'We Shall Fight on the Beaches'-tal"
+      },
+      "category": "politics",
+      "year": 1940,
+      "description": {
+        "en": "Winston Churchill delivers his famous speech to the House of Commons, rallying the British people during World War II.",
+        "sv": "Winston Churchill levererar sitt berömda tal till House of Commons och mobiliserar det brittiska folket under andra världskriget."
+      }
+    },
+    {
+      "id": "f53a5b95-2e76-421b-874c-e1caaffaec6c",
+      "title": {
+        "en": "Margaret Thatcher Becomes the First Female Prime Minister of the UK",
+        "sv": "Margaret Thatcher blir Storbritanniens första kvinnliga premiärminister"
+      },
+      "category": "politics",
+      "year": 1979,
+      "description": {
+        "en": "Margaret Thatcher takes office as the Prime Minister of the United Kingdom, becoming the first woman to hold the position.",
+        "sv": "Margaret Thatcher tillträder som Storbritanniens premiärminister och blir den första kvinnan att inneha ämbetet."
+      }
+    },
+    {
+      "id": "dee7296c-c3f9-47b1-a30f-b75c3a2db8d4",
+      "title": {
+        "en": "The Panama canal is completed",
+        "sv": "Panama kanalen är färdigbyggd"
+      },
+      "category": "politics",
+      "year": 1914,
+      "description": {
+        "en": "After 11 years of construction, the Panama Canal opens to traffic, connecting the Atlantic and Pacific oceans.",
+        "sv": "Efter 11 år av konstruktion öppnas Panamakanalen för trafik och förbinder Atlanten och Stilla havet."
+      }
+    },
+    {
+      "id": "44ee7cc2-6953-4e70-ba6d-ffd9a2ffc11d",
+      "title": {
+        "en": "The Eiffel Tower is completed for the Exposition Universelle",
+        "sv": "Eiffeltornet står färdigt inför världsutställningen i Paris"
+      },
+      "category": "history",
+      "year": 1889,
+      "description": {
+        "en": "The Eiffel Tower, an iconic symbol of Paris, is completed for the Exposition Universelle (World's Fair) and becomes the tallest man-made structure of its time.",
+        "sv": "Eiffeltornet, en ikonisk symbol för Paris, slutförs för Exposition Universelle (världsutställningen) och blir den högsta mänskliga skapelsen vid den tiden."
+      }
+    },
+    {
+      "id": "887fabd2-5196-4955-a7d9-b903a8b52a78",
+      "title": {
+        "en": "Unveiling of the Statue of Liberty",
+        "sv": "Avtäckning av Frihetsgudinnan"
+      },
+      "category": "history",
+      "year": 1886,
+      "description": {
+        "en": "The Statue of Liberty, a gift from France to the United States, is unveiled on Liberty Island in New York Harbor as a symbol of freedom and democracy.",
+        "sv": "Frihetsgudinnan, en gåva från Frankrike till USA, avtäcks på Liberty Island i New Yorks hamn som en symbol för frihet och demokrati."
+      }
+    },
+    {
+      "id": "5cbc0399-e521-4cf4-93f1-e825a377675a",
+      "title": {
+        "en": "'Dagens Nyheter' is founded",
+        "sv": "'Dagens Nyheter' grundas"
+      },
+      "category": "politics",
+      "year": 1864,
+      "description": {
+        "en": "The Swedish newspaper 'Dagens Nyheter' is founded by Rudolf Wall, becoming the largest morning newspaper in the Nordic countries.",
+        "sv": "Den svenska tidningen 'Dagens Nyheter' grundas av Rudolf Wall och blir den största morgontidningen i Norden."
+      }
+    },
+    {
+      "id": "b29d6dce-2713-4d76-9870-2630e4c247ef",
+      "title": {
+        "en": "Discovery of X-rays by Wilhelm Roentgen",
+        "sv": "Wilhelm Röntgen upptäcker röntgenstrålar"
+      },
+      "category": "discovery",
+      "year": 1895,
+      "description": {
+        "en": "German physicist Wilhelm Roentgen accidentally discovers X-rays, revolutionizing medical diagnostics and imaging.",
+        "sv": "Den tyske fysikern Wilhelm Röntgen upptäcker av misstag röntgenstrålar och revolutionerar medicinsk diagnostik och avbildning."
+      }
+    },
+    {
+      "id": "42d94739-a01b-4b2e-b864-f3d60e96968d",
+      "title": {
+        "en": "Sir Isaac Newton publishes his discovery of gravity",
+        "sv": "Sir Isaac Newton publicerar sin upptäckt av gravitation"
+      },
+      "category": "discovery",
+      "year": 1687,
+      "description": {
+        "en": "Sir Isaac Newton formulates the law of universal gravitation, providing a fundamental understanding of the force that governs planetary motion.",
+        "sv": "Sir Isaac Newton formulerar den universella gravitationslagen och ger en grundläggande förståelse för kraften som styr planetrörelse."
+      }
+    },
+    {
+      "id": "d78915a9-63eb-4386-be69-6b347876e86c",
+      "title": {
+        "en": "The Theory of Relativity is published by Albert Einstein",
+        "sv": "Albert Einstein publicerar relativitetsteorin"
+      },
+      "category": "discovery",
+      "year": 1905,
+      "description": {
+        "en": "Albert Einstein introduces the special theory of relativity, transforming our understanding of space, time, and gravity.",
+        "sv": "Albert Einstein introducerar den speciella relativitetsteorin och förändrar vår förståelse för rymden, tiden och gravitationen."
+      }
     }
   ]
 }

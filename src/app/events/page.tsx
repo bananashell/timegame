@@ -2,6 +2,8 @@ import { historicEvents } from "@/data/historicEvents";
 import { Category } from "@/models/historicEvent";
 
 export default async function EventsPage() {
+  if (process.env.NODE_ENV !== "development") return null;
+
   // count the number of events by category
   const eventCategories: { [category in Category]?: number } = {};
   historicEvents.forEach((event) => {
