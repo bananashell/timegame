@@ -3,7 +3,6 @@ import { trpc } from "../_trpc/serverClient";
 import { Highscore } from "./Highscore";
 import { LastUpdated } from "./LastUpdated";
 
-// export const dynamic = "force-dynamic";
 export const revalidate = 1_200; // 20 minutes
 
 const HighscorePage = async () => {
