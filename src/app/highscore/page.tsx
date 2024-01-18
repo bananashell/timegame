@@ -1,11 +1,10 @@
 import Link from "next/link";
 import { trpc } from "../_trpc/serverClient";
 import { Highscore } from "./Highscore";
-import { format } from "date-fns";
 import { LastUpdated } from "./LastUpdated";
 
 // export const dynamic = "force-dynamic";
-export const revalidate = 300;
+export const revalidate = 1_200; // 20 minutes
 
 const HighscorePage = async () => {
   const highscoreData = await trpc.getHighscore({});
