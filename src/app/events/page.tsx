@@ -1,8 +1,9 @@
 import { historicEvents } from "@/data/historicEvents";
 import { Category } from "@/models/historicEvent";
+import { notFound } from "next/navigation";
 
 export default async function EventsPage() {
-  if (process.env.NODE_ENV !== "development") return null;
+  if (process.env.NODE_ENV !== "development") return notFound();
 
   // count the number of events by category
   const eventCategories: { [category in Category]?: number } = {};

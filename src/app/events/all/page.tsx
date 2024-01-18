@@ -1,8 +1,9 @@
 import { historicEvents } from "@/data/historicEvents";
+import { notFound } from "next/navigation";
 import { twMerge } from "tailwind-merge";
 
 export default async function AllEventsPage() {
-  if (process.env.NODE_ENV !== "development") return null;
+  if (process.env.NODE_ENV !== "development") return notFound();
 
   return (
     <section className="text-white container mx-auto">
