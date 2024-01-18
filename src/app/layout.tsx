@@ -6,6 +6,7 @@ import { Provider as JotaiProvider } from "jotai";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { RulesModal } from "./_components/rules/RulesModal";
 
 const lobster = Lobster({
   weight: "400",
@@ -33,6 +34,7 @@ export default function RootLayout({
       <body
         className={`${bebasNeue.variable} ${lobster.variable} font-sans h-full w-full overscroll-none absolute top-0 left-0 text-gray-800 dark:text-white`}
       >
+        <RulesModal />
         <ThemeSwitcher />
         {/* <Provider> */}
         <JotaiProvider>
