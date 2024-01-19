@@ -1325,6 +1325,32 @@
         "en": "Albert Einstein introduces the special theory of relativity, transforming our understanding of space, time, and gravity.",
         "sv": "Albert Einstein introducerar den speciella relativitetsteorin och förändrar vår förståelse för rymden, tiden och gravitationen."
       }
+    },
+    {
+      "id": "7692679b-e509-41a0-95ca-d279fdd7693d",
+      "title": {
+        "en": "'Sikta mot Stjärnorna' airs for the first time",
+        "sv": "Sikta mot Stjärnorna sänds för första gången"
+      },
+      "category": "discovery",
+      "year": 1994,
+      "description": {
+        "en": "'Sikta mot Stjärnorna' program hosted by Lasse Holm was one of the most popular TV programs of its time in Sweden.",
+        "sv": "'Sikta mot Stjärnorna' programlett av Lasse Holm var en av sin tids mest populära TV-program i Sverige."
+      }
+    },
+    {
+      "id": "d63a3184-66fc-426c-b262-66ac7bfe7bb5",
+      "title": {
+        "en": "Amusementpark Gröna Lund opens in Stockholm",
+        "sv": "Tivolit Gröna Lund slår upp portarna på Djurgården i Stockholm"
+      },
+      "category": "discovery",
+      "year": 1994,
+      "description": {
+        "en": "Today, Gröna Lund has 31 attractions and 7 restaurants. Annually, Gröna Lund is visited by approximately 1.5 million guests.",
+        "sv": "Idag har Gröna Lund 31 attraktioner och 7 restauranger. Årligen besöks Gröna Lund av ca 1,5 miljoner gäster."
+      }
     }
   ]
 }
