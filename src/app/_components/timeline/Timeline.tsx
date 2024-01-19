@@ -10,6 +10,7 @@ import { isLockedEvent } from "@/utils/guards/isLockedEvent";
 import { Place } from "@mui/icons-material";
 
 export const Timeline = () => {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
   const arrowRef = useRef<HTMLDivElement>(null);
   const [timelineEvents] = useAtom(orderedTimelineEvents);
   const [currentEvent] = useAtom(currentEventAtom);
@@ -23,16 +24,27 @@ export const Timeline = () => {
   }, [timelineEvents, currentEvent]);
 
   useLayoutEffect(() => {
-    arrowRef.current?.scrollIntoView({
-      behavior: "smooth",
-      block: "center",
-      inline: "center",
+    if (!arrowRef.current || !scrollContainerRef.current) return;
+
+    const container = scrollContainerRef.current;
+    const child = arrowRef.current;
+
+    const child_offsetCenter = child.offsetLeft + child.offsetWidth / 2;
+    const scrollLeftOffset = child_offsetCenter - container.offsetWidth / 2;
+
+    container.scrollTo({
+      behavior: "auto",
+      left: scrollLeftOffset,
     });
   }, [currentEvent]);
 
   return (
     <div className="grid-in-timeline w-full">
-      <div id="timline-scrollcontainer" className="overflow-scroll">
+      <div
+        ref={scrollContainerRef}
+        id="timline-scrollcontainer"
+        className="overflow-scroll"
+      >
         <div className="flex flex-row-reverse flex-nowrap min-w-full w-fit gap-1 justify-center items-center px-2 py-2">
           <AnimatePresence>
             {inlinedTimelineEvents.map((event) => {
