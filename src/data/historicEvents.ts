@@ -2,7 +2,13 @@ import HistoricEvents from "./historicEvents.json";
 import z from "zod";
 import { historicEvent } from "@/models/historicEvent";
 
-export const historicEvents = z.array(historicEvent).parse(HistoricEvents.data);
+const parsedHistoricEvents = z
+  .array(historicEvent)
+  .safeParse(HistoricEvents.data);
+
+export const historicEvents = parsedHistoricEvents.success
+  ? parsedHistoricEvents.data
+  : [];
 
 const _id = z.string().uuid();
 type Id = z.infer<typeof _id>;

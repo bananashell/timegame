@@ -209,6 +209,19 @@
       "id": "a6002c28-f379-4662-947e-4fc2d3e36858"
     },
     {
+      "id": "35150fc7-d69c-46a5-8301-30e130cea0d4",
+      "title": {
+        "sv": "Svenska nobelpriset instiftas av Alfred Nobel",
+        "en": "Swedish Nobel Prizes established by Alfred Nobel"
+      },
+      "category": "science",
+      "year": 1895,
+      "description": {
+        "sv": "Alfred Nobel, svensk uppfinnare och forskare, instiftar Nobelpriset för att hedra framstående prestationer inom fysik, kemi, medicin, litteratur och fred.",
+        "en": "Alfred Nobel, Swedish inventor and scientist, establishes the Nobel Prizes to honor outstanding achievements in physics, chemistry, medicine, literature, and peace."
+      }
+    },
+    {
       "title": {
         "en": "Selma Lagerlöf Wins Nobel Prize in Literature",
         "sv": "Selma Lagerlöf vinner Nobelpriset i litteratur"
@@ -1350,6 +1363,123 @@
       "description": {
         "en": "Today, Gröna Lund has 31 attractions and 7 restaurants. Annually, Gröna Lund is visited by approximately 1.5 million guests.",
         "sv": "Idag har Gröna Lund 31 attraktioner och 7 restauranger. Årligen besöks Gröna Lund av ca 1,5 miljoner gäster."
+      }
+    },
+    {
+      "id": "ec292746-713f-481c-9362-c3971f6a3a25",
+      "title": {
+        "en": "Spider-Man is created by Stan Lee and Steve Ditko",
+        "sv": "Spindelmannen skapas av Stan Lee och Steve Ditko"
+      },
+      "category": "discovery",
+      "year": 1962,
+      "description": {
+        "en": "He was introduced in the comic book Amazing Fantasy.",
+        "sv": "Han introducerades i serietidningen Amazing Fantasy."
+      }
+    },
+    {
+      "id": "c72ef001-0fb6-4d81-9596-a139c8b8dc4f",
+      "title": {
+        "en": "The superhero Batman is created by Bob Kane and Bill Finger at DC Comics",
+        "sv": "Superhjälten Batman skapas av Bob Kane och Bill Finger på DC Comics"
+      },
+      "category": "history",
+      "year": 1939,
+      "description": {
+        "en": "The fictive city Gotham City is inspired by New York and is located in the state of New Jersey.",
+        "sv": "Den fiktiva staden Gotham City är inspirerad av New York och ligger i staten New Jersey."
+      }
+    },
+    {
+      "id": "aa2503d4-15f1-4edf-ac29-cb6cbeb64b83",
+      "title": {
+        "en": "'First Division', the predecessor to the Premier League, is formed in England",
+        "sv": "'First Division', föregångaren till Premier League, bildas i England"
+      },
+      "category": "sports",
+      "year": 1888,
+      "description": {
+        "en": "On it's creation it consisted of 12 clubs, today the Premier League consists of 20 clubs.",
+        "sv": "Vid bildandet bestod den av 12 klubbar, idag består Premier League av 20 klubbar."
+      }
+    },
+    {
+      "id": "57fe2a61-9006-4c23-8876-50afe8a44f08",
+      "title": {
+        "en": "Elitserien changes name to SHL, a name inspired by the NHL",
+        "sv": "Elitserien byter namn till SHL, ett namn inspirerat av NHL"
+      },
+      "category": "sports",
+      "year": 2013,
+      "description": {
+        "en": "The name change was made to increase the leagues international appeal.",
+        "sv": "Namnbytet gjordes för att öka ligans internationella attraktionskraft."
+      }
+    },
+    {
+      "id": "2818e5df-2311-4b9e-9ace-8010eace0455",
+      "title": {
+        "sv": "Arbogamötet, enligt vissa kallad Sveriges första riksdag, samlas",
+        "en": "Arboga meet, by some called Sweden's first parliament convenes"
+      },
+      "category": "politics",
+      "year": 1435,
+      "description": {
+        "sv": "Sveriges första riksdag samlas i Arboga, markera början på det svenska parlamentariska systemet.",
+        "en": "Sweden's first parliament convenes in Arboga, marking the beginning of the Swedish parliamentary system."
+      }
+    },
+    {
+      "id": "9889e7b6-746f-41ac-903e-4b45d64deeaa",
+      "title": {
+        "sv": "Ikea grundas av Ingvar Kamprad",
+        "en": "Ikea founded by Ingvar Kamprad"
+      },
+      "category": "history",
+      "year": 1943,
+      "description": {
+        "sv": "Ingvar Kamprad grundar möbelkedjan Ikea, som senare växer till en global företagsgrupp.",
+        "en": "Ingvar Kamprad founds the furniture retail chain Ikea, which later grows into a global corporate group."
+      }
+    },
+    {
+      "id": "0078a71a-29c5-488b-b23a-5bc7661683dc",
+      "title": {
+        "sv": "Sverige inför världens första tryckfrihetslag",
+        "en": "Sweden introduces the world's first freedom of the press law"
+      },
+      "category": "politics",
+      "year": 1766,
+      "description": {
+        "sv": "Sverige antar världens första lag om tryckfrihet, vilket stärker yttrandefriheten och pressfriheten.",
+        "en": "Sweden adopts the world's first law on freedom of the press, strengthening freedom of speech and the press."
+      }
+    },
+    {
+      "id": "f1dcf059-dbd2-471d-8989-4a0301e2cdcf",
+      "title": {
+        "sv": "Dackefejden i Småland",
+        "en": "The Dacke War in Småland"
+      },
+      "category": "war",
+      "year": 1542,
+      "description": {
+        "sv": "Nils Dacke leder en bondeuppror i Småland mot kung Gustav Vasa, vilket blir känt som Dackefejden.",
+        "en": "Nils Dacke leads a peasant uprising in Småland against King Gustav Vasa, known as the Dacke War."
+      }
+    },
+    {
+      "id": "e6295fb8-c416-445d-b6e3-66b0fb525941",
+      "title": {
+        "sv": "Unionen mellan Sverige och Norge upplöses med Oscar II:s abdikation",
+        "en": "The union between Sweden and Norway is dissolved with the abdication of Oscar II"
+      },
+      "category": "history",
+      "year": 1905,
+      "description": {
+        "sv": "Unionen hade varat i 91 år.",
+        "en": "The union had lasted for 91 years."
       }
     }
   ]
