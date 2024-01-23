@@ -13,10 +13,10 @@ export const ShareStatistics = ({
     const title = "Jag fick " + data.statistics.score + " poäng";
     const text = `${title}
 
-    🕰️ ${data.statistics.noEvents} händelser
-    🎯 ${data.statistics.noCorrectGuesses} fullpottar
-    📅 ${data.statistics.yearsOff} år fel
-    📅 ${data.statistics.averageYearsOff.toFixed(1)} år snitt fel
+🕰️ ${data.statistics.noEvents} händelser
+🎯 ${data.statistics.noCorrectGuesses} fullpottar
+📅 ${data.statistics.yearsOff} år fel
+📅 ${data.statistics.averageYearsOff.toFixed(1)} år snitt fel
 
     Kan du slå mig?
     `;
