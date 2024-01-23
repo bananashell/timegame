@@ -3,6 +3,7 @@
 import { trpc } from "@/app/_trpc/serverClient";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
+import { ShareStatistics } from "./ShareStatistics";
 
 export const Statistics = ({
   data,
@@ -44,6 +45,9 @@ export const Statistics = ({
           value={`${data.statistics.averageYearsOff.toFixed(1)} år`}
         />
       </motion.ol>
+      <section className="mt-8 flex items-end justify-center">
+        <ShareStatistics data={data} />
+      </section>
     </section>
   );
 };
