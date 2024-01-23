@@ -1481,6 +1481,214 @@
         "sv": "Unionen hade varat i 91 år.",
         "en": "The union had lasted for 91 years."
       }
+    },
+    {
+      "id": "2c65f905-2cd7-42c8-aecf-ffb09a4b2018",
+      "title": {
+        "sv": "Mordet på John F. Kennedy",
+        "en": "The assassination of John F. Kennedy"
+      },
+      "category": "history",
+      "year": 1963,
+      "description": {
+        "sv": "Lee Harvey Oswald mördar USA:s president John F. Kennedy i Dallas, Texas.",
+        "en": "Lee Harvey Oswald assassinates US President John F. Kennedy in Dallas, Texas."
+      }
+    },
+    {
+      "id": "249d189b-db5c-4bee-8847-42071487f6b7",
+      "title": {
+        "sv": "John Lennon mördas i New York",
+        "en": "The murder of John Lennon in New York"
+      },
+      "category": "history",
+      "year": 1980,
+      "description": {
+        "sv": "En popikon går i graven när han mördas utanför sitt hem av Mark David Chapman.",
+        "en": "A pop icon dies when he is murdered outside his home by Mark David Chapman."
+      }
+    },
+    {
+      "id": "d78d8340-6eee-43b0-98aa-591ef653fe19",
+      "title": {
+        "sv": "Björn Borg vinner sin första Wimbledon",
+        "en": "Björn Borg wins his first Wimbledon"
+      },
+      "category": "sports",
+      "year": 1976,
+      "description": {
+        "sv": "Björn Borg, den svenska tennislegenden, vinner sin första av fem raka Wimbledon-titlar.",
+        "en": "Björn Borg, the Swedish tennis legend, wins his first of five consecutive Wimbledon titles."
+      }
+    },
+    {
+      "id": "4f5200cc-74b6-47ec-b078-910af4e5642d",
+      "title": {
+        "sv": "Peter Forsberg gör sitt ikoniska mål i OS i Lillehammer",
+        "en": "Peter Forsberg scores his iconic goal in the Lillehammer Olympics"
+      },
+      "category": "sports",
+      "year": 1994,
+      "description": {
+        "sv": "Peter Forsberg utför det minnesvärda 'Foppa'-målet i finalen mot Kanada vid OS i Lillehammer.",
+        "en": "Peter Forsberg executes the memorable 'Foppa' goal in the final against Canada at the Lillehammer Winter Olympics."
+      }
+    },
+    {
+      "id": "cb205249-d9c7-49cf-9692-f290765f6806",
+      "title": {
+        "sv": "Rubiks kub uppfinns av Ernő Rubik",
+        "en": "Rubik's Cube invented by Ernő Rubik"
+      },
+      "category": "popculture",
+      "year": 1974,
+      "description": {
+        "sv": "Ungerska professorn och arkitekten Ernő Rubik uppfinnar Rubiks kub, en 3D-pusselkub som snabbt blir en världsomspännande sensation.",
+        "en": "Hungarian professor and architect Ernő Rubik invents the Rubik's Cube, a 3D puzzle cube that quickly becomes a global sensation."
+      }
+    },
+    {
+      "id": "5067d2b6-59c5-403e-bdaa-41fce050f77d",
+      "title": {
+        "sv": "Premiäravsnittet av Bingolotto sänds",
+        "en": "Premiere episode of Bingolotto airs"
+      },
+      "category": "popculture",
+      "year": 1989,
+      "description": {
+        "sv": "Det första avsnittet av Bingolotto sänds och blir genast en succé bland svenska tittare. Programmet kombinerar dragning av lottonummer med underhållning och musik.",
+        "en": "The first episode of Bingolotto airs, immediately becoming a hit among Swedish viewers. The show combines lottery number drawings with entertainment and music."
+      }
+    },
+    {
+      "id": "b90f96ff-5df6-40c6-bb01-7e3263198d54",
+      "title": {
+        "sv": "Friends Arena invigs",
+        "en": "Friends Arena inaugurated"
+      },
+      "category": "sports",
+      "year": 2012,
+      "description": {
+        "sv": "Friends Arena, Sveriges nya nationalarena, invigs med en storslagen ceremoni. Arenan belägen i Solna, Stockholm, blir ett centrum för sport- och kulturevenemang.",
+        "en": "Friends Arena, Sweden's new national arena, is inaugurated with a grand ceremony. The arena, located in Solna, Stockholm, becomes a hub for sports and cultural events."
+      }
+    },
+    {
+      "id": "50e6cac6-9ded-48e6-b47c-3d2b98054db9",
+      "title": {
+        "sv": "Slottet Tre Kronor brinner",
+        "en": "The Tre Kronor Castle burns"
+      },
+      "category": "history",
+      "year": 1697,
+      "description": {
+        "sv": "Slottet Tre Kronor i Stockholm drabbas av en förödande brand. Elden förstör stora delar av slottet och blir ett betydelsefullt ögonblick i Sveriges historia.",
+        "en": "The Tre Kronor Castle in Stockholm is struck by a devastating fire. The flames destroy significant parts of the castle and become a pivotal moment in Sweden's history."
+      }
+    },
+    {
+      "id": "982e714a-309d-4c79-a721-4957ae233b1d",
+      "title": {
+        "sv": "Emukriget",
+        "en": "The Great Emu War"
+      },
+      "category": "history",
+      "year": 1932,
+      "description": {
+        "sv": "I Australien beslutar regeringen att bekämpa en emupopulation med maskingevär. Trots ansträngningarna misslyckas de, och händelsen blir känd som 'Emukriget'.",
+        "en": "In Australia, the government decides to combat an emu population using machine guns. Despite their efforts, they fail, and the event becomes known as 'The Great Emu War'."
+      }
+    },
+    {
+      "id": "10138d03-24a3-4366-9f79-6fa4d9e32f17",
+      "title": {
+        "sv": "Max Martin blir internationell hitmakare med 'Hit me baby one more time'",
+        "en": "Max Martin becomes an international hitmaker with 'Hit me baby one more time'"
+      },
+      "category": "music",
+      "year": 1998,
+      "description": {
+        "sv": "'Hit me baby one more time' är Max Martins första Billboard-etta i USA, och blir en av de bäst säljande singlarna genom tiderna.",
+        "en": "'Hit me baby one more time' is Max Martin's first Billboard number one in the US, and becomes one of the best-selling singles of all time."
+      }
+    },
+    {
+      "id": "5d506124-5d98-4c5f-89b0-c05bab8ca869",
+      "title": {
+        "sv": "Pippi Långstrump blir TV-serie",
+        "en": "Pippi Longstocking becomes a TV series"
+      },
+      "category": "popculture",
+      "year": 1969,
+      "description": {
+        "sv": "Astrid Lindgrens karaktär Pippi Långstrump blir en omtyckt TV-serie och en popkulturell ikon för generationer av tittare.",
+        "en": "Astrid Lindgren's character Pippi Longstocking becomes a beloved TV series and a pop cultural icon for generations of viewers."
+      }
+    },
+    {
+      "id": "48e8702c-9fd7-47b6-9196-2fcfe1c2e0a8",
+      "title": {
+        "sv": "Ingmar Bergman regisserar Det Sjunde Inseglet",
+        "en": "Ingmar Bergman directs The Seventh Seal"
+      },
+      "category": "popculture",
+      "year": 1957,
+      "description": {
+        "sv": "Ingmar Bergman skapar en mästerverk med Det Sjunde Inseglet, en film som blir en ikon inom svensk och internationell filmkultur.",
+        "en": "Ingmar Bergman creates a masterpiece with The Seventh Seal, a film that becomes an icon in Swedish and international film culture."
+      }
+    },
+    {
+      "id": "d87ed7d2-1e0c-44eb-99cd-76e00ebcbc3f",
+      "title": {
+        "sv": "Porrfilmen Fäbodjäntan premiärvisas på Röda Lyktan i Orsa",
+        "en": "The porno Fäbodjäntan (Come blow the horn) permiers at Röda Lyktan in Orsa, Sweden"
+      },
+      "category": "popculture",
+      "year": 1978,
+      "description": {
+        "sv": "Svensk porrfilm regisserad av Joseph W. Sarno. Filmen blir kontroversiell och uppmärksammad för sin tid.",
+        "en": "Swedish adult film directed by Joseph W. Sarno. The film becomes controversial and gains attention for its time."
+      }
+    },
+    {
+      "id": "f0539653-55d4-4bfc-9c05-76d8f7b99481",
+      "title": {
+        "sv": "Carl XVI och Silvia gifter sig",
+        "en": "Carl XVI and Silvia get married"
+      },
+      "category": "history",
+      "year": 1976,
+      "description": {
+        "sv": "Sveriges kung Carl XVI Gustaf gifter sig med Silvia Sommerlath den 19 juni. Bröllopet blir en storslagen händelse och är ett viktigt ögonblick i svensk historia.",
+        "en": "Sweden's King Carl XVI Gustaf marries Silvia Sommerlath on June 19th. The wedding becomes a grand event and is a significant moment in Swedish history."
+      }
+    },
+    {
+      "id": "7bb8f73a-5846-4961-946a-46d88580a220",
+      "title": {
+        "sv": "Kronprinsessan Victoria och Prins Daniel gifter sig",
+        "en": "Crown Princess Victoria and Prince Daniel get married"
+      },
+      "category": "culture",
+      "year": 2010,
+      "description": {
+        "sv": "Sveriges kronprinsessa Victoria gifter sig med Daniel Westling den 19 juni. Bröllopet blir en nationell festlighet.",
+        "en": "Sweden's Crown Princess Victoria marries Daniel Westling on June 19th. The wedding becomes a national celebration."
+      }
+    },
+    {
+      "id": "04a90c9e-b9dd-4beb-8b8d-d68b81fe8021",
+      "title": {
+        "sv": "Carl XVI Gustaf firar 50 år på tronen",
+        "en": "Carl XVI Gustaf celebrates 50 years on the throne"
+      },
+      "category": "culture",
+      "year": 2023,
+      "description": {
+        "sv": "Han är den regent som suttit längst på tronen i Sveriges historia.",
+        "en": "He is the monarch who has sat on the throne the longest in Sweden's history."
+      }
     }
   ]
 }

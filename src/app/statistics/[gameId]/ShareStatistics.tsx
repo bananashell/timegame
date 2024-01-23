@@ -10,6 +10,7 @@ export const ShareStatistics = ({
   data: Awaited<ReturnType<typeof trpc.getStatistics>>;
 }) => {
   const handleClick = async () => {
+    const url = window.location.protocol + "//" + window.location.host;
     const title = "Jag fick " + data.statistics.score + " poäng";
     const text = `${title}
 
@@ -18,7 +19,7 @@ export const ShareStatistics = ({
 📅 ${data.statistics.yearsOff} år fel
 📅 ${data.statistics.averageYearsOff.toFixed(1)} år snitt fel
 
-    Kan du slå mig?
+Kan du slå mig?
     `;
 
     if (typeof navigator.share !== "undefined") {
@@ -30,7 +31,7 @@ export const ShareStatistics = ({
     } else {
       await navigator.clipboard.write([
         new ClipboardItem({
-          "text/plain": new Blob([`${text}`], {
+          "text/plain": new Blob([`${text}\n\n${url}`], {
             type: "text/plain",
           }),
         }),
