@@ -1,6 +1,5 @@
 "use client";
 
-import { CardStack } from "@/app/_components/card";
 import { Timeline } from "@/app/_components/timeline";
 import { Guess } from "./Guess";
 import { stateAtom, rootStateAtom } from "@/app/state";
