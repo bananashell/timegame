@@ -22,7 +22,10 @@ const userId = () => {
   }
 
   const newUserId = uuidv4();
-  global.localStorage.setItem("userId", newUserId);
+  if (global.localStorage) {
+    global.localStorage.setItem("userId", newUserId);
+  }
+
   return newUserId;
 };
 
