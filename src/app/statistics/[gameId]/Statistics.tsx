@@ -4,6 +4,7 @@ import { trpc } from "@/app/_trpc/serverClient";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { ShareStatistics } from "./ShareStatistics";
+import { TrendingDown, TrendingUp } from "@mui/icons-material";
 
 export const Statistics = ({
   data,
@@ -27,22 +28,37 @@ export const Statistics = ({
         initial="hidden"
         animate="show"
       >
-        <StatisticsItem title={"Poäng"} value={`${data.statistics.score} p`} />
+        <StatisticsItem
+          title={"Poäng"}
+          value={data.statistics.score}
+          postfix="p"
+          average={data.averages?.avgScorePerGame}
+        />
         <StatisticsItem
           title={"Händelser"}
-          value={`${data.statistics.noEvents} st`}
+          value={data.statistics.noEvents}
+          postfix={"st"}
+          average={data.averages?.avgEventCountPerGame}
         />
         <StatisticsItem
           title={"Fullpottar"}
-          value={`${data.statistics.noCorrectGuesses} st`}
+          value={data.statistics.noCorrectGuesses}
+          postfix={"st"}
+          average={data.averages?.avgCorrectGuessesPerGame}
         />
         <StatisticsItem
           title={"Totalt år fel"}
-          value={`${data.statistics.yearsOff} år`}
+          value={data.statistics.yearsOff}
+          postfix={"år"}
+          average={data.averages?.avgYearsOffPerGame}
         />
         <StatisticsItem
           title={"Snitt år fel"}
-          value={`${data.statistics.averageYearsOff.toFixed(1)} år`}
+          value={Math.round(data.statistics.averageYearsOff)}
+          postfix={"år"}
+          average={
+            data.averages && Math.round(data.averages?.avgYearsOffPerEvent)
+          }
         />
       </motion.ol>
       <section className="mt-8 flex items-end justify-center">
@@ -55,9 +71,13 @@ export const Statistics = ({
 const StatisticsItem = ({
   title,
   value,
+  average,
+  postfix,
 }: {
   title: string;
-  value: string | number;
+  value: number;
+  average?: number;
+  postfix: string;
 }) => {
   return (
     <motion.li
@@ -67,9 +87,43 @@ const StatisticsItem = ({
       variants={item}
     >
       <span className="text-2xl text-left col-span-2 ">{title}</span>
-      <span className="text-2xl text-right">{value}</span>
+      <span className="text-2xl text-right flex gap-2 items-center justify-end whitespace-nowrap">
+        <BetterOrWorse value={value} average={average} postfix={postfix} />
+        {value} {postfix}
+      </span>
     </motion.li>
   );
+};
+
+const BetterOrWorse = ({
+  value,
+  average,
+  postfix,
+}: {
+  value: number;
+  average?: number;
+  postfix: string;
+}) => {
+  const betterOrWorse = getBetterOrWorse(value, average);
+  if (betterOrWorse === undefined) return null;
+
+  return (
+    <div className="text-base">
+      {betterOrWorse == "better" && <TrendingUp className="text-green-500" />}
+      {betterOrWorse == "worse" && <TrendingDown className="text-red-500" />}
+      <span className="italic">
+        ({average?.toFixed(0)} {postfix})
+      </span>
+    </div>
+  );
+};
+
+const getBetterOrWorse = (value: number, average?: number) => {
+  if (average === undefined) return undefined;
+  if (value > average) return "better";
+  if (value < average) return "worse";
+
+  return "same";
 };
 
 const container = {

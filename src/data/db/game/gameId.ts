@@ -1,14 +1,26 @@
-export type GameId = string;
+export class GameId {
+  private _userId: string;
+  private _salt: string;
 
-export const gameId = ({
-  userId,
-  salt,
-}: {
-  userId: string;
-  salt: string;
-}): GameId => {
-  if (!userId) throw new Error("userId is not defined");
-  if (!salt) throw new Error("salt is not defined");
+  constructor({ userId, salt }: { userId: string; salt: string }) {
+    this._userId = userId;
+    this._salt = salt;
+  }
 
-  return `${userId}|${salt}`;
-};
+  public static parse(gameId: string): GameId {
+    const [userId, salt] = gameId.split("|");
+    return new GameId({ userId, salt });
+  }
+
+  public get userId(): string {
+    return this._userId;
+  }
+
+  public get salt(): string {
+    return this._salt;
+  }
+
+  public toString(): string {
+    return `${this._userId}|${this._salt}`;
+  }
+}

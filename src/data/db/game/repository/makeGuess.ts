@@ -1,7 +1,7 @@
 import { calculateScore } from "@/gameEngine/logic/calculateScore";
 import { getHistoricEvent } from "../../../historicEvents";
 import { GameEntity, gameEntity } from "../gameEntity";
-import { gameId } from "../gameId";
+import { GameId } from "../gameId";
 import { getGame } from "./getGame";
 import { z } from "zod";
 import { generateYearAndWeek } from "@/utils/date/generateYearAndWeek";
@@ -20,7 +20,7 @@ export type MakeGuessInput = z.infer<typeof makeGuessInput>;
 
 export const makeGuess = async (input: MakeGuessInput): Promise<GameEntity> => {
   const data = makeGuessInput.parse(input);
-  const entity = await getGame(gameId(data));
+  const entity = await getGame(new GameId(data));
 
   if (!entity.exists) {
     throw new Error("Game does not exist");

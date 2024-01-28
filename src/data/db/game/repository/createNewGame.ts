@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { GameEntity, gameEntity } from "../gameEntity";
 import { gamesCollection } from "./gamesCollection";
-import { gameId } from "../gameId";
+import { GameId } from "../gameId";
 import { generateYearAndWeek } from "@/utils/date/generateYearAndWeek";
 
 const createNewGameEntityInput = z.object({
@@ -14,11 +14,11 @@ export const createNewGameEntity = async (
 ): Promise<GameEntity> => {
   const { userId, salt, username } = createNewGameEntityInput.parse(input);
 
-  const id = gameId({ salt: salt, userId: userId });
+  const id = new GameId({ salt: salt, userId: userId });
   const collection = await gamesCollection();
   const now = new Date();
   const entity = gameEntity.parse({
-    id: id,
+    id: id.toString(),
     events: [],
     gameStatus: "playing",
     noEvents: 0,
@@ -31,11 +31,11 @@ export const createNewGameEntity = async (
     weekAndYear: generateYearAndWeek(now).key,
   } satisfies GameEntity);
 
-  const existing = await collection.doc(id).get();
+  const existing = await collection.doc(id.toString()).get();
   if (existing.exists) {
     return existing.data() as GameEntity;
   }
 
-  await collection.doc(id).create(entity);
+  await collection.doc(id.toString()).create(entity);
   return entity;
 };
