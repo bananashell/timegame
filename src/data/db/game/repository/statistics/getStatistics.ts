@@ -3,6 +3,7 @@ import { gamesCollection } from "@/data/db/game/repository/gamesCollection";
 import { nameOf } from "@/utils/nameOf";
 import { GameEntity } from "@/data/db/game/gameEntity";
 import { isDefined } from "@/utils/guards/isDefined";
+import { GameId } from "../../gameId";
 
 export const getStatisticsInput = z.object({
   gameId: z.string(),
@@ -24,9 +25,10 @@ export const getStatistics = async ({
   statistics: Statistics;
   averages: Awaited<ReturnType<typeof getAverageStatistics>>;
 }> => {
+  const id = GameId.parse(gameId);
   const collection = await gamesCollection();
 
-  const game = await collection.doc(gameId).get();
+  const game = await collection.doc(id.toString()).get();
   const data = game.data();
 
   if (!game.exists || !data) {
@@ -41,7 +43,7 @@ export const getStatistics = async ({
     process.env.STATISTIC_AVERAGES === "include"
       ? await getAverageStatistics({
           userId: data.userId,
-          gameId: gameId,
+          gameId: id.toString(),
         })
       : undefined;
 
