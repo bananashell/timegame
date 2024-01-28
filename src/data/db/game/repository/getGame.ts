@@ -15,7 +15,7 @@ export const getGame = async (
   gameId: GameId,
 ): Promise<NonExistingGame | ExistingGame> => {
   const collection = await gamesCollection();
-  const gameSnap = await collection.doc(gameId).get();
+  const gameSnap = await collection.doc(gameId.toString()).get();
 
   const data = gameSnap.data();
   if (!gameSnap.exists || !data) {

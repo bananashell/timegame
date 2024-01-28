@@ -11,13 +11,31 @@ const getFromLocalStorage = (key: string) => {
   return global.localStorage.getItem(key);
 };
 
+const userId = () => {
+  if (process.env.NODE_ENV === "development") {
+    return "00000000-0000-0000-0000-000000000000";
+  }
+
+  const userId = getFromLocalStorage("userId");
+  if (userId) {
+    return userId;
+  }
+
+  const newUserId = uuidv4();
+  if (global.localStorage) {
+    global.localStorage.setItem("userId", newUserId);
+  }
+
+  return newUserId;
+};
+
 export const rootStateAtom = atom<RootState>({
   id: "",
   timelineEvents: [],
   salt: "",
   gameState: { mainState: "game start", subState: undefined },
   username: getFromLocalStorage("username") ?? "",
-  userId: getFromLocalStorage("userId") ?? uuidv4(),
+  userId: userId(),
 });
 rootStateAtom.debugLabel = "gameStateAtom";
 
