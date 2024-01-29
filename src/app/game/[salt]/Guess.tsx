@@ -1,4 +1,4 @@
-import { currentEventAtom, surroundingEventsAtom } from "@/app/state";
+import { currentEventAtom, surroundingYearsAtom } from "@/app/state";
 import { useAtom } from "jotai";
 import { useGuess, useLock } from "@/app/state/actions";
 import { AnimatePresence, motion } from "framer-motion";
@@ -21,35 +21,85 @@ export const Guess = () => {
   );
 };
 
+const Lock = () => {
+  const [currentEvent] = useAtom(currentEventAtom);
+
+  const lockGuess = useLock();
+  const value = currentEvent?.guess;
+
+  const isAllowedToLock = value && value >= 1000;
+
+  const handleLock = () => {
+    if (!isAllowedToLock) {
+      return;
+    }
+
+    lockGuess();
+  };
+
+  return (
+    <motion.button
+      animate={
+        isAllowedToLock
+          ? {
+              y: 0,
+              opacity: 1,
+            }
+          : {
+              y: -10,
+              opacity: 0,
+            }
+      }
+      className="py-4 px-6 absolute"
+      whileTap={{ scale: 0.9 }}
+      onClick={handleLock}
+      disabled={!isAllowedToLock}
+    >
+      Lås
+    </motion.button>
+  );
+};
+
 const Keypad = () => {
   const [currentEvent] = useAtom(currentEventAtom);
-  const [surroundingEvents] = useAtom(surroundingEventsAtom);
+  const [surroundingYears] = useAtom(surroundingYearsAtom);
+
+  console.log("Surrounding", { surroundingYears });
 
   const updateGuess = useGuess();
-  const lockGuess = useLock();
   const value = currentEvent?.guess;
 
   const backspace = () => {
     updateGuess(value ? Math.floor(value / 10) : 0);
   };
+
   const addNumber = (numeral: number) => {
+    if (value && value.toString().length >= 4) {
+      return;
+    }
     updateGuess(value ? value * 10 + numeral : numeral);
   };
+
   const handlePrevious = () => {
-    const nextValue =
-      (surroundingEvents?.eventBefore?.guess &&
-        surroundingEvents?.eventBefore?.guess - 1) ||
-      value ||
-      0;
+    let nextValue: number;
+
+    if (surroundingYears?.eventBefore) {
+      nextValue = surroundingYears?.eventBefore - 1;
+    } else {
+      nextValue = value || 0;
+    }
 
     updateGuess(nextValue);
   };
+
   const handleNext = () => {
-    const nextValue =
-      (surroundingEvents?.eventBefore?.guess &&
-        surroundingEvents?.eventBefore?.guess + 1) ||
-      value ||
-      0;
+    let nextValue: number;
+
+    if (surroundingYears?.eventAfter) {
+      nextValue = surroundingYears?.eventAfter + 1;
+    } else {
+      nextValue = value || 0;
+    }
 
     updateGuess(nextValue);
   };
@@ -86,16 +136,7 @@ const Keypad = () => {
             // }
 
             if (value === "lock") {
-              return (
-                <motion.button
-                  key={value}
-                  whileTap={{ scale: 0.9 }}
-                  onClick={lockGuess}
-                  className="bg-red-500"
-                >
-                  <LockOpen />
-                </motion.button>
-              );
+              return <LockButton key={"lock"} />;
             }
 
             if (value === "backspace") {
@@ -154,5 +195,32 @@ const CurrentEvent = () => {
         <p className="text-base">{currentEvent?.description.sv}</p>
       </div>
     </section>
+  );
+};
+
+const LockButton = () => {
+  const [currentEvent] = useAtom(currentEventAtom);
+  const lockGuess = useLock();
+  const value = currentEvent?.guess;
+  const isAllowedToLock = value && value >= 1000;
+
+  const handleLock = () => {
+    if (!isAllowedToLock) {
+      return;
+    }
+
+    lockGuess();
+  };
+
+  return (
+    <motion.button
+      key={value}
+      whileTap={isAllowedToLock ? { scale: 0.9 } : {}}
+      onClick={handleLock}
+      disabled={!isAllowedToLock}
+      className={`transition-all text-black disabled:text-gray-500 dark:disabled:bg-gray-500 dark:disabled:text-gray-200 disabled:bg-gray-300 dark:text-white bg-red-500`}
+    >
+      <LockOpen />
+    </motion.button>
   );
 };

@@ -71,7 +71,7 @@ export const orderedTimelineEvents = atom((get) =>
 );
 orderedTimelineEvents.debugLabel = "orderedTimelineEvents";
 
-export const surroundingEventsAtom = atom((get) => {
+export const surroundingYearsAtom = atom((get) => {
   const events = get(orderedTimelineEvents);
   const currentEvent = get(currentEventAtom);
 
@@ -79,20 +79,15 @@ export const surroundingEventsAtom = atom((get) => {
     return { eventBefore: undefined, eventAfter: undefined };
   }
 
-  for (let i = 0; i < events.length; i++) {
-    const e = events[i];
-    if (i === events.length - 1)
-      return { eventBefore: e, eventAfter: undefined };
+  let years = [...new Set([...events.map((x) => x.year), currentEvent.guess])];
+  years = years.sort((a, b) => a - b);
 
-    if (e.year < currentEvent.guess) {
-      return {
-        eventBefore: e,
-        eventAfter: events[i + 1],
-      };
-    }
-  }
+  const currentEventIndex = years.indexOf(currentEvent.guess);
 
-  return { eventBefore: undefined, eventAfter: undefined };
+  const eventBefore = years[currentEventIndex - 1] || events?.at(-1)?.year;
+  const eventAfter = years[currentEventIndex + 1];
+
+  return { eventBefore: eventBefore, eventAfter: eventAfter };
 });
 
 export const scoreAtom = atom((get) =>
