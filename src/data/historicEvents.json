@@ -1689,6 +1689,136 @@
         "sv": "Han är den regent som suttit längst på tronen i Sveriges historia.",
         "en": "He is the monarch who has sat on the throne the longest in Sweden's history."
       }
+    },
+    {
+      "id": "fe5fb268-66e0-4fb6-ba7c-bc6a2b6a1b95",
+      "title": {
+        "sv": "TV4 tar bort hallåorna",
+        "en": "TV4 removes the TV program introducers"
+      },
+      "category": "popculture",
+      "year": 2018,
+      "description": {
+        "sv": "TV4s kanske mest kända hallåa är Lucette Rådström",
+        "en": "Probably the most famous TV4 introducer is Lucette Rådström"
+      }
+    },
+    {
+      "id": "7f8254c8-1dbd-4165-99ca-92587c74c08b",
+      "title": {
+        "sv": "SVT tar bort hallåorna",
+        "en": "SVT removes the TV program introducers"
+      },
+      "category": "popculture",
+      "year": 2012,
+      "description": {
+        "sv": "Beslutet togs för att 'modernisera' kanalen.",
+        "en": "The decision was made to 'modernize' the channel."
+      }
+    },
+    {
+      "id": "8d817b2d-3f17-4767-8de4-a565dea3517b",
+      "title": {
+        "sv": "Första avsnittet av 'Äntligen Hemma' sänds",
+        "en": "First episode of 'Äntligen Hemma' airs"
+      },
+      "category": "popculture",
+      "year": 1997,
+      "description": {
+        "sv": "När det första avsnittet av 'Äntligen Hemma' sändes var programmet ett av de mest sedda på TV4.",
+        "en": "When the first episode of 'Äntligen Hemma' aired, the show was one of the most watched on TV4."
+      }
+    },
+    {
+      "id": "02a5ec8b-c3e3-441b-98ce-24ac2ed7f927",
+      "title": {
+        "sv": "Expedition Robinson sänds på SVT med Harald Treutiger som programledare",
+        "en": "Expedition Robinson airs on SVT with Harald Treutiger as host"
+      },
+      "category": "popculture",
+      "year": 1997,
+      "description": {
+        "sv": "Under första säsongen tog en av deltagarna sitt liv efter inspelningen.",
+        "en": "During the firsts season, one of the contestants took his own life after the program aired."
+      }
+    },
+    {
+      "id": "34b1c42f-f600-429b-90d6-21bc3b3997c6",
+      "title": {
+        "sv": "Trolltider, orginalet, sänds som julkalender med blandandra Eva Rydberg och Ted Åström",
+        "en": "Trolltider, the original, airs as a Christmas calendar with Eva Rydberg and Ted Åström"
+      },
+      "category": "popculture",
+      "year": 1979,
+      "description": {
+        "sv": "Med manus av Maria och Camilla Gripe trollband Trolltider en hel nation.",
+        "en": "With script by Maria and Camilla Gripe, Trolltider enchanted a whole nation."
+      }
+    },
+    {
+      "id": "bd54aab9-9101-44ca-93b1-d518141582ef",
+      "title": {
+        "sv": "Wikipedia, den fria encyklopedin, lanseras",
+        "en": "Wikpedia, the free encyclopedia, is launched"
+      },
+      "category": "history",
+      "year": 2001,
+      "description": {
+        "sv": "Den svenskspråkiga versionen har idag över 2,5 miljoner artiklar.",
+        "en": "The Swedish version has over 2.5 million articles today."
+      }
+    },
+    {
+      "id": "95f4a0f6-5f43-4833-a073-dbe64ff441e0",
+      "title": {
+        "sv": "Nationalencyklopedin lanseras i bokform",
+        "en": "Nationalencyklopedin is launched"
+      },
+      "category": "culture",
+      "year": 1989,
+      "description": {
+        "sv": "De ursprungliga 20 banden innehåller 12 700 sidor och 170 000 uppslagsord",
+        "en": "The original 20 volumes contain 12,700 pages and 170,000 entries"
+      }
+    },
+    {
+      "id": "1133c8ba-0bd2-46eb-8410-257864122469",
+      "title": {
+        "sv": "Pierce Brosnan spelar Bond för sista gången i Die Another Day",
+        "en": "Pierce Brosnan plays Bond for the last time in Die Another Day"
+      },
+      "category": "popculture",
+      "year": 2002,
+      "description": {
+        "sv": "Pierce gjorde totalt 4 filmer som James Bond",
+        "en": "Pierce made a total of 4 films as James Bond"
+      }
+    },
+    {
+      "id": "5c5c663c-a01a-4d05-adb7-748a1fa032a3",
+      "title": {
+        "sv": "Anders Lundin tar officiellt över som allsångsledare för Allsång på Skansen",
+        "en": "Anders Lundin officially takes over as host of Allsång på Skansen"
+      },
+      "category": "popculture",
+      "year": 2004,
+      "description": {
+        "sv": "Han ledde också inofficiellt Allsången tillsammans med Lasse Berghagen året innan",
+        "en": "He also unofficially hosted Allsången together with Lasse Berghagen the year before"
+      }
+    },
+    {
+      "id": "73dd0dab-cb5f-4e1b-a720-54a0effa6c0a",
+      "title": {
+        "sv": "Tim Avicii Bergling hittas död i Oman",
+        "en": "Tim Avicii Bergling found dead in Oman"
+      },
+      "category": "popculture",
+      "year": 2018,
+      "description": {
+        "sv": "Efter sin död arbetar hans familj med Tim Bergling Foundation, en stiftelse som arbetar för att förebygga självmord och psykisk ohälsa",
+        "en": "His family now runs Tim Bergling Foundation, a foundation working to prevent suicide and mental health awareness"
+      }
     }
   ]
 }
