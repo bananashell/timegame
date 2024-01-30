@@ -1819,6 +1819,71 @@
         "sv": "Efter sin död arbetar hans familj med Tim Bergling Foundation, en stiftelse som arbetar för att förebygga självmord och psykisk ohälsa",
         "en": "His family now runs Tim Bergling Foundation, a foundation working to prevent suicide and mental health awareness"
       }
+    },
+    {
+      "id": "7bc62867-80aa-4f90-8c01-30e7a5e45d93",
+      "title": {
+        "sv": "Ölkällarkuppen, det kuppförsök där Adolf Hitler försöker ta makten, misslyckas",
+        "en": "Beer Hall Putsch, a coup d'état by Adolf Hitler, fails"
+      },
+      "category": "history",
+      "year": 1923,
+      "description": {
+        "sv": "Det resulterar i fängelsestraff för Adolf Hitler och han spenderar ungefär ett år i fängelse. Under fängelsetiden skriver han Mein Kampf",
+        "en": "It results in prison time for Adolf Hitler for about a year. He writes Mein Kampf during his time in prison"
+      }
+    },
+    {
+      "id": "dab0cbda-58ae-4dec-8c16-2490704ad255",
+      "title": {
+        "sv": "'Svarta torsdagen' omkullkastar världsekonomin och startar den stora depressionen",
+        "en": "'Black Thursday' throws the world economy into dissaray and starts the Great Depression"
+      },
+      "category": "history",
+      "year": 1929,
+      "description": {
+        "sv": "Arbetslösheten steg med 607% och 608 banker i USA gick i konkurs under efterföljande år",
+        "en": "Unemployment rates rose by 607% and 608 banks in the US went bankrupt in the following year"
+      }
+    },
+    {
+      "id": "366a165b-9daf-4256-a8e9-113ed8730725",
+      "title": {
+        "sv": "'Hobbiten' av J.R.R. Tolkien publiceras",
+        "en": "'The Hobbit' by J.R.R. Tolkien is published"
+      },
+      "category": "popculture",
+      "year": 1937,
+      "description": {
+        "sv": "Vi får följa hobbiten Bilbo Bagger på hans äventyr",
+        "en": "We get to follow the hobbit Bilbo Baggins on his adventures"
+      }
+    },
+    {
+      "id": "7b6ef4f5-3d04-4246-87e8-ffcc7b14406a",
+      "title": {
+        "sv": "Orson Wells sänder 'Världarnas Krig' på radio och skapar panik i delar av USA",
+        "en": "Orson Wells airs 'War of the Worlds' on the radio and creates panic in parts of the US"
+      },
+      "category": "popculture",
+      "year": 1938,
+      "description": {
+        "sv": "Sändningen lät som en riktig nyhetssändning och många trodde att det var på riktigt",
+        "en": "The broadcast was made to sound like a real news broadcast, and many people believed it was real"
+      }
+    },
+    {
+      "id": "49d42d1c-c143-4980-bf67-90532f0dbd94",
+      "title": {
+        "sv": "Empire State Building blir världens högsta byggnad med sina 443m",
+        "en": "Empire State Building becomes the tallest building in the world at 443m"
+      },
+      "category": "history",
+      "year": 1931,
+      "description": {
+        "sv": "Den tog över titeln från Chrysler Building som bara varit världens högsta i 11 månader",
+        "en": "It took the title from the Chrysler Building which had only been the tallest for 11 months"
+      }
     }
   ]
 }
