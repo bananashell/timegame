@@ -1884,6 +1884,97 @@
         "sv": "Den tog över titeln från Chrysler Building som bara varit världens högsta i 11 månader",
         "en": "It took the title from the Chrysler Building which had only been the tallest for 11 months"
       }
+    },
+    {
+      "id": "95e87f2d-ba3d-4059-81d2-3c77359df0cb",
+      "title": {
+        "sv": "Disneyfilmen Frost har premiär",
+        "en": "Disney's Frozen premieres"
+      },
+      "category": "popculture",
+      "year": 2013,
+      "description": {
+        "sv": "Filmen är baserad på H.C. Andersens saga Snödrottningen",
+        "en": "The movie is based on H.C. Andersen's tale The Snow Queen"
+      }
+    },
+    {
+      "id": "1ca16f2d-5cac-475a-be88-751dc76c5de6",
+      "title": {
+        "sv": "Nokia lanserar sin ikoniska mobiltelefon; 3310",
+        "en": "Nokia launches the iconic mobile phone 3310"
+      },
+      "category": "technology",
+      "year": 2000,
+      "description": {
+        "sv": "Den sålde i över 126 miljoner exemplar",
+        "en": "It sold over 126 million units"
+      }
+    },
+    {
+      "id": "8c85a18e-9f57-4010-b7d1-0a29f32591a4",
+      "title": {
+        "sv": "Volvo Amazon rullar in i Svenska hemmen",
+        "en": "Volvo Amazon rolls into Swedish homes"
+      },
+      "category": "technology",
+      "year": 1956,
+      "description": {
+        "sv": "Designad av Jan Wilsgaard och tillverkad i Torslanda, Göteborg",
+        "en": "Designed by Jan Wilsgaard and manufactured in Torslanda, Gothenburg"
+      }
+    },
+    {
+      "id": "ef92e95b-455b-45e2-9d85-1f898772c03d",
+      "title": {
+        "sv": "Världsfenomenet Pokémon lanseras",
+        "en": "The global phenomenon Pokémon is launched"
+      },
+      "category": "popculture",
+      "year": 1996,
+      "description": {
+        "sv": "Filmer, tv-spel, kortspel, kläder, gosedjur. Allt finns i Pokémon utförande",
+        "en": "Movies, video games, card games, clothes, stuffed animals. Everything is available in Pokémon design"
+      }
+    },
+    {
+      "id": "0e4ef83b-5d01-4013-b503-f4d08d19e261",
+      "title": {
+        "sv": "SARS bryter ut i Kina",
+        "en": "SARS outbreak in China"
+      },
+      "category": "history",
+      "year": 2002,
+      "description": {
+        "sv": "SARS är en sjukdom som orsakas av ett coronavirus",
+        "en": "SARS is a disease caused by a coronavirus"
+      }
+    },
+    {
+      "id": "fa34da2d-6e4d-44cf-b556-30f5e9f30c2d",
+      "title": {
+        "sv": "Världens största partikelaccelerator, CERNs Large Hadron Collider, invigs",
+        "en": "World's largest particle accelerator, CERN's Large Hadron Collider, is inaugurated"
+      },
+      "category": "technology",
+      "year": 2008,
+      "description": {
+        "sv": "Den är 27km lång och ligger under jord mellan Frankrike och Schweiz",
+        "en": "It is 27km long and is located underground between France and Switzerland"
+      }
+    },
+    {
+      "id": "a05c0942-1834-46e3-ac5d-6e4c79ad08df",
+      "title": {
+        "sv": "Första delarna till International Space Station skjuts upp",
+        "en": "First parts of the International Space Station are launched into space"
+      },
+      "category": "technology",
+      "year": 1998,
+      "description": {
+        "sv": "De första långvariga besättningarna anlände 2 år senare och har sedan dess varit permanent bemannad",
+        "en": "The first long-term residents arrived 2 years later and have been permanently manned ever since"
+      }
     }
   ]
 }
