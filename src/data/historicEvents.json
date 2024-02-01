@@ -1933,8 +1933,8 @@
       "category": "popculture",
       "year": 1996,
       "description": {
-        "sv": "Filmer, tv-spel, kortspel, kläder, gosedjur. Allt finns i Pokémon utförande",
-        "en": "Movies, video games, card games, clothes, stuffed animals. Everything is available in Pokémon design"
+        "sv": "Filmer, tv-spel, kortspel, kläder, gosedjur, maskotar, på flygplan - Pokémon finns överallt",
+        "en": "Movies, video games, card games, clothes, stuffed animals, mascots, on airplanes - Pokémon are everywhere"
       }
     },
     {
@@ -1974,6 +1974,45 @@
       "description": {
         "sv": "De första långvariga besättningarna anlände 2 år senare och har sedan dess varit permanent bemannad",
         "en": "The first long-term residents arrived 2 years later and have been permanently manned ever since"
+      }
+    },
+    {
+      "id": "e42d76af-2dfc-4fc2-b049-8c9feea7e9ba",
+      "title": {
+        "sv": "Teknikjätten Google grundas",
+        "en": "Tech giant Google is founded"
+      },
+      "category": "technology",
+      "year": 1998,
+      "description": {
+        "sv": "Google grundas av Larry Page och Sergey Brin och är idag ett av världens största bolag",
+        "en": "Google is founded by Larry Page and Sergey Brin and is today one of the world's largest companies"
+      }
+    },
+    {
+      "id": "5b670adb-fdb1-4826-98ff-7d6dc07e6b24",
+      "title": {
+        "sv": "Kalle Anka och hans vänner önskar God Jul för första gången på SVT",
+        "en": "Donald Duck and his friends wish Merry Christmas for the first time on SVT"
+      },
+      "category": "popculture",
+      "year": 1960,
+      "description": {
+        "sv": "På Julafton 2020 slog den tittarrekord med 4,5 miljoner tittare",
+        "en": "On Christmas eve 2020 it broke the viewer record with 4.5 million viewers"
+      }
+    },
+    {
+      "id": "20260758-1a3d-4789-8e56-40f92db1aa47",
+      "title": {
+        "sv": "SVT genomför sin första prov-TV-sändning i färg",
+        "en": "SVT conducts its first test TV broadcast in color"
+      },
+      "category": "popculture",
+      "year": 1965,
+      "description": {
+        "sv": "Det dröjde dock 5 år innan färg-TV sändes regelbundet",
+        "en": "However, it took 5 years before color TV was broadcast regularly"
       }
     }
   ]
