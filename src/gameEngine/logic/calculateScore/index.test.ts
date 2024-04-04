@@ -1,7 +1,7 @@
 import { describe, it, expect } from "bun:test";
 import { calculateScore } from ".";
 import { LockedHistoricGameEvent } from "@/gameEngine/gameState";
-import { HistoricEvent } from "@/models/historicEvent";
+import { HistoricEvent } from "@/data/historicEvents/historicEvent";
 import { GameEntity } from "@/data/db/game/gameEntity";
 
 describe("calculateScore", () => {

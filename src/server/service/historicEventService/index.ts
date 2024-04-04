@@ -1,5 +1,5 @@
-import { HistoricEvent } from "@/models/historicEvent";
-import { historicEvents } from "@/data/historicEvents";
+import { HistoricEvent } from "@/data/historicEvents/historicEvent";
+import { historicEvents } from "@/data/historicEvents/historicEvents";
 import { randomizeArrayWithSalt } from "@/utils/array/randomizeArrayWithSalt";
 
 const PAGE_SIZE = 1 as const;

@@ -1,5 +1,5 @@
 import { Year, LockedHistoricGameEvent } from "@/gameEngine/gameState";
-import { HistoricEvent } from "@/models/historicEvent";
+import { HistoricEvent } from "@/data/historicEvents/historicEvent";
 import { isInTimespan } from "./isInTimespan";
 
 export type ScoredHistoricEvent = Pick<

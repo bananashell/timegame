@@ -1,5 +1,5 @@
 import { calculateScore } from "@/gameEngine/logic/calculateScore";
-import { getHistoricEvent } from "../../../historicEvents";
+import { getHistoricEvent } from "../../../historicEvents/historicEvents";
 import { GameEntity, gameEntity } from "../gameEntity";
 import { GameId } from "../gameId";
 import { getGame } from "./getGame";

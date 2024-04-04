@@ -1,6 +1,6 @@
 import HistoricEvents from "./historicEvents.json";
 import z from "zod";
-import { historicEvent } from "@/models/historicEvent";
+import { historicEvent } from "@/data/historicEvents/historicEvent";
 
 const parsedHistoricEvents = z
   .array(historicEvent)

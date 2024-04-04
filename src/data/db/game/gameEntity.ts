@@ -1,4 +1,4 @@
-import { historicEvent } from "@/models/historicEvent";
+import { historicEvent } from "@/data/historicEvents/historicEvent";
 import { z } from "zod";
 
 export const gameEntity = z.object({

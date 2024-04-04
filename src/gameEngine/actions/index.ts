@@ -1,7 +1,7 @@
 import { produce } from "immer";
 import { RootState, Year } from "@/gameEngine/gameState";
 import { calculateScore } from "@/gameEngine/logic/calculateScore";
-import { HistoricEvent } from "@/models/historicEvent";
+import { HistoricEvent } from "@/data/historicEvents/historicEvent";
 import { GameId } from "@/data/db/game/gameId";
 
 export const createNewGame = ({

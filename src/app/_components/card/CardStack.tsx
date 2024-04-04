@@ -2,7 +2,7 @@
 
 import { useAtom } from "jotai";
 import { currentEventAtom, nextEventAtom } from "@/app/state";
-import { HistoricEvent } from "@/models/historicEvent";
+import { HistoricEvent } from "@/data/historicEvents/historicEvent";
 import {
   AnimatePresence,
   motion,

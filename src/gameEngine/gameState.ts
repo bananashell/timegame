@@ -1,4 +1,4 @@
-import { HistoricEvent } from "@/models/historicEvent";
+import { HistoricEvent } from "@/data/historicEvents/historicEvent";
 
 export type Year = number;
 export type HistoricGameEvent = HistoricEvent & { guess: Year };

@@ -1,6 +1,6 @@
 import { GameEntity } from "@/data/db/game/gameEntity";
 import { createNewGameEntity } from "@/data/db/game/repository/createNewGame";
-import { HistoricEvent } from "@/models/historicEvent";
+import { HistoricEvent } from "@/data/historicEvents/historicEvent";
 import { getNextHistoricEvent } from "@/server/service/historicEventService";
 import { generateRandomSalt } from "@/server/service/saltService";
 import { procedure } from "@/server/trpc";

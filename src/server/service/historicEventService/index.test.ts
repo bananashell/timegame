@@ -1,5 +1,5 @@
 import { getNextHistoricEvent } from "./index";
-import { historicEvents } from "@/data/historicEvents";
+import { historicEvents } from "@/data/historicEvents/historicEvents";
 import { describe, it, expect } from "bun:test";
 
 describe("getNextHistoricEvent", () => {
