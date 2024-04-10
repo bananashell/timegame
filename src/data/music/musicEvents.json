@@ -154,17 +154,6 @@
     "description": { "sv": "", "en": "" }
   },
   {
-    "id": "dec520df-7be6-44b0-a080-beffb9bd942e",
-    "spotifyId": "45DP2cidC1BdeIU0WmjIYY",
-    "artistName": "The Ark",
-    "title": "The Worrying Kind",
-    "genre": "pop",
-    "preview": "https://p.scdn.co/mp3-preview/705e41d2e5adbf67abc5cbff6d90adbe5cf06594?cid=25ebf7c03eed46899af0c4749f16c9aa",
-    "coverArt": "https://i.scdn.co/image/ab67616d0000b2737d3cfa8844d0f3895e1b6c97",
-    "year": 2019,
-    "description": { "sv": "", "en": "" }
-  },
-  {
     "id": "7d1140af-ec0b-4faa-83c3-82e22c9459e1",
     "spotifyId": "2kvg4AwMIstkygdQhfFfSf",
     "artistName": "The Ark",
@@ -194,7 +183,7 @@
     "genre": "pop",
     "preview": "https://p.scdn.co/mp3-preview/9f584a57af6aec2219939c60277e565e3a9e3366?cid=25ebf7c03eed46899af0c4749f16c9aa",
     "coverArt": "https://i.scdn.co/image/ab67616d0000b273917db6940592471faf434bc4",
-    "year": 2014,
+    "year": 2006,
     "description": { "sv": "", "en": "" }
   },
   {
@@ -326,7 +315,7 @@
     "genre": "pop",
     "preview": "https://p.scdn.co/mp3-preview/76c7caeda0fd1d9a6561dced014e52b27fd499c1?cid=25ebf7c03eed46899af0c4749f16c9aa",
     "coverArt": "https://i.scdn.co/image/ab67616d0000b273a207f9449b78a4e2371767a2",
-    "year": 2017,
+    "year": 1993,
     "description": { "sv": "", "en": "" }
   },
   {
@@ -337,7 +326,7 @@
     "genre": "pop",
     "preview": "https://p.scdn.co/mp3-preview/e627586e10c5cb4a3c7a2c62ddee5880a3e6ba25?cid=25ebf7c03eed46899af0c4749f16c9aa",
     "coverArt": "https://i.scdn.co/image/ab67616d0000b2730c13d43392c153cbc219ca51",
-    "year": 2008,
+    "year": 1999,
     "description": { "sv": "", "en": "" }
   },
   {
@@ -359,7 +348,7 @@
     "genre": "pop",
     "preview": "https://p.scdn.co/mp3-preview/e03be2806ccf45f99c56f83885fdb0ffec760fbc?cid=25ebf7c03eed46899af0c4749f16c9aa",
     "coverArt": "https://i.scdn.co/image/ab67616d0000b273ea718cef99b43189becc5975",
-    "year": 1995,
+    "year": 1988,
     "description": { "sv": "", "en": "" }
   },
   {
@@ -403,7 +392,7 @@
     "genre": "pop",
     "preview": "https://p.scdn.co/mp3-preview/2c276a2091c6b977bc5ad70b7fcecdce4e974f97?cid=25ebf7c03eed46899af0c4749f16c9aa",
     "coverArt": "https://i.scdn.co/image/ab67616d0000b273a55974eb1561467117b97709",
-    "year": 2006,
+    "year": 1989,
     "description": { "sv": "", "en": "" }
   },
   {
@@ -447,7 +436,7 @@
     "genre": "pop",
     "preview": "https://p.scdn.co/mp3-preview/b44cd080ef29d6021c8787585b7e2db80bd4c7f9?cid=25ebf7c03eed46899af0c4749f16c9aa",
     "coverArt": "https://i.scdn.co/image/ab67616d0000b27352604abf06e3bb37e5ef32c7",
-    "year": 2001,
+    "year": 1987,
     "description": { "sv": "", "en": "" }
   },
   {
@@ -458,7 +447,7 @@
     "genre": "pop",
     "preview": "https://p.scdn.co/mp3-preview/278932aec0e484574976b388accf8fbf2082eb96?cid=25ebf7c03eed46899af0c4749f16c9aa",
     "coverArt": "https://i.scdn.co/image/ab67616d0000b273e56f9b5e455ba04fffddc61e",
-    "year": 2006,
+    "year": 1988,
     "description": { "sv": "", "en": "" }
   },
   {
@@ -469,7 +458,7 @@
     "genre": "pop",
     "preview": "https://p.scdn.co/mp3-preview/96024b0896bd066b536c7db0fde67c4d14e6742e?cid=25ebf7c03eed46899af0c4749f16c9aa",
     "coverArt": "https://i.scdn.co/image/ab67616d0000b273e56f9b5e455ba04fffddc61e",
-    "year": 2006,
+    "year": 1987,
     "description": { "sv": "", "en": "" }
   },
   {
@@ -480,7 +469,7 @@
     "genre": "pop",
     "preview": "https://p.scdn.co/mp3-preview/188f3ef774bf14f743972e14b3af83cdd74e4c8c?cid=25ebf7c03eed46899af0c4749f16c9aa",
     "coverArt": "https://i.scdn.co/image/ab67616d0000b273e56f9b5e455ba04fffddc61e",
-    "year": 2006,
+    "year": 1991,
     "description": { "sv": "", "en": "" }
   },
   {
@@ -502,7 +491,7 @@
     "genre": "pop",
     "preview": "https://p.scdn.co/mp3-preview/dc510f72a003f6ef4ee63f5b81273e53d2fdcbd5?cid=25ebf7c03eed46899af0c4749f16c9aa",
     "coverArt": "https://i.scdn.co/image/ab67616d0000b273db58f82a761d08ada5ab1929",
-    "year": 1993,
+    "year": 1988,
     "description": { "sv": "", "en": "" }
   },
   {
@@ -513,7 +502,7 @@
     "genre": "pop",
     "preview": "https://p.scdn.co/mp3-preview/9d152cedabff0f5d8a4502f6dce87211c98d47c0?cid=25ebf7c03eed46899af0c4749f16c9aa",
     "coverArt": "https://i.scdn.co/image/ab67616d0000b273db58f82a761d08ada5ab1929",
-    "year": 1993,
+    "year": 1990,
     "description": { "sv": "", "en": "" }
   },
   {
@@ -535,7 +524,7 @@
     "genre": "pop",
     "preview": "https://p.scdn.co/mp3-preview/699788d3e9760e6dbf4e059ed9a284181653466d?cid=25ebf7c03eed46899af0c4749f16c9aa",
     "coverArt": "https://i.scdn.co/image/ab67616d0000b273ae427f91828f26f16e62a6a1",
-    "year": 2012,
+    "year": 2011,
     "description": { "sv": "", "en": "" }
   },
   {
@@ -568,7 +557,7 @@
     "genre": "pop",
     "preview": "https://p.scdn.co/mp3-preview/0e1906463d32c2e536eede8a6298bf9b0c4ca298?cid=25ebf7c03eed46899af0c4749f16c9aa",
     "coverArt": "https://i.scdn.co/image/ab67616d0000b2730b275f7a382524e3db5d3372",
-    "year": 2016,
+    "year": 2015,
     "description": { "sv": "", "en": "" }
   },
   {
@@ -645,7 +634,7 @@
     "genre": "pop",
     "preview": "https://p.scdn.co/mp3-preview/172afeb8237b151fa83e3bc5560066858b2fd99a?cid=25ebf7c03eed46899af0c4749f16c9aa",
     "coverArt": "https://i.scdn.co/image/ab67616d0000b273e59861190fc754988c0c4392",
-    "year": 2008,
+    "year": 2004,
     "description": { "sv": "", "en": "" }
   },
   {
@@ -656,7 +645,7 @@
     "genre": "pop",
     "preview": "https://p.scdn.co/mp3-preview/0f9e7bde53a0d0151100241559686c772642bf5c?cid=25ebf7c03eed46899af0c4749f16c9aa",
     "coverArt": "https://i.scdn.co/image/ab67616d0000b27328a3ee6aec7301633d9b28f0",
-    "year": 1998,
+    "year": 1982,
     "description": { "sv": "", "en": "" }
   },
   {
@@ -671,17 +660,6 @@
     "description": { "sv": "", "en": "" }
   },
   {
-    "id": "ebe4d02b-99e9-4536-9451-36cc655ecdcb",
-    "spotifyId": "7DwuqGTLFlbEt78fLLS62k",
-    "artistName": "Nic & The Family",
-    "title": "Hej Monica",
-    "genre": "pop",
-    "preview": "https://p.scdn.co/mp3-preview/ff678cd883efa81b500c2da91f055c594f4dc02a?cid=25ebf7c03eed46899af0c4749f16c9aa",
-    "coverArt": "https://i.scdn.co/image/ab67616d0000b2734b45537d48875d5b0c16d657",
-    "year": 2004,
-    "description": { "sv": "", "en": "" }
-  },
-  {
     "id": "d057ce8f-f28f-4c59-85c2-9f5bdfee41ab",
     "spotifyId": "61sqNOYwEQ2TX1BFLNpTIM",
     "artistName": "Norlie & KKV",
@@ -689,7 +667,7 @@
     "genre": "pop",
     "preview": "https://p.scdn.co/mp3-preview/c489c22a5fa7cf18317b8919bfb38d7b9f7c1b5e?cid=25ebf7c03eed46899af0c4749f16c9aa",
     "coverArt": "https://i.scdn.co/image/ab67616d0000b2732c28babf79d68aa711c154e6",
-    "year": 2012,
+    "year": 2013,
     "description": { "sv": "", "en": "" }
   },
   {
@@ -733,7 +711,7 @@
     "genre": "pop",
     "preview": "https://p.scdn.co/mp3-preview/9176193a711fcc1dd46905c56de6c093bd1feed9?cid=25ebf7c03eed46899af0c4749f16c9aa",
     "coverArt": "https://i.scdn.co/image/ab67616d0000b27322c2d6fdff0a3f70d8ecd1c2",
-    "year": 2008,
+    "year": 2007,
     "description": { "sv": "", "en": "" }
   },
   {
@@ -744,7 +722,7 @@
     "genre": "pop",
     "preview": "https://p.scdn.co/mp3-preview/e20e9422690116ddd52783bc1979b89f044242d7?cid=25ebf7c03eed46899af0c4749f16c9aa",
     "coverArt": "https://i.scdn.co/image/ab67616d0000b273778e11f9add7c45082a60e9f",
-    "year": 2001,
+    "year": 1986,
     "description": { "sv": "", "en": "" }
   },
   {
@@ -784,22 +762,22 @@
     "id": "3d96b86e-d05d-41b1-9ef4-5314ef5858cf",
     "spotifyId": "3N9huFk2IceMSlKoZLaUsv",
     "artistName": "Basshunter",
-    "title": "Boten Anna - Radio edit",
+    "title": "Boten Anna",
     "genre": "pop",
     "preview": "https://p.scdn.co/mp3-preview/5b383bf48b4418871cbfa193462a4f4e4b2c70f9?cid=25ebf7c03eed46899af0c4749f16c9aa",
     "coverArt": "https://i.scdn.co/image/ab67616d0000b27367ba84c79a28e584194c42d9",
-    "year": 2008,
+    "year": 2006,
     "description": { "sv": "", "en": "" }
   },
   {
     "id": "b8542731-9d0b-4b89-b174-9a0e890dc9db",
     "spotifyId": "37dYAkMa4lzRCH6kDbMT1L",
     "artistName": "Yolanda Be Cool",
-    "title": "We No Speak Americano (Edit)",
+    "title": "We No Speak Americano",
     "genre": "pop",
     "preview": "https://p.scdn.co/mp3-preview/560308681d4bd1932d6a80c628425efacfc79391?cid=25ebf7c03eed46899af0c4749f16c9aa",
     "coverArt": "https://i.scdn.co/image/ab67616d0000b273d9f80b2064ea74295afe64cc",
-    "year": 2020,
+    "year": 2010,
     "description": { "sv": "", "en": "" }
   },
   {
@@ -811,6 +789,17 @@
     "preview": "https://p.scdn.co/mp3-preview/1a321315008e98ce6d8f2c49b077c4130043f2b9?cid=25ebf7c03eed46899af0c4749f16c9aa",
     "coverArt": "https://i.scdn.co/image/ab67616d0000b273c914f88aa939c7f7c5532979",
     "year": 1998,
+    "description": { "sv": "", "en": "" }
+  },
+  {
+    "id": "533207a7-a857-4f96-a7fa-3a4aafb14b64",
+    "spotifyId": "37tzoWY1ubBQKGXiWdO5Qv",
+    "artistName": "No Mercy",
+    "title": "Where Do You Go",
+    "genre": "pop",
+    "preview": "https://p.scdn.co/mp3-preview/bea09d04cf474a61a1684607d90a20c9dbd90d86?cid=25ebf7c03eed46899af0c4749f16c9aa",
+    "coverArt": "https://i.scdn.co/image/ab67616d0000b27343e57c8b3faab1b58e3a161b",
+    "year": 1996,
     "description": { "sv": "", "en": "" }
   }
 ]
