@@ -1,28 +1,30 @@
-import type { HistoricEvent } from "@/data/historicEvents/historicEvent";
+import type { GameEvent } from "@/data/GameEvent";
 import { historicEvents } from "@/data/historicEvents/historicEvents";
+import { musicEvents } from "@/data/music/musicEvents";
+import type { GameType } from "@/gameEngine/gameState";
 import { randomizeArrayWithSalt } from "@/utils/array/randomizeArrayWithSalt";
 
 const PAGE_SIZE = 1 as const;
 
 /**
- * @deprecated use `getNextGameEvent` instead
- *
  * Retrieves the next historic event based on the provided cursor and salt.
  * If no cursor is provided, the first event will be returned.
  * @param {Object} options - The options for retrieving the next historic event.
  * @param {string} options.salt - The salt used for randomizing the historic events.
  * @param {string | undefined | null} options.cursor - The cursor indicating the current position in the historic events.
- * @returns {Promise<HistoricEvent>} The next historic event.
+ * @returns {Promise<GameEvent>} The next historic event.
  * @throws {Error} If the cursor is invalid or unable to find the cursor.
  */
-export const getNextHistoricEvent = async ({
+export const getNextGameEvent = async ({
   cursor,
   salt,
+  gameType,
 }: {
   salt: string;
   cursor: string | undefined | null;
-}): Promise<HistoricEvent> => {
-  const randomizedData = randomizeArrayWithSalt(historicEvents, salt);
+  gameType: GameType;
+}): Promise<GameEvent> => {
+  const randomizedData = randomizeArrayWithSalt(getEvents(gameType), salt);
 
   if (!cursor) {
     return randomizedData.slice(0, PAGE_SIZE)[0];
@@ -39,4 +41,15 @@ export const getNextHistoricEvent = async ({
   );
 
   return data[0];
+};
+
+const getEvents = (gameType: GameType) => {
+  switch (gameType) {
+    case "all":
+      return [...historicEvents, ...musicEvents];
+    case "history":
+      return historicEvents;
+    case "music":
+      return musicEvents;
+  }
 };

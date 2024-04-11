@@ -1,15 +1,15 @@
 import { calculateScore } from "@/gameEngine/logic/calculateScore";
-import { getHistoricEvent } from "../../../historicEvents/historicEvents";
 import { GameEntity, gameEntity } from "../gameEntity";
 import { GameId } from "../gameId";
 import { getGame } from "./getGame";
 import { z } from "zod";
 import { generateYearAndWeek } from "@/utils/date/generateYearAndWeek";
 import { Timestamp } from "firebase-admin/firestore";
+import { getGameEvent } from "@/data/gameEvents";
+import { gameTypes } from "@/gameEngine/gameState";
 
 export const makeGuessInput = z.object({
-  userId: z.string().uuid(),
-  salt: z.string(),
+  gameId: z.string(),
   guess: z.object({
     questionId: z.string().uuid(),
     guess: z.number().min(0).max(3000),
@@ -20,13 +20,13 @@ export type MakeGuessInput = z.infer<typeof makeGuessInput>;
 
 export const makeGuess = async (input: MakeGuessInput): Promise<GameEntity> => {
   const data = makeGuessInput.parse(input);
-  const entity = await getGame(new GameId(data));
+  const entity = await getGame(GameId.parse(data.gameId));
 
   if (!entity.exists) {
     throw new Error("Game does not exist");
   }
 
-  const currentEvent = getHistoricEvent(data.guess.questionId);
+  const currentEvent = getGameEvent(data.guess.questionId);
 
   if (!currentEvent)
     throw new Error(`HistoricEvent Id ${data.guess.questionId} does not exist`);

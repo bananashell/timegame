@@ -1,6 +1,7 @@
 [
   {
     "id": "51c29e29-7814-4610-b04b-7a9ce2ac3548",
+    "type": "music",
     "spotifyId": "3BJe4B8zGnqEdQPMvfVjuS",
     "artistName": "Lana Del Rey",
     "title": "Summertime Sadness",
@@ -12,6 +13,7 @@
   },
   {
     "id": "0bae386c-9f21-4bed-9431-38a146a877ab",
+    "type": "music",
     "spotifyId": "1z3ugFmUKoCzGsI6jdY4Ci",
     "artistName": "Madonna",
     "title": "Like a Prayer",
@@ -23,6 +25,7 @@
   },
   {
     "id": "7ebf247d-3899-40fb-ba06-bd3c62232ef1",
+    "type": "music",
     "spotifyId": "7bkyXSi4GtVfD7itZRUR3e",
     "artistName": "Madonna",
     "title": "Material Girl",
@@ -34,6 +37,7 @@
   },
   {
     "id": "3a5ab310-8b0e-41fb-b1b2-736b022fa9fb",
+    "type": "music",
     "spotifyId": "1vJ5EhReS2v1MhnRUdy4Ju",
     "artistName": "Lasse Berghagen",
     "title": "Teddybjörnen Fredriksson",
@@ -45,6 +49,7 @@
   },
   {
     "id": "d4c3b372-96fa-4d57-993e-bb0e9a2ba698",
+    "type": "music",
     "spotifyId": "1DIXPcTDzTj8ZMHt3PDt8p",
     "artistName": "Coolio",
     "title": "Gangsta's Paradise",
@@ -56,6 +61,7 @@
   },
   {
     "id": "a849631d-2d2e-47cb-92e7-d947b16cd293",
+    "type": "music",
     "spotifyId": "2zYzyRzz6pRmhPzyfMEC8s",
     "artistName": "AC/DC",
     "title": "Highway to Hell",
@@ -67,6 +73,7 @@
   },
   {
     "id": "28ff2ae5-c951-439b-a24f-a09bb791156c",
+    "type": "music",
     "spotifyId": "6I1kZgg3bGrPKxhZOltbRW",
     "artistName": "Timbuktu",
     "title": "Alla vill till himmelen men ingen vill dö",
@@ -78,6 +85,7 @@
   },
   {
     "id": "6d2bae7c-d152-45b1-9af5-de601487b6f1",
+    "type": "music",
     "spotifyId": "3PzsbWSQdLCKDLxn7YZfkM",
     "artistName": "Bruce Springsteen",
     "title": "I'm On Fire",
@@ -89,6 +97,7 @@
   },
   {
     "id": "5cf2f4a6-975a-467e-a667-6956538a6897",
+    "type": "music",
     "spotifyId": "0dOg1ySSI7NkpAe89Zo0b9",
     "artistName": "Bruce Springsteen",
     "title": "Born in the U.S.A.",
@@ -100,6 +109,7 @@
   },
   {
     "id": "cebdd86f-c09c-4b0f-a08b-98193a1a3026",
+    "type": "music",
     "spotifyId": "7pMU7BiNFslXAM6T5b0PEY",
     "artistName": "Carola",
     "title": "Gloria",
@@ -111,6 +121,7 @@
   },
   {
     "id": "8c734873-e367-4fb3-83b5-df2317254999",
+    "type": "music",
     "spotifyId": "63vK4u4uKwRD9KVJ5nHc46",
     "artistName": "Carola",
     "title": "Tommy tycker om mig",
@@ -122,6 +133,7 @@
   },
   {
     "id": "46128ed8-284d-4310-8d49-792e731d3a43",
+    "type": "music",
     "spotifyId": "32qGFJqweMFsGvsxRKgdjk",
     "artistName": "Carola",
     "title": "Säg mig var du står",
@@ -133,6 +145,7 @@
   },
   {
     "id": "e8996221-41bf-4c10-be59-bd5e1edb8113",
+    "type": "music",
     "spotifyId": "4GK4mydvnsodLEHWb4zJV4",
     "artistName": "Mares",
     "title": "Sunnanvind",
@@ -144,6 +157,7 @@
   },
   {
     "id": "651f250f-0f40-42d9-95f2-55ad3e7912e3",
+    "type": "music",
     "spotifyId": "5S8EZuiSNFR2N5eG58oISQ",
     "artistName": "The Ark",
     "title": "It Takes A Fool To Remain Sane",
@@ -155,6 +169,7 @@
   },
   {
     "id": "7d1140af-ec0b-4faa-83c3-82e22c9459e1",
+    "type": "music",
     "spotifyId": "2kvg4AwMIstkygdQhfFfSf",
     "artistName": "The Ark",
     "title": "Calleth You, Cometh I",
@@ -166,6 +181,7 @@
   },
   {
     "id": "78e34ee2-1104-4303-af53-26a600c6f0a9",
+    "type": "music",
     "spotifyId": "22u5Yu7vcYEQrIwA2Y9Rj6",
     "artistName": "The Ark",
     "title": "One Of Us Is Gonna Die Young",
@@ -177,6 +193,7 @@
   },
   {
     "id": "48571428-8d39-4ca1-9a7d-2ddb50ed4ef2",
+    "type": "music",
     "spotifyId": "2qkma39oRZ0rzGkyE2gdHd",
     "artistName": "Bo Kaspers Orkester",
     "title": "I samma bil",
@@ -188,6 +205,7 @@
   },
   {
     "id": "47c0f955-dcc3-469d-9fd5-1d7a45b0f947",
+    "type": "music",
     "spotifyId": "3LodQuubJHwPgkxp4BxHE7",
     "artistName": "kent",
     "title": "Sverige",
@@ -199,6 +217,7 @@
   },
   {
     "id": "4cd40119-3851-43d7-ae6d-d8cf45d7e0f7",
+    "type": "music",
     "spotifyId": "5N93hk1vAdIorXlYCiBYPv",
     "artistName": "Teddybears",
     "title": "Yours to Keep",
@@ -210,6 +229,7 @@
   },
   {
     "id": "d08db4c8-1845-4400-b5cf-c555e4a63fea",
+    "type": "music",
     "spotifyId": "4UDaVq5tm2mQ6tNgWydhUX",
     "artistName": "Håkan Hellström",
     "title": "Kom igen Lena!",
@@ -221,6 +241,7 @@
   },
   {
     "id": "eb86bcd3-ce68-4634-8458-4558f2c032c8",
+    "type": "music",
     "spotifyId": "4m9KmD3nxPBKsFWwZRmH9E",
     "artistName": "Salem Al Fakir",
     "title": "Good Song",
@@ -232,6 +253,7 @@
   },
   {
     "id": "7b5dda50-ce30-40da-a5c4-529e0d315560",
+    "type": "music",
     "spotifyId": "1ijNH4JCOlLJz7ToxmjUeY",
     "artistName": "Christian Walz",
     "title": "Wonderchild",
@@ -243,6 +265,7 @@
   },
   {
     "id": "f3bc960e-e1d5-40ae-9ed6-be480ba22610",
+    "type": "music",
     "spotifyId": "5zIxRPGxiOBNRDBu2Upk4i",
     "artistName": "The Ark",
     "title": "The Worrying Kind",
@@ -254,6 +277,7 @@
   },
   {
     "id": "cf5634fe-19be-4c83-8ad4-0d8d7ca54721",
+    "type": "music",
     "spotifyId": "2yz5IaQLnO8WBCIWMXoRBS",
     "artistName": "Håkan Hellström",
     "title": "Känn ingen sorg för mig Göteborg",
@@ -265,6 +289,7 @@
   },
   {
     "id": "bfd6a0c3-7c0c-46e4-8484-65cdc0ad91b6",
+    "type": "music",
     "spotifyId": "2AvS4Rk5G6jPAhZwytyF20",
     "artistName": "Melody Club",
     "title": "Electric",
@@ -276,6 +301,7 @@
   },
   {
     "id": "edd7cbe4-117b-4602-a2f7-e16b6567d39f",
+    "type": "music",
     "spotifyId": "52vLuv7YSkhX27eMg4wv2L",
     "artistName": "Nic & The Family",
     "title": "Hej Monica",
@@ -287,6 +313,7 @@
   },
   {
     "id": "d36f82db-2fff-4c79-a34c-bef8f948be78",
+    "type": "music",
     "spotifyId": "45sdD9GjryujVOcRJ4YQRQ",
     "artistName": "Teddybears",
     "title": "Cobrastyle",
@@ -298,6 +325,7 @@
   },
   {
     "id": "35a3f1c6-7d55-4b88-ad73-3dbc6b4abc8f",
+    "type": "music",
     "spotifyId": "724ltX0NuMww2BeLaZf9Mh",
     "artistName": "Weeping Willows",
     "title": "Touch Me",
@@ -309,6 +337,7 @@
   },
   {
     "id": "d3f088cf-6e56-4fee-88cf-3370c9d78eb4",
+    "type": "music",
     "spotifyId": "2vrr1cDXV2OZ4vrMueocHR",
     "artistName": "Arvingarna",
     "title": "Eloise",
@@ -320,6 +349,7 @@
   },
   {
     "id": "5834bcdf-58ad-43f9-ab91-a4674a9a6eba",
+    "type": "music",
     "spotifyId": "0wnKNQ5YfXy1QTVC8yjkaq",
     "artistName": "Patrik Isaksson",
     "title": "Hos dig är jag underbar",
@@ -331,6 +361,7 @@
   },
   {
     "id": "406ce46d-9a3d-4cf2-a55b-979da8e99e9b",
+    "type": "music",
     "spotifyId": "454J9ZekfjmjWbfcpFaur3",
     "artistName": "Perikles",
     "title": "Var Ska Vi Sova Inatt",
@@ -342,6 +373,7 @@
   },
   {
     "id": "904cfa2b-312d-42e4-be37-15bee8d1d527",
+    "type": "music",
     "spotifyId": "7bVwUOySQGO2afJ0LArAMi",
     "artistName": "Tommy Körberg",
     "title": "Stad i ljus",
@@ -353,6 +385,7 @@
   },
   {
     "id": "84e524ed-a62a-4832-bd80-17f9d0e2d1bc",
+    "type": "music",
     "spotifyId": "7affuyDflV8wvNI4UhuHjX",
     "artistName": "Petter",
     "title": "Mikrofonkåt",
@@ -364,6 +397,7 @@
   },
   {
     "id": "225bbd84-3e47-49ed-ab51-8e7cf440dafa",
+    "type": "music",
     "spotifyId": "09o8YE3Ta7YRXh5NI9HPZQ",
     "artistName": "Ronny & Ragge",
     "title": "Rara söta Anna",
@@ -375,6 +409,7 @@
   },
   {
     "id": "469c2dbb-9538-4591-b455-57331eb033b2",
+    "type": "music",
     "spotifyId": "1uINDFsUumg9C2Ob5dgi0v",
     "artistName": "BlackJack",
     "title": "Inget stoppar oss nu",
@@ -386,6 +421,7 @@
   },
   {
     "id": "6524abde-549d-4f93-95b0-5918c80b9f35",
+    "type": "music",
     "spotifyId": "5Cmwme624iKaqaSKTLcBWP",
     "artistName": "Tommy Nilsson",
     "title": "En dag",
@@ -397,6 +433,7 @@
   },
   {
     "id": "92ffeddc-5a46-4d49-8f59-d612364cba60",
+    "type": "music",
     "spotifyId": "3uELTbXsxWHgG4D0ORehKr",
     "artistName": "Petter",
     "title": "Såklart! (feat. Eye N'I)",
@@ -408,6 +445,7 @@
   },
   {
     "id": "2d21df41-172f-4e9e-bc81-672b6ae6ac18",
+    "type": "music",
     "spotifyId": "4fwOeFfLQoTjEsldLpDngl",
     "artistName": "Pelle Almgren",
     "title": "Omåomigen",
@@ -419,6 +457,7 @@
   },
   {
     "id": "7c976279-958d-4771-8039-05026d78bfb0",
+    "type": "music",
     "spotifyId": "6LSKFEkkD99eTm3sA2e9LJ",
     "artistName": "Adolphson & Falk",
     "title": "Blinkar blå",
@@ -430,6 +469,7 @@
   },
   {
     "id": "c8aa309c-33bc-41ed-9c46-bbe1a6f8da8d",
+    "type": "music",
     "spotifyId": "6Gr22UPMK7MArMazaU9uHC",
     "artistName": "Lena Philipsson",
     "title": "Dansa i neon",
@@ -441,6 +481,7 @@
   },
   {
     "id": "d7bbb51e-a687-4783-aef5-a5334af7ddf2",
+    "type": "music",
     "spotifyId": "6A9HIvL973OLXbNIueqG5W",
     "artistName": "Roxette",
     "title": "Dangerous",
@@ -452,6 +493,7 @@
   },
   {
     "id": "34aca041-3001-417e-8333-27e72cc3129f",
+    "type": "music",
     "spotifyId": "1JZZkORheU1RpGqJdZ77WL",
     "artistName": "Roxette",
     "title": "It Must Have Been Love - From the Film \"Pretty Woman\"",
@@ -463,6 +505,7 @@
   },
   {
     "id": "3ac05330-1962-47c9-82cb-6e5204806803",
+    "type": "music",
     "spotifyId": "6Q2dk1L9uCTzYODYaYzO69",
     "artistName": "Roxette",
     "title": "Fading Like A Flower (Every Time You Leave)",
@@ -474,6 +517,7 @@
   },
   {
     "id": "3fbfdf97-d844-41bb-a2c9-d739c6013b4f",
+    "type": "music",
     "spotifyId": "1nrvksAMsxoiEbUkQyxOXo",
     "artistName": "Jakob Hellman",
     "title": "Hon har ett sätt",
@@ -485,6 +529,7 @@
   },
   {
     "id": "909a02cd-fbb4-4842-8f17-dce1d289a156",
+    "type": "music",
     "spotifyId": "1FM3Fv3pvNo6RD0c6on00v",
     "artistName": "Freda'",
     "title": "I en annan del av världen",
@@ -496,6 +541,7 @@
   },
   {
     "id": "1bec6b27-73ce-48d6-9a3a-f5c336c7db47",
+    "type": "music",
     "spotifyId": "3j01sImWTGQSsdbG0NrmAB",
     "artistName": "Freda'",
     "title": "Allt man kan önska sig",
@@ -507,6 +553,7 @@
   },
   {
     "id": "24ba07fe-46e5-4a85-9c79-aee68e4e6909",
+    "type": "music",
     "spotifyId": "14AJI1RloVWTh8bJe9gBPM",
     "artistName": "Petra Marklund",
     "title": "Händerna mot himlen",
@@ -518,6 +565,7 @@
   },
   {
     "id": "7dba1af4-c1bc-4358-9aa5-0f388ef87afd",
+    "type": "music",
     "spotifyId": "7nLMZKhfkFZLr9rz4VyOpF",
     "artistName": "Den svenska björnstammen",
     "title": "Vart jag mig i världen vänder",
@@ -529,6 +577,7 @@
   },
   {
     "id": "945e283f-4300-4d37-8ee0-d187d54e12ef",
+    "type": "music",
     "spotifyId": "7rklm17yoayxw45lpzv5uv",
     "artistName": "Petter",
     "title": "Se på mig nu (feat. Linnea Henriksson) - Singelversion",
@@ -540,6 +589,7 @@
   },
   {
     "id": "cfd20d32-845d-4d00-880e-0e6ce49ff8ec",
+    "type": "music",
     "spotifyId": "4oEozZqTuhEXIYmpgaiKMC",
     "artistName": "September",
     "title": "Mikrofonkåt",
@@ -551,6 +601,7 @@
   },
   {
     "id": "db0681f3-0fef-493f-87ee-daac772ace1c",
+    "type": "music",
     "spotifyId": "1J8teo08q8FlNWIJh9QFr3",
     "artistName": "Danny Saucedo",
     "title": "Dör för dig",
@@ -562,6 +613,7 @@
   },
   {
     "id": "20545df3-fb95-4ecf-9ed6-cc164cb6eabf",
+    "type": "music",
     "spotifyId": "2Lv9FudgITbthtKK1B5wxY",
     "artistName": "Thomas Stenström",
     "title": "Slå mig hårt i ansiktet",
@@ -573,6 +625,7 @@
   },
   {
     "id": "b97dbe93-2dfa-4d64-9f51-1252c8266323",
+    "type": "music",
     "spotifyId": "1xN7BpTAWnZkuSLOtRP6Qc",
     "artistName": "Loreen",
     "title": "Euphoria - Single Version",
@@ -584,6 +637,7 @@
   },
   {
     "id": "917f20dd-7565-4992-b9b2-399a7a0cdbcf",
+    "type": "music",
     "spotifyId": "2gNAGt7gUiMkagkhIiDLPm",
     "artistName": "Panetoz",
     "title": "Dansa Pausa",
@@ -595,6 +649,7 @@
   },
   {
     "id": "4df73a72-047d-4ef1-b86d-553c37173168",
+    "type": "music",
     "spotifyId": "1SZDQMXX1FrA97YY7Lt3Fj",
     "artistName": "Miriam Bryant",
     "title": "Ett sista glas",
@@ -606,6 +661,7 @@
   },
   {
     "id": "4d64d335-9df0-4eb2-8226-62955b60fe90",
+    "type": "music",
     "spotifyId": "64WR5TPXZZ2wsWYA3enKfK",
     "artistName": "Eric Saade",
     "title": "Popular",
@@ -617,6 +673,7 @@
   },
   {
     "id": "380fd7c2-fc8b-40fa-8887-a4413789a9ea",
+    "type": "music",
     "spotifyId": "3MZp8Ilx8eW2wSujWn3LnG",
     "artistName": "Einár",
     "title": "Katten i trakten",
@@ -628,6 +685,7 @@
   },
   {
     "id": "9401baa5-d7bd-4845-be6e-d385a3d90b5e",
+    "type": "music",
     "spotifyId": "6Rr2kDjAtdAE1rsGRAiVyS",
     "artistName": "Raymond & Maria",
     "title": "Ingen vill veta var du köpt din tröja",
@@ -639,6 +697,7 @@
   },
   {
     "id": "837bf96f-0709-4642-8595-90aca92e7210",
+    "type": "music",
     "spotifyId": "40QPoAAKKMwPms6I6FHJqy",
     "artistName": "KC & The Sunshine Band",
     "title": "Give It Up",
@@ -650,6 +709,7 @@
   },
   {
     "id": "b4749d65-32ed-4391-9ecc-581c5ffe8fd4",
+    "type": "music",
     "spotifyId": "3yrSvpt2l1xhsV9Em88Pul",
     "artistName": "Van Morrison",
     "title": "Brown Eyed Girl",
@@ -661,6 +721,7 @@
   },
   {
     "id": "d057ce8f-f28f-4c59-85c2-9f5bdfee41ab",
+    "type": "music",
     "spotifyId": "61sqNOYwEQ2TX1BFLNpTIM",
     "artistName": "Norlie & KKV",
     "title": "Där jag hänger min hatt",
@@ -672,6 +733,7 @@
   },
   {
     "id": "94aeab27-4e66-4175-962f-1bb18ea9a7e8",
+    "type": "music",
     "spotifyId": "3FmCk4vUECSBsOkqiuRuE3",
     "artistName": "Balsam Boys",
     "title": "Här kommer sommaren",
@@ -683,6 +745,7 @@
   },
   {
     "id": "474bf901-5132-4e6e-8a89-7af3cbe6adb0",
+    "type": "music",
     "spotifyId": "5Ls1Ir6Vl5frICvnH4nVRH",
     "artistName": "Mange Schmidt",
     "title": "Giftig",
@@ -694,6 +757,7 @@
   },
   {
     "id": "0a67c758-9f5f-497c-8ba7-c1389c896c06",
+    "type": "music",
     "spotifyId": "7xmMypGBsTHaGFT4l3UfPV",
     "artistName": "Mange Schmidt",
     "title": "Glassigt",
@@ -705,6 +769,7 @@
   },
   {
     "id": "67dcce48-9f53-4d53-8de7-e3c55bbe789f",
+    "type": "music",
     "spotifyId": "0Kho40qp8dvZYbzXHMfSWN",
     "artistName": "Frida",
     "title": "Dunka mig gul & blå",
@@ -716,6 +781,7 @@
   },
   {
     "id": "7592b2dd-c25e-4dd6-a234-462047a72b2a",
+    "type": "music",
     "spotifyId": "6ncoedDsLh7V13kufpJ1Gj",
     "artistName": "Kikki Danielsson",
     "title": "Papaya Coconut",
@@ -727,6 +793,7 @@
   },
   {
     "id": "758edc38-5538-4f1c-99d8-dfdaeaf923e6",
+    "type": "music",
     "spotifyId": "2374M0fQpWi3dLnB54qaLX",
     "artistName": "TOTO",
     "title": "Africa",
@@ -738,6 +805,7 @@
   },
   {
     "id": "82fd3c2a-384c-4911-b8e3-858d49fcc0ca",
+    "type": "music",
     "spotifyId": "1jYu0gTLkWcQzP9UL9Shuv",
     "artistName": "Eric Amarillo",
     "title": "Om sanningen ska fram (Vill du ligga med mig?)",
@@ -749,6 +817,7 @@
   },
   {
     "id": "c6cb832c-f4c1-43f1-b6a1-484d17a37f06",
+    "type": "music",
     "spotifyId": "3OZeNQnM7WOgsKv7F8gU1q",
     "artistName": "Joakim Hillson",
     "title": "Vacker utan spackel",
@@ -760,6 +829,7 @@
   },
   {
     "id": "3d96b86e-d05d-41b1-9ef4-5314ef5858cf",
+    "type": "music",
     "spotifyId": "3N9huFk2IceMSlKoZLaUsv",
     "artistName": "Basshunter",
     "title": "Boten Anna",
@@ -771,6 +841,7 @@
   },
   {
     "id": "b8542731-9d0b-4b89-b174-9a0e890dc9db",
+    "type": "music",
     "spotifyId": "37dYAkMa4lzRCH6kDbMT1L",
     "artistName": "Yolanda Be Cool",
     "title": "We No Speak Americano",
@@ -782,6 +853,7 @@
   },
   {
     "id": "859f24ee-b334-4bdc-8d45-49d598889971",
+    "type": "music",
     "spotifyId": "3KIUjBZoo13uUWBtbWcPCP",
     "artistName": "Graaf",
     "title": "You Got (What I Want)",
@@ -793,6 +865,7 @@
   },
   {
     "id": "533207a7-a857-4f96-a7fa-3a4aafb14b64",
+    "type": "music",
     "spotifyId": "37tzoWY1ubBQKGXiWdO5Qv",
     "artistName": "No Mercy",
     "title": "Where Do You Go",

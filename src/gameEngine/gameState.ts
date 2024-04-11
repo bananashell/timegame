@@ -1,16 +1,18 @@
-import { HistoricEvent } from "@/data/historicEvents/historicEvent";
+import { GameEvent } from "@/data/GameEvent";
+import z from "zod";
 
 export type Year = number;
-export type HistoricGameEvent = HistoricEvent & { guess: Year };
-export type LockedHistoricGameEvent = HistoricGameEvent & { score: number };
+export type GuessableGameEvent = GameEvent & { guess: Year };
+export type LockedGameEvent = GuessableGameEvent & { score: number };
 
 export type RootState = {
   id: string;
-  currentEvent?: HistoricGameEvent;
-  nextEvent?: HistoricEvent;
-  timelineEvents: LockedHistoricGameEvent[];
+  currentEvent?: GuessableGameEvent;
+  nextEvent?: GameEvent;
+  timelineEvents: LockedGameEvent[];
   gameState: GameStartState | PlayingState | GameOverState;
   salt: string;
+  gameType: GameType;
   username: string;
   userId: string;
 };
@@ -26,3 +28,6 @@ type PlayingState = GameState<
   "guessing" | "displaying correct answer"
 >;
 type GameOverState = GameState<"game over", "score screen" | "end screen">;
+
+export const gameTypes = z.enum(["all", "music", "history"]);
+export type GameType = z.infer<typeof gameTypes>;

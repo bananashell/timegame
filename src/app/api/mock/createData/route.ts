@@ -31,9 +31,11 @@ const now = new Date();
 const entities = [
   gameEntity.parse({
     id: new GameId({ salt: seed[0], userId: userId }).toString(),
+    gameType: "all",
     events: [
       {
         id: uuidv4(),
+        type: "historic",
         title: {
           sv: "Fråga 1",
           en: "Questio  1",
@@ -49,6 +51,7 @@ const entities = [
       },
       {
         id: uuidv4(),
+        type: "historic",
         title: {
           sv: "Fråga 2",
           en: "Questio  2",
@@ -73,11 +76,14 @@ const entities = [
     lastUpdated: now,
     weekAndYear: generateYearAndWeek(now).key,
   } satisfies GameEntity),
+
   gameEntity.parse({
     id: new GameId({ salt: seed[1], userId: userId }).toString(),
+    gameType: "all",
     events: [
       {
         id: uuidv4(),
+        type: "historic",
         title: {
           sv: "Fråga 1",
           en: "Questio  1",
@@ -93,6 +99,7 @@ const entities = [
       },
       {
         id: uuidv4(),
+        type: "historic",
         title: {
           sv: "Fråga 2",
           en: "Questio  2",

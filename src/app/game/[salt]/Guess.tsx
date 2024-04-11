@@ -8,7 +8,13 @@ import {
   ChevronRightRounded,
   LockRounded,
   LockOpen,
+  PlayCircleOutline,
+  PauseCircleOutline,
 } from "@mui/icons-material";
+import { HistoricEvent } from "@/data/historicEvents/historicEvent";
+import { MusicEvent } from "@/data/music/musicEvent";
+import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
 export const Guess = () => {
   return (
@@ -21,50 +27,9 @@ export const Guess = () => {
   );
 };
 
-const Lock = () => {
-  const [currentEvent] = useAtom(currentEventAtom);
-
-  const lockGuess = useLock();
-  const value = currentEvent?.guess;
-
-  const isAllowedToLock = value && value >= 1000;
-
-  const handleLock = () => {
-    if (!isAllowedToLock) {
-      return;
-    }
-
-    lockGuess();
-  };
-
-  return (
-    <motion.button
-      animate={
-        isAllowedToLock
-          ? {
-              y: 0,
-              opacity: 1,
-            }
-          : {
-              y: -10,
-              opacity: 0,
-            }
-      }
-      className="py-4 px-6 absolute"
-      whileTap={{ scale: 0.9 }}
-      onClick={handleLock}
-      disabled={!isAllowedToLock}
-    >
-      Lås
-    </motion.button>
-  );
-};
-
 const Keypad = () => {
   const [currentEvent] = useAtom(currentEventAtom);
   const [surroundingYears] = useAtom(surroundingYearsAtom);
-
-  console.log("Surrounding", { surroundingYears });
 
   const updateGuess = useGuess();
   const value = currentEvent?.guess;
@@ -188,11 +153,101 @@ const buttons = [
 const CurrentEvent = () => {
   const [currentEvent] = useAtom(currentEventAtom);
 
+  if (!currentEvent) {
+    return null;
+  }
+
+  switch (currentEvent.type) {
+    case "historic":
+      return <HistoricCurrentEvent event={currentEvent} />;
+    case "music":
+      return <MusicCurrentEvent event={currentEvent} />;
+  }
+};
+
+const HistoricCurrentEvent = ({ event }: { event: HistoricEvent }) => {
   return (
     <section className="backdrop-blur-xl flex justify-center bg-white/20 dark:bg-black/20 border-black dark:border-white border-t-2 w-full user-select-none">
       <div className="w-full max-w-md p-8 ">
-        <h2 className="text-2xl">{currentEvent?.title.sv}</h2>
-        <p className="text-base">{currentEvent?.description.sv}</p>
+        <h2 className="text-2xl">{event?.title.sv}</h2>
+        <p className="text-base">{event?.description.sv}</p>
+      </div>
+    </section>
+  );
+};
+
+const MusicCurrentEvent = ({ event }: { event: MusicEvent }) => {
+  const [playing, setPlaying] = useState(false);
+  const audio = useRef<HTMLAudioElement>();
+
+  useEffect(() => {
+    return () => {
+      audio.current?.pause();
+    };
+  }, []);
+
+  useEffect(() => {
+    audio.current?.pause();
+
+    audio.current = new Audio(event.preview);
+    audio.current.autoplay = true;
+
+    const unsubOnPlay = (audio.current.onplay = () => {
+      setPlaying(true);
+    });
+    const unsubOnPause = (audio.current.onpause = () => {
+      setPlaying(false);
+    });
+
+    return () => {
+      unsubOnPlay();
+      unsubOnPause();
+    };
+  }, [event.preview]);
+
+  const togglePlay = () => {
+    if (!audio.current) return;
+
+    if (playing) {
+      audio.current.pause();
+    } else {
+      audio.current.play();
+    }
+  };
+
+  return (
+    <section className="backdrop-blur-xl flex justify-center bg-white/20 dark:bg-black/20 border-black dark:border-white border-t-2 w-full user-select-none">
+      <div className="w-full max-w-md p-8 flex gap-4 items-center">
+        <section className="flex flex-col gap-4">
+          <section className="flex gap-4 items-center">
+            <div className="relative">
+              <Image
+                src={event.coverArt}
+                alt={`${event.artistName} - ${event.title}`}
+                width={100}
+                height={100}
+                className="rounded-lg"
+              />
+              <div className="absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center">
+                <motion.button
+                  whileTap={{ scale: 0.9 }}
+                  onClick={togglePlay}
+                  className="text-white w-full aspect-square bg-gray-100/10"
+                >
+                  {playing ? (
+                    <PauseCircleOutline sx={{ fontSize: 50 }} />
+                  ) : (
+                    <PlayCircleOutline sx={{ fontSize: 50 }} />
+                  )}
+                </motion.button>
+              </div>
+            </div>
+            <section>
+              <h2 className="text-2xl">{event.title}</h2>
+              <h2 className="text-xl">{event.artistName}</h2>
+            </section>
+          </section>
+        </section>
       </div>
     </section>
   );

@@ -30,8 +30,7 @@ export const usePersistGuess = () => {
         guess: currentEvent.guess,
         questionId: currentEvent.id,
       },
-      salt: gameState.salt,
-      userId: gameState.userId,
+      gameId: gameState.id,
     });
 
     if (newGameState.gameStatus === "game over") {

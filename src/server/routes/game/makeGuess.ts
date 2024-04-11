@@ -3,6 +3,7 @@ import { emitEvent } from "../../eventEmitter";
 import { makeGuessInput } from "@/data/db/game/repository";
 import { makeGuess as _makeGuess } from "@/data/db/game/repository/makeGuess";
 import { getNextHistoricEvent } from "@/server/service/historicEventService";
+import { getNextGameEvent } from "@/server/service/gameEventService";
 
 export const makeGuess = procedure
   .input(makeGuessInput)
@@ -17,9 +18,10 @@ export const makeGuess = procedure
     const lastId = result.events.at(-1)?.id;
     if (!lastId) throw new Error("No cursor");
 
-    const nextEvent = await getNextHistoricEvent({
-      salt: opts.input.salt,
+    const nextEvent = await getNextGameEvent({
+      salt: result.salt,
       cursor: lastId,
+      gameType: result.gameType,
     });
 
     return { gameState: result, nextEvent: nextEvent };

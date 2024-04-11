@@ -1,12 +1,12 @@
 import { Year } from "@/gameEngine/gameState";
-import { ScoredHistoricEvent, CurrentEvent } from ".";
+import { ScoredGameEvent, CurrentEvent } from ".";
 
 export const isInTimespan = ({
   historicEvents,
   currentEvent,
   guess,
 }: {
-  historicEvents: ScoredHistoricEvent[];
+  historicEvents: ScoredGameEvent[];
   currentEvent: CurrentEvent;
   guess: Year;
 }): boolean => {

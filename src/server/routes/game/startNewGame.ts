@@ -1,22 +1,21 @@
+import { GameEvent } from "@/data/GameEvent";
 import { GameEntity } from "@/data/db/game/gameEntity";
 import { createNewGameEntity } from "@/data/db/game/repository/createNewGame";
-import { HistoricEvent } from "@/data/historicEvents/historicEvent";
-import { getNextHistoricEvent } from "@/server/service/historicEventService";
-import { generateRandomSalt } from "@/server/service/saltService";
+import { gameTypes } from "@/gameEngine/gameState";
+import { getNextGameEvent } from "@/server/service/gameEventService";
 import { procedure } from "@/server/trpc";
 import { z } from "zod";
 
 const startNewGameInput = z.object({
   userId: z.string().uuid(),
   username: z.string().min(1).max(255),
+  gameType: gameTypes,
 });
 
 export const startNewGame = procedure
   .input(startNewGameInput)
   .mutation(
-    async ({
-      input,
-    }): Promise<{ game: GameEntity; nextEvent: HistoricEvent }> => {
+    async ({ input }): Promise<{ game: GameEntity; nextEvent: GameEvent }> => {
       console.log("Start new game");
       // const salt = await generateRandomSalt();
       const salt = (await getCurrentDateOnly()).getTime().toString(16);
@@ -26,12 +25,19 @@ export const startNewGame = procedure
         salt: salt,
         userId: input.userId,
         username: input.username,
+        gameType: input.gameType,
       });
 
-      const nextEvent = await getNextHistoricEvent({
+      const nextEvent = await getNextGameEvent({
         salt: salt,
         cursor: entity.events[entity.events.length - 1]?.id,
+        gameType: entity.gameType,
       });
+
+      if (!nextEvent) {
+        console.error("No next event");
+        throw new Error("No next event");
+      }
 
       return { game: entity, nextEvent: nextEvent };
     },

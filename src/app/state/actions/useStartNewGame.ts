@@ -3,7 +3,7 @@ import { useAtom } from "jotai";
 import { rootStateAtom, currentEventAtom, userIdAtom } from "..";
 import { v4 as uuidv4 } from "uuid";
 import { useState } from "react";
-import { RootState } from "@/gameEngine/gameState";
+import { GameType, RootState } from "@/gameEngine/gameState";
 
 export const useStartNewGame = () => {
   const [rootState, setRootState] = useAtom(rootStateAtom);
@@ -13,7 +13,7 @@ export const useStartNewGame = () => {
   );
 
   return {
-    mutateAsync: async () => {
+    mutateAsync: async ({ gameType }: { gameType: GameType }) => {
       setState("loading");
       try {
         const newUserId = userId ?? uuidv4();
@@ -25,6 +25,7 @@ export const useStartNewGame = () => {
         const res = await trpc.startNewGame.mutate({
           userId: newUserId,
           username: rootState.username,
+          gameType: gameType,
         });
 
         let state: RootState["gameState"] = {
@@ -48,6 +49,7 @@ export const useStartNewGame = () => {
         setState("success");
         return res;
       } catch (e) {
+        console.error("Failed to start new game", e);
         setState("error");
         return undefined;
       }

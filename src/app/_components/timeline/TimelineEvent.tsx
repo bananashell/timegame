@@ -1,20 +1,17 @@
-import { HistoricGameEvent } from "@/gameEngine/gameState";
+import { GuessableGameEvent } from "@/gameEngine/gameState";
 import { isLockedEvent as _isLockedEvent } from "@/utils/guards/isLockedEvent";
 
-export const TimelineEvent = ({
-  historicEvent,
-}: {
-  historicEvent: HistoricGameEvent;
-}) => {
+export const TimelineEvent = ({ event }: { event: GuessableGameEvent }) => {
   return (
     <article
       className={`flex flex-col max-w-lg rounded-xl overflow-hidden border-2 px-4 w-44 border-black dark:border-white backdrop-blur-lg bg-white/20 dark:bg-black/20`}
     >
       <span className="text-3xl text-center">
-        <span className="">{historicEvent.year}</span>
+        <span className="">{event.year}</span>
       </span>
       <span className="text-base text-center font-normal break-words line-clamp-2">
-        {historicEvent.title.sv}
+        {event.type == "historic" && event.title.sv}
+        {event.type == "music" && event.title}
       </span>
     </article>
   );

@@ -33,6 +33,7 @@ export const rootStateAtom = atom<RootState>({
   id: "",
   timelineEvents: [],
   salt: "",
+  gameType: "all",
   gameState: { mainState: "game start", subState: undefined },
   username: getFromLocalStorage("username") ?? "",
   userId: userId(),

@@ -1,6 +1,7 @@
 import { z } from "zod";
 
 export const musicEvent = z.object({
+  type: z.literal("music"),
   id: z.string().uuid(),
   spotifyId: z.string(),
   artistName: z.string().min(1),

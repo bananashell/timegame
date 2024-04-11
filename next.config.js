@@ -8,6 +8,13 @@ const nextConfig = {
   experimental: {
     typedRoutes: true,
   },
+  images: {
+    remotePatterns: [
+      {
+        hostname: "i.scdn.co",
+      },
+    ],
+  },
 };
 
 module.exports = withAnalyzer(nextConfig);
