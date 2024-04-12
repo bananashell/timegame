@@ -1,1 +1,1 @@
-export { getStatistics } from "./getStatistics";
+export { getStatistics, getStatisticsInput } from "./getStatistics";

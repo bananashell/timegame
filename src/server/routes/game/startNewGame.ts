@@ -3,6 +3,7 @@ import { GameEntity } from "@/data/db/game/gameEntity";
 import { createNewGameEntity } from "@/data/db/game/repository/createNewGame";
 import { gameTypes } from "@/gameEngine/gameState";
 import { getNextGameEvent } from "@/server/service/gameEventService";
+import { generateDateSalt } from "@/server/service/saltService";
 import { procedure } from "@/server/trpc";
 import { z } from "zod";
 
@@ -16,11 +17,8 @@ export const startNewGame = procedure
   .input(startNewGameInput)
   .mutation(
     async ({ input }): Promise<{ game: GameEntity; nextEvent: GameEvent }> => {
-      console.log("Start new game");
-      // const salt = await generateRandomSalt();
-      const salt = (await getCurrentDateOnly()).getTime().toString(16);
+      const salt = await generateDateSalt();
 
-      console.log("Salt", salt);
       const entity = await createNewGameEntity({
         salt: salt,
         userId: input.userId,
@@ -42,18 +40,3 @@ export const startNewGame = procedure
       return { game: entity, nextEvent: nextEvent };
     },
   );
-
-function getCurrentDateOnly() {
-  // Get the current date
-  const currentDate = new Date();
-
-  // Extract year, month, and day from the current date
-  const year = currentDate.getFullYear();
-  const month = currentDate.getMonth();
-  const day = currentDate.getDate();
-
-  // Create a new Date object with the extracted values
-  const dateOnly = new Date(year, month, day);
-
-  return dateOnly;
-}

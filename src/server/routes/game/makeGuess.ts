@@ -2,7 +2,6 @@ import { procedure } from "@/server/trpc";
 import { emitEvent } from "../../eventEmitter";
 import { makeGuessInput } from "@/data/db/game/repository";
 import { makeGuess as _makeGuess } from "@/data/db/game/repository/makeGuess";
-import { getNextHistoricEvent } from "@/server/service/historicEventService";
 import { getNextGameEvent } from "@/server/service/gameEventService";
 
 export const makeGuess = procedure

@@ -6,7 +6,6 @@ import { z } from "zod";
 import { generateYearAndWeek } from "@/utils/date/generateYearAndWeek";
 import { Timestamp } from "firebase-admin/firestore";
 import { getGameEvent } from "@/data/gameEvents";
-import { gameTypes } from "@/gameEngine/gameState";
 
 export const makeGuessInput = z.object({
   gameId: z.string(),

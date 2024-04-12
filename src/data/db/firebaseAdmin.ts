@@ -7,17 +7,7 @@ interface FirebaseAdminAppParams {
   privateKey: string;
 }
 
-// const firebaseConfig = {
-//   apiKey: process.env.FIREBASE_APIKEY,
-//   authDomain: process.env.FIREBASE_APIKEY_AUTHDOMAIN,
-//   projectId: process.env.FIREBASE_APIKEY_PROJECTID,
-//   storageBucket: process.env.FIREBASE_APIKEY_STORAGEBUCKET,
-//   messagingSenderId: process.env.FIREBASE_APIKEY_MESSAGINGSENDERID,
-//   appId: process.env.FIREBASE_APIKEY_APPID,
-//   measurementId: process.env.FIREBASE_APIKEY_MEASUREMENTID,
-// };
-
-export function createFirebaseAdminApp(params: FirebaseAdminAppParams) {
+function createFirebaseAdminApp(params: FirebaseAdminAppParams) {
   const privateKey = formatPrivateKey(params.privateKey);
 
   if (firebaseAdmin.apps.length > 0) {

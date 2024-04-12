@@ -79,7 +79,7 @@ const HighscoreItem = ({
   );
 };
 
-export const Medal = ({ place }: { place?: number }) => {
+const Medal = ({ place }: { place?: number }) => {
   const medal = medalBackground[place as keyof typeof medalBackground];
 
   if (!medal)
