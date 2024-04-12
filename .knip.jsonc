@@ -2,5 +2,10 @@
   "$schema": "https://unpkg.com/knip@3/schema.json",
   "eslint": true,
   "ignoreDependencies": ["eslint", "^eslint-.*", "prettier", "public"],
-  "ignore": ["src/types/index.ts", "**/*.test.ts", "**/*.test.tsx"]
+  "ignore": [
+    "src/types/index.ts",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "batch/**/*"
+  ]
 }

@@ -39,7 +39,6 @@ export const GameBoard = () => {
             w-full pb-0 h-full"
           >
             <Timeline />
-            {/* <CardStack /> */}
             <Guess />
             <CurrentScore />
             <Score />
