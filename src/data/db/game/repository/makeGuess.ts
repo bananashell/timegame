@@ -1,4 +1,4 @@
-import { calculateScore } from "@/gameEngine/logic/calculateScore";
+import { calculateScore } from "@/gameEngine/logic";
 import { GameEntity, gameEntity } from "../gameEntity";
 import { GameId } from "../gameId";
 import { getGame } from "./getGame";
