@@ -33,6 +33,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="h-full">
+      <head>
+        <meta property="og:title" content="Tidslinjen" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/images/banner.jpg" />
+      </head>
       <body
         className={`${bebasNeue.variable} ${lobster.variable} font-sans h-full w-full overscroll-none absolute top-0 left-0 text-gray-800 dark:text-white`}
         style={{ background: gradient }}
