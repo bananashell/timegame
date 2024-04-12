@@ -1,7 +1,7 @@
-import { describe, it, expect } from "bun:test";
-import { historicEvent } from "@/models/historicEvent";
-import HistoricEvents from "./historicEvents.json";
+import { historicEvent } from "@/data/historicEvents/historicEvent";
+import { describe, expect, it } from "bun:test";
 import { historicEvents } from "./historicEvents";
+import HistoricEvents from "./historicEvents.json";
 
 const historicEventMap = HistoricEvents.data.map((event) => [
   event.title.en,

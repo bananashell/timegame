@@ -7,10 +7,14 @@ import { AnimatePresence, motion } from "framer-motion";
 import { usernameAtom } from "./state";
 import { useAtom } from "jotai";
 import { useRouter } from "next/navigation";
+import { GameType } from "@/gameEngine/gameState";
+import { MusicNote, Schedule } from "@mui/icons-material";
 
 export const StartNewGame = () => {
   const router = useRouter();
-  const [state, setState] = useState<"initial" | "name select">("initial");
+  const [state, setState] = useState<
+    "initial" | "name select" | "game type select"
+  >("initial");
   const [username, setUsername] = useAtom(usernameAtom);
 
   const {
@@ -21,14 +25,22 @@ export const StartNewGame = () => {
     isSuccess,
   } = useStartNewGame();
 
-  const handleKeyUp = async (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key == "Enter") {
-      await startNewGame();
+  // const handleKeyUp = async (e: React.KeyboardEvent<HTMLInputElement>) => {
+  //   if (e.key == "Enter") {
+  //     await next();
+  //   }
+  // };
+
+  const gotoTypeSelect = async () => {
+    if (state != "name select") {
+      return;
     }
+
+    setState("game type select");
   };
 
-  const startNewGame = async () => {
-    const data = await startNewGameAsync();
+  const startNewGame = async ({ gameType }: { gameType: GameType }) => {
+    const data = await startNewGameAsync({ gameType });
     if (!data) throw new Error("Failed to start new game");
 
     router.push(`/game/${data.game.salt}`);
@@ -71,7 +83,6 @@ export const StartNewGame = () => {
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.9, opacity: 0 }}
                 transition={{ duration: 0.2 }}
-                onKeyUp={handleKeyUp}
                 className="top-1/2 left-1/2 text-center absolute w-full max-w-lg select-none cursor-pointer drop-shadow-lg p-8 rounded-full aspect-square justify-center flex flex-col items-center border-8 border-[#dedac2] bg-[#85d1c0] text-white"
               >
                 <h2>{"Vad heter du?"}</h2>
@@ -90,7 +101,7 @@ export const StartNewGame = () => {
                   whileTap={{ scale: 0.8 }}
                   initial={{ scale: 1 }}
                   disabled={!username}
-                  onClick={startNewGame}
+                  onClick={gotoTypeSelect}
                   className="transition-colors select-none text-4xl mt-2 disabled:text-white/20"
                 >
                   Nästa
@@ -99,10 +110,46 @@ export const StartNewGame = () => {
             )}
           </>
         )}
+
+        {state == "game type select" && (
+          <section className="absolute w-full h-full flex flex-col justify-center items-center text-black">
+            <section className=" grid grid-rows-2 gap-2 items-center justify-center">
+              {selectableGameTypes.map((gt) => (
+                <motion.button
+                  key={gt.type}
+                  className="py-2 px-4 rounded-xl border-4 border-[#dedac2] bg-[#85d1c0] text-white"
+                  whileTap={{ scale: 0.9 }}
+                  onClick={() => startNewGame({ gameType: gt.type })}
+                >
+                  <div className="flex gap-2 justify-center items-center">
+                    {gt.icon} <span className="text-xl">{gt.title}</span>
+                  </div>
+                </motion.button>
+              ))}
+            </section>
+          </section>
+        )}
       </AnimatePresence>
     </section>
   );
 };
+
+const selectableGameTypes: {
+  type: GameType;
+  icon: ReactNode;
+  title: string;
+}[] = [
+  {
+    type: "music",
+    icon: <MusicNote sx={{ fontSize: 50 }} />,
+    title: "Musikfrågor",
+  },
+  {
+    type: "history",
+    icon: <Schedule sx={{ fontSize: 50 }} />,
+    title: "Historia",
+  },
+];
 
 const StrokeHeader = ({
   children,

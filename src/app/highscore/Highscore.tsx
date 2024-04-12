@@ -1,8 +1,11 @@
 "use client";
 
 import { trpc } from "@/app/_trpc/serverClient";
+import { GameId } from "@/data/db/game/gameId";
+import { GameType } from "@/gameEngine/gameState";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
+import { GameTypeIcon } from "@/app/_components/GameTypeIcon";
 
 export const Highscore = ({
   gameId,
@@ -51,6 +54,11 @@ const HighscoreItem = ({
   gameId?: string;
   score: Awaited<ReturnType<typeof trpc.getHighscore>>["highscores"][number];
 }) => {
+  var parseResult = GameId.tryParse(score.gameId);
+  let gameType: GameType = parseResult?.success
+    ? parseResult.result.gameType
+    : "all";
+
   return (
     <motion.li
       key={score.gameId}
@@ -63,13 +71,15 @@ const HighscoreItem = ({
     >
       <Medal place={score.position} />
 
-      <span className="text-xl text-center col-span-2 ">{score.username}</span>
+      <span className="text-xl text-center col-span-2 ">
+        <GameTypeIcon gameType={gameType} /> {score.username}
+      </span>
       <span className="text-lg text-right">{score.score} p</span>
     </motion.li>
   );
 };
 
-export const Medal = ({ place }: { place?: number }) => {
+const Medal = ({ place }: { place?: number }) => {
   const medal = medalBackground[place as keyof typeof medalBackground];
 
   if (!medal)

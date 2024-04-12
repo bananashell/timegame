@@ -1,7 +1,7 @@
 import { describe, it, expect } from "bun:test";
 import { calculateScore } from ".";
-import { LockedHistoricGameEvent } from "@/gameEngine/gameState";
-import { HistoricEvent } from "@/models/historicEvent";
+import { LockedGameEvent } from "@/gameEngine/gameState";
+import { HistoricEvent } from "@/data/historicEvents/historicEvent";
 import { GameEntity } from "@/data/db/game/gameEntity";
 
 describe("calculateScore", () => {
@@ -16,7 +16,7 @@ describe("calculateScore", () => {
         {
           year: 1890,
         },
-      ] as unknown as LockedHistoricGameEvent[],
+      ] as unknown as LockedGameEvent[],
       guess: 1889,
       currentEvent: {
         year: 1900,
@@ -31,7 +31,7 @@ describe("calculateScore", () => {
         {
           year: 1900,
         },
-      ] as unknown as LockedHistoricGameEvent[],
+      ] as unknown as LockedGameEvent[],
       guess: 1901,
       currentEvent: {
         year: 1890,
@@ -46,7 +46,7 @@ describe("calculateScore", () => {
         {
           year: 1900,
         },
-      ] as unknown as LockedHistoricGameEvent[],
+      ] as unknown as LockedGameEvent[],
       guess: 1900,
       currentEvent: {
         year: 1900,
@@ -67,7 +67,7 @@ describe("calculateScore", () => {
           {
             year: 2000,
           },
-        ] as unknown as LockedHistoricGameEvent[],
+        ] as unknown as LockedGameEvent[],
         guess: correctYear + diff,
         currentEvent: {
           year: correctYear,
@@ -89,7 +89,7 @@ describe("calculateScore", () => {
         {
           year: 1995,
         },
-      ] as unknown as LockedHistoricGameEvent[],
+      ] as unknown as LockedGameEvent[],
       guess: 1900,
       currentEvent: {
         year: 1918,
@@ -107,7 +107,7 @@ describe("calculateScore", () => {
         {
           year: 1995,
         },
-      ] as unknown as LockedHistoricGameEvent[],
+      ] as unknown as LockedGameEvent[],
       guess: 1968,
       currentEvent: {
         year: 1969,
@@ -125,7 +125,7 @@ describe("calculateScore", () => {
         {
           year: 1995,
         },
-      ] as unknown as LockedHistoricGameEvent[],
+      ] as unknown as LockedGameEvent[],
       guess: 1996,
       currentEvent: {
         year: 1995,
@@ -146,7 +146,7 @@ describe("calculateScore", () => {
         {
           year: 1995,
         },
-      ] as unknown as LockedHistoricGameEvent[],
+      ] as unknown as LockedGameEvent[],
       guess: 2000,
       currentEvent: {
         year: 2020,
@@ -167,7 +167,7 @@ describe("calculateScore", () => {
         {
           year: 1995,
         },
-      ] as unknown as LockedHistoricGameEvent[],
+      ] as unknown as LockedGameEvent[],
       guess: 2000,
       currentEvent: {
         year: 2020,
@@ -199,7 +199,7 @@ function createDiffArray(
 
 describe("real data", () => {
   it("ends when a wrong guess is made", () => {
-    const previousEvents: LockedHistoricGameEvent[] = [];
+    const previousEvents: LockedGameEvent[] = [];
     let totalScore = 0;
 
     for (const event of entity.events) {
@@ -230,8 +230,11 @@ const entity: GameEntity = {
   lastUpdated: new Date(),
   gameStatus: "game over",
   noEvents: 22,
+  weekAndYear: "2021-01",
+  gameType: "history",
   events: [
     {
+      type: "historic",
       score: 1,
       year: 1969,
       guess: 1976,
@@ -241,6 +244,7 @@ const entity: GameEntity = {
       category: "culture",
     },
     {
+      type: "historic",
       score: 10,
       year: 1945,
       guess: 1945,
@@ -250,6 +254,7 @@ const entity: GameEntity = {
       category: "war",
     },
     {
+      type: "historic",
       score: 10,
       year: 1901,
       guess: 1901,
@@ -259,6 +264,7 @@ const entity: GameEntity = {
       category: "culture",
     },
     {
+      type: "historic",
       score: 1,
       year: 1735,
       guess: 1710,
@@ -268,6 +274,7 @@ const entity: GameEntity = {
       category: "science",
     },
     {
+      type: "historic",
       score: 5,
       year: 1605,
       guess: 1600,
@@ -277,6 +284,7 @@ const entity: GameEntity = {
       category: "culture",
     },
     {
+      type: "historic",
       score: 10,
       year: 1918,
       guess: 1918,
@@ -286,6 +294,7 @@ const entity: GameEntity = {
       category: "war",
     },
     {
+      type: "historic",
       score: 1,
       year: 1492,
       guess: 1523,
@@ -295,6 +304,7 @@ const entity: GameEntity = {
       category: "exploration",
     },
     {
+      type: "historic",
       score: 10,
       year: 1638,
       guess: 1638,
@@ -304,6 +314,7 @@ const entity: GameEntity = {
       category: "exploration",
     },
     {
+      type: "historic",
       score: 1,
       year: 1876,
       guess: 1810,
@@ -313,6 +324,7 @@ const entity: GameEntity = {
       category: "technology",
     },
     {
+      type: "historic",
       score: 10,
       year: 1969,
       guess: 1969,
@@ -322,6 +334,7 @@ const entity: GameEntity = {
       category: "technology",
     },
     {
+      type: "historic",
       score: 10,
       year: 1995,
       guess: 1995,
@@ -331,6 +344,7 @@ const entity: GameEntity = {
       category: "history",
     },
     {
+      type: "historic",
       score: 10,
       year: 1523,
       guess: 1523,
@@ -340,6 +354,7 @@ const entity: GameEntity = {
       category: "history",
     },
     {
+      type: "historic",
       score: 10,
       year: 2003,
       guess: 2003,
@@ -349,6 +364,7 @@ const entity: GameEntity = {
       category: "technology",
     },
     {
+      type: "historic",
       score: 1,
       year: 1809,
       guess: 1890,
@@ -358,6 +374,7 @@ const entity: GameEntity = {
       category: "politics",
     },
     {
+      type: "historic",
       score: 5,
       year: 1971,
       guess: 1976,
@@ -367,6 +384,7 @@ const entity: GameEntity = {
       category: "politics",
     },
     {
+      type: "historic",
       score: 10,
       year: 1989,
       guess: 1989,
@@ -376,6 +394,7 @@ const entity: GameEntity = {
       category: "technology",
     },
     {
+      type: "historic",
       score: 1,
       year: 1519,
       guess: 1506,
@@ -385,6 +404,7 @@ const entity: GameEntity = {
       category: "exploration",
     },
     {
+      type: "historic",
       score: 1,
       year: 1687,
       guess: 1650,
@@ -394,6 +414,7 @@ const entity: GameEntity = {
       category: "science",
     },
     {
+      type: "historic",
       score: 1,
       year: 1789,
       guess: 1887,
@@ -403,6 +424,7 @@ const entity: GameEntity = {
       category: "politics",
     },
     {
+      type: "historic",
       score: 10,
       year: 2016,
       guess: 2016,
@@ -412,6 +434,7 @@ const entity: GameEntity = {
       category: "culture",
     },
     {
+      type: "historic",
       score: 10,
       year: 1776,
       guess: 1776,
@@ -421,6 +444,7 @@ const entity: GameEntity = {
       category: "politics",
     },
     {
+      type: "historic",
       score: 0,
       year: 1876,
       guess: 1750,

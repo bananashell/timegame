@@ -3,22 +3,27 @@ import { GameEntity, gameEntity } from "../gameEntity";
 import { gamesCollection } from "./gamesCollection";
 import { GameId } from "../gameId";
 import { generateYearAndWeek } from "@/utils/date/generateYearAndWeek";
+import { gameTypes } from "@/gameEngine/gameState";
 
 const createNewGameEntityInput = z.object({
   userId: z.string().uuid(),
   salt: z.string(),
   username: z.string().min(1).max(255),
+  gameType: gameTypes,
 });
 export const createNewGameEntity = async (
   input: z.infer<typeof createNewGameEntityInput>,
 ): Promise<GameEntity> => {
-  const { userId, salt, username } = createNewGameEntityInput.parse(input);
+  const { userId, salt, username, gameType } =
+    createNewGameEntityInput.parse(input);
 
-  const id = new GameId({ salt: salt, userId: userId });
+  const id = new GameId({ salt: salt, userId: userId, gameType: gameType });
+  console.log("id", id.toString());
   const collection = await gamesCollection();
   const now = new Date();
   const entity = gameEntity.parse({
     id: id.toString(),
+    gameType: gameType,
     events: [],
     gameStatus: "playing",
     noEvents: 0,

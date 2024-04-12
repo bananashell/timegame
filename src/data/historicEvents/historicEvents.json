@@ -1,6 +1,7 @@
 {
   "data": [
     {
+      "type": "historic",
       "title": {
         "en": "Copernicus' Heliocentric Theory",
         "sv": "Copernicus heliocentriska teori"
@@ -14,6 +15,7 @@
       "id": "9949df87-d7b3-4789-85ba-60aa972a1750"
     },
     {
+      "type": "historic",
       "title": {
         "en": "United States Declaration of Independence",
         "sv": "USA förklarar sig självständigt"
@@ -27,6 +29,7 @@
       "id": "eaf4287a-da99-4030-a322-8169b15d86d2"
     },
     {
+      "type": "historic",
       "title": {
         "en": "Apollo 11 Moon Landing",
         "sv": "Apollo 11-månlandningen"
@@ -40,6 +43,7 @@
       "id": "38d2c0c4-4e1c-4f71-b263-c36b7d5f0b05"
     },
     {
+      "type": "historic",
       "title": {
         "en": "Columbus discovers the Americas",
         "sv": "Columbus upptäcker den Nya världen"
@@ -53,6 +57,7 @@
       "id": "d0a0f4b9-f050-4b97-8ed9-20dc81544cce"
     },
     {
+      "type": "historic",
       "title": {
         "en": "First Performance of Macbeth",
         "sv": "Första framträdandet av Macbeth"
@@ -66,6 +71,7 @@
       "id": "a1c1dc8e-15ba-45e6-83d3-aa2e5407423a"
     },
     {
+      "type": "historic",
       "title": {
         "en": "End of World War II in Europe",
         "sv": "Andra världskrigets slut i Europa"
@@ -79,6 +85,7 @@
       "id": "5827119b-85c5-4f3a-bbf2-fd6134080f0e"
     },
     {
+      "type": "historic",
       "title": {
         "en": "Isaac Newton's theory of Universal Gravitation is published",
         "sv": "Isaac Newton publicerar sin teori om universell gravitation"
@@ -92,6 +99,7 @@
       "id": "7b920779-834e-4199-8d22-9c617ed0811b"
     },
     {
+      "type": "historic",
       "title": {
         "en": "The French Revolution begins with the storming of the Bastille",
         "sv": "Bastiljen stormas och franska revolutionen börjar"
@@ -105,6 +113,7 @@
       "id": "6142f822-83f3-4cf7-9fea-1a96c7e36925"
     },
     {
+      "type": "historic",
       "title": {
         "en": "Invention of the Telephone",
         "sv": "Telefonen patenteras"
@@ -118,6 +127,7 @@
       "id": "872eb354-8ebe-4686-a2bb-4519c225aedb"
     },
     {
+      "type": "historic",
       "title": {
         "en": "Magellan travels around the globe",
         "sv": "Magellans resa runt jorden"
@@ -131,10 +141,8 @@
       "id": "08038ee4-d27a-4d13-8ea0-d8a1cc7136f5"
     },
     {
-      "title": {
-        "en": "Woodstock Festival",
-        "sv": "Woodstock Festivalen"
-      },
+      "type": "historic",
+      "title": { "en": "Woodstock Festival", "sv": "Woodstock Festivalen" },
       "category": "culture",
       "year": 1969,
       "description": {
@@ -144,6 +152,7 @@
       "id": "7f3eee96-9c23-4aa1-8fb9-e1d81dd7af78"
     },
     {
+      "type": "historic",
       "title": {
         "en": "End of World War I",
         "sv": "Första världskrigets slut"
@@ -157,6 +166,7 @@
       "id": "12f30caa-2c6a-4690-9759-a8d6598165ad"
     },
     {
+      "type": "historic",
       "title": {
         "en": "Gustav Vasa Elected King of Sweden",
         "sv": "Gustav Vasa vald till kung av Sverige"
@@ -170,10 +180,8 @@
       "id": "cc8fe089-0d12-4a47-aeef-5fe2f56c10a0"
     },
     {
-      "title": {
-        "en": "Foundation of Gothenburg",
-        "sv": "Göteborg grundas"
-      },
+      "type": "historic",
+      "title": { "en": "Foundation of Gothenburg", "sv": "Göteborg grundas" },
       "category": "exploration",
       "year": 1621,
       "description": {
@@ -183,6 +191,7 @@
       "id": "45d14b37-6837-4ae5-90ad-51c6d37f7a5b"
     },
     {
+      "type": "historic",
       "title": {
         "en": "Finland belongs to Russia after the Treaty of Fredrikshamn",
         "sv": "Finland tillfaller Ryssland efter fredsavtalet i Fredrikshamn"
@@ -196,6 +205,7 @@
       "id": "3591d947-781c-4f20-9d1e-f654b8d3ae20"
     },
     {
+      "type": "historic",
       "title": {
         "en": "Invention of Dynamite",
         "sv": "Uppfinningen av dynamit"
@@ -209,6 +219,7 @@
       "id": "a6002c28-f379-4662-947e-4fc2d3e36858"
     },
     {
+      "type": "historic",
       "id": "35150fc7-d69c-46a5-8301-30e130cea0d4",
       "title": {
         "sv": "Svenska nobelpriset instiftas av Alfred Nobel",
@@ -222,6 +233,7 @@
       }
     },
     {
+      "type": "historic",
       "title": {
         "en": "Selma Lagerlöf Wins Nobel Prize in Literature",
         "sv": "Selma Lagerlöf vinner Nobelpriset i litteratur"
@@ -235,6 +247,7 @@
       "id": "78a9d962-e15b-4fc1-92ae-314691a4c6fe"
     },
     {
+      "type": "historic",
       "title": {
         "en": "Switch to Right-Hand Traffic in Sweden",
         "sv": "Byte till högertrafik i Sverige"
@@ -248,6 +261,7 @@
       "id": "81aa8317-4fac-417d-80b6-ebfd047026c7"
     },
     {
+      "type": "historic",
       "title": {
         "en": "Invention of the World Wide Web",
         "sv": "Uppfinningen av World Wide Web"
@@ -261,6 +275,7 @@
       "id": "d8cec920-cf93-49a5-a808-ef1a2ab68989"
     },
     {
+      "type": "historic",
       "title": {
         "en": "Sweden Joins the European Union",
         "sv": "Sverige går med i Europeiska unionen"
@@ -274,10 +289,8 @@
       "id": "d4e274ee-ee3c-4ee8-87ca-a4ccd9fafa75"
     },
     {
-      "title": {
-        "en": "Skype is released",
-        "sv": "Skype släpps"
-      },
+      "type": "historic",
+      "title": { "en": "Skype is released", "sv": "Skype släpps" },
       "category": "technology",
       "year": 2003,
       "description": {
@@ -287,6 +300,7 @@
       "id": "3af64621-99ea-425c-b02f-ec367b78db20"
     },
     {
+      "type": "historic",
       "title": {
         "en": "Bob Dylan Wins Nobel Prize in Literature",
         "sv": "Bob Dylan vinner Nobelpriset i litteratur"
@@ -300,6 +314,7 @@
       "id": "a42c1483-8007-4096-873d-0ce6ef08920a"
     },
     {
+      "type": "historic",
       "title": {
         "en": "'Trillingnöten' is discontinued",
         "sv": "Trillingnöten slutar tillverkas"
@@ -313,10 +328,8 @@
       "id": "e3186122-d146-41d7-838e-541b667cf1b0"
     },
     {
-      "title": {
-        "en": "Adolf Hitler is born",
-        "sv": "Adolf Hitler föds"
-      },
+      "type": "historic",
+      "title": { "en": "Adolf Hitler is born", "sv": "Adolf Hitler föds" },
       "category": "history",
       "year": 1889,
       "description": {
@@ -326,6 +339,7 @@
       "id": "49247261-fe99-4a7e-aa93-2eaa20ab7410"
     },
     {
+      "type": "historic",
       "title": {
         "en": "The chocolate drink O'boy is launched by Findus",
         "sv": "Mjölkdrycken O'boy lanseras av Findus"
@@ -339,6 +353,7 @@
       "id": "57f42db8-a077-4460-95a8-3e5b88d65186"
     },
     {
+      "type": "historic",
       "title": {
         "en": "Javier Sotomayor sets a new world record in high jump",
         "sv": "Javier Sotomayor sätter nytt världsrekord i höjdhopp"
@@ -352,6 +367,7 @@
       "id": "48c5f7d6-d172-4802-8a76-a10c32e45ae3"
     },
     {
+      "type": "historic",
       "title": {
         "en": "The Berlin Wall falls, marking the reunification of East and West Germany",
         "sv": "Berlinmuren faller och markerar återföreningen av Öst- och Västtyskland"
@@ -365,6 +381,7 @@
       "id": "b0e444cb-776d-4add-b872-99f5e2c8e082"
     },
     {
+      "type": "historic",
       "title": {
         "en": "Nelson Mandela is released from prison after 27 years",
         "sv": "Nelson Mandela friges från fängelset efter 27 år"
@@ -378,6 +395,7 @@
       "id": "1500cf8e-ffe5-4919-9237-df5090b53f39"
     },
     {
+      "type": "historic",
       "title": {
         "en": "The first iPhone is released",
         "sv": "Den första iPhonen släpps"
@@ -391,6 +409,7 @@
       "id": "3b765457-0387-4175-b4e9-a5d787d6ab5b"
     },
     {
+      "type": "historic",
       "id": "3d7ad2ca-3a76-4e22-8f9f-10b7662dd3b4",
       "title": {
         "sv": "SpaceX genomför första bemannade rymduppdrag till Internationella rymdstationen ISS",
@@ -404,6 +423,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "8822b36a-7797-4bad-809b-b9584ef877c6",
       "title": {
         "sv": "Netflix-serien 'Stranger Things' fångar publikens uppmärksamhet",
@@ -417,6 +437,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "5830b638-eeb4-418b-b805-1307f9d4455e",
       "title": {
         "sv": "George R.R. Martin släpper boken 'A Game of Thrones'",
@@ -430,6 +451,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "1d87dea2-0d57-47cd-939d-8e8e50d096da",
       "title": {
         "sv": "Parasite vinner Oscar för Bästa Film och Bästa Internationella Film",
@@ -443,6 +465,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "1215dbc7-c223-4791-9e68-d10d8ba77ed5",
       "title": {
         "sv": "Avengers: Endgame går upp på biograferna",
@@ -456,6 +479,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "780548bb-2c36-4eb7-84b6-cc3325cba3f8",
       "title": {
         "sv": "Casablanca vinner Oscar för Bästa Film",
@@ -469,6 +493,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "1306a0fc-ceb9-4846-a419-1f17f25e0401",
       "title": {
         "sv": "The Wizard of Oz premiärvisas i Technicolor",
@@ -482,6 +507,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "fb0262c4-5f93-44b2-aebc-cfb2d96448cc",
       "title": {
         "sv": "Charlie Chaplin släpper filmen 'The Kid'",
@@ -495,6 +521,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "50721b7a-066e-4c61-bdbb-996d164b135a",
       "title": {
         "sv": "'The Birth of a Nation' revolutionerar filmtekniken",
@@ -508,6 +535,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "276e2a46-f1bd-4ab5-8d73-a71e775f0299",
       "title": {
         "sv": "Star Wars: A New Hope släpps",
@@ -521,6 +549,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "be5556a4-6a69-4f7b-8f00-53f6f0a8374c",
       "title": {
         "sv": "Rocky vinner Oscar för Bästa Film",
@@ -534,6 +563,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "e041bee9-a845-4799-bd0a-22ccc85dee22",
       "title": {
         "sv": "E.T. the Extra-Terrestrial blir en kassasuccé",
@@ -547,6 +577,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "16b29001-c140-41b1-a72b-c722e886cac9",
       "title": {
         "sv": "The Breakfast Club släpps och blir en ikonisk ungdomsfilm",
@@ -560,6 +591,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "87492642-cbf5-412a-871a-f300c92acb1f",
       "title": {
         "sv": "Harrison Ford introducerar karaktären Deckard i Blade Runner",
@@ -573,6 +605,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "5457978a-32a5-411c-8908-27b54f771156",
       "title": {
         "sv": "Filmen The Godfather släpps",
@@ -586,6 +619,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "57dd8627-b38b-4b3a-ad12-a0d68f70eb85",
       "title": {
         "sv": "The Shawshank Redemption släpps",
@@ -599,6 +633,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "d8000a95-a358-4400-8fe2-04dca8956c47",
       "title": {
         "sv": "The Lord of the Rings: The Return of the King vinner Oscar för Bästa Film",
@@ -612,6 +647,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "85749ed7-57bc-4560-bf0d-44caf7eacb37",
       "title": {
         "sv": "Queen släpper 'Bohemian Rhapsody'",
@@ -625,6 +661,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "f5636795-1767-4bf5-9b59-a3de4752c760",
       "title": {
         "sv": "Michael Jackson släpper albumet 'Thriller'",
@@ -638,6 +675,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "fec34283-4574-47aa-a0bb-d0a660c39d81",
       "title": {
         "sv": "Bee Gees dominerar med soundtracket till 'Saturday Night Fever'",
@@ -651,6 +689,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "1c2280ca-644b-41ea-aa5e-265cf7add78b",
       "title": {
         "sv": "John Lennon släpper 'Imagine'",
@@ -664,6 +703,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "7b709c70-6d07-4d53-a10a-c062196e71b1",
       "title": {
         "sv": "Madonna släpper albumet 'Like a Virgin'",
@@ -677,6 +717,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "8a6aba3c-5d9f-4119-a460-374cbc3892a2",
       "title": {
         "sv": "The Beatles släpper albumet 'Sgt. Pepper's Lonely Hearts Club Band'",
@@ -690,6 +731,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "6d137f9f-9418-4bc1-8caa-08644e950d30",
       "title": {
         "sv": "The Beatles släpper debutalbumet 'Please Please Me'",
@@ -703,6 +745,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "382efb41-1b4a-4f1a-8e41-95b40feae71d",
       "title": {
         "sv": "Sverige inför allmän rösträtt för kvinnor",
@@ -716,6 +759,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "c341710f-c2a5-470b-bc64-512a1e7f08ea",
       "title": {
         "sv": "ABBA vinner Eurovision Song Contest",
@@ -729,6 +773,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "1f753d0b-0cb9-42b6-b737-4328b2955eeb",
       "title": {
         "sv": "Olof Palme mördas i Stockholm",
@@ -742,11 +787,9 @@
       }
     },
     {
+      "type": "historic",
       "id": "2b4ddaa8-ec79-46c0-abe0-2d5a6dd4d36d",
-      "title": {
-        "sv": "Slaget vid Poltava",
-        "en": "The Battle of Poltava"
-      },
+      "title": { "sv": "Slaget vid Poltava", "en": "The Battle of Poltava" },
       "category": "war",
       "year": 1709,
       "description": {
@@ -755,6 +798,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "bd6e858b-1a77-499c-a0e9-ef295918585d",
       "title": {
         "sv": "Celine Dion representerar Schweiz i Eurovision Song Contest",
@@ -768,6 +812,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "93ad6703-9a7e-4c52-97c4-f5b9b9bdd842",
       "title": {
         "sv": "Eurovision Song Contest hålls för första gången",
@@ -781,6 +826,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "77dcbe8b-daed-4168-a384-15a14a062985",
       "title": {
         "sv": "Stockholm arrangerar Sommar-OS",
@@ -794,11 +840,9 @@
       }
     },
     {
+      "type": "historic",
       "id": "e45eb5a3-df2a-4056-8c6d-018617c11c47",
-      "title": {
-        "en": "The Battle of Hastings",
-        "sv": "Slaget vid Hastings"
-      },
+      "title": { "en": "The Battle of Hastings", "sv": "Slaget vid Hastings" },
       "category": "war",
       "year": 1066,
       "description": {
@@ -807,6 +851,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "d64e8514-a728-409e-9e69-e7557338feb2",
       "title": {
         "en": "The Magna Carta is Signed",
@@ -820,6 +865,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "7d81e3d7-6ab4-4bc2-acd5-9f4ea10c08e9",
       "title": {
         "en": "The Hundred Years' War Starts",
@@ -833,6 +879,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "5e129d19-06c6-48ae-a209-6192b38b0b83",
       "title": {
         "en": "Galileo Galilei discovers the moons of Jupiter",
@@ -846,6 +893,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "cf56097c-8d9c-4ea5-a1e2-41770979f7e9",
       "title": {
         "en": "Linnaeus' Biological Classification System",
@@ -859,6 +907,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "c2e49715-6ba8-41ee-9519-67b2a9c3e7fc",
       "title": {
         "en": "Jesse Owens wins 4 gold medals at the Berlin Olympics",
@@ -872,6 +921,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "18a3adc9-6333-42b7-aca6-5b899e569ae7",
       "title": {
         "en": "Michael Jordan's Final NBA Finals",
@@ -885,6 +935,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "4261a90a-d6fb-4133-9b7a-0f7776f2f826",
       "title": {
         "en": "Construction of Notre Dame Cathedral",
@@ -898,11 +949,9 @@
       }
     },
     {
+      "type": "historic",
       "id": "9aeb09af-30d5-411d-b006-8dfb88153619",
-      "title": {
-        "en": "Salem Witch Trials",
-        "sv": "Häxprocesserna i Salem"
-      },
+      "title": { "en": "Salem Witch Trials", "sv": "Häxprocesserna i Salem" },
       "category": "history",
       "year": 1692,
       "description": {
@@ -911,6 +960,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "1e728c49-18bf-4fd1-a4c3-d03e68776585",
       "title": {
         "en": "The Great Fire of London",
@@ -924,6 +974,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "5bb52ddf-3df0-460a-95f0-4ef328a99384",
       "title": {
         "en": "Invention of the Spinning Jenny",
@@ -937,6 +988,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "9c52cf97-8809-45ae-a178-c5d6c4791e99",
       "title": {
         "en": "Invention of the Telegraph",
@@ -950,6 +1002,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "6b1d84d2-d96e-440d-baaf-5c3d0f70080c",
       "title": {
         "en": "The Wright brothers make the first powered flight",
@@ -963,6 +1016,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "e5bd6c47-e7d0-4d04-a023-200161cbec4b",
       "title": {
         "en": "Invention of the Steam Engine",
@@ -976,6 +1030,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "d7db7284-66b8-47dd-95cd-8601dbeeae4a",
       "title": {
         "en": "Introduction of the Celsius Temperature Scale",
@@ -989,6 +1044,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "1812fe25-f29a-4c3e-8177-6b70f1112f93",
       "title": {
         "en": "Diego Maradona's 'Hand of God' Goal",
@@ -1002,11 +1058,9 @@
       }
     },
     {
+      "type": "historic",
       "id": "09fb7697-b47b-4873-a6c9-4fa70c98a459",
-      "title": {
-        "en": "Death of Pablo Escobar",
-        "sv": "Pablo Escobars död"
-      },
+      "title": { "en": "Death of Pablo Escobar", "sv": "Pablo Escobars död" },
       "category": "history",
       "year": 1993,
       "description": {
@@ -1015,6 +1069,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "8e09fc3f-59df-4f38-8138-9a75319f0868",
       "title": {
         "en": "The Pacemaker is fully implanted",
@@ -1028,11 +1083,9 @@
       }
     },
     {
+      "type": "historic",
       "id": "a00a967a-e56e-413c-a402-cd4c6e73e326",
-      "title": {
-        "en": "Sinking of the Titanic",
-        "sv": "Titanic sjunker"
-      },
+      "title": { "en": "Sinking of the Titanic", "sv": "Titanic sjunker" },
       "category": "history",
       "year": 1912,
       "description": {
@@ -1041,6 +1094,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "61bbcb73-e2ad-4c5c-b555-5d8366c7fcde",
       "title": {
         "en": "President Clinton's Denial of the Monica Lewinsky Scandal",
@@ -1054,11 +1108,9 @@
       }
     },
     {
+      "type": "historic",
       "id": "8197ac3b-e1e9-44df-8275-a001ca7fd3da",
-      "title": {
-        "en": "Watergate Scandal",
-        "sv": "Watergate-skandalen"
-      },
+      "title": { "en": "Watergate Scandal", "sv": "Watergate-skandalen" },
       "category": "politics",
       "year": 1972,
       "description": {
@@ -1067,6 +1119,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "e3d7dcbc-0c16-4305-860d-918983f00eda",
       "title": {
         "en": "Paternity Leave in Sweden",
@@ -1080,6 +1133,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "3bbce86a-e7f5-41e7-aed7-648679c9b4b5",
       "title": {
         "en": "Dag Hammarskjöld dies in a plane crash",
@@ -1093,6 +1147,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "792bff3c-e539-4ee8-9567-9f87d85c3ea1",
       "title": {
         "en": "Nelson Mandela's Imprisonment",
@@ -1106,6 +1161,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "69d9418c-0f7c-4694-9d47-ae350acb0687",
       "title": {
         "en": "Mariner 9 becomes the first spacecraft to orbit another planet",
@@ -1119,6 +1175,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "dc58385c-13ec-420d-8b1d-c5f4c70c1dee",
       "title": {
         "en": "'Voting Rights Act' prohibits racial discrimination in voting",
@@ -1132,6 +1189,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "fa1426c1-58bb-41c5-a43d-dff042ee3f31",
       "title": {
         "en": "Work on Mount Rushmore begins",
@@ -1145,6 +1203,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "90ceda70-10f5-4c4c-ae4d-dca8ffbd9bfa",
       "title": {
         "en": "Ågestaverket Swedens first commercially used Nuclear Power Plant comes online",
@@ -1158,6 +1217,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "0f1244de-c4fd-40b9-bb67-40c23881f738",
       "title": {
         "en": "Discovery of Penicillin by Alexander Fleming",
@@ -1171,6 +1231,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "2e5b2a77-b8d5-4197-a331-a16965447500",
       "title": {
         "en": "First Successful Heart Transplant human-to-human",
@@ -1184,6 +1245,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "f3fbf142-d2c5-40c1-81dd-de95ebd980d9",
       "title": {
         "en": "Nature, the journal, publishes the evidence for DNA",
@@ -1197,6 +1259,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "ce374b52-2556-4f45-ab43-137480c2c258",
       "title": {
         "en": "Martin Luther King Jr.'s 'I Have a Dream' Speech",
@@ -1210,6 +1273,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "4cd701a7-ac4c-4db1-b855-058d799ffe6e",
       "title": {
         "en": "Indira Gandhi Becomes the First Female Prime Minister of India",
@@ -1223,6 +1287,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "adeb9516-dde5-4451-9503-97690c1c424c",
       "title": {
         "en": "Winston Churchill's 'We Shall Fight on the Beaches' Speech",
@@ -1236,6 +1301,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "f53a5b95-2e76-421b-874c-e1caaffaec6c",
       "title": {
         "en": "Margaret Thatcher Becomes the First Female Prime Minister of the UK",
@@ -1249,6 +1315,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "dee7296c-c3f9-47b1-a30f-b75c3a2db8d4",
       "title": {
         "en": "The Panama canal is completed",
@@ -1262,6 +1329,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "44ee7cc2-6953-4e70-ba6d-ffd9a2ffc11d",
       "title": {
         "en": "The Eiffel Tower is completed for the Exposition Universelle",
@@ -1275,6 +1343,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "887fabd2-5196-4955-a7d9-b903a8b52a78",
       "title": {
         "en": "Unveiling of the Statue of Liberty",
@@ -1288,6 +1357,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "5cbc0399-e521-4cf4-93f1-e825a377675a",
       "title": {
         "en": "'Dagens Nyheter' is founded",
@@ -1301,6 +1371,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "b29d6dce-2713-4d76-9870-2630e4c247ef",
       "title": {
         "en": "Discovery of X-rays by Wilhelm Roentgen",
@@ -1314,6 +1385,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "42d94739-a01b-4b2e-b864-f3d60e96968d",
       "title": {
         "en": "Sir Isaac Newton publishes his discovery of gravity",
@@ -1327,6 +1399,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "d78915a9-63eb-4386-be69-6b347876e86c",
       "title": {
         "en": "The Theory of Relativity is published by Albert Einstein",
@@ -1340,6 +1413,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "7692679b-e509-41a0-95ca-d279fdd7693d",
       "title": {
         "en": "'Sikta mot Stjärnorna' airs for the first time",
@@ -1353,6 +1427,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "849e47e7-7b54-492b-8547-9abbc1cb8099",
       "title": {
         "en": "Amusementpark Gröna Lund opens in Stockholm",
@@ -1366,6 +1441,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "ec292746-713f-481c-9362-c3971f6a3a25",
       "title": {
         "en": "Spider-Man is created by Stan Lee and Steve Ditko",
@@ -1379,6 +1455,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "c72ef001-0fb6-4d81-9596-a139c8b8dc4f",
       "title": {
         "en": "The superhero Batman is created by Bob Kane and Bill Finger at DC Comics",
@@ -1392,6 +1469,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "aa2503d4-15f1-4edf-ac29-cb6cbeb64b83",
       "title": {
         "en": "'First Division', the predecessor to the Premier League, is formed in England",
@@ -1405,6 +1483,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "57fe2a61-9006-4c23-8876-50afe8a44f08",
       "title": {
         "en": "Elitserien changes name to SHL, a name inspired by the NHL",
@@ -1418,6 +1497,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "2818e5df-2311-4b9e-9ace-8010eace0455",
       "title": {
         "sv": "Arbogamötet, enligt vissa kallad Sveriges första riksdag, samlas",
@@ -1431,6 +1511,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "9889e7b6-746f-41ac-903e-4b45d64deeaa",
       "title": {
         "sv": "Ikea grundas av Ingvar Kamprad",
@@ -1444,6 +1525,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "0078a71a-29c5-488b-b23a-5bc7661683dc",
       "title": {
         "sv": "Sverige inför världens första tryckfrihetslag",
@@ -1457,6 +1539,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "f1dcf059-dbd2-471d-8989-4a0301e2cdcf",
       "title": {
         "sv": "Dackefejden i Småland",
@@ -1470,6 +1553,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "e6295fb8-c416-445d-b6e3-66b0fb525941",
       "title": {
         "sv": "Unionen mellan Sverige och Norge upplöses med Oscar II:s abdikation",
@@ -1483,6 +1567,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "2c65f905-2cd7-42c8-aecf-ffb09a4b2018",
       "title": {
         "sv": "Mordet på John F. Kennedy",
@@ -1496,6 +1581,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "249d189b-db5c-4bee-8847-42071487f6b7",
       "title": {
         "sv": "John Lennon mördas i New York",
@@ -1509,6 +1595,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "d78d8340-6eee-43b0-98aa-591ef653fe19",
       "title": {
         "sv": "Björn Borg vinner sin första Wimbledon",
@@ -1522,6 +1609,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "4f5200cc-74b6-47ec-b078-910af4e5642d",
       "title": {
         "sv": "Peter Forsberg gör sitt ikoniska mål i OS i Lillehammer",
@@ -1535,6 +1623,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "cb205249-d9c7-49cf-9692-f290765f6806",
       "title": {
         "sv": "Rubiks kub uppfinns av Ernő Rubik",
@@ -1548,6 +1637,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "5067d2b6-59c5-403e-bdaa-41fce050f77d",
       "title": {
         "sv": "Premiäravsnittet av Bingolotto sänds",
@@ -1561,6 +1651,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "b90f96ff-5df6-40c6-bb01-7e3263198d54",
       "title": {
         "sv": "Friends Arena invigs",
@@ -1574,6 +1665,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "50e6cac6-9ded-48e6-b47c-3d2b98054db9",
       "title": {
         "sv": "Slottet Tre Kronor brinner",
@@ -1587,11 +1679,9 @@
       }
     },
     {
+      "type": "historic",
       "id": "982e714a-309d-4c79-a721-4957ae233b1d",
-      "title": {
-        "sv": "Emukriget",
-        "en": "The Great Emu War"
-      },
+      "title": { "sv": "Emukriget", "en": "The Great Emu War" },
       "category": "history",
       "year": 1932,
       "description": {
@@ -1600,6 +1690,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "10138d03-24a3-4366-9f79-6fa4d9e32f17",
       "title": {
         "sv": "Max Martin blir internationell hitmakare med 'Hit me baby one more time'",
@@ -1613,6 +1704,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "5d506124-5d98-4c5f-89b0-c05bab8ca869",
       "title": {
         "sv": "Pippi Långstrump blir TV-serie",
@@ -1626,6 +1718,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "48e8702c-9fd7-47b6-9196-2fcfe1c2e0a8",
       "title": {
         "sv": "Ingmar Bergman regisserar Det Sjunde Inseglet",
@@ -1639,6 +1732,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "d87ed7d2-1e0c-44eb-99cd-76e00ebcbc3f",
       "title": {
         "sv": "Porrfilmen Fäbodjäntan premiärvisas på Röda Lyktan i Orsa",
@@ -1652,6 +1746,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "f0539653-55d4-4bfc-9c05-76d8f7b99481",
       "title": {
         "sv": "Carl XVI och Silvia gifter sig",
@@ -1665,6 +1760,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "7bb8f73a-5846-4961-946a-46d88580a220",
       "title": {
         "sv": "Kronprinsessan Victoria och Prins Daniel gifter sig",
@@ -1678,6 +1774,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "04a90c9e-b9dd-4beb-8b8d-d68b81fe8021",
       "title": {
         "sv": "Carl XVI Gustaf firar 50 år på tronen",
@@ -1691,6 +1788,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "fe5fb268-66e0-4fb6-ba7c-bc6a2b6a1b95",
       "title": {
         "sv": "TV4 tar bort hallåorna",
@@ -1704,6 +1802,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "7f8254c8-1dbd-4165-99ca-92587c74c08b",
       "title": {
         "sv": "SVT tar bort hallåorna",
@@ -1717,6 +1816,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "8d817b2d-3f17-4767-8de4-a565dea3517b",
       "title": {
         "sv": "Första avsnittet av 'Äntligen Hemma' sänds",
@@ -1730,6 +1830,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "02a5ec8b-c3e3-441b-98ce-24ac2ed7f927",
       "title": {
         "sv": "Expedition Robinson sänds på SVT med Harald Treutiger som programledare",
@@ -1743,6 +1844,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "34b1c42f-f600-429b-90d6-21bc3b3997c6",
       "title": {
         "sv": "Trolltider, orginalet, sänds som julkalender med blandandra Eva Rydberg och Ted Åström",
@@ -1756,6 +1858,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "bd54aab9-9101-44ca-93b1-d518141582ef",
       "title": {
         "sv": "Wikipedia, den fria encyklopedin, lanseras",
@@ -1769,6 +1872,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "95f4a0f6-5f43-4833-a073-dbe64ff441e0",
       "title": {
         "sv": "Nationalencyklopedin lanseras i bokform",
@@ -1782,6 +1886,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "1133c8ba-0bd2-46eb-8410-257864122469",
       "title": {
         "sv": "Pierce Brosnan spelar Bond för sista gången i Die Another Day",
@@ -1795,6 +1900,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "5c5c663c-a01a-4d05-adb7-748a1fa032a3",
       "title": {
         "sv": "Anders Lundin tar officiellt över som allsångsledare för Allsång på Skansen",
@@ -1808,6 +1914,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "73dd0dab-cb5f-4e1b-a720-54a0effa6c0a",
       "title": {
         "sv": "Tim Avicii Bergling hittas död i Oman",
@@ -1821,6 +1928,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "7bc62867-80aa-4f90-8c01-30e7a5e45d93",
       "title": {
         "sv": "Ölkällarkuppen, det kuppförsök där Adolf Hitler försöker ta makten, misslyckas",
@@ -1834,6 +1942,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "dab0cbda-58ae-4dec-8c16-2490704ad255",
       "title": {
         "sv": "'Svarta torsdagen' omkullkastar världsekonomin och startar den stora depressionen",
@@ -1847,6 +1956,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "366a165b-9daf-4256-a8e9-113ed8730725",
       "title": {
         "sv": "'Hobbiten' av J.R.R. Tolkien publiceras",
@@ -1860,6 +1970,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "7b6ef4f5-3d04-4246-87e8-ffcc7b14406a",
       "title": {
         "sv": "Orson Wells sänder 'Världarnas Krig' på radio och skapar panik i delar av USA",
@@ -1873,6 +1984,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "49d42d1c-c143-4980-bf67-90532f0dbd94",
       "title": {
         "sv": "Empire State Building blir världens högsta byggnad med sina 443m",
@@ -1886,6 +1998,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "95e87f2d-ba3d-4059-81d2-3c77359df0cb",
       "title": {
         "sv": "Disneyfilmen Frost har premiär",
@@ -1899,6 +2012,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "1ca16f2d-5cac-475a-be88-751dc76c5de6",
       "title": {
         "sv": "Nokia lanserar sin ikoniska mobiltelefon; 3310",
@@ -1912,6 +2026,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "8c85a18e-9f57-4010-b7d1-0a29f32591a4",
       "title": {
         "sv": "Volvo Amazon rullar in i Svenska hemmen",
@@ -1925,6 +2040,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "ef92e95b-455b-45e2-9d85-1f898772c03d",
       "title": {
         "sv": "Världsfenomenet Pokémon lanseras",
@@ -1938,6 +2054,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "0e4ef83b-5d01-4013-b503-f4d08d19e261",
       "title": {
         "sv": "SARS bryter ut i Kina",
@@ -1951,6 +2068,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "fa34da2d-6e4d-44cf-b556-30f5e9f30c2d",
       "title": {
         "sv": "Världens största partikelaccelerator, CERNs Large Hadron Collider, invigs",
@@ -1964,6 +2082,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "a05c0942-1834-46e3-ac5d-6e4c79ad08df",
       "title": {
         "sv": "Första delarna till International Space Station skjuts upp",
@@ -1977,6 +2096,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "e42d76af-2dfc-4fc2-b049-8c9feea7e9ba",
       "title": {
         "sv": "Teknikjätten Google grundas",
@@ -1990,6 +2110,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "5b670adb-fdb1-4826-98ff-7d6dc07e6b24",
       "title": {
         "sv": "Kalle Anka och hans vänner önskar God Jul för första gången på SVT",
@@ -2003,6 +2124,7 @@
       }
     },
     {
+      "type": "historic",
       "id": "20260758-1a3d-4789-8e56-40f92db1aa47",
       "title": {
         "sv": "SVT genomför sin första prov-TV-sändning i färg",

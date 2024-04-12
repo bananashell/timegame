@@ -1,6 +1,7 @@
 import { z } from "zod";
 
 export const historicEvent = z.object({
+  type: z.literal("historic"),
   id: z.string().uuid(),
   title: z.object({
     sv: z.string(),

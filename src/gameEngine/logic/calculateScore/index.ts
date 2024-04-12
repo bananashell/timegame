@@ -1,12 +1,9 @@
-import { Year, LockedHistoricGameEvent } from "@/gameEngine/gameState";
-import { HistoricEvent } from "@/models/historicEvent";
+import { Year, LockedGameEvent } from "@/gameEngine/gameState";
+import type { GameEvent } from "@/data/GameEvent";
 import { isInTimespan } from "./isInTimespan";
 
-export type ScoredHistoricEvent = Pick<
-  LockedHistoricGameEvent,
-  "year" | "score"
->;
-export type CurrentEvent = Pick<HistoricEvent, "year">;
+export type ScoredGameEvent = Pick<LockedGameEvent, "year" | "score">;
+export type CurrentEvent = Pick<GameEvent, "year">;
 
 const SCORES = {
   ABSOLUTELY_CORRECT: 20 as const,
@@ -23,7 +20,7 @@ const SCORES = {
  * @param gameState
  */
 export const calculateScore = (args: {
-  historicEvents: ScoredHistoricEvent[];
+  historicEvents: ScoredGameEvent[];
   currentEvent: CurrentEvent;
   guess: Year;
 }): false | number => {

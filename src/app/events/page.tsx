@@ -1,5 +1,5 @@
-import { historicEvents } from "@/data/historicEvents";
-import { Category } from "@/models/historicEvent";
+import { historicEvents } from "@/data/historicEvents/historicEvents";
+import { Category } from "@/data/historicEvents/historicEvent";
 import { notFound } from "next/navigation";
 
 export default async function EventsPage() {

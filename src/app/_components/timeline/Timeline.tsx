@@ -76,9 +76,7 @@ export const Timeline = () => {
                       <Place sx={{ fontSize: 40 }} className="text-red-500" />
                     </motion.div>
                   )}
-                  {!asArrow && (
-                    <TimelineEvent historicEvent={event} key={event.id} />
-                  )}
+                  {!asArrow && <TimelineEvent event={event} key={event.id} />}
                 </motion.div>
               );
             })}

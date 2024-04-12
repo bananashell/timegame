@@ -1,4 +1,4 @@
-import { historicEvents } from "@/data/historicEvents";
+import { historicEvents } from "@/data/historicEvents/historicEvents";
 import { notFound } from "next/navigation";
 import { twMerge } from "tailwind-merge";
 
