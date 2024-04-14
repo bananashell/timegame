@@ -1,6 +1,9 @@
 # Welcome to the Timeline
 
 [![Tidslinjen banner](public/images/banner.jpg)](https://tidslinjen.app)
+
+_The Timeline - arrange time, travel through history_
+
 This is a simple yet fun game trying to place historic events or songs in correct order. You may only play one historic game and one musical game per day - wordl style. Top ten games will be featured on the weekly highscore list so you can brag to your friends - **no cheating**!
 
 _Currently only in Swedish_
